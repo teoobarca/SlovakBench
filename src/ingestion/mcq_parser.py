@@ -48,21 +48,15 @@ class MCQExamExtraction(BaseModel):
     contexts: List[Context] = Field(default=[], description="All passages/excerpts referenced by questions")
     questions: List[Question] = Field(description="List of all extracted questions")
 
-
-# --- Helper ---
-
 def load_pdf_as_base64(pdf_path: str) -> str:
     """Load a PDF file and return its base64 encoding."""
     with open(pdf_path, "rb") as f:
         return base64.standard_b64encode(f.read()).decode("utf-8")
 
-
-# --- Extraction Functions ---
-
 def extract_answers_from_key(
     test_pdf_path: str,
     key_pdf_path: str,
-    model_name: str,
+    model_name: str = "openai/gpt-5.2",
 ) -> str:
     """
     Step 1: Extract correct answers from key PDF matching the test code.
@@ -99,19 +93,24 @@ Include ALL questions. For short text:
 - Copy all accepted variants separated by /
 - Include the Poznámka (note) if present - it explains validation rules"""
 
-    llm = create_llm(model_name, temperature=0.5)
+    llm = create_llm(model_name)
     
     message = HumanMessage(content=[
         {"type": "text", "text": prompt},
-        {"type": "image_url", "image_url": {"url": f"data:application/pdf;base64,{test_base64}"}},
-        {"type": "image_url", "image_url": {"url": f"data:application/pdf;base64,{key_base64}"}},
+        {"type": "file", "base64": test_base64, "mime_type": "application/pdf", "filename": "test.pdf"},
+        {"type": "file", "base64": key_base64, "mime_type": "application/pdf", "filename": "kluc.pdf"},
     ])
     
     response = llm.invoke([message])
+    cost = get_cost(response)
     
-    print(f"📋 Step 1: Extracted answers")
-    print_cost(response)
-    print(f"\n{response.content[:500]}...\n")
+    # Extract test code from response for display
+    content = response.content
+    test_code = "unknown"
+    if "Test code:" in content:
+        test_code = content.split("Test code:")[1].split("\n")[0].strip().replace("**", "")
+    
+    print(f"  Step 1: Answers extracted (Test {test_code}) 💰${cost:.4f}")
     
     return response.content
 
@@ -119,14 +118,14 @@ Include ALL questions. For short text:
 def extract_mcq_from_pdf(
     test_pdf_path: str,
     key_pdf_path: str,
-    model_name: str,
+    model_name: str = "openai/gpt-5.2",
 ) -> MCQExamExtraction:
     """
     Extract MCQ questions from a test PDF and pair with correct answers from key PDF.
     Uses two-step extraction: first extracts answers, then full questions.
     """
     # Step 1: Extract answers from key
-    answers_markdown = extract_answers_from_key(test_pdf_path, key_pdf_path, model_name)
+    answers_markdown = extract_answers_from_key(test_pdf_path, key_pdf_path)
     
     # Step 2: Extract full questions with pre-extracted answers
     test_base64 = load_pdf_as_base64(test_pdf_path)
@@ -138,19 +137,22 @@ I have already extracted the correct answers for you:
 {answers_markdown}
 ---
 
+## CRITICAL: PRESERVE ALL FORMATTING
+Both in contexts AND in question text, preserve visual formatting from the PDF:
+- **bold** for tučné/bold text
+- _italic_ for kurzíva/italic text
+- __underline__ for podčiarknuté/underlined text
+
+Example: "Určte slovný druh slova **rýchlo** vo vete." - the word is bolded, keep it!
+
 ## CONTEXTS
-Extract all passages/excerpts into `contexts` array:
-- `id`: unique identifier (e.g., "ukazka_1", "text_a")
-- `text`: full passage text with PRESERVED FORMATTING:
-  - **bold** for bold/tučné text
-  - _italic_ for italic/kurzíva text  
-  - __underline__ for underlined/podčiarknuté text
-  - IMPORTANT: if words are highlighted in the PDF, mark them!
+- `id`: unique identifier (e.g., "ukazka_1")
+- `text`: full passage with formatting preserved
 
 ## QUESTIONS
 - `id`: question number ("01", "02", ...)
 - `context_id`: reference to context id, or null if standalone
-- `question`: the question text itself
+- `question`: question text with formatting preserved (if words are highlighted, mark them!)
 - `task_type`: "mcq" if has A/B/C/D options, "short_text" if written answer
 - `options`: for mcq only: {{"A": "...", "B": "...", "C": "...", "D": "..."}}
 - `answer`: use the pre-extracted answers above
@@ -164,35 +166,30 @@ Normalize options: trim, casefold, collapse_ws, remove_punct, remove_diacritics,
     
     message = HumanMessage(content=[
         {"type": "text", "text": prompt},
-        {"type": "image_url", "image_url": {"url": f"data:application/pdf;base64,{test_base64}"}},
+        {"type": "file", "base64": test_base64, "mime_type": "application/pdf", "filename": "test.pdf"},
     ])
     
     result = structured_llm.invoke([message])
     
     raw = result.get("raw")
-    if raw:
-        print_cost(raw, "Step 2")
+    cost = get_cost(raw) if raw else 0.0
     
     parsed = result.get("parsed")
     if parsed:
-        print(f"  Contexts: {len(parsed.contexts)}, Questions: {len(parsed.questions)}")
+        print(f"  Step 2: {len(parsed.contexts)} contexts, {len(parsed.questions)} questions 💰${cost:.4f}")
         return parsed
     else:
         raise ValueError(f"Failed to parse response")
 
 
-# --- Main ---
-
 if __name__ == "__main__":
-    MODEL = "openai/gpt-5.2"
-    
     test_pdf_path = "data/raw/mcq/test_2025.pdf"
     key_pdf_path = "data/raw/mcq/kluc_2025.pdf"
     
     if os.path.exists(test_pdf_path) and os.path.exists(key_pdf_path):
         print(f"Extracting from {test_pdf_path} + {key_pdf_path}...")
         
-        extraction = extract_mcq_from_pdf(test_pdf_path, key_pdf_path, MODEL)
+        extraction = extract_mcq_from_pdf(test_pdf_path, key_pdf_path)
         
         print(f"\n✓ Extracted {len(extraction.contexts)} contexts, {len(extraction.questions)} questions.")
         

@@ -1,5 +1,5 @@
 """
-Metrics computation for skBench evaluation.
+Metrics computation for SlovakBench evaluation.
 """
 from typing import List, Dict, Any
 from dataclasses import dataclass

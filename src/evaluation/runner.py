@@ -1,5 +1,5 @@
 """
-Evaluation runner for skBench.
+Evaluation runner for SlovakBench.
 Orchestrates LLM evaluation on extracted exam questions.
 """
 import json
@@ -10,11 +10,13 @@ from datetime import datetime
 from typing import List, Dict, Optional
 
 from langchain_core.messages import HumanMessage, SystemMessage
+from langsmith import tracing_context
 from tqdm import tqdm
 
 # Add src to path for imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from utils.llm import create_llm, get_model_short_name
+from utils.llm import create_llm, get_cost, print_cost
+from evaluation.answer_validator import validate_mcq, validate_short_text
 
 
 @dataclass
@@ -25,6 +27,7 @@ class QuestionResult:
     model_answer: str
     correct_answer: str
     is_correct: bool
+    cost_usd: float = 0.0
     raw_response: str = ""
 
 
@@ -37,6 +40,7 @@ class EvaluationResult:
     total_questions: int
     correct_count: int
     accuracy: float
+    total_cost_usd: float = 0.0
     mcq_accuracy: Optional[float] = None
     short_text_accuracy: Optional[float] = None
     results: List[QuestionResult] = field(default_factory=list)
@@ -49,6 +53,7 @@ class EvaluationResult:
             "total_questions": self.total_questions,
             "correct_count": self.correct_count,
             "accuracy": self.accuracy,
+            "total_cost_usd": self.total_cost_usd,
             "mcq_accuracy": self.mcq_accuracy,
             "short_text_accuracy": self.short_text_accuracy,
             "results": [
@@ -58,6 +63,7 @@ class EvaluationResult:
                     "model_answer": r.model_answer,
                     "correct_answer": r.correct_answer,
                     "is_correct": r.is_correct,
+                    "cost_usd": r.cost_usd,
                 }
                 for r in self.results
             ],
@@ -103,7 +109,12 @@ Odpovedz IBA písmenom správnej odpovede (A, B, C alebo D). Nič viac."""
             prompt = f"""{context_text}### Otázka
 {q_text}
 
-Odpovedz stručne a presne. Uveď len odpoveď bez vysvetľovania."""
+DÔLEŽITÉ: Odpoveď je automaticky hodnotená systémom, ktorý porovnáva presne slová.
+- Napíš len jedno slovo alebo niekoľko slov
+- BEZ vysvetlení, BEZ zátvoriek, BEZ dodatkov
+- Presne to čo sa pýta, nič viac
+
+Príklad: "epiteton" (nie "epiteton (básnický prívlastok)")"""
         
         return prompt
     
@@ -127,68 +138,80 @@ Odpovedz stručne a presne. Uveď len odpoveď bez vysvetľovania."""
         
         if question["task_type"] == "mcq":
             correct = answer.get("correct_option", "")
-            return model_answer.upper() == correct.upper()
+            return validate_mcq(model_answer, correct)
         else:
-            # Short text - normalize and compare
             accepted = answer.get("accepted", [])
-            normalize_steps = answer.get("normalize", ["trim", "casefold"])
-            
-            # Apply normalization
-            model_norm = model_answer.strip().lower()
-            for acc in accepted:
-                acc_norm = acc.strip().lower()
-                if model_norm == acc_norm:
-                    return True
-            return False
+            steps = answer.get("normalize", ["trim", "casefold"])
+            return validate_short_text(model_answer, accepted, steps)
     
-    def run(self, dataset_path: str) -> EvaluationResult:
-        """Execute evaluation on dataset."""
+    async def _evaluate_question(self, q: Dict, contexts: List[Dict], system_msg) -> QuestionResult:
+        """Evaluate a single question asynchronously."""
+        prompt = self.build_prompt(q, contexts)
+        
+        try:
+            response = await self.llm.ainvoke([system_msg, HumanMessage(content=prompt)])
+            raw_response = response.content
+            cost = get_cost(response)
+        except Exception as e:
+            print(f"Error on question {q['id']}: {e}")
+            raw_response = ""
+            cost = 0.0
+        
+        model_answer = self.parse_response(raw_response, q["task_type"])
+        is_correct = self.validate_answer(q, model_answer)
+        
+        if q["task_type"] == "mcq":
+            correct_answer = q["answer"].get("correct_option", "")
+        else:
+            correct_answer = ", ".join(q["answer"].get("accepted", [])[:3])
+        
+        return QuestionResult(
+            question_id=q["id"],
+            task_type=q["task_type"],
+            model_answer=model_answer,
+            correct_answer=correct_answer,
+            is_correct=is_correct,
+            cost_usd=cost,
+            raw_response=raw_response,
+        )
+    
+    def run(self, dataset_path: str, concurrency: int = 32) -> EvaluationResult:
+        """Execute evaluation on dataset with concurrent processing."""
+        import asyncio
+        
         data = self.load_dataset(dataset_path)
         contexts = data.get("contexts", [])
         questions = data.get("questions", [])
         
-        results: List[QuestionResult] = []
-        mcq_correct, mcq_total = 0, 0
-        st_correct, st_total = 0, 0
-        
         system_msg = SystemMessage(content="Si expert na slovenský jazyk. Odpovedaj presne a stručne.")
         
-        for q in tqdm(questions, desc=f"Evaluating with {self.model_name}"):
-            prompt = self.build_prompt(q, contexts)
+        async def run_all():
+            semaphore = asyncio.Semaphore(concurrency)
+            pbar = tqdm(total=len(questions), desc=f"{self.model_name.split('/')[-1]}", leave=False)
             
-            try:
-                response = self.llm.invoke([system_msg, HumanMessage(content=prompt)])
-                raw_response = response.content
-            except Exception as e:
-                print(f"Error on question {q['id']}: {e}")
-                raw_response = ""
+            async def bounded_eval(q):
+                async with semaphore:
+                    with tracing_context(enabled=False):
+                        result = await self._evaluate_question(q, contexts, system_msg)
+                    pbar.update(1)
+                    return result
             
-            model_answer = self.parse_response(raw_response, q["task_type"])
-            is_correct = self.validate_answer(q, model_answer)
-            
-            # Get correct answer for logging
-            if q["task_type"] == "mcq":
-                correct_answer = q["answer"].get("correct_option", "")
-                mcq_total += 1
-                if is_correct:
-                    mcq_correct += 1
-            else:
-                correct_answer = ", ".join(q["answer"].get("accepted", [])[:3])
-                st_total += 1
-                if is_correct:
-                    st_correct += 1
-            
-            results.append(QuestionResult(
-                question_id=q["id"],
-                task_type=q["task_type"],
-                model_answer=model_answer,
-                correct_answer=correct_answer,
-                is_correct=is_correct,
-                raw_response=raw_response,
-            ))
+            tasks = [bounded_eval(q) for q in questions]
+            results = await asyncio.gather(*tasks)
+            pbar.close()
+            return results
+        
+        results = asyncio.run(run_all())
+        
+        # Compute stats
+        mcq_correct = sum(1 for r in results if r.task_type == "mcq" and r.is_correct)
+        mcq_total = sum(1 for r in results if r.task_type == "mcq")
+        st_correct = sum(1 for r in results if r.task_type == "short_text" and r.is_correct)
+        st_total = sum(1 for r in results if r.task_type == "short_text")
         
         total = len(results)
         correct = sum(1 for r in results if r.is_correct)
+        total_cost = sum(r.cost_usd for r in results)
         
         return EvaluationResult(
             model_name=self.model_name,
@@ -197,6 +220,7 @@ Odpovedz stručne a presne. Uveď len odpoveď bez vysvetľovania."""
             total_questions=total,
             correct_count=correct,
             accuracy=correct / total if total > 0 else 0.0,
+            total_cost_usd=total_cost,
             mcq_accuracy=mcq_correct / mcq_total if mcq_total > 0 else None,
             short_text_accuracy=st_correct / st_total if st_total > 0 else None,
             results=results,
@@ -204,12 +228,12 @@ Odpovedz stručne a presne. Uveď len odpoveď bez vysvetľovania."""
 
 
 def save_results(result: EvaluationResult, output_dir: str = "data/results") -> str:
-    """Save evaluation results to JSON."""
+    """Save evaluation results to JSON (overwrites previous for same model)."""
     os.makedirs(output_dir, exist_ok=True)
     
-    # Create filename from model and timestamp
-    model_short = get_model_short_name(result.model_name)
-    filename = f"eval_{model_short}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    # Filename is just model name - overwrites previous result
+    model_short = result.model_name.split("/")[-1]
+    filename = f"{model_short}.json"
     output_path = os.path.join(output_dir, filename)
     
     with open(output_path, "w", encoding="utf-8") as f:

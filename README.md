@@ -1,60 +1,120 @@
-# skBench: Slovak LLM Benchmark
+# SlovakBench
 
-**skBench** is a reproducible pipeline for benchmarking Large Language Models (LLMs) in the Slovak language. The project focuses on three main tasks relevant to Slovak education and linguistics.
+**Benchmarking LLMs on Slovak Language Tasks**
 
-## 🎯 Project Goals
-1.  **POS Tagging (Part-of-Speech):** Automatic determination of word classes using the Universal Dependencies (UD) corpus.
-2.  **MCQ (Multiple Choice Questions):** Solving multiple-choice questions (A, B, C, D) extracted from official leaving exams and entrance tests.
-3.  **Grammar Correction:** Correcting grammatical and spelling errors in Slovak text (both synthetic and real errors).
+A reproducible evaluation pipeline for testing Large Language Models on Slovak. Uses real-world data from official Maturita exams and linguistic corpora.
 
-## 📂 Project Structure
+## 🎯 Tasks
 
-This project is organized to clearly separate each step (from data acquisition to evaluation):
-
-```text
-skBench/
-├── data/
-│   ├── raw/          # Raw data (PDF tests, .conllu files) - DROP YOUR DATA HERE
-│   ├── processed/    # Cleaned data in JSON/JSONL format ready for models
-│   └── results/      # Model outputs and final metrics (scores)
-├── src/
-│   ├── ingestion/    # Scripts for data processing (PDF -> Text, Conllu -> JSON)
-│   ├── evaluation/   # Logic for running models and evaluating responses
-│   └── utils/        # Helper functions (logging, configs)
-├── notebooks/        # Jupyter notebooks for data exploration and quick experiments
-├── .env              # API keys (e.g., OPENROUTER_API_KEY)
-├── pyproject.toml    # Project definition and dependencies (managed via uv)
-└── uv.lock           # Locked package versions for reproducibility
-```
+| Task | Description | Status |
+|------|-------------|--------|
+| **Maturita Exam** | Slovak high school graduation exam (MCQ + short text) | ✅ Active |
+| **POS Tagging** | Part-of-speech tagging on Slovak National Corpus | 🔜 Coming |
+| **Grammar Correction** | Detecting and correcting Slovak text errors | 🔜 Coming |
 
 ## 🚀 Quick Start
 
-### 1. Environment Setup
-This project uses `uv` for package management, a super-fast alternative to pip/poetry.
-
 ```bash
-# Install dependencies
+# Install
 uv sync
+
+# Configure
+cp .env.example .env
+# Set OPENROUTER_API_KEY in .env
+
+# Ingest exam data
+uv run python main.py ingest --all
+
+# Evaluate all models
+uv run python main.py evaluate
+
+# View results
+uv run python main.py report
+
+# Export for frontend
+uv run python main.py export
 ```
 
-### 2. Configuration
-Create a `.env` file (by copying `.env.example`) and add your API key:
+## 📊 Latest Results (Maturita 2025)
+
+| Model | Overall | MCQ | Short Text | Cost |
+|-------|---------|-----|------------|------|
+| gpt-5.2 | **92.2%** | 95.0% | 87.5% | $0.17 |
+| gemini-2.5-pro | **92.2%** | 97.5% | 83.3% | $0.77 |
+| gemini-2.5-flash | 81.2% | 97.5% | 54.2% | $0.01 |
+| gpt-4o | 78.1% | 87.5% | 62.5% | $0.09 |
+| claude-sonnet-4 | 75.0% | 90.0% | 50.0% | $0.13 |
+| gpt-4o-mini | 65.6% | 82.5% | 37.5% | $0.01 |
+
+## 📁 Structure
+
+```
+SlovakBench/
+├── data/
+│   ├── raw/exam/          # PDF test files (test_YYYY.pdf, kluc_YYYY.pdf)
+│   ├── processed/exam/    # Extracted JSON datasets
+│   └── results/exam/      # Evaluation results per year
+├── config/
+│   └── models.py          # Models to evaluate
+├── public/
+│   ├── index.html         # Leaderboard frontend
+│   └── leaderboard.json   # Exported results
+├── src/
+│   ├── ingestion/         # PDF → JSON extraction
+│   ├── evaluation/        # LLM evaluation runner
+│   └── utils/             # LLM client, helpers
+└── main.py                # CLI entry point
+```
+
+## 🔧 CLI Commands
 
 ```bash
-cp .env.example .env
-# Open .env and set OPENROUTER_API_KEY=...
+# Ingest PDF exams
+main.py ingest                    # Show status
+main.py ingest --year 2025        # Process specific year
+main.py ingest --all              # Process all years
+main.py ingest --force            # Reprocess existing
+
+# Evaluate models
+main.py evaluate                  # Run all configured models
+main.py evaluate --year 2025      # Specific year only
+main.py evaluate -m openai/gpt-4o # Single model
+main.py evaluate --force          # Re-run completed
+main.py evaluate --list           # Show available datasets/models
+
+# Reports
+main.py report                    # Cross-model comparison
+main.py report --year 2025        # Year-specific results
+
+# Frontend
+main.py export                    # Generate public/leaderboard.json
 ```
 
-### 3. Data
-- **MCQ:** Upload PDF test files to `data/raw/mcq_pdfs/`.
-- **POS:** Download the UD Slovak corpus and place `.conllu` files in `data/raw/ud_slovak/`.
+## ⚙️ Configuration
 
-### 4. Running
-*(Instructions for running data processing and evaluation scripts will be added here once implemented)*
+**Models** (`config/models.py`):
+```python
+MODELS = [
+    "openai/gpt-5.2",
+    "anthropic/claude-sonnet-4",
+    "google/gemini-2.5-pro",
+    # Add more...
+]
+```
 
-## 🛠 Technologies Used
-- **Python 3.14+**
-- **LangChain:** For orchestrating LLM calls.
-- **OpenRouter:** For accessing various models via a unified API.
-- **PyPDF:** For extracting text from PDFs.
-- **Pandas/Datasets:** For data manipulation.
+**Environment** (`.env`):
+```
+OPENROUTER_API_KEY=sk-or-...
+```
+
+## 📖 Data Sources
+
+- **Maturita Exams**: [NÚCEM](https://www.nucem.sk/) - National Institute for Certified Educational Measurements
+- Official Slovak high school graduation exams in Slovak Language and Literature
+
+## 🛠 Tech Stack
+
+- **Python 3.11+** with `uv` package manager
+- **LangChain** for LLM orchestration
+- **OpenRouter** API for model access
+- **Tailwind CSS** for frontend

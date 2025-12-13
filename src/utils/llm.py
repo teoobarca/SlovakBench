@@ -13,11 +13,9 @@ def create_llm(model_name: str, temperature: float = 1.0) -> ChatOpenAI:
         openai_api_key=os.getenv("OPENROUTER_API_KEY"),
         openai_api_base="https://openrouter.ai/api/v1",
         temperature=temperature,
-        model_kwargs={
-            "extra_body": {
-                "usage": {"include": True},
-                "reasoning": {"exclude": True},
-            }
+        extra_body={
+            "usage": {"include": True},
+            "reasoning": {"exclude": True},
         },
     )
 

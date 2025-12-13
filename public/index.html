@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlovakBench — Slovak LLM Benchmark</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Instrument Serif', 'Georgia', 'serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                        sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        cream: '#FAFAF8',
+                        ink: '#1A1A1A',
+                        paper: '#F5F4F0',
+                        accent: '#E63946',
+                        muted: '#6B7280',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-up {
+            animation: fadeUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.4s;
+        }
+
+        .task-tab.active {
+            background: #1A1A1A;
+            color: #FAFAF8;
+        }
+
+        tr:hover td {
+            background: #F5F4F0;
+        }
+
+        .rank-1 {
+            color: #D4AF37;
+        }
+
+        .rank-2 {
+            color: #A8A8A8;
+        }
+
+        .rank-3 {
+            color: #CD7F32;
+        }
+
+        .score-bar {
+            background: linear-gradient(90deg, #1A1A1A 0%, #1A1A1A var(--score), #E5E7EB var(--score), #E5E7EB 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-cream text-ink min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-cream/90 backdrop-blur-sm z-50 border-b border-ink/5">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="font-serif text-2xl italic">SlovakBench</a>
+            <div class="flex items-center gap-6 text-sm font-mono">
+                <a href="#leaderboard" class="hover:text-accent transition-colors">Leaderboard</a>
+                <a href="#about" class="hover:text-accent transition-colors">About</a>
+                <a href="https://github.com" class="hover:text-accent transition-colors" target="_blank">GitHub ↗</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <p class="font-mono text-xs tracking-[0.3em] text-muted mb-4 animate-fade-up">BENCHMARK</p>
+            <h1 class="font-serif text-7xl md:text-8xl lg:text-9xl leading-[0.9] mb-8 animate-fade-up delay-1">
+                Slovak<br>
+                <span class="italic text-accent">Bench</span>
+            </h1>
+            <p class="font-sans text-xl md:text-2xl text-muted max-w-2xl leading-relaxed animate-fade-up delay-2">
+                Evaluating Large Language Models on Slovak language tasks.
+                Rigorous benchmarks for grammar, comprehension, and linguistic understanding.
+            </p>
+        </div>
+    </header>
+
+    <!-- Stats Strip -->
+    <section class="border-y border-ink/10 py-8 px-6 animate-fade-up delay-3">
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+                <p class="font-mono text-4xl font-semibold" id="stat-models">6</p>
+                <p class="text-muted text-sm mt-1">Models Evaluated</p>
+            </div>
+            <div>
+                <p class="font-mono text-4xl font-semibold" id="stat-tasks">3</p>
+                <p class="text-muted text-sm mt-1">Task Categories</p>
+            </div>
+            <div>
+                <p class="font-mono text-4xl font-semibold" id="stat-questions">192</p>
+                <p class="text-muted text-sm mt-1">Total Questions</p>
+            </div>
+            <div>
+                <p class="font-mono text-4xl font-semibold">2025</p>
+                <p class="text-muted text-sm mt-1">Latest Year</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leaderboard -->
+    <section id="leaderboard" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <p class="font-mono text-xs tracking-[0.3em] text-muted mb-2">RESULTS</p>
+                    <h2 class="font-serif text-5xl italic">Leaderboard</h2>
+                </div>
+
+                <!-- Task Tabs -->
+                <div class="flex gap-2 font-mono text-sm">
+                    <button class="task-tab active px-4 py-2 rounded-full border border-ink/20 transition-all"
+                        data-task="exam">
+                        Maturita Exam
+                    </button>
+                    <button class="task-tab px-4 py-2 rounded-full border border-ink/20 hover:bg-ink/5 transition-all"
+                        data-task="pos">
+                        POS Tagging
+                    </button>
+                    <button class="task-tab px-4 py-2 rounded-full border border-ink/20 hover:bg-ink/5 transition-all"
+                        data-task="grammar">
+                        Grammar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Task Description -->
+            <div id="task-description" class="bg-paper rounded-2xl p-6 mb-8 border border-ink/5">
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-12 h-12 bg-ink text-cream rounded-xl flex items-center justify-center font-mono text-lg">
+                        📝</div>
+                    <div>
+                        <h3 class="font-sans font-semibold text-lg mb-1">Slovak Maturita Exam</h3>
+                        <p class="text-muted text-sm leading-relaxed">
+                            Official Slovak high school graduation exam (Maturita) in Slovak Language and Literature.
+                            Includes MCQ and short-text answers covering grammar, literature, and comprehension.
+                            <a href="https://www.nucem.sk/" target="_blank"
+                                class="text-accent hover:underline ml-1">NÚCEM ↗</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Year Selector -->
+            <div class="flex items-center gap-3 mb-6">
+                <span class="font-mono text-sm text-muted">Year:</span>
+                <div class="flex gap-2" id="year-selector">
+                    <button class="year-btn px-3 py-1 rounded-lg font-mono text-sm bg-ink text-cream"
+                        data-year="2025">2025</button>
+                    <button class="year-btn px-3 py-1 rounded-lg font-mono text-sm border border-ink/20 hover:bg-ink/5"
+                        data-year="2024">2024</button>
+                    <button class="year-btn px-3 py-1 rounded-lg font-mono text-sm border border-ink/20 hover:bg-ink/5"
+                        data-year="2023">2023</button>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="bg-white rounded-2xl border border-ink/10 overflow-hidden shadow-sm">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b border-ink/10 text-left">
+                            <th class="px-6 py-4 font-mono text-xs tracking-wider text-muted font-medium">#</th>
+                            <th class="px-6 py-4 font-mono text-xs tracking-wider text-muted font-medium">MODEL</th>
+                            <th class="px-6 py-4 font-mono text-xs tracking-wider text-muted font-medium text-right">
+                                OVERALL</th>
+                            <th
+                                class="px-6 py-4 font-mono text-xs tracking-wider text-muted font-medium text-right hidden md:table-cell">
+                                MCQ</th>
+                            <th
+                                class="px-6 py-4 font-mono text-xs tracking-wider text-muted font-medium text-right hidden md:table-cell">
+                                SHORT TEXT</th>
+                            <th
+                                class="px-6 py-4 font-mono text-xs tracking-wider text-muted font-medium text-right hidden lg:table-cell">
+                                COST</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="text-muted text-sm mt-4 font-mono">
+                Last updated: <span id="last-updated">December 2025</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 px-6 bg-paper">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <p class="font-mono text-xs tracking-[0.3em] text-muted mb-2">ABOUT</p>
+                    <h2 class="font-serif text-4xl italic mb-6">Why SlovakBench?</h2>
+                    <div class="space-y-4 text-muted leading-relaxed">
+                        <p>
+                            Most LLM benchmarks focus on English, leaving low-resource languages underrepresented.
+                            SlovakBench provides rigorous evaluation for Slovak language capabilities.
+                        </p>
+                        <p>
+                            We use real-world tasks: official Maturita exams from NÚCEM,
+                            part-of-speech tagging from linguistic corpora, and grammar correction from native texts.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <p class="font-mono text-xs tracking-[0.3em] text-muted mb-2">TASKS</p>
+                    <h2 class="font-serif text-4xl italic mb-6">Benchmark Tasks</h2>
+                    <div class="space-y-4">
+                        <div class="flex gap-4 items-start">
+                            <span class="text-2xl">📝</span>
+                            <div>
+                                <h4 class="font-semibold">Maturita Exam</h4>
+                                <p class="text-sm text-muted">Slovak high school graduation exam with MCQ and open-ended
+                                    questions.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start opacity-50">
+                            <span class="text-2xl">🏷️</span>
+                            <div>
+                                <h4 class="font-semibold">POS Tagging <span
+                                        class="text-xs font-mono text-accent">(coming soon)</span></h4>
+                                <p class="text-sm text-muted">Part-of-speech tagging on Slovak National Corpus data.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start opacity-50">
+                            <span class="text-2xl">✏️</span>
+                            <div>
+                                <h4 class="font-semibold">Grammar Correction <span
+                                        class="text-xs font-mono text-accent">(coming soon)</span></h4>
+                                <p class="text-sm text-muted">Detecting and correcting grammatical errors in Slovak
+                                    text.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-ink/10">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="font-serif text-xl italic">SlovakBench</p>
+            <p class="font-mono text-sm text-muted">
+                Open source benchmark for Slovak LLM evaluation
+            </p>
+            <div class="flex gap-4 font-mono text-sm">
+                <a href="https://github.com" class="hover:text-accent transition-colors">GitHub</a>
+                <a href="https://www.nucem.sk/" class="hover:text-accent transition-colors">NÚCEM</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Leaderboard data - loaded from leaderboard.json
+        // Data loaded from leaderboard.json
+        let data = {
+            exam: {},
+            pos: {},
+            grammar: {},
+        };
+
+        const taskDescriptions = {
+            exam: {
+                icon: "📝",
+                title: "Slovak Maturita Exam",
+                description: 'Official Slovak high school graduation exam (Maturita) in Slovak Language and Literature. Includes MCQ and short-text answers covering grammar, literature, and comprehension. <a href="https://www.nucem.sk/" target="_blank" class="text-accent hover:underline">NÚCEM ↗</a>'
+            },
+            pos: {
+                icon: "🏷️",
+                title: "Part-of-Speech Tagging",
+                description: "Part-of-speech tagging evaluation on Slovak National Corpus data. Tests morphological analysis capabilities. <span class='text-accent'>(Coming soon)</span>"
+            },
+            grammar: {
+                icon: "✏️",
+                title: "Grammar Correction",
+                description: "Detecting and correcting grammatical and spelling errors in Slovak text. <span class='text-accent'>(Coming soon)</span>"
+            }
+        };
+
+        let currentTask = 'exam';
+        let currentYear = 2025;
+
+        function renderLeaderboard() {
+            const tbody = document.getElementById('leaderboard-body');
+            const items = data[currentTask][currentYear] || [];
+
+            // Sort by overall score
+            const sorted = [...items].sort((a, b) => b.overall - a.overall);
+
+            if (sorted.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="6" class="px-6 py-12 text-center text-muted">
+                            <p class="text-lg mb-2">No data available</p>
+                            <p class="text-sm">This task/year combination hasn't been evaluated yet.</p>
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            tbody.innerHTML = sorted.map((item, i) => {
+                const rank = i + 1;
+                const rankClass = rank <= 3 ? `rank-${rank}` : '';
+                const medal = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : '';
+
+                return `
+                    <tr class="border-b border-ink/5 last:border-0 transition-colors">
+                        <td class="px-6 py-5 font-mono font-semibold ${rankClass}">${medal || rank}</td>
+                        <td class="px-6 py-5">
+                            <div class="font-sans font-medium">${item.model}</div>
+                            <div class="text-xs text-muted">${item.provider}</div>
+                        </td>
+                        <td class="px-6 py-5 text-right">
+                            <span class="font-mono font-semibold text-lg">${item.overall.toFixed(1)}%</span>
+                        </td>
+                        <td class="px-6 py-5 text-right font-mono hidden md:table-cell">${item.mcq?.toFixed(1) || '-'}%</td>
+                        <td class="px-6 py-5 text-right font-mono hidden md:table-cell">${item.short_text?.toFixed(1) || '-'}%</td>
+                        <td class="px-6 py-5 text-right font-mono text-muted hidden lg:table-cell">$${item.cost?.toFixed(4) || '-'}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function updateTaskDescription() {
+            const desc = taskDescriptions[currentTask];
+            document.getElementById('task-description').innerHTML = `
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-ink text-cream rounded-xl flex items-center justify-center font-mono text-lg">${desc.icon}</div>
+                    <div>
+                        <h3 class="font-sans font-semibold text-lg mb-1">${desc.title}</h3>
+                        <p class="text-muted text-sm leading-relaxed">${desc.description}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Task tab clicks
+        document.querySelectorAll('.task-tab').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.task-tab').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentTask = btn.dataset.task;
+                updateTaskDescription();
+                renderLeaderboard();
+            });
+        });
+
+        // Year selector clicks
+        document.querySelectorAll('.year-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.year-btn').forEach(b => {
+                    b.classList.remove('bg-ink', 'text-cream');
+                    b.classList.add('border', 'border-ink/20');
+                });
+                btn.classList.add('bg-ink', 'text-cream');
+                btn.classList.remove('border', 'border-ink/20');
+                currentYear = parseInt(btn.dataset.year);
+                renderLeaderboard();
+            });
+        });
+
+        // Load external data if available
+        fetch('leaderboard.json')
+            .then(r => r.json())
+            .then(d => {
+                data = d;
+                renderLeaderboard();
+                // Update stats
+                const allModels = new Set();
+                Object.values(data).forEach(task => {
+                    Object.values(task).forEach(year => {
+                        year.forEach(m => allModels.add(m.model));
+                    });
+                });
+                document.getElementById('stat-models').textContent = allModels.size;
+            })
+            .catch(() => {
+                // Use embedded data
+                renderLeaderboard();
+            });
+
+        // Initial render
+        renderLeaderboard();
+    </script>
+</body>
+
+</html>
