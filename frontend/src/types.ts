@@ -5,6 +5,7 @@ export interface ModelResult {
     mcq?: number;
     short_text?: number;
     cost?: number;
+    latency_ms?: number;
 }
 
 export interface LeaderboardData {
@@ -14,7 +15,7 @@ export interface LeaderboardData {
 }
 
 export type TaskType = 'exam' | 'pos' | 'grammar';
-export type SortField = 'overall' | 'mcq' | 'short_text' | 'cost';
+export type SortField = 'overall' | 'mcq' | 'short_text' | 'cost' | 'latency_ms';
 export type SortDirection = 'asc' | 'desc';
 
 export interface TaskDescription {
