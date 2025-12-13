@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Image from "next/image";
 import type { LeaderboardData, TaskType, SortField, SortDirection, TaskDescription } from "@/types";
 
 const TASK_DESCRIPTIONS: Record<TaskType, TaskDescription> = {
@@ -22,11 +23,16 @@ const TASK_DESCRIPTIONS: Record<TaskType, TaskDescription> = {
     },
 };
 
-const PROVIDER_COLORS: Record<string, string> = {
-    OpenAI: "bg-[var(--color-openai)]",
-    Google: "bg-[var(--color-google)]",
-    Anthropic: "bg-[var(--color-anthropic)]",
-    Meta: "bg-[var(--color-meta)]",
+// Provider logos - SVGs in public/logos/
+const PROVIDER_LOGOS: Record<string, string> = {
+    OpenAI: "/logos/openai.svg",
+    Google: "/logos/google.svg",
+    Anthropic: "/logos/anthropic.svg",
+    Meta: "/logos/meta.svg",
+    Mistral: "/logos/mistral.svg",
+    DeepSeek: "/logos/deepseek.svg",
+    Alibaba: "/logos/alibaba.svg",
+    xAI: "/logos/xai.svg",
 };
 
 const YEARS = [2025, 2024, 2023];
@@ -84,8 +90,8 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                 key={task}
                                 onClick={() => setCurrentTask(task)}
                                 className={`px-4 py-2 rounded-full border border-[var(--color-ink)]/20 transition-all ${currentTask === task
-                                        ? "bg-[var(--color-ink)] text-[var(--color-cream)]"
-                                        : "hover:bg-[var(--color-ink)]/5"
+                                    ? "bg-[var(--color-ink)] text-[var(--color-cream)]"
+                                    : "hover:bg-[var(--color-ink)]/5"
                                     }`}
                             >
                                 {task === "exam" ? "Maturita Exam" : task === "pos" ? "POS Tagging" : "Grammar"}
@@ -131,8 +137,8 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                     key={year}
                                     onClick={() => setCurrentYear(year)}
                                     className={`px-3 py-1.5 rounded-lg font-[var(--font-mono)] text-sm transition-all ${currentYear === year
-                                            ? "bg-[var(--color-ink)] text-[var(--color-cream)]"
-                                            : "border border-[var(--color-ink)]/20 hover:bg-[var(--color-ink)]/5"
+                                        ? "bg-[var(--color-ink)] text-[var(--color-cream)]"
+                                        : "border border-[var(--color-ink)]/20 hover:bg-[var(--color-ink)]/5"
                                         }`}
                                 >
                                     {year}
@@ -150,11 +156,13 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                     key={provider}
                                     onClick={() => setCurrentProvider(provider)}
                                     className={`px-3 py-1.5 rounded-lg font-[var(--font-mono)] text-sm border border-[var(--color-ink)]/20 transition-all flex items-center gap-1.5 ${currentProvider === provider
-                                            ? "bg-[var(--color-ink)] text-[var(--color-cream)]"
-                                            : "hover:bg-[var(--color-ink)]/5"
+                                        ? "bg-[var(--color-ink)] text-[var(--color-cream)]"
+                                        : "hover:bg-[var(--color-ink)]/5"
                                         }`}
                                 >
-                                    {provider !== "all" && <span className={`w-2 h-2 rounded-full ${PROVIDER_COLORS[provider]}`} />}
+                                    {provider !== "all" && PROVIDER_LOGOS[provider] && (
+                                        <Image src={PROVIDER_LOGOS[provider]} alt={provider} width={14} height={14} className="opacity-70" />
+                                    )}
                                     {provider === "all" ? "All" : provider}
                                 </button>
                             ))}
@@ -167,26 +175,24 @@ export function Leaderboard({ data }: LeaderboardProps) {
                     <table className="w-full">
                         <thead>
                             <tr className="border-b border-[var(--color-ink)]/10 text-left">
-                                <th className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium">
-                                    #
+                                <th className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium w-20">
+                                    Rank
                                 </th>
                                 <th className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium">
-                                    MODEL
+                                    Model
                                 </th>
                                 <th
                                     onClick={() => handleSort("overall")}
-                                    className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] tooltip"
-                                    data-tooltip="Weighted average of MCQ and Short Text scores"
+                                    className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)]"
                                 >
-                                    OVERALL{" "}
+                                    Score{" "}
                                     <span className={`text-[10px] ml-1 ${sort.field === "overall" ? "opacity-100" : "opacity-50"}`}>
                                         {sort.field === "overall" && sort.direction === "asc" ? "▲" : "▼"}
                                     </span>
                                 </th>
                                 <th
                                     onClick={() => handleSort("mcq")}
-                                    className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell tooltip"
-                                    data-tooltip="Multiple Choice Questions accuracy (40 questions)"
+                                    className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
                                 >
                                     MCQ{" "}
                                     <span className={`text-[10px] ml-1 ${sort.field === "mcq" ? "opacity-100" : "opacity-50"}`}>
@@ -195,20 +201,18 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                 </th>
                                 <th
                                     onClick={() => handleSort("short_text")}
-                                    className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell tooltip"
-                                    data-tooltip="Short answer questions accuracy (24 questions)"
+                                    className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
                                 >
-                                    SHORT TEXT{" "}
+                                    Text{" "}
                                     <span className={`text-[10px] ml-1 ${sort.field === "short_text" ? "opacity-100" : "opacity-50"}`}>
                                         {sort.field === "short_text" && sort.direction === "asc" ? "▲" : "▼"}
                                     </span>
                                 </th>
                                 <th
                                     onClick={() => handleSort("cost")}
-                                    className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden lg:table-cell tooltip"
-                                    data-tooltip="Estimated cost per full evaluation run"
+                                    className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden lg:table-cell"
                                 >
-                                    COST{" "}
+                                    Cost{" "}
                                     <span className={`text-[10px] ml-1 ${sort.field === "cost" ? "opacity-100" : "opacity-50"}`}>
                                         {sort.field === "cost" && sort.direction === "asc" ? "▲" : "▼"}
                                     </span>
@@ -226,41 +230,43 @@ export function Leaderboard({ data }: LeaderboardProps) {
                             ) : (
                                 filteredAndSorted.map((item, i) => {
                                     const rank = i + 1;
-                                    const medal = rank === 1 ? "🥇" : rank === 2 ? "🥈" : rank === 3 ? "🥉" : null;
-                                    const providerColor = PROVIDER_COLORS[item.provider] || "bg-[var(--color-muted)]";
+                                    const logo = PROVIDER_LOGOS[item.provider];
 
                                     return (
-                                        <tr key={item.model} className="border-b border-[var(--color-ink)]/5 last:border-0 transition-colors">
-                                            <td
-                                                className={`px-6 py-5 font-[var(--font-mono)] font-semibold ${rank === 1 ? "rank-1" : rank === 2 ? "rank-2" : rank === 3 ? "rank-3" : ""
-                                                    }`}
-                                            >
-                                                {medal || rank}
+                                        <tr key={item.model} className="border-b border-[var(--color-ink)]/5 last:border-0 hover:bg-[var(--color-paper)]/50 transition-colors">
+                                            {/* Rank - bigger, bolder */}
+                                            <td className="px-6 py-5">
+                                                <span className={`font-[var(--font-mono)] text-2xl font-bold ${rank === 1 ? "text-yellow-500" : rank === 2 ? "text-gray-400" : rank === 3 ? "text-amber-600" : "text-[var(--color-muted)]"
+                                                    }`}>
+                                                    {rank}
+                                                </span>
                                             </td>
+                                            {/* Model with logo */}
                                             <td className="px-6 py-5">
                                                 <div className="flex items-center gap-3">
-                                                    <div>
-                                                        <div className="font-[var(--font-sans)] font-semibold text-base">{item.model}</div>
-                                                        <div className="flex items-center gap-1.5 mt-1">
-                                                            <span className={`w-2 h-2 rounded-full ${providerColor}`} />
-                                                            <span className="text-sm text-[var(--color-muted)]">{item.provider}</span>
-                                                        </div>
-                                                    </div>
+                                                    {logo && (
+                                                        <Image
+                                                            src={logo}
+                                                            alt={item.provider}
+                                                            width={20}
+                                                            height={20}
+                                                            className="flex-shrink-0"
+                                                        />
+                                                    )}
+                                                    <span className="font-[var(--font-mono)] text-base">{item.model}</span>
                                                 </div>
                                             </td>
+                                            {/* Score */}
                                             <td className="px-6 py-5 text-right">
-                                                <div className="flex flex-col items-end gap-1">
-                                                    <span className="font-[var(--font-mono)] font-semibold text-lg">{item.overall.toFixed(1)}%</span>
-                                                    <div className="score-bar w-16">
-                                                        <div className="score-bar-fill" style={{ width: `${item.overall}%` }} />
-                                                    </div>
-                                                </div>
+                                                <span className="font-[var(--font-mono)] font-semibold text-lg">
+                                                    {item.overall.toFixed(1)}
+                                                </span>
                                             </td>
-                                            <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell">
-                                                {item.mcq?.toFixed(1) || "-"}%
+                                            <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
+                                                {item.mcq?.toFixed(1) || "-"}
                                             </td>
-                                            <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell">
-                                                {item.short_text?.toFixed(1) || "-"}%
+                                            <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
+                                                {item.short_text?.toFixed(1) || "-"}
                                             </td>
                                             <td className="px-6 py-5 text-right font-[var(--font-mono)] text-[var(--color-muted)] hidden lg:table-cell">
                                                 ${item.cost?.toFixed(4) || "-"}
@@ -273,21 +279,15 @@ export function Leaderboard({ data }: LeaderboardProps) {
                     </table>
                 </div>
 
-                {/* Table legend */}
+                {/* Updated legend with logos */}
                 <div className="flex flex-wrap items-center gap-6 mt-4 text-sm text-[var(--color-muted)] font-[var(--font-mono)]">
                     <span>Providers:</span>
-                    <div className="flex items-center gap-1.5">
-                        <span className="w-2.5 h-2.5 rounded-full bg-[var(--color-openai)]" />
-                        OpenAI
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                        <span className="w-2.5 h-2.5 rounded-full bg-[var(--color-google)]" />
-                        Google
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                        <span className="w-2.5 h-2.5 rounded-full bg-[var(--color-anthropic)]" />
-                        Anthropic
-                    </div>
+                    {Object.entries(PROVIDER_LOGOS).map(([provider, logo]) => (
+                        <div key={provider} className="flex items-center gap-1.5">
+                            <Image src={logo} alt={provider} width={14} height={14} />
+                            {provider}
+                        </div>
+                    ))}
                     <span className="ml-auto">Last updated: December 2025</span>
                 </div>
             </div>
