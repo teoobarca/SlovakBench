@@ -75,6 +75,8 @@ export function Leaderboard({ data }: LeaderboardProps) {
         field: "overall",
         direction: "desc",
     });
+    const [highlightedProviders, setHighlightedProviders] = useState<Set<string>>(new Set());
+    const [hoveredProvider, setHoveredProvider] = useState<string | null>(null);
 
     const filteredAndSorted = useMemo(() => {
         let items = data[currentTask]?.[currentYear] || [];
@@ -95,6 +97,28 @@ export function Leaderboard({ data }: LeaderboardProps) {
             field,
             direction: prev.field === field && prev.direction === "desc" ? "asc" : "desc",
         }));
+    };
+
+    const toggleProviderHighlight = (provider: string) => {
+        setHighlightedProviders((prev) => {
+            const next = new Set(prev);
+            if (next.has(provider)) {
+                next.delete(provider);
+            } else {
+                next.add(provider);
+            }
+            return next;
+        });
+    };
+
+    const isProviderActive = (provider: string) => {
+        if (highlightedProviders.size > 0) {
+            return highlightedProviders.has(provider) || (hoveredProvider === provider);
+        }
+        if (hoveredProvider) {
+            return provider === hoveredProvider;
+        }
+        return true;
     };
 
     const taskDesc = TASK_DESCRIPTIONS[currentTask];
@@ -342,12 +366,24 @@ export function Leaderboard({ data }: LeaderboardProps) {
                     <div className="bg-white rounded-2xl border border-[var(--color-ink)]/10 overflow-hidden shadow-sm p-6">
                         <div className="mb-4 flex items-center justify-between">
                             <h3 className="font-[var(--font-mono)] text-sm text-[var(--color-muted)]">Score vs Cost</h3>
-                            <div className="flex items-center gap-4 text-xs font-[var(--font-mono)]">
-                                {Object.entries(PROVIDER_COLORS).slice(0, 4).map(([provider, color]) => (
-                                    <div key={provider} className="flex items-center gap-1.5">
+                            <div className="flex flex-wrap items-center gap-3 text-xs font-[var(--font-mono)]">
+                                {Object.entries(PROVIDER_COLORS).map(([provider, color]) => (
+                                    <button
+                                        key={provider}
+                                        onClick={() => toggleProviderHighlight(provider)}
+                                        onMouseEnter={() => setHoveredProvider(provider)}
+                                        onMouseLeave={() => setHoveredProvider(null)}
+                                        className={`flex items-center gap-1.5 px-2 py-1 rounded-md transition-all cursor-pointer border ${highlightedProviders.has(provider)
+                                            ? "bg-[var(--color-ink)]/5 border-[var(--color-ink)]/10"
+                                            : "border-transparent hover:bg-[var(--color-ink)]/5"
+                                            }`}
+                                        style={{
+                                            opacity: isProviderActive(provider) ? 1 : 0.4
+                                        }}
+                                    >
                                         <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: color }} />
                                         {provider}
-                                    </div>
+                                    </button>
                                 ))}
                             </div>
                         </div>
@@ -416,22 +452,28 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                 <Scatter
                                     data={scatterData}
                                     name="Models"
+                                    isAnimationActive={false}
                                     shape={(props: any) => {
-                                        const { cx, cy, fill } = props;
-                                        return <circle cx={cx} cy={cy} r={5} fill={fill} />;
+                                        const { cx, cy, fill, fillOpacity } = props;
+                                        return <circle cx={cx} cy={cy} r={5} fill={fill} fillOpacity={fillOpacity} />;
                                     }}
                                     activeShape={(props: any) => {
-                                        const { cx, cy, fill } = props;
+                                        const { cx, cy, fill, fillOpacity } = props;
                                         return (
                                             <g>
                                                 <circle cx={cx} cy={cy} r={8} fill="white" stroke={fill} strokeWidth={1} style={{ filter: 'drop-shadow(0px 2px 4px rgba(0,0,0,0.1))' }} />
-                                                <circle cx={cx} cy={cy} r={6} fill={fill} />
+                                                <circle cx={cx} cy={cy} r={6} fill={fill} fillOpacity={fillOpacity} />
                                             </g>
                                         );
                                     }}
                                 >
                                     {scatterData.map((entry, index) => (
-                                        <Cell key={`cell-${index}`} fill={entry.color} />
+                                        <Cell
+                                            key={`cell-${index}`}
+                                            fill={entry.color}
+                                            fillOpacity={isProviderActive(entry.provider) ? 1 : 0.15}
+                                            strokeOpacity={isProviderActive(entry.provider) ? 1 : 0.15}
+                                        />
                                     ))}
                                     <LabelList
                                         dataKey="model"
@@ -446,6 +488,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                         content={(props: any) => {
                                             const { x, y, value, index } = props;
                                             const entry = scatterData[index];
+                                            const isActive = isProviderActive(entry.provider);
                                             return (
                                                 <text
                                                     x={x}
@@ -453,6 +496,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                                     dx={15}
                                                     dy={8}
                                                     fill={entry.color}
+                                                    fillOpacity={isActive ? 1 : 0.25}
                                                     fontSize={10}
                                                     fontFamily="var(--font-mono)"
                                                     fontWeight={600}
