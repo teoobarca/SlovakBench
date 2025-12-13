@@ -1,5 +1,5 @@
 {
-  "model_name": "o4-mini-high",
+  "model_name": "openai/o4-mini-high",
   "dataset_path": "data/processed/exam/2025.json",
   "timestamp": "2025-12-13T22:41:14.249876",
   "total_questions": 64,

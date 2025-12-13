@@ -141,7 +141,17 @@ def evaluate(
         years_to_eval = sorted(datasets.keys())  # Default to all
     
     # Determine models
-    models_to_eval = [model] if model else MODELS
+    if model:
+        # Validate model is in config
+        if model not in MODELS:
+            typer.echo(f"❌ Unknown model: {model}")
+            typer.echo(f"   Available models:")
+            for m in MODELS:
+                typer.echo(f"     {m}")
+            raise typer.Exit(1)
+        models_to_eval = [model]
+    else:
+        models_to_eval = MODELS
     
     # Track what needs to be done
     tasks = []
@@ -254,6 +264,10 @@ def report(
                     if data.get("short_text_accuracy"):
                         model_stats[model]["st"].append(data["short_text_accuracy"])
                     model_stats[model]["cost"] += data.get("total_cost_usd", 0)
+                    if data.get("avg_latency_ms"):
+                        if "latency" not in model_stats[model]:
+                            model_stats[model]["latency"] = []
+                        model_stats[model]["latency"].append(data["avg_latency_ms"])
         
         if not model_stats:
             typer.echo("No results found. Run 'evaluate' first.")
@@ -265,12 +279,14 @@ def report(
         table.add_column("Avg Overall", justify="right", style="bold")
         table.add_column("Avg MCQ", justify="right")
         table.add_column("Avg Text", justify="right")
+        table.add_column("Latency", justify="right", style="dim")
         table.add_column("Total Cost", justify="right", style="green")
         
         for model, stats in sorted(model_stats.items()):
             avg_acc = sum(stats["accs"]) / len(stats["accs"]) if stats["accs"] else 0
             avg_mcq = sum(stats["mcq"]) / len(stats["mcq"]) if stats["mcq"] else 0
             avg_st = sum(stats["st"]) / len(stats["st"]) if stats["st"] else 0
+            avg_latency = sum(stats.get("latency", [])) / len(stats.get("latency", [1])) if stats.get("latency") else None
             years_str = ",".join(sorted(set(stats["years"])))
             
             table.add_row(
@@ -279,6 +295,7 @@ def report(
                 f"{avg_acc:.1%}",
                 f"{avg_mcq:.1%}" if stats["mcq"] else "-",
                 f"{avg_st:.1%}" if stats["st"] else "-",
+                f"{avg_latency:.0f}ms" if avg_latency else "-",
                 f"${stats['cost']:.4f}"
             )
         
@@ -288,11 +305,11 @@ def report(
 
 @app.command()
 def export():
-    """Export leaderboard data to public/leaderboard.json for frontend."""
+    """Export leaderboard data to frontend/public/leaderboard.json for frontend."""
     from collections import defaultdict
     
-    PUBLIC_DIR = Path("public")
-    PUBLIC_DIR.mkdir(exist_ok=True)
+    OUTPUT_DIR = Path("frontend/public")
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     
     # Structure: { task: { year: [ {model, provider, overall, mcq, short_text, cost} ] } }
     leaderboard = {
@@ -335,6 +352,7 @@ def export():
                         "mcq": round(data.get("mcq_accuracy", 0) * 100, 1) if data.get("mcq_accuracy") else None,
                         "short_text": round(data.get("short_text_accuracy", 0) * 100, 1) if data.get("short_text_accuracy") else None,
                         "cost": round(data.get("total_cost_usd", 0), 4),
+                        "latency_ms": round(data.get("avg_latency_ms", 0)) if data.get("avg_latency_ms") else None,
                     })
     
     # Sort each year by overall score
@@ -349,7 +367,7 @@ def export():
     # Convert defaultdict to regular dict for JSON
     output = {task: dict(years) for task, years in leaderboard.items()}
     
-    output_path = PUBLIC_DIR / "leaderboard.json"
+    output_path = OUTPUT_DIR / "leaderboard.json"
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
     
