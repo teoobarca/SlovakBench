@@ -41,12 +41,14 @@ venv.bak/
 .vscode
 .idea
 *.swp
+.DS_Store
 
-# Data
-data/raw/*
-!data/raw/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
-data/results/*
-!data/results/.gitkeep
+# Raw PDFs (large binary files, can be downloaded from NUCEM)
+# data/raw/*.pdf
 
+# Checkpoints (temporary, can be regenerated)
+data/checkpoints/
+
+# Keep processed data and results in git for reproducibility!
+# data/processed/ - contains extracted exam questions
+# data/results/ - contains benchmark results

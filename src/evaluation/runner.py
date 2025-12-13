@@ -9,6 +9,7 @@ Features:
 - Graceful error handling
 """
 import asyncio
+import time
 import json
 import os
 import sys
@@ -40,6 +41,7 @@ class QuestionResult:
     correct_answer: str
     is_correct: bool
     cost_usd: float = 0.0
+    latency_ms: float = 0.0  # Response time in milliseconds
     raw_response: str = ""
     error: Optional[str] = None
 
@@ -56,6 +58,8 @@ class EvaluationResult:
     total_cost_usd: float = 0.0
     mcq_accuracy: Optional[float] = None
     short_text_accuracy: Optional[float] = None
+    avg_latency_ms: Optional[float] = None
+    p95_latency_ms: Optional[float] = None
     results: List[QuestionResult] = field(default_factory=list)
     
     def to_dict(self) -> Dict:
@@ -69,6 +73,8 @@ class EvaluationResult:
             "total_cost_usd": self.total_cost_usd,
             "mcq_accuracy": self.mcq_accuracy,
             "short_text_accuracy": self.short_text_accuracy,
+            "avg_latency_ms": self.avg_latency_ms,
+            "p95_latency_ms": self.p95_latency_ms,
             "results": [
                 {
                     "question_id": r.question_id,
@@ -77,6 +83,7 @@ class EvaluationResult:
                     "correct_answer": r.correct_answer,
                     "is_correct": r.is_correct,
                     "cost_usd": r.cost_usd,
+                    "latency_ms": r.latency_ms,
                     "error": r.error,
                 }
                 for r in self.results
@@ -111,6 +118,7 @@ class CheckpointManager:
                     correct_answer=r["correct_answer"],
                     is_correct=r["is_correct"],
                     cost_usd=r.get("cost_usd", 0.0),
+                    latency_ms=r.get("latency_ms", 0.0),
                     raw_response=r.get("raw_response", ""),
                     error=r.get("error"),
                 )
@@ -133,6 +141,7 @@ class CheckpointManager:
                     "correct_answer": r.correct_answer,
                     "is_correct": r.is_correct,
                     "cost_usd": r.cost_usd,
+                    "latency_ms": r.latency_ms,
                     "raw_response": r.raw_response,
                     "error": r.error,
                 }
@@ -234,22 +243,26 @@ Príklad: "epiteton" (nie "epiteton (básnický prívlastok)")"""
         else:
             correct_answer = ", ".join(q["answer"].get("accepted", [])[:3])
         
+        start_time = time.perf_counter()
         try:
             # Apply timeout to the LLM call
             response = await asyncio.wait_for(
                 self.llm.ainvoke([system_msg, HumanMessage(content=prompt)]),
                 timeout=self.timeout
             )
+            latency_ms = (time.perf_counter() - start_time) * 1000
             raw_response = response.content
             cost = get_cost(response)
             error = None
             
         except asyncio.TimeoutError:
+            latency_ms = (time.perf_counter() - start_time) * 1000
             raw_response = ""
             cost = 0.0
             error = f"Timeout after {self.timeout}s"
             
         except Exception as e:
+            latency_ms = (time.perf_counter() - start_time) * 1000
             raw_response = ""
             cost = 0.0
             error = str(e)
@@ -264,6 +277,7 @@ Príklad: "epiteton" (nie "epiteton (básnický prívlastok)")"""
             correct_answer=correct_answer,
             is_correct=is_correct,
             cost_usd=cost,
+            latency_ms=latency_ms,
             raw_response=raw_response,
             error=error,
         )
@@ -341,6 +355,17 @@ Príklad: "epiteton" (nie "epiteton (básnický prívlastok)")"""
         correct = sum(1 for r in all_results if r.is_correct)
         total_cost = sum(r.cost_usd for r in all_results)
         
+        # Compute latency stats
+        latencies = [r.latency_ms for r in all_results if r.latency_ms > 0]
+        if latencies:
+            avg_latency = sum(latencies) / len(latencies)
+            sorted_latencies = sorted(latencies)
+            p95_idx = int(len(sorted_latencies) * 0.95)
+            p95_latency = sorted_latencies[min(p95_idx, len(sorted_latencies) - 1)]
+        else:
+            avg_latency = None
+            p95_latency = None
+        
         # Count errors/timeouts
         errors = sum(1 for r in all_results if r.error)
         if errors > 0:
@@ -359,6 +384,8 @@ Príklad: "epiteton" (nie "epiteton (básnický prívlastok)")"""
             total_cost_usd=total_cost,
             mcq_accuracy=mcq_correct / mcq_total if mcq_total > 0 else None,
             short_text_accuracy=st_correct / st_total if st_total > 0 else None,
+            avg_latency_ms=avg_latency,
+            p95_latency_ms=p95_latency,
             results=all_results,
         )
 

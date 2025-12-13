@@ -173,7 +173,8 @@ def evaluate(
             
             mcq = f"MCQ {result.mcq_accuracy:.0%}" if result.mcq_accuracy else ""
             st = f"Text {result.short_text_accuracy:.0%}" if result.short_text_accuracy else ""
-            typer.echo(f"   ✅ {result.accuracy:.1%} ({result.correct_count}/{result.total_questions}) | {mcq} | {st} | 💰${result.total_cost_usd:.4f}")
+            latency = f"⏱️ {result.avg_latency_ms:.0f}ms" if result.avg_latency_ms else ""
+            typer.echo(f"   ✅ {result.accuracy:.1%} ({result.correct_count}/{result.total_questions}) | {mcq} | {st} | 💰${result.total_cost_usd:.4f} | {latency}")
         except Exception as e:
             typer.echo(f"   ❌ Error: {e}")
 
