@@ -9,16 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        serif: ['Instrument Serif', 'Georgia', 'serif'],
+                        display: ['Space Grotesk', 'system-ui', 'sans-serif'],
                         mono: ['JetBrains Mono', 'monospace'],
-                        sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
                     },
                     colors: {
                         cream: '#FAFAF8',
@@ -26,6 +26,10 @@
                         paper: '#F5F4F0',
                         accent: '#E63946',
                         muted: '#6B7280',
+                        openai: '#10A37F',
+                        google: '#4285F4',
+                        anthropic: '#D4A574',
+                        meta: '#0668E1',
                     }
                 }
             }
@@ -70,6 +74,11 @@
             color: #FAFAF8;
         }
 
+        .provider-filter.active {
+            background: #1A1A1A;
+            color: #FAFAF8;
+        }
+
         tr:hover td {
             background: #F5F4F0;
         }
@@ -86,8 +95,113 @@
             color: #CD7F32;
         }
 
+        .sortable {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .sortable:hover {
+            color: #1A1A1A;
+        }
+
+        .sort-indicator {
+            opacity: 0.5;
+            font-size: 10px;
+            margin-left: 4px;
+        }
+
+        .sortable.active .sort-indicator {
+            opacity: 1;
+        }
+
+        /* Tooltips */
+        .tooltip {
+            position: relative;
+        }
+
+        .tooltip::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 10px;
+            background: #1A1A1A;
+            color: #FAFAF8;
+            font-size: 11px;
+            font-weight: 400;
+            white-space: nowrap;
+            border-radius: 6px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+            z-index: 100;
+            margin-bottom: 6px;
+        }
+
+        .tooltip::after {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: #1A1A1A;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+            z-index: 100;
+        }
+
+        .tooltip:hover::before,
+        .tooltip:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Provider badges */
+        .provider-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .provider-openai {
+            background: #10A37F15;
+            color: #0D8A6F;
+        }
+
+        .provider-google {
+            background: #4285F415;
+            color: #3367D6;
+        }
+
+        .provider-anthropic {
+            background: #D4A57420;
+            color: #B8956A;
+        }
+
+        .provider-meta {
+            background: #0668E115;
+            color: #0559C0;
+        }
+
+        /* Score bar */
         .score-bar {
-            background: linear-gradient(90deg, #1A1A1A 0%, #1A1A1A var(--score), #E5E7EB var(--score), #E5E7EB 100%);
+            height: 4px;
+            background: #E5E7EB;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .score-bar-fill {
+            height: 100%;
+            background: #1A1A1A;
+            border-radius: 2px;
         }
     </style>
 </head>
@@ -96,7 +210,7 @@
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 bg-cream/90 backdrop-blur-sm z-50 border-b border-ink/5">
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#" class="font-serif text-2xl italic">SlovakBench</a>
+            <a href="#" class="font-display text-2xl font-semibold">SlovakBench</a>
             <div class="flex items-center gap-6 text-sm font-mono">
                 <a href="#leaderboard" class="hover:text-accent transition-colors">Leaderboard</a>
                 <a href="#about" class="hover:text-accent transition-colors">About</a>
@@ -109,9 +223,9 @@
     <header class="pt-32 pb-20 px-6">
         <div class="max-w-6xl mx-auto">
             <p class="font-mono text-xs tracking-[0.3em] text-muted mb-4 animate-fade-up">BENCHMARK</p>
-            <h1 class="font-serif text-7xl md:text-8xl lg:text-9xl leading-[0.9] mb-8 animate-fade-up delay-1">
-                Slovak<br>
-                <span class="italic text-accent">Bench</span>
+            <h1
+                class="font-display text-7xl md:text-8xl lg:text-9xl leading-[0.9] mb-8 animate-fade-up delay-1 font-bold">
+                Slovak<span class="text-accent">Bench</span>
             </h1>
             <p class="font-sans text-xl md:text-2xl text-muted max-w-2xl leading-relaxed animate-fade-up delay-2">
                 Evaluating Large Language Models on Slovak language tasks.
@@ -148,7 +262,7 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                 <div>
                     <p class="font-mono text-xs tracking-[0.3em] text-muted mb-2">RESULTS</p>
-                    <h2 class="font-serif text-5xl italic">Leaderboard</h2>
+                    <h2 class="font-display text-5xl font-semibold">Leaderboard</h2>
                 </div>
 
                 <!-- Task Tabs -->
@@ -186,16 +300,49 @@
                 </div>
             </div>
 
-            <!-- Year Selector -->
-            <div class="flex items-center gap-3 mb-6">
-                <span class="font-mono text-sm text-muted">Year:</span>
-                <div class="flex gap-2" id="year-selector">
-                    <button class="year-btn px-3 py-1 rounded-lg font-mono text-sm bg-ink text-cream"
-                        data-year="2025">2025</button>
-                    <button class="year-btn px-3 py-1 rounded-lg font-mono text-sm border border-ink/20 hover:bg-ink/5"
-                        data-year="2024">2024</button>
-                    <button class="year-btn px-3 py-1 rounded-lg font-mono text-sm border border-ink/20 hover:bg-ink/5"
-                        data-year="2023">2023</button>
+            <!-- Filters Row -->
+            <div class="flex flex-wrap items-center gap-6 mb-6">
+                <!-- Year Selector -->
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-sm text-muted">Year:</span>
+                    <div class="flex gap-2" id="year-selector">
+                        <button class="year-btn px-3 py-1.5 rounded-lg font-mono text-sm bg-ink text-cream"
+                            data-year="2025">2025</button>
+                        <button
+                            class="year-btn px-3 py-1.5 rounded-lg font-mono text-sm border border-ink/20 hover:bg-ink/5"
+                            data-year="2024">2024</button>
+                        <button
+                            class="year-btn px-3 py-1.5 rounded-lg font-mono text-sm border border-ink/20 hover:bg-ink/5"
+                            data-year="2023">2023</button>
+                    </div>
+                </div>
+
+                <!-- Provider Filter -->
+                <div class="flex items-center gap-3">
+                    <span class="font-mono text-sm text-muted">Provider:</span>
+                    <div class="flex gap-2" id="provider-filter">
+                        <button
+                            class="provider-filter active px-3 py-1.5 rounded-lg font-mono text-sm border border-ink/20 transition-all"
+                            data-provider="all">All</button>
+                        <button
+                            class="provider-filter px-3 py-1.5 rounded-lg font-mono text-sm border border-ink/20 hover:bg-ink/5 transition-all flex items-center gap-1.5"
+                            data-provider="OpenAI">
+                            <span class="w-2 h-2 rounded-full bg-openai"></span>
+                            OpenAI
+                        </button>
+                        <button
+                            class="provider-filter px-3 py-1.5 rounded-lg font-mono text-sm border border-ink/20 hover:bg-ink/5 transition-all flex items-center gap-1.5"
+                            data-provider="Google">
+                            <span class="w-2 h-2 rounded-full bg-google"></span>
+                            Google
+                        </button>
+                        <button
+                            class="provider-filter px-3 py-1.5 rounded-lg font-mono text-sm border border-ink/20 hover:bg-ink/5 transition-all flex items-center gap-1.5"
+                            data-provider="Anthropic">
+                            <span class="w-2 h-2 rounded-full bg-anthropic"></span>
+                            Anthropic
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -206,17 +353,22 @@
                         <tr class="border-b border-ink/10 text-left">
                             <th class="px-6 py-4 font-mono text-xs tracking-wider text-muted font-medium">#</th>
                             <th class="px-6 py-4 font-mono text-xs tracking-wider text-muted font-medium">MODEL</th>
-                            <th class="px-6 py-4 font-mono text-xs tracking-wider text-muted font-medium text-right">
-                                OVERALL</th>
-                            <th
-                                class="px-6 py-4 font-mono text-xs tracking-wider text-muted font-medium text-right hidden md:table-cell">
-                                MCQ</th>
-                            <th
-                                class="px-6 py-4 font-mono text-xs tracking-wider text-muted font-medium text-right hidden md:table-cell">
-                                SHORT TEXT</th>
-                            <th
-                                class="px-6 py-4 font-mono text-xs tracking-wider text-muted font-medium text-right hidden lg:table-cell">
-                                COST</th>
+                            <th class="px-6 py-4 font-mono text-xs tracking-wider text-muted font-medium sortable tooltip text-right"
+                                data-sort="overall" data-tooltip="Weighted average of MCQ and Short Text scores">
+                                OVERALL <span class="sort-indicator">▼</span>
+                            </th>
+                            <th class="px-6 py-4 font-mono text-xs tracking-wider text-muted font-medium sortable tooltip text-right hidden md:table-cell"
+                                data-sort="mcq" data-tooltip="Multiple Choice Questions accuracy (40 questions)">
+                                MCQ <span class="sort-indicator">▼</span>
+                            </th>
+                            <th class="px-6 py-4 font-mono text-xs tracking-wider text-muted font-medium sortable tooltip text-right hidden md:table-cell"
+                                data-sort="short_text" data-tooltip="Short answer questions accuracy (24 questions)">
+                                SHORT TEXT <span class="sort-indicator">▼</span>
+                            </th>
+                            <th class="px-6 py-4 font-mono text-xs tracking-wider text-muted font-medium sortable tooltip text-right hidden lg:table-cell"
+                                data-sort="cost" data-tooltip="Estimated cost per full evaluation run">
+                                COST <span class="sort-indicator">▼</span>
+                            </th>
                         </tr>
                     </thead>
                     <tbody id="leaderboard-body">
@@ -225,9 +377,23 @@
                 </table>
             </div>
 
-            <p class="text-muted text-sm mt-4 font-mono">
-                Last updated: <span id="last-updated">December 2025</span>
-            </p>
+            <!-- Table legend -->
+            <div class="flex flex-wrap items-center gap-6 mt-4 text-sm text-muted font-mono">
+                <span>Providers:</span>
+                <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-openai"></span>
+                    OpenAI
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-google"></span>
+                    Google
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-anthropic"></span>
+                    Anthropic
+                </div>
+                <span class="ml-auto">Last updated: <span id="last-updated">December 2025</span></span>
+            </div>
         </div>
     </section>
 
@@ -237,7 +403,7 @@
             <div class="grid md:grid-cols-2 gap-16">
                 <div>
                     <p class="font-mono text-xs tracking-[0.3em] text-muted mb-2">ABOUT</p>
-                    <h2 class="font-serif text-4xl italic mb-6">Why SlovakBench?</h2>
+                    <h2 class="font-display text-4xl font-semibold mb-6">Why SlovakBench?</h2>
                     <div class="space-y-4 text-muted leading-relaxed">
                         <p>
                             Most LLM benchmarks focus on English, leaving low-resource languages underrepresented.
@@ -251,7 +417,7 @@
                 </div>
                 <div>
                     <p class="font-mono text-xs tracking-[0.3em] text-muted mb-2">TASKS</p>
-                    <h2 class="font-serif text-4xl italic mb-6">Benchmark Tasks</h2>
+                    <h2 class="font-display text-4xl font-semibold mb-6">Benchmark Tasks</h2>
                     <div class="space-y-4">
                         <div class="flex gap-4 items-start">
                             <span class="text-2xl">📝</span>
@@ -287,7 +453,7 @@
     <!-- Footer -->
     <footer class="py-12 px-6 border-t border-ink/10">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <p class="font-serif text-xl italic">SlovakBench</p>
+            <p class="font-display text-xl font-semibold">SlovakBench</p>
             <p class="font-mono text-sm text-muted">
                 Open source benchmark for Slovak LLM evaluation
             </p>
@@ -300,7 +466,6 @@
 
     <script>
         // Leaderboard data - loaded from leaderboard.json
-        // Data loaded from leaderboard.json
         let data = {
             exam: {},
             pos: {},
@@ -325,15 +490,53 @@
             }
         };
 
+        const providerColors = {
+            'OpenAI': 'openai',
+            'Google': 'google',
+            'Anthropic': 'anthropic',
+            'Meta': 'meta'
+        };
+
         let currentTask = 'exam';
         let currentYear = 2025;
+        let currentProvider = 'all';
+        let currentSort = { field: 'overall', direction: 'desc' };
+
+        function getProviderBadge(provider) {
+            const colorClass = providerColors[provider] || 'muted';
+            return `<span class="provider-badge provider-${colorClass.toLowerCase()}">
+                <span class="w-2 h-2 rounded-full bg-${colorClass}"></span>
+                ${provider}
+            </span>`;
+        }
 
         function renderLeaderboard() {
             const tbody = document.getElementById('leaderboard-body');
-            const items = data[currentTask][currentYear] || [];
+            let items = data[currentTask][currentYear] || [];
 
-            // Sort by overall score
-            const sorted = [...items].sort((a, b) => b.overall - a.overall);
+            // Filter by provider
+            if (currentProvider !== 'all') {
+                items = items.filter(item => item.provider === currentProvider);
+            }
+
+            // Sort items
+            const sorted = [...items].sort((a, b) => {
+                const aVal = a[currentSort.field] || 0;
+                const bVal = b[currentSort.field] || 0;
+                return currentSort.direction === 'desc' ? bVal - aVal : aVal - bVal;
+            });
+
+            // Update sort indicators
+            document.querySelectorAll('.sortable').forEach(el => {
+                el.classList.remove('active');
+                const indicator = el.querySelector('.sort-indicator');
+                indicator.textContent = '▼';
+            });
+            const activeSort = document.querySelector(`.sortable[data-sort="${currentSort.field}"]`);
+            if (activeSort) {
+                activeSort.classList.add('active');
+                activeSort.querySelector('.sort-indicator').textContent = currentSort.direction === 'desc' ? '▼' : '▲';
+            }
 
             if (sorted.length === 0) {
                 tbody.innerHTML = `
@@ -351,16 +554,29 @@
                 const rank = i + 1;
                 const rankClass = rank <= 3 ? `rank-${rank}` : '';
                 const medal = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : '';
+                const providerColor = providerColors[item.provider] || 'muted';
 
                 return `
                     <tr class="border-b border-ink/5 last:border-0 transition-colors">
                         <td class="px-6 py-5 font-mono font-semibold ${rankClass}">${medal || rank}</td>
                         <td class="px-6 py-5">
-                            <div class="font-sans font-medium">${item.model}</div>
-                            <div class="text-xs text-muted">${item.provider}</div>
+                            <div class="flex items-center gap-3">
+                                <div>
+                                    <div class="font-sans font-semibold text-base">${item.model}</div>
+                                    <div class="flex items-center gap-1.5 mt-1">
+                                        <span class="w-2 h-2 rounded-full bg-${providerColor}"></span>
+                                        <span class="text-sm text-muted">${item.provider}</span>
+                                    </div>
+                                </div>
+                            </div>
                         </td>
                         <td class="px-6 py-5 text-right">
-                            <span class="font-mono font-semibold text-lg">${item.overall.toFixed(1)}%</span>
+                            <div class="flex flex-col items-end gap-1">
+                                <span class="font-mono font-semibold text-lg">${item.overall.toFixed(1)}%</span>
+                                <div class="score-bar w-16">
+                                    <div class="score-bar-fill" style="width: ${item.overall}%"></div>
+                                </div>
+                            </div>
                         </td>
                         <td class="px-6 py-5 text-right font-mono hidden md:table-cell">${item.mcq?.toFixed(1) || '-'}%</td>
                         <td class="px-6 py-5 text-right font-mono hidden md:table-cell">${item.short_text?.toFixed(1) || '-'}%</td>
@@ -404,6 +620,32 @@
                 btn.classList.add('bg-ink', 'text-cream');
                 btn.classList.remove('border', 'border-ink/20');
                 currentYear = parseInt(btn.dataset.year);
+                renderLeaderboard();
+            });
+        });
+
+        // Provider filter clicks
+        document.querySelectorAll('.provider-filter').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.provider-filter').forEach(b => {
+                    b.classList.remove('active', 'bg-ink', 'text-cream');
+                });
+                btn.classList.add('active', 'bg-ink', 'text-cream');
+                currentProvider = btn.dataset.provider;
+                renderLeaderboard();
+            });
+        });
+
+        // Sortable column clicks
+        document.querySelectorAll('.sortable').forEach(th => {
+            th.addEventListener('click', () => {
+                const field = th.dataset.sort;
+                if (currentSort.field === field) {
+                    currentSort.direction = currentSort.direction === 'desc' ? 'asc' : 'desc';
+                } else {
+                    currentSort.field = field;
+                    currentSort.direction = 'desc';
+                }
                 renderLeaderboard();
             });
         });
