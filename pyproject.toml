@@ -1,0 +1,22 @@
+[project]
+name = "skbench"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "conllu>=6.0.0",
+    "datasets>=4.4.1",
+    "jupyter>=1.1.1",
+    "langchain>=1.1.3",
+    "langchain-core>=1.2.0",
+    "langchain-openai>=1.1.3",
+    "langsmith>=0.4.59",
+    "openai>=2.11.0",
+    "openrouter>=0.1.1",
+    "pandas>=2.3.3",
+    "pypdf>=6.4.1",
+    "python-dotenv>=1.2.1",
+    "scikit-learn>=1.8.0",
+    "tqdm>=4.67.1",
+]
