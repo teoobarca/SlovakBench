@@ -1,12 +1,20 @@
 """
 Evaluation runner for SlovakBench.
 Orchestrates LLM evaluation on extracted exam questions.
+
+Features:
+- Async concurrent processing with semaphore
+- Per-question timeout (prevents hanging)
+- Checkpoint saving (resume after interruption)
+- Graceful error handling
 """
+import asyncio
 import json
 import os
 import sys
 from dataclasses import dataclass, field
 from datetime import datetime
+from pathlib import Path
 from typing import List, Dict, Optional
 
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -15,8 +23,12 @@ from tqdm import tqdm
 
 # Add src to path for imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from utils.llm import create_llm, get_cost, print_cost
+from utils.llm import create_llm, get_cost
 from evaluation.answer_validator import validate_mcq, validate_short_text
+
+# Configuration
+DEFAULT_TIMEOUT = 120  # seconds per question
+CHECKPOINT_DIR = Path("data/checkpoints")
 
 
 @dataclass
@@ -29,6 +41,7 @@ class QuestionResult:
     is_correct: bool
     cost_usd: float = 0.0
     raw_response: str = ""
+    error: Optional[str] = None
 
 
 @dataclass
@@ -64,17 +77,84 @@ class EvaluationResult:
                     "correct_answer": r.correct_answer,
                     "is_correct": r.is_correct,
                     "cost_usd": r.cost_usd,
+                    "error": r.error,
                 }
                 for r in self.results
             ],
         }
 
 
+class CheckpointManager:
+    """Manages checkpoint saving/loading for evaluation progress."""
+    
+    def __init__(self, model_name: str, dataset_path: str):
+        self.model_short = model_name.split("/")[-1]
+        self.dataset_name = Path(dataset_path).stem
+        CHECKPOINT_DIR.mkdir(parents=True, exist_ok=True)
+        self.checkpoint_path = CHECKPOINT_DIR / f"{self.model_short}_{self.dataset_name}.json"
+    
+    def load(self) -> Dict[str, QuestionResult]:
+        """Load checkpoint if exists. Returns dict of question_id -> result."""
+        if not self.checkpoint_path.exists():
+            return {}
+        
+        try:
+            with open(self.checkpoint_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            
+            results = {}
+            for r in data.get("results", []):
+                results[r["question_id"]] = QuestionResult(
+                    question_id=r["question_id"],
+                    task_type=r["task_type"],
+                    model_answer=r["model_answer"],
+                    correct_answer=r["correct_answer"],
+                    is_correct=r["is_correct"],
+                    cost_usd=r.get("cost_usd", 0.0),
+                    raw_response=r.get("raw_response", ""),
+                    error=r.get("error"),
+                )
+            return results
+        except Exception as e:
+            print(f"⚠️  Could not load checkpoint: {e}")
+            return {}
+    
+    def save(self, results: List[QuestionResult], model_name: str, dataset_path: str):
+        """Save checkpoint with current results."""
+        data = {
+            "model_name": model_name,
+            "dataset_path": dataset_path,
+            "timestamp": datetime.now().isoformat(),
+            "results": [
+                {
+                    "question_id": r.question_id,
+                    "task_type": r.task_type,
+                    "model_answer": r.model_answer,
+                    "correct_answer": r.correct_answer,
+                    "is_correct": r.is_correct,
+                    "cost_usd": r.cost_usd,
+                    "raw_response": r.raw_response,
+                    "error": r.error,
+                }
+                for r in results
+            ],
+        }
+        
+        with open(self.checkpoint_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+    
+    def delete(self):
+        """Delete checkpoint after successful completion."""
+        if self.checkpoint_path.exists():
+            self.checkpoint_path.unlink()
+
+
 class EvaluationRunner:
     """Run LLM evaluation on exam dataset."""
     
-    def __init__(self, model_name: str):
+    def __init__(self, model_name: str, timeout: int = DEFAULT_TIMEOUT):
         self.model_name = model_name
+        self.timeout = timeout
         self.llm = create_llm(model_name=model_name)
     
     def load_dataset(self, dataset_path: str) -> Dict:
@@ -145,25 +225,37 @@ Príklad: "epiteton" (nie "epiteton (básnický prívlastok)")"""
             return validate_short_text(model_answer, accepted, steps)
     
     async def _evaluate_question(self, q: Dict, contexts: List[Dict], system_msg) -> QuestionResult:
-        """Evaluate a single question asynchronously."""
+        """Evaluate a single question with timeout."""
         prompt = self.build_prompt(q, contexts)
         
-        try:
-            response = await self.llm.ainvoke([system_msg, HumanMessage(content=prompt)])
-            raw_response = response.content
-            cost = get_cost(response)
-        except Exception as e:
-            print(f"Error on question {q['id']}: {e}")
-            raw_response = ""
-            cost = 0.0
-        
-        model_answer = self.parse_response(raw_response, q["task_type"])
-        is_correct = self.validate_answer(q, model_answer)
-        
+        # Determine correct answer for logging
         if q["task_type"] == "mcq":
             correct_answer = q["answer"].get("correct_option", "")
         else:
             correct_answer = ", ".join(q["answer"].get("accepted", [])[:3])
+        
+        try:
+            # Apply timeout to the LLM call
+            response = await asyncio.wait_for(
+                self.llm.ainvoke([system_msg, HumanMessage(content=prompt)]),
+                timeout=self.timeout
+            )
+            raw_response = response.content
+            cost = get_cost(response)
+            error = None
+            
+        except asyncio.TimeoutError:
+            raw_response = ""
+            cost = 0.0
+            error = f"Timeout after {self.timeout}s"
+            
+        except Exception as e:
+            raw_response = ""
+            cost = 0.0
+            error = str(e)
+        
+        model_answer = self.parse_response(raw_response, q["task_type"])
+        is_correct = self.validate_answer(q, model_answer) if not error else False
         
         return QuestionResult(
             question_id=q["id"],
@@ -173,45 +265,89 @@ Príklad: "epiteton" (nie "epiteton (básnický prívlastok)")"""
             is_correct=is_correct,
             cost_usd=cost,
             raw_response=raw_response,
+            error=error,
         )
     
-    def run(self, dataset_path: str, concurrency: int = 32) -> EvaluationResult:
-        """Execute evaluation on dataset with concurrent processing."""
+    def run(self, dataset_path: str, concurrency: int = 32, resume: bool = True) -> EvaluationResult:
+        """Execute evaluation on dataset with concurrent processing and checkpointing."""
         import asyncio
         
         data = self.load_dataset(dataset_path)
         contexts = data.get("contexts", [])
         questions = data.get("questions", [])
         
+        # Initialize checkpoint manager
+        checkpoint = CheckpointManager(self.model_name, dataset_path)
+        
+        # Load existing progress if resuming
+        completed_results: Dict[str, QuestionResult] = {}
+        if resume:
+            completed_results = checkpoint.load()
+            if completed_results:
+                print(f"   📂 Resuming from checkpoint: {len(completed_results)}/{len(questions)} done")
+        
+        # Filter out already completed questions
+        pending_questions = [q for q in questions if q["id"] not in completed_results]
+        
         system_msg = SystemMessage(content="Si expert na slovenský jazyk. Odpovedaj presne a stručne.")
         
+        # Results list (will include both resumed and new)
+        all_results: List[QuestionResult] = list(completed_results.values())
+        
         async def run_all():
+            nonlocal all_results
+            
+            if not pending_questions:
+                return
+            
             semaphore = asyncio.Semaphore(concurrency)
-            pbar = tqdm(total=len(questions), desc=f"{self.model_name.split('/')[-1]}", leave=False)
+            pbar = tqdm(
+                total=len(questions),
+                initial=len(completed_results),
+                desc=f"{self.model_name.split('/')[-1]}",
+                leave=False
+            )
+            
+            # Lock for thread-safe checkpoint saving
+            checkpoint_lock = asyncio.Lock()
             
             async def bounded_eval(q):
                 async with semaphore:
                     with tracing_context(enabled=False):
                         result = await self._evaluate_question(q, contexts, system_msg)
+                    
+                    # Add result and save checkpoint (thread-safe)
+                    async with checkpoint_lock:
+                        all_results.append(result)
+                        # Save checkpoint every question for safety
+                        checkpoint.save(all_results, self.model_name, dataset_path)
+                    
                     pbar.update(1)
                     return result
             
-            tasks = [bounded_eval(q) for q in questions]
-            results = await asyncio.gather(*tasks)
+            tasks = [bounded_eval(q) for q in pending_questions]
+            await asyncio.gather(*tasks)
             pbar.close()
-            return results
         
-        results = asyncio.run(run_all())
+        asyncio.run(run_all())
         
         # Compute stats
-        mcq_correct = sum(1 for r in results if r.task_type == "mcq" and r.is_correct)
-        mcq_total = sum(1 for r in results if r.task_type == "mcq")
-        st_correct = sum(1 for r in results if r.task_type == "short_text" and r.is_correct)
-        st_total = sum(1 for r in results if r.task_type == "short_text")
+        mcq_correct = sum(1 for r in all_results if r.task_type == "mcq" and r.is_correct)
+        mcq_total = sum(1 for r in all_results if r.task_type == "mcq")
+        st_correct = sum(1 for r in all_results if r.task_type == "short_text" and r.is_correct)
+        st_total = sum(1 for r in all_results if r.task_type == "short_text")
         
-        total = len(results)
-        correct = sum(1 for r in results if r.is_correct)
-        total_cost = sum(r.cost_usd for r in results)
+        total = len(all_results)
+        correct = sum(1 for r in all_results if r.is_correct)
+        total_cost = sum(r.cost_usd for r in all_results)
+        
+        # Count errors/timeouts
+        errors = sum(1 for r in all_results if r.error)
+        if errors > 0:
+            print(f"   ⚠️  {errors} questions had errors/timeouts")
+        
+        # Delete checkpoint on success
+        checkpoint.delete()
         
         return EvaluationResult(
             model_name=self.model_name,
@@ -223,7 +359,7 @@ Príklad: "epiteton" (nie "epiteton (básnický prívlastok)")"""
             total_cost_usd=total_cost,
             mcq_accuracy=mcq_correct / mcq_total if mcq_total > 0 else None,
             short_text_accuracy=st_correct / st_total if st_total > 0 else None,
-            results=results,
+            results=all_results,
         )
 
 
@@ -269,6 +405,7 @@ if __name__ == "__main__":
         print(f"\n--- Sample Results ---")
         for r in result.results[:5]:
             status = "✓" if r.is_correct else "✗"
-            print(f"[{r.question_id}] {status} Model: {r.model_answer} | Correct: {r.correct_answer}")
+            err = f" [{r.error}]" if r.error else ""
+            print(f"[{r.question_id}] {status} Model: {r.model_answer} | Correct: {r.correct_answer}{err}")
     else:
         print(f"Dataset not found: {dataset_path}")
