@@ -420,5 +420,266 @@ def export():
     typer.echo(f"   Tasks: {len([t for t in output.values() if any(y for y in t.values())])}")
 
 
+@app.command()
+def analyze(
+    year: int = typer.Option(..., "--year", "-y", help="Year to analyze"),
+    question: Optional[str] = typer.Option(None, "--question", "-q", help="Specific question ID"),
+    threshold: int = typer.Option(50, "--threshold", "-t", help="Min % of models that must fail to flag question"),
+):
+    """Analyze failed questions across all models to identify dataset issues."""
+    from rich.console import Console
+    from rich.table import Table
+    from collections import defaultdict
+    
+    console = Console()
+    
+    # Load dataset
+    datasets = get_processed_datasets()
+    if year not in datasets:
+        typer.echo(f"❌ No dataset for year {year}")
+        raise typer.Exit(1)
+    
+    with open(datasets[year]) as f:
+        dataset = json.load(f)
+    
+    questions_by_id = {q["id"]: q for q in dataset["questions"]}
+    
+    # Load all results for this year
+    year_dir = RESULTS_DIR / str(year)
+    if not year_dir.exists():
+        typer.echo(f"❌ No results for year {year}")
+        raise typer.Exit(1)
+    
+    results_by_question = defaultdict(list)
+    model_count = 0
+    
+    for f in year_dir.glob("*.json"):
+        try:
+            with open(f) as fp:
+                data = json.load(fp)
+        except json.JSONDecodeError:
+            continue
+        
+        model_name = data.get("model_name", "?").split("/")[-1]
+        model_count += 1
+        
+        for r in data.get("results", []):
+            if r.get("error"):
+                continue  # Skip technical errors
+            results_by_question[r["question_id"]].append({
+                "model": model_name,
+                "answer": r.get("model_answer", ""),
+                "correct": r.get("is_correct", False),
+            })
+    
+    if model_count == 0:
+        typer.echo("❌ No valid result files found")
+        raise typer.Exit(1)
+    
+    console.print(f"\n📊 [bold]Question Analysis: {year}[/bold] ({model_count} models)")
+    console.print()
+    
+    # Filter to specific question if requested
+    question_ids = [question] if question else sorted(results_by_question.keys())
+    
+    flagged = 0
+    for qid in question_ids:
+        if qid not in questions_by_id:
+            continue
+        
+        q = questions_by_id[qid]
+        results = results_by_question.get(qid, [])
+        
+        if not results:
+            continue
+        
+        failed = [r for r in results if not r["correct"]]
+        passed = [r for r in results if r["correct"]]
+        fail_pct = len(failed) / len(results) * 100 if results else 0
+        
+        # Skip if below threshold (unless specific question requested)
+        if not question and fail_pct < threshold:
+            continue
+        
+        flagged += 1
+        
+        # Get expected answer
+        if q["task_type"] == "mcq":
+            expected = q["answer"].get("correct_option", "?")
+            normalize_steps = None
+        else:
+            accepted = q["answer"].get("accepted", [])
+            expected = ", ".join(accepted[:5]) + ("..." if len(accepted) > 5 else "")
+            normalize_steps = q["answer"].get("normalize", [])
+        
+        # Print question header
+        status = "❌" if fail_pct >= 80 else "⚠️" if fail_pct >= 50 else "🔍"
+        console.print(f"{status} [bold]Q{qid}[/bold] [{q['task_type']}] - {len(failed)}/{len(results)} models failed ({fail_pct:.0f}%)")
+        
+        # Show question text (truncated)
+        question_text = q.get("question", "")
+        if len(question_text) > 200:
+            question_text = question_text[:200] + "..."
+        console.print(f"   [cyan]Q:[/cyan] {question_text}")
+        
+        # Show context if available (first 150 chars)
+        if q.get("context_id"):
+            ctx = next((c for c in dataset.get("contexts", []) if c["id"] == q["context_id"]), None)
+            if ctx:
+                ctx_text = ctx.get("text", "")[:150].replace("\n", " ")
+                console.print(f"   [dim]Context ({q['context_id']}):[/dim] {ctx_text}...")
+        
+        console.print(f"   [dim]Expected:[/dim] {expected}")
+        if normalize_steps:
+            console.print(f"   [dim]Normalize:[/dim] {', '.join(normalize_steps)}")
+        console.print("   " + "─" * 50)
+        
+        # Group answers
+        answer_groups = defaultdict(list)
+        for r in results:
+            answer_groups[r["answer"]].append((r["model"], r["correct"]))
+        
+        # Sort by frequency
+        for ans, models in sorted(answer_groups.items(), key=lambda x: -len(x[1])):
+            is_correct = any(c for _, c in models)
+            prefix = "[green]✅[/green]" if is_correct else "[red]❌[/red]"
+            model_list = ", ".join(m for m, _ in models[:3])
+            if len(models) > 3:
+                model_list += f" +{len(models)-3} more"
+            console.print(f"   {prefix} \"{ans}\" ({len(models)}): {model_list}")
+        
+        console.print()
+    
+    if flagged == 0:
+        console.print(f"[green]✅ No questions flagged (threshold: {threshold}% failure rate)[/green]")
+    else:
+        console.print(f"[yellow]⚠️ {flagged} questions flagged for review[/yellow]")
+
+
+@app.command()
+def recalculate(
+    year: int = typer.Option(..., "--year", "-y", help="Year to recalculate"),
+    dry_run: bool = typer.Option(False, "--dry-run", "-n", help="Show changes without saving"),
+):
+    """Recalculate results from stored answers after dataset fixes."""
+    from rich.console import Console
+    from rich.table import Table
+    from src.evaluation.answer_validator import normalize, validate_mcq, validate_short_text
+    
+    console = Console()
+    
+    # Load dataset
+    datasets = get_processed_datasets()
+    if year not in datasets:
+        typer.echo(f"❌ No dataset for year {year}")
+        raise typer.Exit(1)
+    
+    with open(datasets[year]) as f:
+        dataset = json.load(f)
+    
+    questions_by_id = {q["id"]: q for q in dataset["questions"]}
+    
+    # Load and recalculate all results
+    year_dir = RESULTS_DIR / str(year)
+    if not year_dir.exists():
+        typer.echo(f"❌ No results for year {year}")
+        raise typer.Exit(1)
+    
+    table = Table(title=f"🔄 Recalculation: {year}")
+    table.add_column("Model", style="cyan")
+    table.add_column("Before", justify="right")
+    table.add_column("After", justify="right")
+    table.add_column("Δ", justify="right")
+    
+    updated_files = 0
+    
+    for f in sorted(year_dir.glob("*.json")):
+        try:
+            with open(f) as fp:
+                data = json.load(fp)
+        except json.JSONDecodeError:
+            continue
+        
+        model_name = data.get("model_name", "?").split("/")[-1]
+        results = data.get("results", [])
+        
+        old_correct = sum(1 for r in results if r.get("is_correct") and not r.get("error"))
+        old_total = sum(1 for r in results if not r.get("error"))
+        
+        # Recalculate
+        new_correct = 0
+        new_total = 0
+        changes = False
+        
+        for r in results:
+            if r.get("error"):
+                continue
+            
+            qid = r["question_id"]
+            if qid not in questions_by_id:
+                continue
+            
+            q = questions_by_id[qid]
+            model_answer = r.get("model_answer", "")
+            
+            # Re-validate
+            if q["task_type"] == "mcq":
+                new_is_correct = validate_mcq(model_answer, q["answer"].get("correct_option", ""))
+            else:
+                accepted = q["answer"].get("accepted", [])
+                steps = q["answer"].get("normalize", ["trim", "casefold"])
+                new_is_correct = validate_short_text(model_answer, accepted, steps)
+            
+            if r.get("is_correct") != new_is_correct:
+                changes = True
+                r["is_correct"] = new_is_correct
+            
+            new_total += 1
+            if new_is_correct:
+                new_correct += 1
+        
+        # Update aggregates
+        if new_total > 0:
+            data["correct_count"] = new_correct
+            data["accuracy"] = new_correct / new_total
+            data["total_questions"] = new_total
+            
+            # Recalc per-type
+            mcq_results = [r for r in results if r.get("task_type") == "mcq" and not r.get("error")]
+            st_results = [r for r in results if r.get("task_type") == "short_text" and not r.get("error")]
+            
+            if mcq_results:
+                data["mcq_accuracy"] = sum(1 for r in mcq_results if r.get("is_correct")) / len(mcq_results)
+            if st_results:
+                data["short_text_accuracy"] = sum(1 for r in st_results if r.get("is_correct")) / len(st_results)
+        
+        old_pct = old_correct / old_total * 100 if old_total else 0
+        new_pct = new_correct / new_total * 100 if new_total else 0
+        delta = new_pct - old_pct
+        
+        delta_str = f"[green]+{delta:.1f}%[/green]" if delta > 0 else f"[red]{delta:.1f}%[/red]" if delta < 0 else "[dim]0.0%[/dim]"
+        
+        table.add_row(
+            model_name,
+            f"{old_pct:.1f}%",
+            f"{new_pct:.1f}%",
+            delta_str
+        )
+        
+        # Save if changed
+        if changes and not dry_run:
+            with open(f, "w", encoding="utf-8") as fp:
+                json.dump(data, fp, indent=2, ensure_ascii=False)
+            updated_files += 1
+    
+    console.print(table)
+    
+    if dry_run:
+        console.print("\n[yellow]Dry run - no files updated[/yellow]")
+    else:
+        console.print(f"\n[green]✅ Updated {updated_files} result files[/green]")
+
+
 if __name__ == "__main__":
     app()
+

@@ -7,7 +7,7 @@ export function Footer() {
                     Open source benchmark for Slovak LLM evaluation
                 </p>
                 <div className="flex gap-4 font-[var(--font-mono)] text-sm">
-                    <a href="https://github.com" className="hover:text-[var(--color-accent)] transition-colors">
+                    <a href="https://github.com/teoobarca/SlovakBench" className="hover:text-[var(--color-accent)] transition-colors">
                         GitHub
                     </a>
                     <a href="https://www.nucem.sk/" className="hover:text-[var(--color-accent)] transition-colors">

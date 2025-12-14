@@ -323,7 +323,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
 
                                         return (
                                             <tr key={item.model} className="border-b border-[var(--color-ink)]/5 last:border-0 hover:bg-[var(--color-paper)]/50 transition-colors">
-                                                <td className="px-6 py-5">
+                                                <td className="px-6 py-5 text-center">
                                                     <span className={`font-[var(--font-mono)] text-2xl font-bold ${rank === 1 ? "text-yellow-500" : rank === 2 ? "text-gray-400" : rank === 3 ? "text-amber-600" : "text-[var(--color-muted)]"
                                                         }`}>
                                                         {rank}

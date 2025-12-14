@@ -13,7 +13,7 @@ export function Navbar() {
                         About
                     </a>
                     <a
-                        href="https://github.com"
+                        href="https://github.com/teoobarca/SlovakBench"
                         className="hover:text-[var(--color-accent)] transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
