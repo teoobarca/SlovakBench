@@ -1,0 +1,44 @@
+{
+  "model_name": "google/gemini-2.5-flash",
+  "timestamp": "2025-12-14T20:08:39.548860",
+  "total_sentences": 10,
+  "accuracy": 0.8095238095238096,
+  "pos_accuracy": 0.9428571428571428,
+  "lemma_accuracy": 0.8666666666666667,
+  "dep_accuracy": 0.6190476190476191,
+  "total_cost_usd": 0.0072478,
+  "avg_latency_ms": 1000.5423069000244,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9428571428571428,
+      "correct": 99,
+      "total": 105,
+      "cost_usd": 0.0022422,
+      "avg_latency_ms": 988.4181499481201,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8666666666666667,
+      "correct": 91,
+      "total": 105,
+      "cost_usd": 0.0021902,
+      "avg_latency_ms": 994.7864055633545,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.6190476190476191,
+      "correct": 65,
+      "total": 105,
+      "cost_usd": 0.0028154,
+      "avg_latency_ms": 1018.4223651885986,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

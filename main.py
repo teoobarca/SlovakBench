@@ -7,9 +7,14 @@ import json
 
 app = typer.Typer(help="SlovakBench - Slovak LLM Benchmark")
 
+# Subcommand groups
+evaluate_app = typer.Typer(help="Run LLM evaluations")
+app.add_typer(evaluate_app, name="evaluate")
+
 RAW_DIR = Path("data/raw/exam")
 PROCESSED_DIR = Path("data/processed/exam")
 RESULTS_DIR = Path("data/results/exam")
+UD_RESULTS_DIR = Path("data/results/ud_snk")
 
 
 def get_available_years(source_dir: Path, prefix: str = "test_") -> list[int]:
@@ -106,15 +111,15 @@ def ingest(
         typer.echo(f"✅ Saved {len(extraction.questions)} questions to {output}")
 
 
-@app.command()
-def evaluate(
+@evaluate_app.command("exam")
+def evaluate_exam(
     year: Optional[int] = typer.Option(None, "--year", "-y", help="Year to evaluate"),
     all_years: bool = typer.Option(False, "--all", "-a", help="Evaluate all years"),
     model: Optional[str] = typer.Option(None, "--model", "-m", help="Single model to evaluate"),
     force: bool = typer.Option(False, "--force", "-f", help="Re-run even if results exist"),
     list_datasets: bool = typer.Option(False, "--list", "-l", help="List available datasets"),
 ):
-    """Run LLM evaluation on datasets. Without --model, runs all models from config."""
+    """Run exam benchmark evaluation. Without --model, runs all models from config."""
     from src.evaluation.runner import EvaluationRunner, save_results
     from config.models import MODELS
     
@@ -1055,6 +1060,85 @@ def retry(
         console.print(f"\n💰 Total retry cost: [bold]${total_cost:.4f}[/bold]")
     
     console.print(f"\n✅ Retry complete! Run [bold]export[/bold] to update frontend.")
+
+
+# ============================================================================
+# UD Slovak SNK Benchmark Commands
+# ============================================================================
+
+@evaluate_app.command("ud")
+def evaluate_ud(
+    model: Optional[str] = typer.Option(None, "--model", "-m", help="Model to evaluate (from config/models.py)"),
+    report_only: bool = typer.Option(False, "--report", "-r", help="Show results only"),
+):
+    """Run UD Slovak SNK benchmark (POS, Lemma, DEP) on curated 32-sentence dataset."""
+    import asyncio
+    from rich.console import Console
+    from rich.table import Table
+    from config.models import MODELS
+    
+    console = Console()
+    
+    # Report mode
+    if report_only:
+        if not UD_RESULTS_DIR.exists():
+            console.print("[red]❌ No UD results found[/red]")
+            raise typer.Exit(1)
+        
+        table = Table(title="📊 UD Slovak SNK Results")
+        table.add_column("Model", style="cyan")
+        table.add_column("Avg", justify="right", style="bold")
+        table.add_column("POS", justify="right")
+        table.add_column("Lemma", justify="right")
+        table.add_column("DEP", justify="right")
+        table.add_column("Cost", justify="right", style="green")
+        
+        for f in sorted(UD_RESULTS_DIR.glob("*.json")):
+            try:
+                with open(f) as fp:
+                    data = json.load(fp)
+                table.add_row(
+                    data.get("model_name", "?").split("/")[-1],
+                    f"{data.get('accuracy', 0):.1%}",
+                    f"{data.get('pos_accuracy', 0):.1%}",
+                    f"{data.get('lemma_accuracy', 0):.1%}",
+                    f"{data.get('dep_accuracy', 0):.1%}",
+                    f"${data.get('total_cost_usd', 0):.4f}",
+                )
+            except:
+                pass
+        
+        console.print(table)
+        raise typer.Exit(0)
+    
+    # Import runner
+    from src.evaluation.ud_runner import run_benchmark
+    
+    # Get models to run
+    if model:
+        if model not in MODELS:
+            console.print(f"[red]❌ Unknown model: {model}[/red]")
+            console.print(f"[dim]Available: {', '.join(MODELS.keys())}[/dim]")
+            raise typer.Exit(1)
+        models_to_run = [model]
+    else:
+        models_to_run = list(MODELS.keys())
+    
+    console.print(f"\n{'='*60}")
+    console.print(f"[bold]UD Slovak SNK Benchmark[/bold]")
+    console.print(f"Models: {len(models_to_run)}")
+    console.print(f"Tasks: POS, LEMMA, DEP")
+    console.print(f"Dataset: Curated (32 sentences)")
+    console.print(f"{'='*60}\n")
+    
+    for m in models_to_run:
+        try:
+            asyncio.run(run_benchmark(m))
+        except Exception as e:
+            console.print(f"[red]❌ {m}: {str(e)[:80]}[/red]")
+        console.print()
+    
+    console.print("[green]✅ Done! Use --report to see all results.[/green]")
 
 
 if __name__ == "__main__":

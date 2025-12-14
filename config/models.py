@@ -59,11 +59,6 @@ MODELS = {
     "x-ai/grok-4": create_llm("x-ai/grok-4", {"reasoning": {"enabled": True}}),
     "x-ai/grok-4.1-fast": create_llm("x-ai/grok-4.1-fast", {"reasoning": {"enabled": True}}),
 
-    # DeepSeek
-    "deepseek/deepseek-r1-0528": create_llm("deepseek/deepseek-r1-0528", {"reasoning": {"enabled": True}}),
-    "deepseek/deepseek-chat-v3.1": create_llm("deepseek/deepseek-chat-v3.1"),
-    "deepseek/deepseek-v3.2": create_llm("deepseek/deepseek-v3.2", {"reasoning": {"enabled": True, "effort": "high"}}),
-
     # Moonshot Kimi
     "moonshotai/kimi-k2-0905": create_llm("moonshotai/kimi-k2-0905"),
     "moonshotai/kimi-k2-thinking": create_llm("moonshotai/kimi-k2-thinking", {"reasoning": {"enabled": True}}),

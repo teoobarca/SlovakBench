@@ -1,0 +1,906 @@
+{
+  "source": "UD Slovak SNK",
+  "total_sentences": 10,
+  "sentences": [
+    {
+      "sent_id": "wikipedia2:wiki-nove-035:wiki_nove_035-p14s1",
+      "text": "Ďalším príkladom je Ulysses, kozmická sonda ESA, ktorá študuje polárne oblasti Slnka.",
+      "tokens": [
+        {
+          "id": "1",
+          "form": "Ďalším",
+          "lemma": "ďalší",
+          "upos": "ADJ",
+          "head": "2",
+          "deprel": "amod"
+        },
+        {
+          "id": "2",
+          "form": "príkladom",
+          "lemma": "príklad",
+          "upos": "NOUN",
+          "head": "0",
+          "deprel": "root"
+        },
+        {
+          "id": "3",
+          "form": "je",
+          "lemma": "byť",
+          "upos": "AUX",
+          "head": "2",
+          "deprel": "cop"
+        },
+        {
+          "id": "4",
+          "form": "Ulysses",
+          "lemma": "ulysses",
+          "upos": "PROPN",
+          "head": "2",
+          "deprel": "nsubj"
+        },
+        {
+          "id": "5",
+          "form": ",",
+          "lemma": ",",
+          "upos": "PUNCT",
+          "head": "7",
+          "deprel": "punct"
+        },
+        {
+          "id": "6",
+          "form": "kozmická",
+          "lemma": "kozmický",
+          "upos": "ADJ",
+          "head": "7",
+          "deprel": "amod"
+        },
+        {
+          "id": "7",
+          "form": "sonda",
+          "lemma": "sonda",
+          "upos": "NOUN",
+          "head": "4",
+          "deprel": "appos"
+        },
+        {
+          "id": "8",
+          "form": "ESA",
+          "lemma": "esa",
+          "upos": "PROPN",
+          "head": "7",
+          "deprel": "nmod"
+        },
+        {
+          "id": "9",
+          "form": ",",
+          "lemma": ",",
+          "upos": "PUNCT",
+          "head": "11",
+          "deprel": "punct"
+        },
+        {
+          "id": "10",
+          "form": "ktorá",
+          "lemma": "ktorý",
+          "upos": "DET",
+          "head": "11",
+          "deprel": "nsubj"
+        },
+        {
+          "id": "11",
+          "form": "študuje",
+          "lemma": "študovať",
+          "upos": "VERB",
+          "head": "7",
+          "deprel": "acl:relcl"
+        },
+        {
+          "id": "12",
+          "form": "polárne",
+          "lemma": "polárny",
+          "upos": "ADJ",
+          "head": "13",
+          "deprel": "amod"
+        },
+        {
+          "id": "13",
+          "form": "oblasti",
+          "lemma": "oblasť",
+          "upos": "NOUN",
+          "head": "11",
+          "deprel": "obj"
+        },
+        {
+          "id": "14",
+          "form": "Slnka",
+          "lemma": "slnko",
+          "upos": "PROPN",
+          "head": "13",
+          "deprel": "nmod"
+        },
+        {
+          "id": "15",
+          "form": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "head": "2",
+          "deprel": "punct"
+        }
+      ]
+    },
+    {
+      "sent_id": "wikipedia:wiki2701:wiki2701-p1s6",
+      "text": "\"Oficiálne\" názov DVD neskracuje nič.",
+      "tokens": [
+        {
+          "id": "1",
+          "form": "\"",
+          "lemma": "\"",
+          "upos": "PUNCT",
+          "head": "2",
+          "deprel": "punct"
+        },
+        {
+          "id": "2",
+          "form": "Oficiálne",
+          "lemma": "oficiálne",
+          "upos": "ADV",
+          "head": "6",
+          "deprel": "advmod"
+        },
+        {
+          "id": "3",
+          "form": "\"",
+          "lemma": "\"",
+          "upos": "PUNCT",
+          "head": "2",
+          "deprel": "punct"
+        },
+        {
+          "id": "4",
+          "form": "názov",
+          "lemma": "názov",
+          "upos": "NOUN",
+          "head": "6",
+          "deprel": "nsubj"
+        },
+        {
+          "id": "5",
+          "form": "DVD",
+          "lemma": "dvd",
+          "upos": "PROPN",
+          "head": "4",
+          "deprel": "nmod"
+        },
+        {
+          "id": "6",
+          "form": "neskracuje",
+          "lemma": "skracovať",
+          "upos": "VERB",
+          "head": "0",
+          "deprel": "root"
+        },
+        {
+          "id": "7",
+          "form": "nič",
+          "lemma": "nič",
+          "upos": "PRON",
+          "head": "6",
+          "deprel": "obj"
+        },
+        {
+          "id": "8",
+          "form": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "head": "6",
+          "deprel": "punct"
+        }
+      ]
+    },
+    {
+      "sent_id": "wikipedia2:wiki-nove-061:wiki_nove_061-p14s1",
+      "text": "Ulrich ‐ muž bez vlastností",
+      "tokens": [
+        {
+          "id": "1",
+          "form": "Ulrich",
+          "lemma": "ulrich",
+          "upos": "PROPN",
+          "head": "0",
+          "deprel": "root"
+        },
+        {
+          "id": "2",
+          "form": "‐",
+          "lemma": "‐",
+          "upos": "PUNCT",
+          "head": "3",
+          "deprel": "punct"
+        },
+        {
+          "id": "3",
+          "form": "muž",
+          "lemma": "muž",
+          "upos": "NOUN",
+          "head": "1",
+          "deprel": "appos"
+        },
+        {
+          "id": "4",
+          "form": "bez",
+          "lemma": "bez",
+          "upos": "ADP",
+          "head": "5",
+          "deprel": "case"
+        },
+        {
+          "id": "5",
+          "form": "vlastností",
+          "lemma": "vlastnosť",
+          "upos": "NOUN",
+          "head": "3",
+          "deprel": "nmod"
+        }
+      ]
+    },
+    {
+      "sent_id": "wikipedia:wiki2642:wiki2642-p1s59",
+      "text": "Volanie generátora môžeme použiť namiesto zoznamu, alebo inej štruktúry, cez elementy ktorej chceme postupne prechádzať.",
+      "tokens": [
+        {
+          "id": "1",
+          "form": "Volanie",
+          "lemma": "volanie",
+          "upos": "NOUN",
+          "head": "4",
+          "deprel": "obj"
+        },
+        {
+          "id": "2",
+          "form": "generátora",
+          "lemma": "generátor",
+          "upos": "NOUN",
+          "head": "1",
+          "deprel": "nmod"
+        },
+        {
+          "id": "3",
+          "form": "môžeme",
+          "lemma": "môcť",
+          "upos": "VERB",
+          "head": "0",
+          "deprel": "root"
+        },
+        {
+          "id": "4",
+          "form": "použiť",
+          "lemma": "použiť",
+          "upos": "VERB",
+          "head": "3",
+          "deprel": "xcomp"
+        },
+        {
+          "id": "5",
+          "form": "namiesto",
+          "lemma": "namiesto",
+          "upos": "ADP",
+          "head": "6",
+          "deprel": "case"
+        },
+        {
+          "id": "6",
+          "form": "zoznamu",
+          "lemma": "zoznam",
+          "upos": "NOUN",
+          "head": "4",
+          "deprel": "obl"
+        },
+        {
+          "id": "7",
+          "form": ",",
+          "lemma": ",",
+          "upos": "PUNCT",
+          "head": "10",
+          "deprel": "punct"
+        },
+        {
+          "id": "8",
+          "form": "alebo",
+          "lemma": "alebo",
+          "upos": "CCONJ",
+          "head": "10",
+          "deprel": "cc"
+        },
+        {
+          "id": "9",
+          "form": "inej",
+          "lemma": "iný",
+          "upos": "DET",
+          "head": "10",
+          "deprel": "det"
+        },
+        {
+          "id": "10",
+          "form": "štruktúry",
+          "lemma": "štruktúra",
+          "upos": "NOUN",
+          "head": "6",
+          "deprel": "conj"
+        },
+        {
+          "id": "11",
+          "form": ",",
+          "lemma": ",",
+          "upos": "PUNCT",
+          "head": "15",
+          "deprel": "punct"
+        },
+        {
+          "id": "12",
+          "form": "cez",
+          "lemma": "cez",
+          "upos": "ADP",
+          "head": "13",
+          "deprel": "case"
+        },
+        {
+          "id": "13",
+          "form": "elementy",
+          "lemma": "element",
+          "upos": "NOUN",
+          "head": "17",
+          "deprel": "obl"
+        },
+        {
+          "id": "14",
+          "form": "ktorej",
+          "lemma": "ktorý",
+          "upos": "DET",
+          "head": "13",
+          "deprel": "nmod"
+        },
+        {
+          "id": "15",
+          "form": "chceme",
+          "lemma": "chcieť",
+          "upos": "VERB",
+          "head": "10",
+          "deprel": "acl"
+        },
+        {
+          "id": "16",
+          "form": "postupne",
+          "lemma": "postupne",
+          "upos": "ADV",
+          "head": "17",
+          "deprel": "advmod"
+        },
+        {
+          "id": "17",
+          "form": "prechádzať",
+          "lemma": "prechádzať",
+          "upos": "VERB",
+          "head": "15",
+          "deprel": "xcomp"
+        },
+        {
+          "id": "18",
+          "form": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "head": "3",
+          "deprel": "punct"
+        }
+      ]
+    },
+    {
+      "sent_id": "wikipedia2:wiki-nove-073:wiki_nove_073-p5s2",
+      "text": "Z výučbových dôvodov vzniklo mnoho emulátorov tohoto počítača (napr.",
+      "tokens": [
+        {
+          "id": "1",
+          "form": "Z",
+          "lemma": "z",
+          "upos": "ADP",
+          "head": "3",
+          "deprel": "case"
+        },
+        {
+          "id": "2",
+          "form": "výučbových",
+          "lemma": "výučbový",
+          "upos": "ADJ",
+          "head": "3",
+          "deprel": "amod"
+        },
+        {
+          "id": "3",
+          "form": "dôvodov",
+          "lemma": "dôvod",
+          "upos": "NOUN",
+          "head": "4",
+          "deprel": "obl"
+        },
+        {
+          "id": "4",
+          "form": "vzniklo",
+          "lemma": "vzniknúť",
+          "upos": "VERB",
+          "head": "0",
+          "deprel": "root"
+        },
+        {
+          "id": "5",
+          "form": "mnoho",
+          "lemma": "mnoho",
+          "upos": "NUM",
+          "head": "4",
+          "deprel": "nsubj"
+        },
+        {
+          "id": "6",
+          "form": "emulátorov",
+          "lemma": "emulátor",
+          "upos": "NOUN",
+          "head": "5",
+          "deprel": "nmod"
+        },
+        {
+          "id": "7",
+          "form": "tohoto",
+          "lemma": "tento",
+          "upos": "DET",
+          "head": "8",
+          "deprel": "det"
+        },
+        {
+          "id": "8",
+          "form": "počítača",
+          "lemma": "počítač",
+          "upos": "NOUN",
+          "head": "6",
+          "deprel": "nmod"
+        },
+        {
+          "id": "9",
+          "form": "(",
+          "lemma": "(",
+          "upos": "PUNCT",
+          "head": "10",
+          "deprel": "punct"
+        },
+        {
+          "id": "10",
+          "form": "napr",
+          "lemma": "napr",
+          "upos": "ADV",
+          "head": "5",
+          "deprel": "appos"
+        },
+        {
+          "id": "11",
+          "form": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "head": "4",
+          "deprel": "punct"
+        }
+      ]
+    },
+    {
+      "sent_id": "wikipedia2:wiki-nove-004:wiki_nove_004-p55s2",
+      "text": "V paláci nahradili vankúše a divány európske pohovky, stoličky a stoly.",
+      "tokens": [
+        {
+          "id": "1",
+          "form": "V",
+          "lemma": "v",
+          "upos": "ADP",
+          "head": "2",
+          "deprel": "case"
+        },
+        {
+          "id": "2",
+          "form": "paláci",
+          "lemma": "palác",
+          "upos": "NOUN",
+          "head": "3",
+          "deprel": "obl"
+        },
+        {
+          "id": "3",
+          "form": "nahradili",
+          "lemma": "nahradiť",
+          "upos": "VERB",
+          "head": "0",
+          "deprel": "root"
+        },
+        {
+          "id": "4",
+          "form": "vankúše",
+          "lemma": "vankúš",
+          "upos": "NOUN",
+          "head": "3",
+          "deprel": "nsubj"
+        },
+        {
+          "id": "5",
+          "form": "a",
+          "lemma": "a",
+          "upos": "CCONJ",
+          "head": "6",
+          "deprel": "cc"
+        },
+        {
+          "id": "6",
+          "form": "divány",
+          "lemma": "diván",
+          "upos": "NOUN",
+          "head": "4",
+          "deprel": "conj"
+        },
+        {
+          "id": "7",
+          "form": "európske",
+          "lemma": "európsky",
+          "upos": "ADJ",
+          "head": "8",
+          "deprel": "amod"
+        },
+        {
+          "id": "8",
+          "form": "pohovky",
+          "lemma": "pohovka",
+          "upos": "NOUN",
+          "head": "3",
+          "deprel": "obj"
+        },
+        {
+          "id": "9",
+          "form": ",",
+          "lemma": ",",
+          "upos": "PUNCT",
+          "head": "10",
+          "deprel": "punct"
+        },
+        {
+          "id": "10",
+          "form": "stoličky",
+          "lemma": "stolička",
+          "upos": "NOUN",
+          "head": "8",
+          "deprel": "conj"
+        },
+        {
+          "id": "11",
+          "form": "a",
+          "lemma": "a",
+          "upos": "CCONJ",
+          "head": "12",
+          "deprel": "cc"
+        },
+        {
+          "id": "12",
+          "form": "stoly",
+          "lemma": "stôl",
+          "upos": "NOUN",
+          "head": "8",
+          "deprel": "conj"
+        },
+        {
+          "id": "13",
+          "form": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "head": "3",
+          "deprel": "punct"
+        }
+      ]
+    },
+    {
+      "sent_id": "wikipedia2:wiki-nove-005:wiki_nove_005-p2s6",
+      "text": "Kráľ sa sám nechcel svojmu hosťovi pomstiť, ale poslal ho s listom ku kráľovninmu otcovi, kráľovi Iobatovi do Lýkie.",
+      "tokens": [
+        {
+          "id": "1",
+          "form": "Kráľ",
+          "lemma": "kráľ",
+          "upos": "NOUN",
+          "head": "4",
+          "deprel": "nsubj"
+        },
+        {
+          "id": "2",
+          "form": "sa",
+          "lemma": "sa",
+          "upos": "PRON",
+          "head": "7",
+          "deprel": "expl:pv"
+        },
+        {
+          "id": "3",
+          "form": "sám",
+          "lemma": "sám",
+          "upos": "DET",
+          "head": "1",
+          "deprel": "advcl:pred"
+        },
+        {
+          "id": "4",
+          "form": "nechcel",
+          "lemma": "chcieť",
+          "upos": "VERB",
+          "head": "0",
+          "deprel": "root"
+        },
+        {
+          "id": "5",
+          "form": "svojmu",
+          "lemma": "svoj",
+          "upos": "DET",
+          "head": "6",
+          "deprel": "det"
+        },
+        {
+          "id": "6",
+          "form": "hosťovi",
+          "lemma": "hosť",
+          "upos": "NOUN",
+          "head": "7",
+          "deprel": "obl:arg"
+        },
+        {
+          "id": "7",
+          "form": "pomstiť",
+          "lemma": "pomstiť",
+          "upos": "VERB",
+          "head": "4",
+          "deprel": "xcomp"
+        },
+        {
+          "id": "8",
+          "form": ",",
+          "lemma": ",",
+          "upos": "PUNCT",
+          "head": "10",
+          "deprel": "punct"
+        },
+        {
+          "id": "9",
+          "form": "ale",
+          "lemma": "ale",
+          "upos": "CCONJ",
+          "head": "10",
+          "deprel": "cc"
+        },
+        {
+          "id": "10",
+          "form": "poslal",
+          "lemma": "poslať",
+          "upos": "VERB",
+          "head": "4",
+          "deprel": "conj"
+        },
+        {
+          "id": "11",
+          "form": "ho",
+          "lemma": "on",
+          "upos": "PRON",
+          "head": "10",
+          "deprel": "obj"
+        },
+        {
+          "id": "12",
+          "form": "s",
+          "lemma": "s",
+          "upos": "ADP",
+          "head": "13",
+          "deprel": "case"
+        },
+        {
+          "id": "13",
+          "form": "listom",
+          "lemma": "list",
+          "upos": "NOUN",
+          "head": "10",
+          "deprel": "obl"
+        },
+        {
+          "id": "14",
+          "form": "ku",
+          "lemma": "k",
+          "upos": "ADP",
+          "head": "16",
+          "deprel": "case"
+        },
+        {
+          "id": "15",
+          "form": "kráľovninmu",
+          "lemma": "kráľovnin",
+          "upos": "ADJ",
+          "head": "16",
+          "deprel": "amod"
+        },
+        {
+          "id": "16",
+          "form": "otcovi",
+          "lemma": "otec",
+          "upos": "NOUN",
+          "head": "10",
+          "deprel": "obl"
+        },
+        {
+          "id": "17",
+          "form": ",",
+          "lemma": ",",
+          "upos": "PUNCT",
+          "head": "19",
+          "deprel": "punct"
+        },
+        {
+          "id": "18",
+          "form": "kráľovi",
+          "lemma": "kráľ",
+          "upos": "NOUN",
+          "head": "19",
+          "deprel": "nmod"
+        },
+        {
+          "id": "19",
+          "form": "Iobatovi",
+          "lemma": "iobates",
+          "upos": "PROPN",
+          "head": "16",
+          "deprel": "appos"
+        },
+        {
+          "id": "20",
+          "form": "do",
+          "lemma": "do",
+          "upos": "ADP",
+          "head": "21",
+          "deprel": "case"
+        },
+        {
+          "id": "21",
+          "form": "Lýkie",
+          "lemma": "lýkia",
+          "upos": "PROPN",
+          "head": "10",
+          "deprel": "obl"
+        },
+        {
+          "id": "22",
+          "form": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "head": "4",
+          "deprel": "punct"
+        }
+      ]
+    },
+    {
+      "sent_id": "wikipedia2:wiki-nove-077:wiki_nove_077-p4s4",
+      "text": "Navštevoval aj Laponsko a blízke časti ruskej Karélie.",
+      "tokens": [
+        {
+          "id": "1",
+          "form": "Navštevoval",
+          "lemma": "navštevovať",
+          "upos": "VERB",
+          "head": "0",
+          "deprel": "root"
+        },
+        {
+          "id": "2",
+          "form": "aj",
+          "lemma": "aj",
+          "upos": "PART",
+          "head": "3",
+          "deprel": "advmod:emph"
+        },
+        {
+          "id": "3",
+          "form": "Laponsko",
+          "lemma": "laponsko",
+          "upos": "PROPN",
+          "head": "1",
+          "deprel": "obj"
+        },
+        {
+          "id": "4",
+          "form": "a",
+          "lemma": "a",
+          "upos": "CCONJ",
+          "head": "6",
+          "deprel": "cc"
+        },
+        {
+          "id": "5",
+          "form": "blízke",
+          "lemma": "blízky",
+          "upos": "ADJ",
+          "head": "6",
+          "deprel": "amod"
+        },
+        {
+          "id": "6",
+          "form": "časti",
+          "lemma": "časť",
+          "upos": "NOUN",
+          "head": "3",
+          "deprel": "conj"
+        },
+        {
+          "id": "7",
+          "form": "ruskej",
+          "lemma": "ruský",
+          "upos": "ADJ",
+          "head": "8",
+          "deprel": "amod"
+        },
+        {
+          "id": "8",
+          "form": "Karélie",
+          "lemma": "karélia",
+          "upos": "PROPN",
+          "head": "6",
+          "deprel": "nmod"
+        },
+        {
+          "id": "9",
+          "form": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "head": "1",
+          "deprel": "punct"
+        }
+      ]
+    },
+    {
+      "sent_id": "wikipedia:wiki-29:wiki_29-p5s1",
+      "text": "Obrana ríše",
+      "tokens": [
+        {
+          "id": "1",
+          "form": "Obrana",
+          "lemma": "obrana",
+          "upos": "PROPN",
+          "head": "0",
+          "deprel": "root"
+        },
+        {
+          "id": "2",
+          "form": "ríše",
+          "lemma": "ríša",
+          "upos": "NOUN",
+          "head": "1",
+          "deprel": "nmod"
+        }
+      ]
+    },
+    {
+      "sent_id": "wikipedia2:wiki-nove-099:wiki_nove_099-p13s1",
+      "text": "1.",
+      "tokens": [
+        {
+          "id": "1",
+          "form": "1",
+          "lemma": "1",
+          "upos": "NUM",
+          "head": "0",
+          "deprel": "root"
+        },
+        {
+          "id": "2",
+          "form": ".",
+          "lemma": ".",
+          "upos": "PUNCT",
+          "head": "1",
+          "deprel": "punct"
+        }
+      ]
+    }
+  ]
+}
