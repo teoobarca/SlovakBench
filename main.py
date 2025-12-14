@@ -809,11 +809,11 @@ def reevaluate(
                 ckpt.checkpoint_path.unlink()
     
     # Show summary table
-    table = Table(title=f"📋 Re-evaluation Changes: Q{question}")
-    table.add_column("Model", style="cyan")
-    table.add_column("Old Answer")
-    table.add_column("New Answer")
-    table.add_column("Verdict", justify="center")
+    table = Table(title=f"📋 Q{question} Changes", box=None, pad_edge=False)
+    table.add_column("Model", style="cyan", max_width=25)
+    table.add_column("Before", style="dim", max_width=20)
+    table.add_column("After", max_width=20)
+    table.add_column("", justify="center", width=8)
     
     changes_count = 0
     
@@ -823,19 +823,21 @@ def reevaluate(
             
         changes_count += 1
         
-        old_icon = "✅" if d["old_correct"] else "❌"
-        new_icon = "✅" if d["new_correct"] else "❌"
+        # Verdict with color
+        if d["old_correct"] and not d["new_correct"]:
+            verdict = "[red]✅→❌[/red]"   # Got worse
+        elif not d["old_correct"] and d["new_correct"]:
+            verdict = "[green]❌→✅[/green]"  # Got better
+        elif d["new_correct"]:
+            verdict = "[green]✅[/green]"
+        else:
+            verdict = "[red]❌[/red]"
         
-        verdict = f"{old_icon} → {new_icon}"
-        if d["old_correct"] == d["new_correct"]:
-            verdict = new_icon
+        # Truncate answers
+        old_ans = d['old_ans'][:18] + "…" if len(d['old_ans']) > 18 else d['old_ans']
+        new_ans = d['new_ans'][:18] + "…" if len(d['new_ans']) > 18 else d['new_ans']
         
-        table.add_row(
-            d["model"],
-            f"[dim]{d['old_ans'][:30]}...[/dim]" if len(d['old_ans']) > 30 else f"[dim]{d['old_ans']}[/dim]",
-            f"[bold]{d['new_ans'][:30]}...[/bold]" if len(d['new_ans']) > 30 else f"[bold]{d['new_ans']}[/bold]",
-            verdict
-        )
+        table.add_row(d["model"], old_ans, new_ans, verdict)
     
     console.print()
     if changes_count > 0:
