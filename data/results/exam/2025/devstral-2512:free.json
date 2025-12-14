@@ -651,5 +651,6 @@
       "latency_ms": 2751.857249997556,
       "error": "Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'mistralai/devstral-2512:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Mistral'}}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
     }
-  ]
+  ],
+  "error_count": 3
 }

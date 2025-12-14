@@ -1,0 +1,656 @@
+{
+  "model_name": "qwen/qwen3-8b",
+  "dataset_path": "data/processed/exam/2025.json",
+  "timestamp": "2025-12-14T11:22:36.524188",
+  "total_questions": 64,
+  "correct_count": 0,
+  "accuracy": 0.0,
+  "total_cost_usd": 0.0,
+  "mcq_accuracy": 0.0,
+  "short_text_accuracy": 0.0,
+  "avg_latency_ms": 341.7902727469482,
+  "p95_latency_ms": 676.4962500310503,
+  "results": [
+    {
+      "question_id": "19",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 540.9485420095734,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "06",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "pás",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 547.5363750010729,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "08",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "synonymá, synonymami, synonymné",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 548.9606250193901,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "12",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 578.5910419654101,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "03",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 585.2001670282334,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "13",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 589.9170829798095,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "07",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "chôdze, k chôdze, do chôdze",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 590.9983750316314,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "09",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 592.436709033791,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "33",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 56.39762501232326,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "21",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 600.0802919734269,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "28",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 605.4481660248712,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "34",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 59.290915960446,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "29",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 606.8766669486649,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "23",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "(znamienko) výkričník, (znamienko) !, výkričník",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 611.4532499923371,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "22",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "citát, citácia, výrok",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 613.3365419809707,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "16",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "nesklonné, nesklonným, neohybné",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 623.2877080328763,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "11",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 624.8020000057295,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "05",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 625.8663330227137,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "04",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 627.016749989707,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "20",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 628.3097909763455,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "18",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 629.9958329764195,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "30",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "Provízia, provízia",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 630.858791002538,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "27",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 632.0492909871973,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "39",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "lek-ci-a, lek...ci...a, lek ci a",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 43.278333032503724,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "37",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 50.28974998276681,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "40",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "klesavá (melódia), klesavá, klesavá melódia",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 43.97316696122289,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "02",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 640.4065829701722,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "17",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 640.4436670127325,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "38",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "začína sa - končí sa, začína sa, končí sa, začínať sa - končiť sa",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 51.16849998012185,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "32",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "informačný (slohový postup), informačný, informatívny (slohový postup)",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 643.6147909844294,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "41",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 68.14887502696365,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "15",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "zízaš",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 667.3777499818243,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "45",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 60.14187500113621,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "42",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 67.49608303653076,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "47",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "ulica",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 54.52533299103379,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "01",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 670.0441669672728,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "46",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "vidiečan, dedinčan, vidiečanom",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 56.89883296145126,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "44",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 61.56125001143664,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "35",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 120.31504197511822,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "14",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "(ľudovú) pieseň, (ľudovú) slovesnosť, ľudovú pieseň",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 672.5369170308113,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "26",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 672.442749957554,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "48",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "1, jednu, jedna",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 49.43479096982628,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "36",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 95.54458397906274,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "43",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 68.82508296985179,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "52",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 47.268333029933274,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "24",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "podmet, subjekt",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 676.4962500310503,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "25",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 678.3997500315309,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "58",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 44.95141701772809,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "55",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "(obdobia) barok, barok, baroka",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 50.02220795722678,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "50",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 57.124874962028116,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "49",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 58.30833298387006,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "54",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "Hugolín Gavlovič, Hugolin Gavlovič, Martin Gavlovič",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 52.67791700316593,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "57",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 50.098042003810406,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "53",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 55.79166597453877,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "56",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "Salernovo príslovie, Salernusovo príslovie, Salemovo príslovie",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 52.92812502011657,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "59",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 48.7133749993518,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "51",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 62.08250002237037,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "60",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 50.181624945253134,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "61",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 50.39966700132936,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "31",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "skladaním, skladanie, kompozíciou",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 698.171625030227,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "10",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 710.1111669908278,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "62",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "epiteton (ornans), epiteton ornans, epiteton",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 73.41337500838563,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "63",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "Posledný, posledný, Posledný zvuk zvonku.",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 53.53966704569757,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    },
+    {
+      "question_id": "64",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "3, tri, 3 vety",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 55.77054200693965,
+      "error": "Error: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys', 'code': 403}}"
+    }
+  ],
+  "error_count": 64
+}

@@ -203,12 +203,17 @@ def evaluate(
             result = runner.run(str(dataset_path))
             
             output_dir = RESULTS_DIR / str(y)
-            save_results(result, str(output_dir))
+            saved_path = save_results(result, str(output_dir))
             
+            answered = result.total_questions - result.error_count
             mcq = f"MCQ {result.mcq_accuracy:.0%}" if result.mcq_accuracy else ""
             st = f"Text {result.short_text_accuracy:.0%}" if result.short_text_accuracy else ""
             latency = f"⏱️ {result.avg_latency_ms:.0f}ms" if result.avg_latency_ms else ""
-            typer.echo(f"   ✅ {result.accuracy:.1%} ({result.correct_count}/{result.total_questions}) | {mcq} | {st} | 💰${result.total_cost_usd:.4f} | {latency}")
+            
+            if saved_path:
+                typer.echo(f"   ✅ {result.accuracy:.1%} ({result.correct_count}/{answered}) | {mcq} | {st} | 💰${result.total_cost_usd:.4f} | {latency}")
+            else:
+                typer.echo(f"   ⚠️  Too many errors, result not saved")
         except Exception as e:
             typer.echo(f"   ❌ Error: {e}")
 
@@ -389,6 +394,8 @@ def export():
                         "short_text": round(data.get("short_text_accuracy", 0) * 100, 1) if data.get("short_text_accuracy") else None,
                         "cost": round(data.get("total_cost_usd", 0), 4),
                         "latency_ms": round(data.get("avg_latency_ms", 0)) if data.get("avg_latency_ms") else None,
+                        "error_count": data.get("error_count", 0),
+                        "total_questions": data.get("total_questions", 64),
                     })
     
     # Sort each year by overall score

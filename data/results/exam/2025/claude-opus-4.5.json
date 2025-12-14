@@ -651,5 +651,6 @@
       "latency_ms": 2613.877583993599,
       "error": null
     }
-  ]
+  ],
+  "error_count": 1
 }

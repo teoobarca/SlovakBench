@@ -6,6 +6,8 @@ export interface ModelResult {
     short_text?: number;
     cost?: number;
     latency_ms?: number;
+    error_count?: number;
+    total_questions?: number;
 }
 
 export interface LeaderboardData {

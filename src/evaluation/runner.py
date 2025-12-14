@@ -28,7 +28,8 @@ from utils.llm import create_llm, get_cost
 from evaluation.answer_validator import validate_mcq, validate_short_text
 
 # Configuration
-DEFAULT_TIMEOUT = 120  # seconds per question
+DEFAULT_TIMEOUT = 300  # 5 minutes per question
+MAX_ERROR_RATE = 0.20  # Don't save if > 20% errors
 CHECKPOINT_DIR = Path("data/checkpoints")
 
 
@@ -60,6 +61,7 @@ class EvaluationResult:
     short_text_accuracy: Optional[float] = None
     avg_latency_ms: Optional[float] = None
     p95_latency_ms: Optional[float] = None
+    error_count: int = 0
     results: List[QuestionResult] = field(default_factory=list)
     
     def to_dict(self) -> Dict:
@@ -75,6 +77,7 @@ class EvaluationResult:
             "short_text_accuracy": self.short_text_accuracy,
             "avg_latency_ms": self.avg_latency_ms,
             "p95_latency_ms": self.p95_latency_ms,
+            "error_count": self.error_count,
             "results": [
                 {
                     "question_id": r.question_id,
@@ -262,20 +265,25 @@ Príklad: "epiteton" (nie "epiteton (básnický prívlastok)")"""
                 error = None
                 break  # Success
                 
+            except asyncio.TimeoutError:
+                latency_ms = (time.perf_counter() - start_time) * 1000
+                raw_response = ""
+                error = f"Timeout after {self.timeout}s"
+                break
+                
             except Exception as e:
-                err_str = str(e)
+                err_str = str(e) or type(e).__name__
                 # Check for rate limits or server errors
                 is_retryable = "429" in err_str or "500" in err_str or "503" in err_str or "rate limit" in err_str.lower()
                 
                 if is_retryable and attempt < max_retries:
-                    print(f"   ⚠️ API Error, retrying immediately...")
-                    await asyncio.sleep(2) # Simple 2s wait
+                    await asyncio.sleep(2 ** attempt)  # Exponential backoff
                     continue
                 
-                # If timeout or not retryable or retries exhausted
+                # If not retryable or retries exhausted
                 latency_ms = (time.perf_counter() - start_time) * 1000
                 raw_response = ""
-                error = f"Error: {err_str}"
+                error = f"{type(e).__name__}: {err_str[:100]}" if err_str else type(e).__name__
                 break
         
         model_answer = self.parse_response(raw_response, q["task_type"])
@@ -397,12 +405,20 @@ Príklad: "epiteton" (nie "epiteton (básnický prívlastok)")"""
             short_text_accuracy=st_correct / st_total if st_total > 0 else None,
             avg_latency_ms=avg_latency,
             p95_latency_ms=p95_latency,
+            error_count=errors,
             results=all_results,
         )
 
 
-def save_results(result: EvaluationResult, output_dir: str = "data/results") -> str:
-    """Save evaluation results to JSON (overwrites previous for same model)."""
+def save_results(result: EvaluationResult, output_dir: str = "data/results") -> Optional[str]:
+    """Save evaluation results to JSON. Returns None if too many errors."""
+    # Guard: don't save if error rate > MAX_ERROR_RATE
+    if result.total_questions > 0:
+        error_rate = result.error_count / result.total_questions
+        if error_rate > MAX_ERROR_RATE:
+            print(f"   ❌ Skipping save: {result.error_count}/{result.total_questions} errors ({error_rate:.0%} > {MAX_ERROR_RATE:.0%} threshold)")
+            return None
+    
     os.makedirs(output_dir, exist_ok=True)
     
     # Filename is just model name - overwrites previous result
