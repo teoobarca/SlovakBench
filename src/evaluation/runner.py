@@ -164,10 +164,16 @@ class CheckpointManager:
 class EvaluationRunner:
     """Run LLM evaluation on exam dataset."""
     
-    def __init__(self, model_name: str, timeout: int = DEFAULT_TIMEOUT):
-        self.model_name = model_name
+    def __init__(self, model_id: str, timeout: int = DEFAULT_TIMEOUT):
+        """model_id: key from MODELS dict (e.g. 'openai/gpt-5.2')."""
+        from config.models import MODELS
+        
+        if model_id not in MODELS:
+            raise ValueError(f"Unknown model: {model_id}. Available: {list(MODELS.keys())}")
+        
+        self.model_name = model_id  # Full ID with provider
+        self.llm = MODELS[model_id]
         self.timeout = timeout
-        self.llm = create_llm(model_name=model_name)
     
     def load_dataset(self, dataset_path: str) -> Dict:
         """Load processed exam JSON."""
