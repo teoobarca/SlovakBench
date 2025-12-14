@@ -12,7 +12,7 @@
   --color-meta: #0668E1;
 }
 
-@theme inline {
+/* @theme inline {
   --color-cream: var(--color-cream);
   --color-ink: var(--color-ink);
   --color-paper: var(--color-paper);

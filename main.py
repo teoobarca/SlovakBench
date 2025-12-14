@@ -605,75 +605,78 @@ def recalculate(
                 data = json.load(fp)
         except json.JSONDecodeError:
             continue
-        
-        model_name = data.get("model_name", "?").split("/")[-1]
+            
+        model_name = data.get("model_name", "?")
         results = data.get("results", [])
+        original_count = len(results)
         
-        old_correct = sum(1 for r in results if r.get("is_correct") and not r.get("error"))
-        old_total = sum(1 for r in results if not r.get("error"))
+        # Calculate scores
+        # ... logic reused ...
         
-        # Recalculate
-        new_correct = 0
-        new_total = 0
-        changes = False
+        updated_results = []
+        changed = False
         
         for r in results:
-            if r.get("error"):
+            # Re-validate
+            question_id = r["question_id"]
+            if question_id not in questions_by_id:
+                updated_results.append(r)
                 continue
-            
-            qid = r["question_id"]
-            if qid not in questions_by_id:
-                continue
-            
-            q = questions_by_id[qid]
+                
+            q = questions_by_id[question_id]
             model_answer = r.get("model_answer", "")
             
-            # Re-validate
+            # Use validator
             if q["task_type"] == "mcq":
-                new_is_correct = validate_mcq(model_answer, q["answer"].get("correct_option", ""))
+                correct_opt = q["answer"].get("correct_option", "")
+                is_correct = validate_mcq(model_answer, correct_opt)
             else:
                 accepted = q["answer"].get("accepted", [])
                 steps = q["answer"].get("normalize", ["trim", "casefold"])
-                new_is_correct = validate_short_text(model_answer, accepted, steps)
+                is_correct = validate_short_text(model_answer, accepted, steps)
             
-            if r.get("is_correct") != new_is_correct:
-                changes = True
-                r["is_correct"] = new_is_correct
+            if is_correct != r.get("is_correct"):
+                r["is_correct"] = is_correct
+                changed = True
             
-            new_total += 1
-            if new_is_correct:
-                new_correct += 1
+            updated_results.append(r)
         
-        # Update aggregates
-        if new_total > 0:
-            data["correct_count"] = new_correct
-            data["accuracy"] = new_correct / new_total
-            data["total_questions"] = new_total
-            
-            # Recalc per-type
-            mcq_results = [r for r in results if r.get("task_type") == "mcq" and not r.get("error")]
-            st_results = [r for r in results if r.get("task_type") == "short_text" and not r.get("error")]
-            
-            if mcq_results:
-                data["mcq_accuracy"] = sum(1 for r in mcq_results if r.get("is_correct")) / len(mcq_results)
-            if st_results:
-                data["short_text_accuracy"] = sum(1 for r in st_results if r.get("is_correct")) / len(st_results)
+        # Calculate new accuracy
+        new_correct = len([r for r in updated_results if r.get("is_correct")])
+        new_pct = new_correct / original_count * 100 if original_count else 0
         
-        old_pct = old_correct / old_total * 100 if old_total else 0
-        new_pct = new_correct / new_total * 100 if new_total else 0
+        # Helper to get old accuracy
+        old_correct = len([r for r in data.get("results", []) if r.get("is_correct")])
+        old_pct = old_correct / original_count * 100 if original_count else 0
+        
         delta = new_pct - old_pct
-        
         delta_str = f"[green]+{delta:.1f}%[/green]" if delta > 0 else f"[red]{delta:.1f}%[/red]" if delta < 0 else "[dim]0.0%[/dim]"
         
         table.add_row(
-            model_name,
+            model_name.split("/")[-1],
             f"{old_pct:.1f}%",
             f"{new_pct:.1f}%",
             delta_str
         )
         
         # Save if changed
-        if changes and not dry_run:
+        if changed and not dry_run:
+            data["results"] = updated_results
+            # Update aggregates
+            if original_count > 0:
+                data["correct_count"] = new_correct
+                data["accuracy"] = new_correct / original_count
+                data["total_questions"] = original_count
+                
+                # Recalc per-type
+                mcq_results = [r for r in updated_results if r.get("task_type") == "mcq" and not r.get("error")]
+                st_results = [r for r in updated_results if r.get("task_type") == "short_text" and not r.get("error")]
+                
+                if mcq_results:
+                    data["mcq_accuracy"] = sum(1 for r in mcq_results if r.get("is_correct")) / len(mcq_results)
+                if st_results:
+                    data["short_text_accuracy"] = sum(1 for r in st_results if r.get("is_correct")) / len(st_results)
+
             with open(f, "w", encoding="utf-8") as fp:
                 json.dump(data, fp, indent=2, ensure_ascii=False)
             updated_files += 1
@@ -686,6 +689,129 @@ def recalculate(
         console.print(f"\n[green]✅ Updated {updated_files} result files[/green]")
 
 
+@app.command()
+def reevaluate(
+    year: int = typer.Option(..., "--year", "-y", help="Year to re-evaluate"),
+    question: str = typer.Option(..., "--question", "-q", help="Question ID to re-run (e.g. '32')"),
+):
+    """Re-run a specific question for ALL models by manipulating checkpoints."""
+    from rich.console import Console
+    from src.evaluation.runner import EvaluationRunner, CheckpointManager
+    from datetime import datetime
+    
+    console = Console()
+    
+    # Load dataset
+    datasets = get_processed_datasets()
+    if year not in datasets:
+        typer.echo(f"❌ No dataset for year {year}")
+        raise typer.Exit(1)
+        
+    dataset_path = str(datasets[year])
+    
+    # Locate all results
+    year_dir = RESULTS_DIR / str(year)
+    if not year_dir.exists():
+        typer.echo(f"❌ No results for year {year}")
+        raise typer.Exit(1)
+    
+    results_files = list(year_dir.glob("*.json"))
+    console.print(f"🔄 Re-evaluating Q{question} for {len(results_files)} models...")
+    
+    results_files = list(year_dir.glob("*.json"))
+    console.print(f"🔄 Re-evaluating Q{question} for {len(results_files)} models...")
+    
+    # Process concurrent
+    import asyncio
+    
+    semaphore = asyncio.Semaphore(10)  # Limit concurrency to 10 models at once
+    
+    async def process_model(f):
+        async with semaphore:
+            try:
+                with open(f) as fp:
+                    data = json.load(fp)
+            except:
+                return
+                
+            model_name = data.get("model_name")
+            if not model_name:
+                return
+                
+            short_name = model_name.split("/")[-1]
+            console.print(f"   Running {short_name}...", end="")
+            
+            # Filter OUT the target question from existing results
+            current_results = data.get("results", [])
+            filtered_results = [r for r in current_results if r["question_id"] != question]
+            
+            # Create a checkpoint with these filtered results
+            ckpt = CheckpointManager(model_name, dataset_path)
+            
+            checkpoint_data = {
+                "model_name": model_name,
+                "dataset_path": dataset_path,
+                "timestamp": datetime.now().isoformat(),
+                "results": filtered_results
+            }
+            
+            with open(ckpt.checkpoint_path, "w", encoding="utf-8") as fp:
+                json.dump(checkpoint_data, fp, ensure_ascii=False, indent=2)
+                
+            # Run evaluation
+            runner = EvaluationRunner(model_name=model_name)
+            
+            # Suppress output
+            import io
+            from contextlib import redirect_stdout
+            
+            try:
+                # We need to run this in a thread because runner.run calls asyncio.run itself 
+                # causing "asyncio.run() cannot be called from a running event loop"
+                # But since we are already in async, we can't use asyncio.run inside
+                # We need to refactor or just run in a thread
+                
+                # Correction: runner.run uses asyncio.run(). To call it from here, 
+                # we should run it in a separate thread/process
+                
+                def run_in_thread():
+                    with redirect_stdout(io.StringIO()):
+                        return runner.run(dataset_path, resume=True)
+                
+                new_result = await asyncio.to_thread(run_in_thread)
+                
+                # Sort results by ID
+                def get_id(r):
+                    try:
+                        return int(r.question_id)
+                    except ValueError:
+                        return 9999
+                
+                new_result.results.sort(key=get_id)
+                
+                # Save the new full result
+                output_path = f
+                with open(output_path, "w", encoding="utf-8") as fp:
+                    json.dump(new_result.to_dict(), fp, indent=2, ensure_ascii=False)
+                    
+                console.print(f" [green]Done[/green]")
+                
+            except Exception as e:
+                console.print(f" [red]Failed[/red]: {e}")
+                if ckpt.checkpoint_path.exists():
+                    ckpt.checkpoint_path.unlink()
+
+    async def run_all():
+        tasks = [process_model(f) for f in results_files]
+        await asyncio.gather(*tasks)
+
+    try:
+        asyncio.run(run_all())
+    except Exception as e:
+        console.print(f"Error in parallel execution: {e}")
+            
+    console.print(f"\n✅ Re-evaluation complete. Run [bold]analyze[/bold] to see new results.")
+
+
 if __name__ == "__main__":
     app()
-
