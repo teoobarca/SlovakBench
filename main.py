@@ -214,6 +214,10 @@ def evaluate(
                 typer.echo(f"   ✅ {result.accuracy:.1%} ({result.correct_count}/{answered}) | {mcq} | {st} | 💰${result.total_cost_usd:.4f} | {latency}")
             else:
                 typer.echo(f"   ⚠️  Too many errors, result not saved")
+                # Show sample error for debugging
+                sample_errors = [r for r in result.results if r.error][:2]
+                for err in sample_errors:
+                    typer.echo(f"      → Q{err.question_id}: {err.error[:150]}...")
         except Exception as e:
             typer.echo(f"   ❌ Error: {e}")
 
@@ -361,9 +365,16 @@ def export():
         "anthropic": "Anthropic",
         "google": "Google",
         "mistralai": "Mistral",
+        "mistral": "Mistral",
         "meta-llama": "Meta",
-        "qwen": "Alibaba",
+        "qwen": "Qwen",
         "deepseek": "DeepSeek",
+        "moonshotai": "Kimi",
+        "minimax": "Minimax",
+        "cohere": "Cohere",
+        "databricks": "Databricks",
+        "tii": "TII",
+        "microsoft": "Microsoft",
     }
     
     # Collect exam results

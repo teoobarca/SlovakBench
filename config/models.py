@@ -68,7 +68,7 @@ MODELS = [
     "moonshotai/kimi-k2",
 
     #minimax
-    "minimax/minimax-01",
+    # "minimax/minimax-01",
     "minimax/minimax-m1",
     "minimax/minimax-m2",
     
@@ -94,7 +94,52 @@ MODELS = [
     "qwen/qwen3-235b-a22b-2507",
     "qwen/qwen3-30b-a3b",
     "qwen/qwen3-8b",
-    "qwen/qwen3-32b"
+    "qwen/qwen3-32b",
+
+    #zai
+    "z-ai/glm-4-32b",
+    "z-ai/glm-4.5-air",
+    "z-ai/glm-4.5",
+    "z-ai/glm-4.5v",
+    "z-ai/glm-4.6",
+    "z-ai/glm-4.6v",
+
+    #meta
+    "meta-llama/llama-3-8b-instruct",
+    "meta-llama/llama-3-70b-instruct",
+    "meta-llama/llama-3.1-70b-instruct",
+    "meta-llama/llama-3.1-405b-instruct",
+    "meta-llama/llama-3.1-8b-instruct",
+    "meta-llama/llama-3.2-1b-instruct",
+    "meta-llama/llama-3.2-3b-instruct",
+    "meta-llama/llama-3.3-70b-instruct",
+    "meta-llama/llama-4-scout",
+    "meta-llama/llama-4-maverick",
+    "meta-llama/llama-guard-4-12b",
 
 
+    #xai
+    "x-ai/grok-3",
+    "x-ai/grok-3-mini",
+    "x-ai/grok-4",
+    "x-ai/grok-code-fast-1",
+    "x-ai/grok-4-fast",
+    "x-ai/grok-4.1-fast"
+
+    #cohere
+    "cohere/command-r-plus-08-2024",
+    "cohere/command-r-08-2024",
+    "cohere/command-r7b-12-2024",
+    "cohere/command-a",
+
+    #a21
+    "ai21/jamba-large-1.7",
+    "ai21/jamba-mini-1.7",
+
+    #microsoft
+    "microsoft/phi-3-mini-128k-instruct",
+    "microsoft/phi-3.5-mini-128k-instruct,
+    "microsoft/phi-4",
+    "microsoft/phi-4-multimodal-instruct",
+    "microsoft/phi-4-reasoning-plus",
 ]

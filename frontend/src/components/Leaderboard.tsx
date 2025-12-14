@@ -44,6 +44,13 @@ const PROVIDER_LOGOS: Record<string, string> = {
     DeepSeek: "/logos/deepseek.svg",
     Alibaba: "/logos/alibaba.svg",
     xAI: "/logos/xai.svg",
+    Kimi: "/logos/kimi.svg",
+    Qwen: "/logos/qwen.svg",
+    Cohere: "/logos/cohere.svg",
+    Databricks: "/logos/databricks.svg",
+    TII: "/logos/tii.svg",
+    Minimax: "/logos/minimax.svg",
+    Microsoft: "/logos/microsoft.svg",
 };
 
 const PROVIDER_COLORS: Record<string, string> = {
@@ -55,6 +62,13 @@ const PROVIDER_COLORS: Record<string, string> = {
     DeepSeek: "#4f46e5",
     Alibaba: "#ff6a00",
     xAI: "#000000",
+    Kimi: "#027AFF",
+    Qwen: "#6366F1",
+    Cohere: "#39594D",
+    Databricks: "#FE321D",
+    TII: "#6400FF",
+    Minimax: "#FF6B35",
+    Microsoft: "#00A4EF",
 };
 
 const YEARS = [2025, 2024, 2023];
@@ -338,10 +352,10 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                                         {(item.error_count ?? 0) > 0 && (
                                                             <span className="relative group ml-1">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" className="text-amber-500/80">
-                                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <path d="M12 1.67c.955 0 1.845 .467 2.39 1.247l.105 .16l8.114 13.548a2.914 2.914 0 0 1 -2.307 4.363l-.195 .008h-16.225a2.914 2.914 0 0 1 -2.582 -4.2l.099 -.185l8.11 -13.538a2.914 2.914 0 0 1 2.491 -1.403zm.01 13.33l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm-.01 -7a1 1 0 0 0 -.993 .883l-.007 .117v4l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-4l-.007 -.117a1 1 0 0 0 -.993 -.883z" />
                                                                 </svg>
-                                                                
+
                                                                 <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-[var(--color-ink)] text-[var(--color-cream)] text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50 pointer-events-none font-[var(--font-mono)]">
                                                                     {item.error_count}/{item.total_questions || 64} questions failed
                                                                     <br />
