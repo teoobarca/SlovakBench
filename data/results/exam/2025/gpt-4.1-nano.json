@@ -1,15 +1,15 @@
 {
   "model_name": "openai/gpt-4.1-nano",
   "dataset_path": "data/processed/exam/2025.json",
-  "timestamp": "2025-12-14T10:52:28.038942",
+  "timestamp": "2025-12-14T11:06:41.143846",
   "total_questions": 64,
   "correct_count": 32,
   "accuracy": 0.5,
-  "total_cost_usd": 0.0035394,
+  "total_cost_usd": 0.0035398,
   "mcq_accuracy": 0.65,
   "short_text_accuracy": 0.25,
-  "avg_latency_ms": 1310.4906660155393,
-  "p95_latency_ms": 1310.4906660155393,
+  "avg_latency_ms": 1042.7754590054974,
+  "p95_latency_ms": 1042.7754590054974,
   "results": [
     {
       "question_id": "01",
@@ -327,8 +327,8 @@
       "model_answer": "popisný",
       "correct_answer": "informačný (slohový postup), informačný, informatívny (slohový postup)",
       "is_correct": false,
-      "cost_usd": 6.41e-05,
-      "latency_ms": 1310.4906660155393,
+      "cost_usd": 6.45e-05,
+      "latency_ms": 1042.7754590054974,
       "error": null
     },
     {

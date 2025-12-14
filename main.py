@@ -718,99 +718,132 @@ def reevaluate(
     results_files = list(year_dir.glob("*.json"))
     console.print(f"🔄 Re-evaluating Q{question} for {len(results_files)} models...")
     
-    results_files = list(year_dir.glob("*.json"))
-    console.print(f"🔄 Re-evaluating Q{question} for {len(results_files)} models...")
+    from rich.table import Table
+    from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn
+    from tqdm import tqdm
+    import io
+    from contextlib import redirect_stdout, redirect_stderr
     
-    # Process concurrent
-    import asyncio
+    diffs = []
     
-    semaphore = asyncio.Semaphore(10)  # Limit concurrency to 10 models at once
+    for f in tqdm(results_files, desc="Models", leave=True):
+        try:
+            with open(f) as fp:
+                data = json.load(fp)
+        except:
+            continue
+            
+        model_name = data.get("model_name")
+        if not model_name:
+            continue
+            
+        short_name = model_name.split("/")[-1]
+        
+        current_results = data.get("results", [])
+        
+        # Find old answer for diff
+        old_result = next((r for r in current_results if r["question_id"] == question), None)
+        old_ans = old_result.get("model_answer", "") if old_result else "-"
+        old_correct = old_result.get("is_correct", False) if old_result else False
+        
+        filtered_results = [r for r in current_results if r["question_id"] != question]
+        
+        # Create checkpoint
+        ckpt = CheckpointManager(model_name, dataset_path)
+        
+        checkpoint_data = {
+            "model_name": model_name,
+            "dataset_path": dataset_path,
+            "timestamp": datetime.now().isoformat(),
+            "results": filtered_results
+        }
+        
+        with open(ckpt.checkpoint_path, "w", encoding="utf-8") as fp:
+            json.dump(checkpoint_data, fp, ensure_ascii=False, indent=2)
+            
+        # Run evaluation with suppressed output
+        runner = EvaluationRunner(model_name=model_name)
+        
+        try:
+            # Suppress tqdm and print output from runner
+            with redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
+                new_result = runner.run(dataset_path, resume=True)
+            
+            # Sort results by ID
+            def get_id(r):
+                try:
+                    return int(r.question_id)
+                except ValueError:
+                    return 9999
+            
+            new_result.results.sort(key=get_id)
+            
+            # Save
+            with open(f, "w", encoding="utf-8") as fp:
+                json.dump(new_result.to_dict(), fp, indent=2, ensure_ascii=False)
+            
+            # Find new answer
+            new_r = next((r for r in new_result.results if r.question_id == question), None)
+            new_ans = new_r.model_answer if new_r else "-"
+            new_correct = new_r.is_correct if new_r else False
+            
+            diffs.append({
+                "model": short_name,
+                "old_ans": old_ans,
+                "new_ans": new_ans,
+                "old_correct": old_correct,
+                "new_correct": new_correct,
+                "changed": old_ans != new_ans or old_correct != new_correct
+            })
+            
+        except Exception as e:
+            diffs.append({
+                "model": short_name,
+                "old_ans": old_ans,
+                "new_ans": f"ERROR: {e}",
+                "old_correct": old_correct,
+                "new_correct": False,
+                "changed": True
+            })
+            if ckpt.checkpoint_path.exists():
+                ckpt.checkpoint_path.unlink()
     
-    async def process_model(f):
-        async with semaphore:
-            try:
-                with open(f) as fp:
-                    data = json.load(fp)
-            except:
-                return
-                
-            model_name = data.get("model_name")
-            if not model_name:
-                return
-                
-            short_name = model_name.split("/")[-1]
-            console.print(f"   Running {short_name}...", end="")
+    # Show summary table
+    table = Table(title=f"📋 Re-evaluation Changes: Q{question}")
+    table.add_column("Model", style="cyan")
+    table.add_column("Old Answer")
+    table.add_column("New Answer")
+    table.add_column("Verdict", justify="center")
+    
+    changes_count = 0
+    
+    for d in sorted(diffs, key=lambda x: x["model"]):
+        if not d["changed"]:
+            continue
             
-            # Filter OUT the target question from existing results
-            current_results = data.get("results", [])
-            filtered_results = [r for r in current_results if r["question_id"] != question]
-            
-            # Create a checkpoint with these filtered results
-            ckpt = CheckpointManager(model_name, dataset_path)
-            
-            checkpoint_data = {
-                "model_name": model_name,
-                "dataset_path": dataset_path,
-                "timestamp": datetime.now().isoformat(),
-                "results": filtered_results
-            }
-            
-            with open(ckpt.checkpoint_path, "w", encoding="utf-8") as fp:
-                json.dump(checkpoint_data, fp, ensure_ascii=False, indent=2)
-                
-            # Run evaluation
-            runner = EvaluationRunner(model_name=model_name)
-            
-            # Suppress output
-            import io
-            from contextlib import redirect_stdout
-            
-            try:
-                # We need to run this in a thread because runner.run calls asyncio.run itself 
-                # causing "asyncio.run() cannot be called from a running event loop"
-                # But since we are already in async, we can't use asyncio.run inside
-                # We need to refactor or just run in a thread
-                
-                # Correction: runner.run uses asyncio.run(). To call it from here, 
-                # we should run it in a separate thread/process
-                
-                def run_in_thread():
-                    with redirect_stdout(io.StringIO()):
-                        return runner.run(dataset_path, resume=True)
-                
-                new_result = await asyncio.to_thread(run_in_thread)
-                
-                # Sort results by ID
-                def get_id(r):
-                    try:
-                        return int(r.question_id)
-                    except ValueError:
-                        return 9999
-                
-                new_result.results.sort(key=get_id)
-                
-                # Save the new full result
-                output_path = f
-                with open(output_path, "w", encoding="utf-8") as fp:
-                    json.dump(new_result.to_dict(), fp, indent=2, ensure_ascii=False)
-                    
-                console.print(f" [green]Done[/green]")
-                
-            except Exception as e:
-                console.print(f" [red]Failed[/red]: {e}")
-                if ckpt.checkpoint_path.exists():
-                    ckpt.checkpoint_path.unlink()
-
-    async def run_all():
-        tasks = [process_model(f) for f in results_files]
-        await asyncio.gather(*tasks)
-
-    try:
-        asyncio.run(run_all())
-    except Exception as e:
-        console.print(f"Error in parallel execution: {e}")
-            
-    console.print(f"\n✅ Re-evaluation complete. Run [bold]analyze[/bold] to see new results.")
+        changes_count += 1
+        
+        old_icon = "✅" if d["old_correct"] else "❌"
+        new_icon = "✅" if d["new_correct"] else "❌"
+        
+        verdict = f"{old_icon} → {new_icon}"
+        if d["old_correct"] == d["new_correct"]:
+            verdict = new_icon
+        
+        table.add_row(
+            d["model"],
+            f"[dim]{d['old_ans'][:30]}...[/dim]" if len(d['old_ans']) > 30 else f"[dim]{d['old_ans']}[/dim]",
+            f"[bold]{d['new_ans'][:30]}...[/bold]" if len(d['new_ans']) > 30 else f"[bold]{d['new_ans']}[/bold]",
+            verdict
+        )
+    
+    console.print()
+    if changes_count > 0:
+        console.print(table)
+    else:
+        console.print("[yellow]No changes in answers/correctness detected.[/yellow]")
+        
+    console.print(f"\n✅ Re-evaluation complete. Run [bold]analyze[/bold] to see full results.")
 
 
 if __name__ == "__main__":

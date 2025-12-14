@@ -1,15 +1,15 @@
 {
   "model_name": "openai/gpt-4o",
   "dataset_path": "data/processed/exam/2025.json",
-  "timestamp": "2025-12-14T10:52:45.857247",
+  "timestamp": "2025-12-14T11:06:59.108183",
   "total_questions": 64,
   "correct_count": 50,
   "accuracy": 0.78125,
-  "total_cost_usd": 0.088155,
+  "total_cost_usd": 0.088165,
   "mcq_accuracy": 0.875,
   "short_text_accuracy": 0.625,
-  "avg_latency_ms": 1415.6075000064448,
-  "p95_latency_ms": 1415.6075000064448,
+  "avg_latency_ms": 1705.3560829954222,
+  "p95_latency_ms": 1705.3560829954222,
   "results": [
     {
       "question_id": "01",
@@ -327,8 +327,8 @@
       "model_answer": "opisný",
       "correct_answer": "informačný (slohový postup), informačný, informatívny (slohový postup)",
       "is_correct": false,
-      "cost_usd": 0.0015825,
-      "latency_ms": 1415.6075000064448,
+      "cost_usd": 0.0015925,
+      "latency_ms": 1705.3560829954222,
       "error": null
     },
     {

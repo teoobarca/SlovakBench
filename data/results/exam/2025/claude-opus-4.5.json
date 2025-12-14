@@ -1,14 +1,14 @@
 {
   "model_name": "anthropic/claude-opus-4.5",
   "dataset_path": "data/processed/exam/2025.json",
-  "timestamp": "2025-12-14T10:54:30.402741",
+  "timestamp": "2025-12-14T11:08:33.903628",
   "total_questions": 64,
-  "correct_count": 58,
-  "accuracy": 0.90625,
-  "total_cost_usd": 0.209115,
+  "correct_count": 57,
+  "accuracy": 0.890625,
+  "total_cost_usd": 0.205285,
   "mcq_accuracy": 1.0,
-  "short_text_accuracy": 0.75,
-  "avg_latency_ms": 2706.403041656813,
+  "short_text_accuracy": 0.7083333333333334,
+  "avg_latency_ms": 2683.5007506251713,
   "p95_latency_ms": 3261.1853330163285,
   "results": [
     {
@@ -324,12 +324,12 @@
     {
       "question_id": "32",
       "task_type": "short_text",
-      "model_answer": "informačný",
+      "model_answer": "",
       "correct_answer": "informačný (slohový postup), informačný, informatívny (slohový postup)",
-      "is_correct": true,
-      "cost_usd": 0.00383,
-      "latency_ms": 2878.4689170424826,
-      "error": null
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 1412.7222910174169,
+      "error": "Error: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 64000 tokens, but can only afford 26553. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
     },
     {
       "question_id": "33",

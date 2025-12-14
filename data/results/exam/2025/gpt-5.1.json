@@ -1,14 +1,14 @@
 {
   "model_name": "openai/gpt-5.1",
   "dataset_path": "data/processed/exam/2025.json",
-  "timestamp": "2025-12-14T10:52:44.434489",
+  "timestamp": "2025-12-14T11:06:57.396063",
   "total_questions": 64,
-  "correct_count": 58,
-  "accuracy": 0.90625,
-  "total_cost_usd": 0.1312625,
+  "correct_count": 59,
+  "accuracy": 0.921875,
+  "total_cost_usd": 0.1326075,
   "mcq_accuracy": 0.975,
-  "short_text_accuracy": 0.7916666666666666,
-  "avg_latency_ms": 2131.918938687704,
+  "short_text_accuracy": 0.8333333333333334,
+  "avg_latency_ms": 2142.314507046649,
   "p95_latency_ms": 5535.864790959749,
   "results": [
     {
@@ -324,11 +324,11 @@
     {
       "question_id": "32",
       "task_type": "short_text",
-      "model_answer": "opisný",
+      "model_answer": "informačný",
       "correct_answer": "informačný (slohový postup), informačný, informatívny (slohový postup)",
-      "is_correct": false,
-      "cost_usd": 0.00482,
-      "latency_ms": 10403.245208028238,
+      "is_correct": true,
+      "cost_usd": 0.006165,
+      "latency_ms": 11068.561583000701,
       "error": null
     },
     {

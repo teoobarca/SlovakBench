@@ -7,8 +7,8 @@
         "overall": 95.3,
         "mcq": 97.5,
         "short_text": 91.7,
-        "cost": 0.1723,
-        "latency_ms": 2711
+        "cost": 0.1714,
+        "latency_ms": 2700
       },
       {
         "model": "gemini-2.5-pro",
@@ -16,8 +16,8 @@
         "overall": 95.3,
         "mcq": 97.5,
         "short_text": 91.7,
-        "cost": 0.7741,
-        "latency_ms": null
+        "cost": 0.7909,
+        "latency_ms": 49790
       },
       {
         "model": "gemini-3-pro-preview",
@@ -25,8 +25,8 @@
         "overall": 95.3,
         "mcq": 97.5,
         "short_text": 91.7,
-        "cost": 1.051,
-        "latency_ms": 17994
+        "cost": 1.048,
+        "latency_ms": 17979
       },
       {
         "model": "gpt-5",
@@ -34,8 +34,8 @@
         "overall": 93.8,
         "mcq": 97.5,
         "short_text": 87.5,
-        "cost": 0.4424,
-        "latency_ms": 14426
+        "cost": 0.4386,
+        "latency_ms": 14317
       },
       {
         "model": "gpt-5.2",
@@ -43,8 +43,8 @@
         "overall": 93.8,
         "mcq": 95.0,
         "short_text": 91.7,
-        "cost": 0.1654,
-        "latency_ms": null
+        "cost": 0.1672,
+        "latency_ms": 4099
       },
       {
         "model": "o3",
@@ -52,17 +52,8 @@
         "overall": 93.8,
         "mcq": 97.5,
         "short_text": 87.5,
-        "cost": 0.3214,
-        "latency_ms": 6354
-      },
-      {
-        "model": "claude-3.7-sonnet",
-        "provider": "Anthropic",
-        "overall": 93.5,
-        "mcq": 97.5,
-        "short_text": 86.4,
-        "cost": 1.0912,
-        "latency_ms": 18742
+        "cost": 0.3296,
+        "latency_ms": 6470
       },
       {
         "model": "gpt-5.1",
@@ -70,8 +61,8 @@
         "overall": 90.6,
         "mcq": 97.5,
         "short_text": 79.2,
-        "cost": 0.1372,
-        "latency_ms": 2117
+        "cost": 0.1313,
+        "latency_ms": 2132
       },
       {
         "model": "gpt-5.1-chat",
@@ -79,17 +70,26 @@
         "overall": 90.6,
         "mcq": 97.5,
         "short_text": 79.2,
-        "cost": 0.075,
-        "latency_ms": 2116
+        "cost": 0.0756,
+        "latency_ms": 2146
       },
       {
         "model": "claude-opus-4.5",
         "provider": "Anthropic",
-        "overall": 89.1,
+        "overall": 90.6,
         "mcq": 100.0,
-        "short_text": 70.8,
-        "cost": 0.209,
-        "latency_ms": 2708
+        "short_text": 75.0,
+        "cost": 0.2091,
+        "latency_ms": 2706
+      },
+      {
+        "model": "claude-3.7-sonnet",
+        "provider": "Anthropic",
+        "overall": 90.6,
+        "mcq": 97.5,
+        "short_text": 79.2,
+        "cost": 1.0426,
+        "latency_ms": 18065
       },
       {
         "model": "o4-mini-high",
@@ -97,17 +97,17 @@
         "overall": 85.9,
         "mcq": 92.5,
         "short_text": 75.0,
-        "cost": 0.4085,
-        "latency_ms": 10270
+        "cost": 0.4181,
+        "latency_ms": 10500
       },
       {
-        "model": "gpt-5-mini",
-        "provider": "OpenAI",
-        "overall": 85.9,
-        "mcq": 95.0,
+        "model": "claude-3.5-sonnet",
+        "provider": "Anthropic",
+        "overall": 84.4,
+        "mcq": 92.5,
         "short_text": 70.8,
-        "cost": 0.0848,
-        "latency_ms": 11795
+        "cost": 0.251,
+        "latency_ms": 2129
       },
       {
         "model": "claude-sonnet-4.5",
@@ -115,8 +115,8 @@
         "overall": 84.4,
         "mcq": 97.5,
         "short_text": 62.5,
-        "cost": 0.1261,
-        "latency_ms": 1704
+        "cost": 0.1234,
+        "latency_ms": 1678
       },
       {
         "model": "gemini-2.5-flash",
@@ -125,16 +125,25 @@
         "mcq": 97.5,
         "short_text": 62.5,
         "cost": 0.0106,
-        "latency_ms": null
+        "latency_ms": 1152
       },
       {
-        "model": "claude-3.5-sonnet",
-        "provider": "Anthropic",
-        "overall": 82.8,
-        "mcq": 92.5,
+        "model": "gpt-5-mini",
+        "provider": "OpenAI",
+        "overall": 84.4,
+        "mcq": 95.0,
         "short_text": 66.7,
-        "cost": 0.2509,
-        "latency_ms": 2137
+        "cost": 0.0838,
+        "latency_ms": 11600
+      },
+      {
+        "model": "gemini-2.5-flash-preview-09-2025",
+        "provider": "Google",
+        "overall": 82.8,
+        "mcq": 90.0,
+        "short_text": 70.8,
+        "cost": 0.0107,
+        "latency_ms": 813
       },
       {
         "model": "gpt-4.1",
@@ -143,16 +152,7 @@
         "mcq": 90.0,
         "short_text": 70.8,
         "cost": 0.0707,
-        "latency_ms": null
-      },
-      {
-        "model": "gemini-2.5-flash-preview-09-2025",
-        "provider": "Google",
-        "overall": 81.2,
-        "mcq": 90.0,
-        "short_text": 66.7,
-        "cost": 0.0107,
-        "latency_ms": 810
+        "latency_ms": 1500
       },
       {
         "model": "gpt-4o",
@@ -160,8 +160,8 @@
         "overall": 78.1,
         "mcq": 87.5,
         "short_text": 62.5,
-        "cost": 0.0881,
-        "latency_ms": null
+        "cost": 0.0882,
+        "latency_ms": 1416
       },
       {
         "model": "claude-sonnet-4",
@@ -169,8 +169,8 @@
         "overall": 76.6,
         "mcq": 90.0,
         "short_text": 54.2,
-        "cost": 0.1255,
-        "latency_ms": null
+        "cost": 0.1232,
+        "latency_ms": 1447
       },
       {
         "model": "gemini-2.0-flash-001",
@@ -179,7 +179,7 @@
         "mcq": 85.0,
         "short_text": 58.3,
         "cost": 0.0038,
-        "latency_ms": 682
+        "latency_ms": 705
       },
       {
         "model": "claude-haiku-4.5",
@@ -188,7 +188,7 @@
         "mcq": 90.0,
         "short_text": 45.8,
         "cost": 0.0419,
-        "latency_ms": 1740
+        "latency_ms": 1747
       },
       {
         "model": "claude-3.5-haiku",
@@ -206,7 +206,7 @@
         "mcq": 87.5,
         "short_text": 41.7,
         "cost": 0.0035,
-        "latency_ms": 758
+        "latency_ms": 761
       },
       {
         "model": "gpt-5-nano",
@@ -214,8 +214,8 @@
         "overall": 68.8,
         "mcq": 85.0,
         "short_text": 41.7,
-        "cost": 0.044,
-        "latency_ms": 24115
+        "cost": 0.0439,
+        "latency_ms": 23994
       },
       {
         "model": "gpt-4-turbo",
@@ -223,8 +223,8 @@
         "overall": 68.8,
         "mcq": 85.0,
         "short_text": 41.7,
-        "cost": 0.4298,
-        "latency_ms": null
+        "cost": 0.4297,
+        "latency_ms": 1372
       },
       {
         "model": "devstral-2512",
@@ -233,7 +233,7 @@
         "mcq": 82.5,
         "short_text": 45.8,
         "cost": 0.0,
-        "latency_ms": 1547
+        "latency_ms": 1569
       },
       {
         "model": "gpt-4o-mini",
@@ -242,7 +242,7 @@
         "mcq": 82.5,
         "short_text": 41.7,
         "cost": 0.0053,
-        "latency_ms": null
+        "latency_ms": 1403
       },
       {
         "model": "gemini-2.5-flash-lite",
@@ -251,7 +251,7 @@
         "mcq": 87.5,
         "short_text": 33.3,
         "cost": 0.0035,
-        "latency_ms": 933
+        "latency_ms": 942
       },
       {
         "model": "gpt-4.1-mini",
@@ -260,7 +260,7 @@
         "mcq": 77.5,
         "short_text": 37.5,
         "cost": 0.0142,
-        "latency_ms": null
+        "latency_ms": 1572
       },
       {
         "model": "claude-3-haiku",
@@ -269,7 +269,7 @@
         "mcq": 70.0,
         "short_text": 33.3,
         "cost": 0.0105,
-        "latency_ms": 891
+        "latency_ms": 896
       },
       {
         "model": "gpt-4.1-nano",
@@ -278,7 +278,7 @@
         "mcq": 65.0,
         "short_text": 25.0,
         "cost": 0.0035,
-        "latency_ms": null
+        "latency_ms": 1310
       },
       {
         "model": "gpt-3.5-turbo",
@@ -287,7 +287,7 @@
         "mcq": 60.0,
         "short_text": 20.8,
         "cost": 0.0219,
-        "latency_ms": null
+        "latency_ms": 1233
       },
       {
         "model": "claude-3-sonnet",
@@ -296,7 +296,7 @@
         "mcq": null,
         "short_text": null,
         "cost": 0.0,
-        "latency_ms": 308
+        "latency_ms": 309
       }
     ]
   },

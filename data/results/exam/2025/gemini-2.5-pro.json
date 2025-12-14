@@ -1,15 +1,15 @@
 {
   "model_name": "google/gemini-2.5-pro",
   "dataset_path": "data/processed/exam/2025.json",
-  "timestamp": "2025-12-14T10:54:21.417714",
+  "timestamp": "2025-12-14T11:08:27.198913",
   "total_questions": 64,
   "correct_count": 61,
   "accuracy": 0.953125,
-  "total_cost_usd": 0.7909375,
+  "total_cost_usd": 0.7809825,
   "mcq_accuracy": 0.975,
   "short_text_accuracy": 0.9166666666666666,
-  "avg_latency_ms": 49790.08787497878,
-  "p95_latency_ms": 49790.08787497878,
+  "avg_latency_ms": 41734.999375010375,
+  "p95_latency_ms": 41734.999375010375,
   "results": [
     {
       "question_id": "01",
@@ -327,8 +327,8 @@
       "model_answer": "informačný",
       "correct_answer": "informačný (slohový postup), informačný, informatívny (slohový postup)",
       "is_correct": true,
-      "cost_usd": 0.03008875,
-      "latency_ms": 49790.08787497878,
+      "cost_usd": 0.02013375,
+      "latency_ms": 41734.999375010375,
       "error": null
     },
     {

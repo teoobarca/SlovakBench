@@ -1,14 +1,14 @@
 {
   "model_name": "mistralai/devstral-2512:free",
   "dataset_path": "data/processed/exam/2025.json",
-  "timestamp": "2025-12-14T10:55:20.352065",
+  "timestamp": "2025-12-14T11:09:04.998726",
   "total_questions": 64,
   "correct_count": 44,
   "accuracy": 0.6875,
   "total_cost_usd": 0.0,
   "mcq_accuracy": 0.825,
   "short_text_accuracy": 0.4583333333333333,
-  "avg_latency_ms": 1568.7729257351748,
+  "avg_latency_ms": 1547.1355364070405,
   "p95_latency_ms": 7002.9096670332365,
   "results": [
     {
@@ -324,12 +324,12 @@
     {
       "question_id": "32",
       "task_type": "short_text",
-      "model_answer": "",
+      "model_answer": "popisný",
       "correct_answer": "informačný (slohový postup), informačný, informatívny (slohový postup)",
       "is_correct": false,
-      "cost_usd": 0.0,
-      "latency_ms": 2244.3129169987515,
-      "error": "Error: Error code: 429 - {'error': {'message': 'Provider returned error', 'code': 429, 'metadata': {'raw': 'mistralai/devstral-2512:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations', 'provider_name': 'Mistral'}}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+      "cost_usd": 0,
+      "latency_ms": 859.519999998156,
+      "error": null
     },
     {
       "question_id": "33",

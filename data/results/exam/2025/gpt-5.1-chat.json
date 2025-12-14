@@ -1,15 +1,15 @@
 {
   "model_name": "openai/gpt-5.1-chat",
   "dataset_path": "data/processed/exam/2025.json",
-  "timestamp": "2025-12-14T10:54:26.362625",
+  "timestamp": "2025-12-14T11:08:31.306536",
   "total_questions": 64,
   "correct_count": 58,
   "accuracy": 0.90625,
-  "total_cost_usd": 0.0756225,
+  "total_cost_usd": 0.0743475,
   "mcq_accuracy": 0.975,
   "short_text_accuracy": 0.7916666666666666,
-  "avg_latency_ms": 2145.6748015161793,
-  "p95_latency_ms": 3241.380040999502,
+  "avg_latency_ms": 2128.4394362974126,
+  "p95_latency_ms": 3220.980791025795,
   "results": [
     {
       "question_id": "01",
@@ -327,8 +327,8 @@
       "model_answer": "opisný",
       "correct_answer": "informačný (slohový postup), informačný, informatívny (slohový postup)",
       "is_correct": false,
-      "cost_usd": 0.00214,
-      "latency_ms": 3470.890833006706,
+      "cost_usd": 0.000865,
+      "latency_ms": 2367.827459005639,
       "error": null
     },
     {

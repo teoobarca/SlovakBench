@@ -1,14 +1,14 @@
 {
   "model_name": "openai/gpt-5-nano",
   "dataset_path": "data/processed/exam/2025.json",
-  "timestamp": "2025-12-14T10:53:31.621921",
+  "timestamp": "2025-12-14T11:07:45.456791",
   "total_questions": 64,
   "correct_count": 44,
   "accuracy": 0.6875,
-  "total_cost_usd": 0.0438653,
+  "total_cost_usd": 0.0443523,
   "mcq_accuracy": 0.85,
   "short_text_accuracy": 0.4166666666666667,
-  "avg_latency_ms": 23994.37799354928,
+  "avg_latency_ms": 24202.332010487225,
   "p95_latency_ms": 59843.37916702498,
   "results": [
     {
@@ -324,11 +324,11 @@
     {
       "question_id": "32",
       "task_type": "short_text",
-      "model_answer": "epiteton",
+      "model_answer": "reklamný",
       "correct_answer": "informačný (slohový postup), informačný, informatívny (slohový postup)",
       "is_correct": false,
-      "cost_usd": 0.000598,
-      "latency_ms": 18501.376583008096,
+      "cost_usd": 0.001085,
+      "latency_ms": 31810.433667036705,
       "error": null
     },
     {

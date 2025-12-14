@@ -1,14 +1,14 @@
 {
   "model_name": "anthropic/claude-3-haiku",
   "dataset_path": "data/processed/exam/2025.json",
-  "timestamp": "2025-12-14T10:55:52.014032",
+  "timestamp": "2025-12-14T11:09:15.055409",
   "total_questions": 64,
   "correct_count": 36,
   "accuracy": 0.5625,
-  "total_cost_usd": 0.010477,
+  "total_cost_usd": 0.010478,
   "mcq_accuracy": 0.7,
   "short_text_accuracy": 0.3333333333333333,
-  "avg_latency_ms": 896.3383841319228,
+  "avg_latency_ms": 898.0760605691103,
   "p95_latency_ms": 1416.2288749939762,
   "results": [
     {
@@ -327,8 +327,8 @@
       "model_answer": "Popisný",
       "correct_answer": "informačný (slohový postup), informačný, informatívny (slohový postup)",
       "is_correct": false,
-      "cost_usd": 0.00019275,
-      "latency_ms": 1280.8972080238163,
+      "cost_usd": 0.00019375,
+      "latency_ms": 1392.1085000038147,
       "error": null
     },
     {

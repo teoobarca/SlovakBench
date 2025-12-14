@@ -1,14 +1,14 @@
 {
   "model_name": "anthropic/claude-sonnet-4.5",
   "dataset_path": "data/processed/exam/2025.json",
-  "timestamp": "2025-12-14T10:54:22.885602",
+  "timestamp": "2025-12-14T11:08:28.934125",
   "total_questions": 64,
   "correct_count": 54,
   "accuracy": 0.84375,
   "total_cost_usd": 0.123396,
   "mcq_accuracy": 0.975,
   "short_text_accuracy": 0.625,
-  "avg_latency_ms": 1678.4484727158997,
+  "avg_latency_ms": 1682.6028379509808,
   "p95_latency_ms": 2271.6219589929096,
   "results": [
     {
@@ -328,8 +328,8 @@
       "correct_answer": "informačný (slohový postup), informačný, informatívny (slohový postup)",
       "is_correct": false,
       "cost_usd": 0.0,
-      "latency_ms": 1461.3053749781102,
-      "error": "Error: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 64000 tokens, but can only afford 60687. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+      "latency_ms": 1727.184750023298,
+      "error": "Error: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 64000 tokens, but can only afford 44340. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
     },
     {
       "question_id": "33",

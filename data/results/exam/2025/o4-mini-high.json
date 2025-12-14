@@ -1,14 +1,14 @@
 {
   "model_name": "openai/o4-mini-high",
   "dataset_path": "data/processed/exam/2025.json",
-  "timestamp": "2025-12-14T10:53:13.113858",
+  "timestamp": "2025-12-14T11:07:13.639722",
   "total_questions": 64,
   "correct_count": 55,
   "accuracy": 0.859375,
-  "total_cost_usd": 0.4180946,
+  "total_cost_usd": 0.4121722,
   "mcq_accuracy": 0.925,
   "short_text_accuracy": 0.75,
-  "avg_latency_ms": 10500.068744820055,
+  "avg_latency_ms": 10362.559098975908,
   "p95_latency_ms": 35174.8624999891,
   "results": [
     {
@@ -324,11 +324,11 @@
     {
       "question_id": "32",
       "task_type": "short_text",
-      "model_answer": "presvedčovací",
+      "model_answer": "opis",
       "correct_answer": "informačný (slohový postup), informačný, informatívny (slohový postup)",
       "is_correct": false,
-      "cost_usd": 0.0142472,
-      "latency_ms": 21905.32095899107,
+      "cost_usd": 0.0083248,
+      "latency_ms": 13104.703624965623,
       "error": null
     },
     {
