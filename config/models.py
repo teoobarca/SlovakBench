@@ -49,7 +49,7 @@ MODELS = [
     "google/gemini-3-pro-preview",
 
     #mistral
-    "mistralai/devstral-2512:free",
+    "mistralai/devstral-2512",
     "mistralai/ministral-14b-2512",
     "mistralai/mistral-large-2512",
     "mistralai/mistral-saba",

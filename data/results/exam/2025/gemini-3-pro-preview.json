@@ -1,15 +1,16 @@
 {
   "model_name": "google/gemini-3-pro-preview",
   "dataset_path": "data/processed/exam/2025.json",
-  "timestamp": "2025-12-14T11:09:12.833331",
+  "timestamp": "2025-12-14T12:17:30.115219",
   "total_questions": 64,
   "correct_count": 61,
   "accuracy": 0.953125,
-  "total_cost_usd": 1.02917,
+  "total_cost_usd": 1.040758,
   "mcq_accuracy": 0.975,
   "short_text_accuracy": 0.9166666666666666,
-  "avg_latency_ms": 17538.21398564105,
+  "avg_latency_ms": 17701.452323531157,
   "p95_latency_ms": 46924.944458005484,
+  "error_count": 0,
   "results": [
     {
       "question_id": "01",
@@ -324,12 +325,12 @@
     {
       "question_id": "32",
       "task_type": "short_text",
-      "model_answer": "",
+      "model_answer": "opisný",
       "correct_answer": "informačný (slohový postup), informačný, informatívny (slohový postup)",
       "is_correct": false,
-      "cost_usd": 0.0,
-      "latency_ms": 391.52691600611433,
-      "error": "Error: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 53500. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+      "cost_usd": 0.011588,
+      "latency_ms": 10838.780540972948,
+      "error": null
     },
     {
       "question_id": "33",
@@ -651,6 +652,5 @@
       "latency_ms": 7290.525624994189,
       "error": null
     }
-  ],
-  "error_count": 1
+  ]
 }

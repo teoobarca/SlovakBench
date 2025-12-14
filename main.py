@@ -855,5 +855,193 @@ def reevaluate(
     console.print(f"\n✅ Re-evaluation complete. Run [bold]analyze[/bold] to see full results.")
 
 
+@app.command()
+def retry(
+    year: int = typer.Option(..., "--year", "-y", help="Year to retry errors for"),
+    model: Optional[str] = typer.Option(None, "--model", "-m", help="Specific model to retry (partial match)"),
+    list_only: bool = typer.Option(False, "--list", "-l", help="Just show what would be retried"),
+):
+    """Retry only the ERRORED questions for models with partial failures."""
+    from rich.table import Table
+    from rich.console import Console
+    from tqdm import tqdm
+    import io
+    from contextlib import redirect_stdout, redirect_stderr
+    from src.evaluation.runner import CheckpointManager, EvaluationRunner
+    
+    console = Console()
+    
+    year_dir = RESULTS_DIR / str(year)
+    if not year_dir.exists():
+        typer.echo(f"❌ No results for year {year}")
+        raise typer.Exit(1)
+    
+    dataset_path = f"data/processed/exam/{year}.json"
+    
+    # Find models with errors
+    models_with_errors = []
+    
+    for f in year_dir.glob("*.json"):
+        try:
+            with open(f) as fp:
+                data = json.load(fp)
+        except:
+            continue
+        
+        model_name = data.get("model_name", "")
+        error_count = data.get("error_count", 0)
+        
+        # Count errors from results if error_count not present
+        if error_count == 0:
+            error_count = sum(1 for r in data.get("results", []) if r.get("error"))
+        
+        if error_count > 0:
+            # Filter by model if specified
+            if model and model.lower() not in model_name.lower():
+                continue
+                
+            errored_questions = [r["question_id"] for r in data.get("results", []) if r.get("error")]
+            models_with_errors.append({
+                "file": f,
+                "model_name": model_name,
+                "short_name": model_name.split("/")[-1],
+                "error_count": error_count,
+                "total": data.get("total_questions", 64),
+                "errored_questions": errored_questions,
+            })
+    
+    if not models_with_errors:
+        console.print("[green]✅ No models with errors found![/green]")
+        return
+    
+    # Show table
+    table = Table(title=f"🔄 Models with Errors ({year})")
+    table.add_column("Model", style="cyan")
+    table.add_column("Errors", justify="right")
+    table.add_column("Questions")
+    
+    for m in sorted(models_with_errors, key=lambda x: -x["error_count"]):
+        qs = ", ".join(m["errored_questions"][:5])
+        if len(m["errored_questions"]) > 5:
+            qs += f" (+{len(m['errored_questions']) - 5} more)"
+        table.add_row(
+            m["short_name"],
+            f"{m['error_count']}/{m['total']}",
+            qs
+        )
+    
+    console.print(table)
+    
+    if list_only:
+        console.print("\n[dim]Use without --list to retry these.[/dim]")
+        return
+    
+    console.print(f"\n🔄 Retrying {len(models_with_errors)} models...")
+    
+    # Track results for summary
+    retry_results = []
+    
+    for m in tqdm(models_with_errors, desc="Retrying"):
+        try:
+            with open(m["file"]) as fp:
+                data = json.load(fp)
+        except:
+            continue
+        
+        # Store before stats
+        before_errors = m["error_count"]
+        before_accuracy = data.get("accuracy", 0)
+        
+        # Keep only non-errored results
+        good_results = [r for r in data.get("results", []) if not r.get("error")]
+        
+        # Create checkpoint with good results only
+        ckpt = CheckpointManager(m["model_name"], dataset_path)
+        
+        checkpoint_data = {
+            "model_name": m["model_name"],
+            "dataset_path": dataset_path,
+            "timestamp": datetime.now().isoformat(),
+            "results": good_results
+        }
+        
+        with open(ckpt.checkpoint_path, "w", encoding="utf-8") as fp:
+            json.dump(checkpoint_data, fp, ensure_ascii=False, indent=2)
+        
+        # Run evaluation with suppressed output
+        runner = EvaluationRunner(model_name=m["model_name"])
+        
+        try:
+            with redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
+                new_result = runner.run(dataset_path, resume=True)
+            
+            # Sort results by ID
+            def get_id(r):
+                try:
+                    return int(r.question_id)
+                except ValueError:
+                    return 9999
+            
+            new_result.results.sort(key=get_id)
+            
+            # Save
+            with open(m["file"], "w", encoding="utf-8") as fp:
+                json.dump(new_result.to_dict(), fp, indent=2, ensure_ascii=False)
+            
+            # Track results
+            after_errors = new_result.error_count
+            after_accuracy = new_result.accuracy
+            
+            # Calculate cost of retried questions only
+            retried_cost = sum(r.cost_usd for r in new_result.results 
+                             if r.question_id in m["errored_questions"])
+            
+            retry_results.append({
+                "model": m["short_name"],
+                "before_errors": before_errors,
+                "after_errors": after_errors,
+                "before_accuracy": before_accuracy,
+                "after_accuracy": after_accuracy,
+                "fixed": before_errors - after_errors,
+                "cost": retried_cost,
+            })
+                
+        except Exception as e:
+            console.print(f"[red]Failed {m['short_name']}: {e}[/red]")
+            if ckpt.checkpoint_path.exists():
+                ckpt.checkpoint_path.unlink()
+    
+    # Show summary
+    if retry_results:
+        summary = Table(title="📊 Retry Summary")
+        summary.add_column("Model", style="cyan")
+        summary.add_column("Errors", justify="center")
+        summary.add_column("Fixed", justify="center")
+        summary.add_column("Accuracy", justify="center")
+        summary.add_column("Cost", justify="right")
+        
+        total_cost = 0
+        for r in retry_results:
+            errors_str = f"{r['before_errors']} → {r['after_errors']}"
+            fixed_str = f"[green]+{r['fixed']}[/green]" if r['fixed'] > 0 else f"[yellow]{r['fixed']}[/yellow]"
+            acc_before = f"{r['before_accuracy']:.1%}"
+            acc_after = f"{r['after_accuracy']:.1%}"
+            if r['after_accuracy'] > r['before_accuracy']:
+                acc_str = f"{acc_before} → [green]{acc_after}[/green]"
+            else:
+                acc_str = f"{acc_before} → {acc_after}"
+            
+            cost_str = f"${r['cost']:.4f}"
+            total_cost += r['cost']
+            
+            summary.add_row(r["model"], errors_str, fixed_str, acc_str, cost_str)
+        
+        console.print()
+        console.print(summary)
+        console.print(f"\n💰 Total retry cost: [bold]${total_cost:.4f}[/bold]")
+    
+    console.print(f"\n✅ Retry complete! Run [bold]export[/bold] to update frontend.")
+
+
 if __name__ == "__main__":
     app()

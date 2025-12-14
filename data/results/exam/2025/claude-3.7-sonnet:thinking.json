@@ -1,15 +1,16 @@
 {
   "model_name": "anthropic/claude-3.7-sonnet:thinking",
   "dataset_path": "data/processed/exam/2025.json",
-  "timestamp": "2025-12-14T11:09:13.658214",
+  "timestamp": "2025-12-14T12:07:53.458964",
   "total_questions": 64,
-  "correct_count": 58,
-  "accuracy": 0.90625,
-  "total_cost_usd": 1.042611,
+  "correct_count": 60,
+  "accuracy": 0.9375,
+  "total_cost_usd": 1.358511,
   "mcq_accuracy": 0.975,
-  "short_text_accuracy": 0.7916666666666666,
-  "avg_latency_ms": 18061.437639297765,
-  "p95_latency_ms": 101970.77791602351,
+  "short_text_accuracy": 0.875,
+  "avg_latency_ms": 18564.691820938606,
+  "p95_latency_ms": 87832.79020804912,
+  "error_count": 0,
   "results": [
     {
       "question_id": "01",
@@ -64,12 +65,12 @@
     {
       "question_id": "06",
       "task_type": "short_text",
-      "model_answer": "",
+      "model_answer": "výraz",
       "correct_answer": "pás",
       "is_correct": false,
-      "cost_usd": 0.0,
-      "latency_ms": 120002.08904198371,
-      "error": "Timeout after 120s"
+      "cost_usd": 0.203604,
+      "latency_ms": 174287.21554199,
+      "error": null
     },
     {
       "question_id": "07",
@@ -224,12 +225,12 @@
     {
       "question_id": "22",
       "task_type": "short_text",
-      "model_answer": "",
+      "model_answer": "citát",
       "correct_answer": "citát, citácia, výrok",
-      "is_correct": false,
-      "cost_usd": 0.0,
-      "latency_ms": 120002.78779200744,
-      "error": "Timeout after 120s"
+      "is_correct": true,
+      "cost_usd": 0.100146,
+      "latency_ms": 87832.79020804912,
+      "error": null
     },
     {
       "question_id": "23",
@@ -324,12 +325,12 @@
     {
       "question_id": "32",
       "task_type": "short_text",
-      "model_answer": "",
+      "model_answer": "informačný",
       "correct_answer": "informačný (slohový postup), informačný, informatívny (slohový postup)",
-      "is_correct": false,
-      "cost_usd": 0.0,
-      "latency_ms": 819.3244159920141,
-      "error": "Error: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 42800. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+      "is_correct": true,
+      "cost_usd": 0.01215,
+      "latency_ms": 10912.463124957867,
+      "error": null
     },
     {
       "question_id": "33",
@@ -651,6 +652,5 @@
       "latency_ms": 5669.063124980312,
       "error": null
     }
-  ],
-  "error_count": 3
+  ]
 }

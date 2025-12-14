@@ -273,6 +273,8 @@ Príklad: "epiteton" (nie "epiteton (básnický prívlastok)")"""
                 
             except Exception as e:
                 err_str = str(e) or type(e).__name__
+                err_type = type(e).__name__
+                
                 # Check for rate limits or server errors
                 is_retryable = "429" in err_str or "500" in err_str or "503" in err_str or "rate limit" in err_str.lower()
                 
@@ -280,10 +282,24 @@ Príklad: "epiteton" (nie "epiteton (básnický prívlastok)")"""
                     await asyncio.sleep(2 ** attempt)  # Exponential backoff
                     continue
                 
-                # If not retryable or retries exhausted
+                # Build informative error message
                 latency_ms = (time.perf_counter() - start_time) * 1000
                 raw_response = ""
-                error = f"{type(e).__name__}: {err_str[:100]}" if err_str else type(e).__name__
+                
+                # Extract useful info from error + keep some raw for debugging
+                raw_snippet = err_str[:250] if len(err_str) > 250 else err_str
+                
+                if "429" in err_str:
+                    error = f"{err_type}: Rate limit (429) | {raw_snippet}"
+                elif "500" in err_str or "502" in err_str or "503" in err_str:
+                    error = f"{err_type}: Server error (5xx) | {raw_snippet}"
+                elif "Connection" in err_str or "connection" in err_str:
+                    error = f"{err_type}: Connection failed | {raw_snippet}"
+                elif "timeout" in err_str.lower():
+                    error = f"{err_type}: Timed out | {raw_snippet}"
+                else:
+                    error = f"{err_type}: {err_str[:250]}"
+                
                 break
         
         model_answer = self.parse_response(raw_response, q["task_type"])
