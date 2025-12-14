@@ -28,8 +28,8 @@ class ShortTextAnswer(BaseModel):
     """Answer for short_text question with accepted variants."""
     accepted: List[str] = Field(description="List of all acceptable answer forms")
     normalize: List[str] = Field(
-        default=["trim", "casefold"],
-        description="Normalization steps: trim, casefold, collapse_ws, remove_punct, remove_diacritics, numeric_only"
+        default=["trim", "casefold", "collapse_ws"],
+        description="Normalization steps: trim, casefold, collapse_ws, remove_punct, remove_diacritics, numeric_only, normalize_dashes. Use normalize_dashes for answers with dashes/separators. Use remove_diacritics for number answers."
     )
 
 
@@ -157,9 +157,16 @@ Example: "Určte slovný druh slova **rýchlo** vo vete." - the word is bolded, 
 - `options`: for mcq only: {{"A": "...", "B": "...", "C": "...", "D": "..."}}
 - `answer`: use the pre-extracted answers above
   - For mcq: {{"correct_option": "A"}}
-  - For short_text: {{"accepted": ["variant1", "variant2"], "normalize": ["trim", "casefold"]}}
+  - For short_text: {{"accepted": ["variant1", "variant2"], "normalize": ["trim", "casefold", "collapse_ws"]}}
 
-Normalize options: trim, casefold, collapse_ws, remove_punct, remove_diacritics, numeric_only"""
+## NORMALIZATION RULES (choose appropriate ones):
+- trim: remove leading/trailing whitespace (ALWAYS use)
+- casefold: case-insensitive comparison (ALMOST ALWAYS use)
+- collapse_ws: normalize whitespace (ALMOST ALWAYS use)
+- normalize_dashes: treat all dashes (-, –, —) as equivalent (use for answers with separators like "A – B")
+- remove_diacritics: ignore accents (use for number answers like "1", "jedna")
+- remove_punct: remove punctuation (use sparingly)
+- numeric_only: keep only digits (only for pure number answers)"""
 
     llm = create_llm(model_name)
     structured_llm = llm.with_structured_output(MCQExamExtraction, include_raw=True)

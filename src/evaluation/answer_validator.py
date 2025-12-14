@@ -5,7 +5,7 @@ from typing import List
 
 
 def normalize(text: str, steps: List[str]) -> str:
-    """Apply normalization steps: trim, casefold, collapse_ws, remove_punct, remove_diacritics, numeric_only."""
+    """Apply normalization steps: trim, casefold, collapse_ws, remove_punct, remove_diacritics, numeric_only, normalize_dashes."""
     for step in steps:
         if step == "trim":
             text = text.strip()
@@ -19,6 +19,9 @@ def normalize(text: str, steps: List[str]) -> str:
             text = "".join(c for c in unicodedata.normalize("NFKD", text) if not unicodedata.combining(c))
         elif step == "numeric_only":
             text = "".join(c for c in text if c.isdigit())
+        elif step == "normalize_dashes":
+            # Convert all dash variants to simple hyphen-minus
+            text = re.sub(r'[–—−‐‑]', '-', text)
     return text
 
 

@@ -4,56 +4,65 @@
       {
         "model": "gpt-5.2-chat",
         "provider": "OpenAI",
-        "overall": 93.8,
+        "overall": 95.3,
         "mcq": 97.5,
-        "short_text": 87.5,
+        "short_text": 91.7,
         "cost": 0.1723,
         "latency_ms": 2711
       },
       {
+        "model": "gemini-2.5-pro",
+        "provider": "Google",
+        "overall": 95.3,
+        "mcq": 97.5,
+        "short_text": 91.7,
+        "cost": 0.7741,
+        "latency_ms": null
+      },
+      {
+        "model": "gemini-3-pro-preview",
+        "provider": "Google",
+        "overall": 95.3,
+        "mcq": 97.5,
+        "short_text": 91.7,
+        "cost": 1.051,
+        "latency_ms": 17994
+      },
+      {
         "model": "gpt-5",
         "provider": "OpenAI",
-        "overall": 92.2,
+        "overall": 93.8,
         "mcq": 97.5,
-        "short_text": 83.3,
+        "short_text": 87.5,
         "cost": 0.4424,
         "latency_ms": 14426
       },
       {
         "model": "gpt-5.2",
         "provider": "OpenAI",
-        "overall": 92.2,
+        "overall": 93.8,
         "mcq": 95.0,
-        "short_text": 87.5,
+        "short_text": 91.7,
         "cost": 0.1654,
-        "latency_ms": null
-      },
-      {
-        "model": "gemini-2.5-pro",
-        "provider": "Google",
-        "overall": 92.2,
-        "mcq": 97.5,
-        "short_text": 83.3,
-        "cost": 0.7741,
         "latency_ms": null
       },
       {
         "model": "o3",
         "provider": "OpenAI",
-        "overall": 92.2,
+        "overall": 93.8,
         "mcq": 97.5,
-        "short_text": 83.3,
+        "short_text": 87.5,
         "cost": 0.3214,
         "latency_ms": 6354
       },
       {
-        "model": "gemini-3-pro-preview",
-        "provider": "Google",
-        "overall": 92.2,
+        "model": "claude-3.7-sonnet",
+        "provider": "Anthropic",
+        "overall": 93.5,
         "mcq": 97.5,
-        "short_text": 83.3,
-        "cost": 1.051,
-        "latency_ms": 17994
+        "short_text": 86.4,
+        "cost": 1.0912,
+        "latency_ms": 18742
       },
       {
         "model": "gpt-5.1",
@@ -83,22 +92,40 @@
         "latency_ms": 2708
       },
       {
-        "model": "claude-3.7-sonnet",
-        "provider": "Anthropic",
-        "overall": 87.5,
-        "mcq": 97.5,
-        "short_text": 70.8,
-        "cost": 1.0912,
-        "latency_ms": 18742
+        "model": "o4-mini-high",
+        "provider": "OpenAI",
+        "overall": 85.9,
+        "mcq": 92.5,
+        "short_text": 75.0,
+        "cost": 0.4085,
+        "latency_ms": 10270
       },
       {
         "model": "gpt-5-mini",
         "provider": "OpenAI",
-        "overall": 84.4,
+        "overall": 85.9,
         "mcq": 95.0,
-        "short_text": 66.7,
+        "short_text": 70.8,
         "cost": 0.0848,
         "latency_ms": 11795
+      },
+      {
+        "model": "claude-sonnet-4.5",
+        "provider": "Anthropic",
+        "overall": 84.4,
+        "mcq": 97.5,
+        "short_text": 62.5,
+        "cost": 0.1261,
+        "latency_ms": 1704
+      },
+      {
+        "model": "gemini-2.5-flash",
+        "provider": "Google",
+        "overall": 84.4,
+        "mcq": 97.5,
+        "short_text": 62.5,
+        "cost": 0.0106,
+        "latency_ms": null
       },
       {
         "model": "claude-3.5-sonnet",
@@ -110,47 +137,20 @@
         "latency_ms": 2137
       },
       {
-        "model": "o4-mini-high",
-        "provider": "OpenAI",
-        "overall": 82.8,
-        "mcq": 92.5,
-        "short_text": 66.7,
-        "cost": 0.4085,
-        "latency_ms": 10270
-      },
-      {
-        "model": "claude-sonnet-4.5",
-        "provider": "Anthropic",
-        "overall": 82.8,
-        "mcq": 97.5,
-        "short_text": 58.3,
-        "cost": 0.1261,
-        "latency_ms": 1704
-      },
-      {
-        "model": "gemini-2.5-flash",
-        "provider": "Google",
-        "overall": 81.2,
-        "mcq": 97.5,
-        "short_text": 54.2,
-        "cost": 0.0106,
-        "latency_ms": null
-      },
-      {
         "model": "gpt-4.1",
         "provider": "OpenAI",
-        "overall": 81.2,
+        "overall": 82.8,
         "mcq": 90.0,
-        "short_text": 66.7,
+        "short_text": 70.8,
         "cost": 0.0707,
         "latency_ms": null
       },
       {
         "model": "gemini-2.5-flash-preview-09-2025",
         "provider": "Google",
-        "overall": 78.1,
+        "overall": 81.2,
         "mcq": 90.0,
-        "short_text": 58.3,
+        "short_text": 66.7,
         "cost": 0.0107,
         "latency_ms": 810
       },
@@ -166,18 +166,18 @@
       {
         "model": "claude-sonnet-4",
         "provider": "Anthropic",
-        "overall": 75.0,
+        "overall": 76.6,
         "mcq": 90.0,
-        "short_text": 50.0,
+        "short_text": 54.2,
         "cost": 0.1255,
         "latency_ms": null
       },
       {
         "model": "gemini-2.0-flash-001",
         "provider": "Google",
-        "overall": 73.4,
+        "overall": 75.0,
         "mcq": 85.0,
-        "short_text": 54.2,
+        "short_text": 58.3,
         "cost": 0.0038,
         "latency_ms": 682
       },
@@ -202,9 +202,9 @@
       {
         "model": "gemini-2.5-flash-lite-preview-09-2025",
         "provider": "Google",
-        "overall": 68.8,
+        "overall": 70.3,
         "mcq": 87.5,
-        "short_text": 37.5,
+        "short_text": 41.7,
         "cost": 0.0035,
         "latency_ms": 758
       },
@@ -218,6 +218,15 @@
         "latency_ms": 24115
       },
       {
+        "model": "gpt-4-turbo",
+        "provider": "OpenAI",
+        "overall": 68.8,
+        "mcq": 85.0,
+        "short_text": 41.7,
+        "cost": 0.4298,
+        "latency_ms": null
+      },
+      {
         "model": "devstral-2512",
         "provider": "Mistral",
         "overall": 68.8,
@@ -227,12 +236,12 @@
         "latency_ms": 1547
       },
       {
-        "model": "gpt-4-turbo",
+        "model": "gpt-4o-mini",
         "provider": "OpenAI",
         "overall": 67.2,
-        "mcq": 85.0,
-        "short_text": 37.5,
-        "cost": 0.4298,
+        "mcq": 82.5,
+        "short_text": 41.7,
+        "cost": 0.0053,
         "latency_ms": null
       },
       {
@@ -243,15 +252,6 @@
         "short_text": 33.3,
         "cost": 0.0035,
         "latency_ms": 933
-      },
-      {
-        "model": "gpt-4o-mini",
-        "provider": "OpenAI",
-        "overall": 65.6,
-        "mcq": 82.5,
-        "short_text": 37.5,
-        "cost": 0.0053,
-        "latency_ms": null
       },
       {
         "model": "gpt-4.1-mini",
@@ -290,31 +290,13 @@
         "latency_ms": null
       },
       {
-        "model": "claude-3.5-haiku-20241022",
-        "provider": "Anthropic",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 3014
-      },
-      {
-        "model": "gemini-2.0-flash-exp",
-        "provider": "Google",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 1867
-      },
-      {
         "model": "claude-3-sonnet",
         "provider": "Anthropic",
         "overall": 0.0,
         "mcq": null,
         "short_text": null,
         "cost": 0.0,
-        "latency_ms": 334
+        "latency_ms": 308
       }
     ]
   },

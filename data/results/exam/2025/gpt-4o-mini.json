@@ -3,11 +3,11 @@
   "dataset_path": "data/processed/exam/2025.json",
   "timestamp": "2025-12-13T21:10:21.613789",
   "total_questions": 64,
-  "correct_count": 42,
-  "accuracy": 0.65625,
+  "correct_count": 43,
+  "accuracy": 0.671875,
   "total_cost_usd": 0.0052674,
   "mcq_accuracy": 0.825,
-  "short_text_accuracy": 0.375,
+  "short_text_accuracy": 0.4166666666666667,
   "results": [
     {
       "question_id": "01",
@@ -390,7 +390,7 @@
       "task_type": "short_text",
       "model_answer": "jedna",
       "correct_answer": "1, jednu, jednu autorskú poznámku",
-      "is_correct": false,
+      "is_correct": true,
       "cost_usd": 9.48e-05
     },
     {

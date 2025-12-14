@@ -3,11 +3,11 @@
   "dataset_path": "data/processed/exam/2025.json",
   "timestamp": "2025-12-13T23:17:30.994113",
   "total_questions": 64,
-  "correct_count": 59,
-  "accuracy": 0.921875,
+  "correct_count": 60,
+  "accuracy": 0.9375,
   "total_cost_usd": 0.321368,
   "mcq_accuracy": 0.975,
-  "short_text_accuracy": 0.8333333333333334,
+  "short_text_accuracy": 0.875,
   "avg_latency_ms": 6353.956737718363,
   "p95_latency_ms": 19472.843958996236,
   "results": [
@@ -406,7 +406,7 @@
       "task_type": "short_text",
       "model_answer": "začína končí",
       "correct_answer": "začína sa – končí sa, začína sa, končí sa, začínať sa – končiť sa",
-      "is_correct": false,
+      "is_correct": true,
       "cost_usd": 0.005164,
       "latency_ms": 5635.98391704727,
       "error": null

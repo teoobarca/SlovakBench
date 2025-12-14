@@ -661,19 +661,22 @@
       "options": null,
       "answer": {
         "accepted": [
-          "začína sa – končí sa",
+          "začína sa - končí sa",
           "začína sa, končí sa",
-          "začínať sa – končiť sa",
+          "začínať sa - končiť sa",
           "začínať sa, končiť sa",
-          "začína – končí",
+          "začína - končí",
           "začína, končí",
-          "začínať – končiť",
-          "začínať, končiť"
+          "začína končí",
+          "začínať - končiť",
+          "začínať, končiť",
+          "začínať končiť"
         ],
         "normalize": [
           "trim",
           "casefold",
-          "collapse_ws"
+          "collapse_ws",
+          "normalize_dashes"
         ]
       }
     },
@@ -706,13 +709,16 @@
         "accepted": [
           "klesavá (melódia)",
           "klesavá",
+          "klesavá melódia",
           "klesajúca (melódia)",
           "klesajúca",
+          "klesajúca melódia",
           "(konkluzívna) kadencia",
           "konkluzívna kadencia",
           "kadencia",
           "uspokojivá končiaca (melódia)",
-          "uspokojivá končiaca"
+          "uspokojivá končiaca",
+          "uspokojivá končiaca melódia"
         ],
         "normalize": [
           "trim",
@@ -845,8 +851,11 @@
         "accepted": [
           "1",
           "jednu",
+          "jedna",
           "jednu autorskú poznámku",
-          "1 autorskú poznámku"
+          "1 autorskú poznámku",
+          "jedna autorská poznámka",
+          "1 autorská poznámka"
         ],
         "normalize": [
           "trim",

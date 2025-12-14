@@ -3,11 +3,11 @@
   "dataset_path": "data/processed/exam/2025.json",
   "timestamp": "2025-12-13T21:11:32.645729",
   "total_questions": 64,
-  "correct_count": 59,
-  "accuracy": 0.921875,
+  "correct_count": 61,
+  "accuracy": 0.953125,
   "total_cost_usd": 0.7740825,
   "mcq_accuracy": 0.975,
-  "short_text_accuracy": 0.8333333333333334,
+  "short_text_accuracy": 0.9166666666666666,
   "results": [
     {
       "question_id": "01",
@@ -326,7 +326,7 @@
       "task_type": "short_text",
       "model_answer": "klesavá melódia",
       "correct_answer": "klesavá (melódia), klesavá, klesajúca (melódia)",
-      "is_correct": false,
+      "is_correct": true,
       "cost_usd": 0.0082975
     },
     {
@@ -390,7 +390,7 @@
       "task_type": "short_text",
       "model_answer": "jedna",
       "correct_answer": "1, jednu, jednu autorskú poznámku",
-      "is_correct": false,
+      "is_correct": true,
       "cost_usd": 0.02085625
     },
     {

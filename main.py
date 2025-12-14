@@ -425,6 +425,7 @@ def analyze(
     year: int = typer.Option(..., "--year", "-y", help="Year to analyze"),
     question: Optional[str] = typer.Option(None, "--question", "-q", help="Specific question ID"),
     threshold: int = typer.Option(50, "--threshold", "-t", help="Min % of models that must fail to flag question"),
+    model: Optional[str] = typer.Option(None, "--model", "-m", help="Filter by model name (partial match)"),
 ):
     """Analyze failed questions across all models to identify dataset issues."""
     from rich.console import Console
@@ -461,6 +462,11 @@ def analyze(
             continue
         
         model_name = data.get("model_name", "?").split("/")[-1]
+        
+        # Filter by model if requested
+        if model and model.lower() not in model_name.lower():
+            continue
+            
         model_count += 1
         
         for r in data.get("results", []):
