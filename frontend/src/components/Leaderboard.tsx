@@ -51,6 +51,8 @@ const PROVIDER_LOGOS: Record<string, string> = {
     TII: "/logos/tii.svg",
     Minimax: "/logos/minimax.svg",
     Microsoft: "/logos/microsoft.svg",
+    AI21: "/logos/ai21.webp",
+    zAI: "/logos/z-ai.svg",
 };
 
 const PROVIDER_COLORS: Record<string, string> = {
@@ -69,6 +71,8 @@ const PROVIDER_COLORS: Record<string, string> = {
     TII: "#6400FF",
     Minimax: "#FF6B35",
     Microsoft: "#00A4EF",
+    AI21: "#000000",
+    zAI: "#1d1d1f",
 };
 
 const YEARS = [2025, 2024, 2023];

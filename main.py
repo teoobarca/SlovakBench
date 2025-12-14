@@ -375,6 +375,9 @@ def export():
         "databricks": "Databricks",
         "tii": "TII",
         "microsoft": "Microsoft",
+        "x-ai": "xAI",
+        "z-ai": "zAI",
+        "ai21": "AI21",
     }
     
     # Collect exam results
