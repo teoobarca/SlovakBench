@@ -2,6 +2,24 @@
   "exam": {
     "2025": [
       {
+        "model": "gpt-5.2-chat",
+        "provider": "OpenAI",
+        "overall": 93.8,
+        "mcq": 97.5,
+        "short_text": 87.5,
+        "cost": 0.1723,
+        "latency_ms": 2711
+      },
+      {
+        "model": "gpt-5",
+        "provider": "OpenAI",
+        "overall": 92.2,
+        "mcq": 97.5,
+        "short_text": 83.3,
+        "cost": 0.4424,
+        "latency_ms": 14426
+      },
+      {
         "model": "gpt-5.2",
         "provider": "OpenAI",
         "overall": 92.2,
@@ -20,6 +38,78 @@
         "latency_ms": null
       },
       {
+        "model": "o3",
+        "provider": "OpenAI",
+        "overall": 92.2,
+        "mcq": 97.5,
+        "short_text": 83.3,
+        "cost": 0.3214,
+        "latency_ms": 6354
+      },
+      {
+        "model": "gemini-3-pro-preview",
+        "provider": "Google",
+        "overall": 92.2,
+        "mcq": 97.5,
+        "short_text": 83.3,
+        "cost": 1.051,
+        "latency_ms": 17994
+      },
+      {
+        "model": "gpt-5.1",
+        "provider": "OpenAI",
+        "overall": 90.6,
+        "mcq": 97.5,
+        "short_text": 79.2,
+        "cost": 0.1372,
+        "latency_ms": 2117
+      },
+      {
+        "model": "gpt-5.1-chat",
+        "provider": "OpenAI",
+        "overall": 90.6,
+        "mcq": 97.5,
+        "short_text": 79.2,
+        "cost": 0.075,
+        "latency_ms": 2116
+      },
+      {
+        "model": "claude-opus-4.5",
+        "provider": "Anthropic",
+        "overall": 89.1,
+        "mcq": 100.0,
+        "short_text": 70.8,
+        "cost": 0.209,
+        "latency_ms": 2708
+      },
+      {
+        "model": "claude-3.7-sonnet",
+        "provider": "Anthropic",
+        "overall": 87.5,
+        "mcq": 97.5,
+        "short_text": 70.8,
+        "cost": 1.0912,
+        "latency_ms": 18742
+      },
+      {
+        "model": "gpt-5-mini",
+        "provider": "OpenAI",
+        "overall": 84.4,
+        "mcq": 95.0,
+        "short_text": 66.7,
+        "cost": 0.0848,
+        "latency_ms": 11795
+      },
+      {
+        "model": "claude-3.5-sonnet",
+        "provider": "Anthropic",
+        "overall": 82.8,
+        "mcq": 92.5,
+        "short_text": 66.7,
+        "cost": 0.2509,
+        "latency_ms": 2137
+      },
+      {
         "model": "o4-mini-high",
         "provider": "OpenAI",
         "overall": 82.8,
@@ -27,6 +117,15 @@
         "short_text": 66.7,
         "cost": 0.4085,
         "latency_ms": 10270
+      },
+      {
+        "model": "claude-sonnet-4.5",
+        "provider": "Anthropic",
+        "overall": 82.8,
+        "mcq": 97.5,
+        "short_text": 58.3,
+        "cost": 0.1261,
+        "latency_ms": 1704
       },
       {
         "model": "gemini-2.5-flash",
@@ -47,6 +146,15 @@
         "latency_ms": null
       },
       {
+        "model": "gemini-2.5-flash-preview-09-2025",
+        "provider": "Google",
+        "overall": 78.1,
+        "mcq": 90.0,
+        "short_text": 58.3,
+        "cost": 0.0107,
+        "latency_ms": 810
+      },
+      {
         "model": "gpt-4o",
         "provider": "OpenAI",
         "overall": 78.1,
@@ -65,6 +173,60 @@
         "latency_ms": null
       },
       {
+        "model": "gemini-2.0-flash-001",
+        "provider": "Google",
+        "overall": 73.4,
+        "mcq": 85.0,
+        "short_text": 54.2,
+        "cost": 0.0038,
+        "latency_ms": 682
+      },
+      {
+        "model": "claude-haiku-4.5",
+        "provider": "Anthropic",
+        "overall": 73.4,
+        "mcq": 90.0,
+        "short_text": 45.8,
+        "cost": 0.0419,
+        "latency_ms": 1740
+      },
+      {
+        "model": "claude-3.5-haiku",
+        "provider": "Anthropic",
+        "overall": 70.3,
+        "mcq": 82.5,
+        "short_text": 50.0,
+        "cost": 0.0335,
+        "latency_ms": 1585
+      },
+      {
+        "model": "gemini-2.5-flash-lite-preview-09-2025",
+        "provider": "Google",
+        "overall": 68.8,
+        "mcq": 87.5,
+        "short_text": 37.5,
+        "cost": 0.0035,
+        "latency_ms": 758
+      },
+      {
+        "model": "gpt-5-nano",
+        "provider": "OpenAI",
+        "overall": 68.8,
+        "mcq": 85.0,
+        "short_text": 41.7,
+        "cost": 0.044,
+        "latency_ms": 24115
+      },
+      {
+        "model": "devstral-2512",
+        "provider": "Mistral",
+        "overall": 68.8,
+        "mcq": 82.5,
+        "short_text": 45.8,
+        "cost": 0.0,
+        "latency_ms": 1547
+      },
+      {
         "model": "gpt-4-turbo",
         "provider": "OpenAI",
         "overall": 67.2,
@@ -72,6 +234,15 @@
         "short_text": 37.5,
         "cost": 0.4298,
         "latency_ms": null
+      },
+      {
+        "model": "gemini-2.5-flash-lite",
+        "provider": "Google",
+        "overall": 67.2,
+        "mcq": 87.5,
+        "short_text": 33.3,
+        "cost": 0.0035,
+        "latency_ms": 933
       },
       {
         "model": "gpt-4o-mini",
@@ -92,6 +263,15 @@
         "latency_ms": null
       },
       {
+        "model": "claude-3-haiku",
+        "provider": "Anthropic",
+        "overall": 56.2,
+        "mcq": 70.0,
+        "short_text": 33.3,
+        "cost": 0.0105,
+        "latency_ms": 891
+      },
+      {
         "model": "gpt-4.1-nano",
         "provider": "OpenAI",
         "overall": 50.0,
@@ -108,6 +288,33 @@
         "short_text": 20.8,
         "cost": 0.0219,
         "latency_ms": null
+      },
+      {
+        "model": "claude-3.5-haiku-20241022",
+        "provider": "Anthropic",
+        "overall": 0.0,
+        "mcq": null,
+        "short_text": null,
+        "cost": 0.0,
+        "latency_ms": 3014
+      },
+      {
+        "model": "gemini-2.0-flash-exp",
+        "provider": "Google",
+        "overall": 0.0,
+        "mcq": null,
+        "short_text": null,
+        "cost": 0.0,
+        "latency_ms": 1867
+      },
+      {
+        "model": "claude-3-sonnet",
+        "provider": "Anthropic",
+        "overall": 0.0,
+        "mcq": null,
+        "short_text": null,
+        "cost": 0.0,
+        "latency_ms": 334
       }
     ]
   },

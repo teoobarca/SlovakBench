@@ -243,29 +243,40 @@ Príklad: "epiteton" (nie "epiteton (básnický prívlastok)")"""
         else:
             correct_answer = ", ".join(q["answer"].get("accepted", [])[:3])
         
-        start_time = time.perf_counter()
-        try:
-            # Apply timeout to the LLM call
-            response = await asyncio.wait_for(
-                self.llm.ainvoke([system_msg, HumanMessage(content=prompt)]),
-                timeout=self.timeout
-            )
-            latency_ms = (time.perf_counter() - start_time) * 1000
-            raw_response = response.content
-            cost = get_cost(response)
-            error = None
-            
-        except asyncio.TimeoutError:
-            latency_ms = (time.perf_counter() - start_time) * 1000
-            raw_response = ""
-            cost = 0.0
-            error = f"Timeout after {self.timeout}s"
-            
-        except Exception as e:
-            latency_ms = (time.perf_counter() - start_time) * 1000
-            raw_response = ""
-            cost = 0.0
-            error = str(e)
+        cost = 0.0
+        
+        # Simple retry loop
+        max_retries = 3
+        
+        for attempt in range(max_retries + 1):
+            start_time = time.perf_counter()
+            try:
+                # Apply timeout to the LLM call
+                response = await asyncio.wait_for(
+                    self.llm.ainvoke([system_msg, HumanMessage(content=prompt)]),
+                    timeout=self.timeout
+                )
+                latency_ms = (time.perf_counter() - start_time) * 1000
+                raw_response = response.content
+                cost = get_cost(response)
+                error = None
+                break  # Success
+                
+            except Exception as e:
+                err_str = str(e)
+                # Check for rate limits or server errors
+                is_retryable = "429" in err_str or "500" in err_str or "503" in err_str or "rate limit" in err_str.lower()
+                
+                if is_retryable and attempt < max_retries:
+                    print(f"   ⚠️ API Error, retrying immediately...")
+                    await asyncio.sleep(2) # Simple 2s wait
+                    continue
+                
+                # If timeout or not retryable or retries exhausted
+                latency_ms = (time.perf_counter() - start_time) * 1000
+                raw_response = ""
+                error = f"Error: {err_str}"
+                break
         
         model_answer = self.parse_response(raw_response, q["task_type"])
         is_correct = self.validate_answer(q, model_answer) if not error else False

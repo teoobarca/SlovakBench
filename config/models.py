@@ -46,7 +46,7 @@ MODELS = [
     "google/gemini-2.5-flash-lite",
     "google/gemini-2.5-flash-lite-preview-09-2025",
     "google/gemini-2.5-pro",
-    "google/gemini-3-pro-preview"
+    "google/gemini-3-pro-preview",
 
     #mistral
     "mistralai/devstral-2512:free"

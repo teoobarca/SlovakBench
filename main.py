@@ -121,12 +121,36 @@ def evaluate(
     datasets = get_processed_datasets()
     
     if list_datasets:
-        typer.echo("📋 Available datasets:")
-        for y, path in sorted(datasets.items()):
-            typer.echo(f"  {y}: {path}")
-        typer.echo(f"\n🤖 Configured models: {len(MODELS)}")
+        from rich.console import Console
+        from rich.table import Table
+        
+        console = Console()
+        
+        # Datasets Info
+        console.print(f"\n📚 [bold]Available Datasets (Years):[/bold] {', '.join(map(str, sorted(datasets.keys())))}")
+        
+        # Status Table
+        table = Table(title=f"🤖 Model Evaluation Status ({len(MODELS)} configured)")
+        table.add_column("Model Identifier", style="cyan")
+        
+        sorted_years = sorted(datasets.keys())
+        for y in sorted_years:
+            table.add_column(str(y), justify="center")
+            
         for m in MODELS:
-            typer.echo(f"  {m}")
+            model_short = m.split("/")[-1]
+            row = [model_short]
+            
+            for y in sorted_years:
+                output_path = RESULTS_DIR / str(y) / f"{model_short}.json"
+                if output_path.exists():
+                    row.append("✅")
+                else:
+                    row.append("[dim]⚪[/dim]")
+            table.add_row(*row)
+            
+        console.print(table)
+        console.print("[dim]Use --model [MODEL] --year [YEAR] to run specific evaluation[/dim]")
         raise typer.Exit(0)
     
     # Determine years
@@ -221,8 +245,12 @@ def report(
         table.add_column("Timestamp", style="dim")
         
         for f in results_files:
-            with open(f) as fp:
-                data = json.load(fp)
+            try:
+                with open(f) as fp:
+                    data = json.load(fp)
+            except json.JSONDecodeError:
+                typer.echo(f"⚠️ Warning: Skipping corrupted file {f.name}")
+                continue
             
             model = data.get("model_name", "?").split("/")[-1]
             acc = f"{data.get('accuracy', 0):.1%}"
@@ -254,8 +282,12 @@ def report(
         for year_dir in sorted(RESULTS_DIR.iterdir()):
             if year_dir.is_dir():
                 for f in year_dir.glob("*.json"):
-                    with open(f) as fp:
-                        data = json.load(fp)
+                    try:
+                        with open(f) as fp:
+                            data = json.load(fp)
+                    except json.JSONDecodeError:
+                        typer.echo(f"⚠️ Warning: Skipping corrupted file {f.name}")
+                        continue
                     model = data.get("model_name", "?").split("/")[-1]
                     model_stats[model]["years"].append(year_dir.name)
                     model_stats[model]["accs"].append(data.get("accuracy", 0))
@@ -336,8 +368,12 @@ def export():
             if year_dir.is_dir():
                 year = year_dir.name
                 for f in year_dir.glob("*.json"):
-                    with open(f) as fp:
-                        data = json.load(fp)
+                    try:
+                        with open(f) as fp:
+                            data = json.load(fp)
+                    except json.JSONDecodeError:
+                        print(f"⚠️ Warning: Skipping corrupted file {f.name}")
+                        continue
                     
                     full_name = data.get("model_name", "unknown/unknown")
                     provider_slug = full_name.split("/")[0]

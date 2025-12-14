@@ -1,0 +1,655 @@
+{
+  "model_name": "anthropic/claude-3-sonnet",
+  "dataset_path": "data/processed/exam/2025.json",
+  "timestamp": "2025-12-13T23:35:07.141485",
+  "total_questions": 64,
+  "correct_count": 0,
+  "accuracy": 0.0,
+  "total_cost_usd": 0.0,
+  "mcq_accuracy": 0.0,
+  "short_text_accuracy": 0.0,
+  "avg_latency_ms": 307.7489680645158,
+  "p95_latency_ms": 606.5747080137953,
+  "results": [
+    {
+      "question_id": "29",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 470.19949997775257,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "15",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "zízaš",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 471.7614999972284,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "24",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "podmet, subjekt",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 475.1056249951944,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "21",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 476.27079096855596,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "08",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "synonymá, synonymami, synonymné",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 478.39049994945526,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "20",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 479.0599999832921,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "12",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 481.74954199930653,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "07",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "chôdze, k chôdze, do chôdze",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 489.53479196643457,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "03",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 492.9432500503026,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "06",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "pás",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 494.07712498214096,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "25",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 496.9327920116484,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "31",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "skladaním, skladanie, kompozíciou",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 498.9364590146579,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "19",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 500.9770829929039,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "22",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "citát, citácia, výrok",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 502.87591700907797,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "01",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 507.25349999265745,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "33",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 40.16583296470344,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "35",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 47.55804099841043,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "37",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 50.97495799418539,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "39",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "lek-ci-a, lek...ci...a, lek ci a",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 48.14962501404807,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "41",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 40.341040992643684,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "40",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "klesavá (melódia), klesavá, klesajúca (melódia)",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 59.44870802341029,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "45",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 49.01329200947657,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "48",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "1, jednu, jednu autorskú poznámku",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 38.87887502787635,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "30",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "Provízia, provízia",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 565.5357079813257,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "47",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "ulica",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 62.55616602720693,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "49",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 46.36408400256187,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "16",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "nesklonné, nesklonným, neohybné",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 570.7732499577105,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "02",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 576.87041698955,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "52",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 45.510999974794686,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "50",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 49.6005829772912,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "23",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "(znamienko) výkričník, (znamienko) !, výkričník",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 579.348957980983,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "18",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 586.0351670417003,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "28",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 586.2057500053197,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "17",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 586.8099590297788,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "51",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 57.80266603687778,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "05",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 589.7556249983609,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "09",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 589.9241670267656,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "54",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "Hugolín Gavlovič, Hugolin Gavlovič, Martin Gavlovič",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 39.065707998815924,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "13",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 590.8211250207387,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "53",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 49.042750033549964,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "04",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 599.6701249969192,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "27",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 599.2108330246992,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "55",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "(obdobia) barok, barok, baroka",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 50.82433304050937,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "10",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 604.8131660209037,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "32",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "informačný (slohový postup), informačný, informatívny (slohový postup)",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 606.5747080137953,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "59",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 39.34620798099786,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "56",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "Salernovo príslovie, Salernusovo príslovie, Salemovo príslovie",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 46.21012497227639,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "26",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 614.4041669904254,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "14",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "(ľudovú) pieseň, (ľudovú) slovesnosť, ľudovú pieseň",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 615.6072079902515,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "58",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 50.05650001112372,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "11",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 620.6339159980416,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "63",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "Posledný, posledný, Posledný zvuk zvonku.",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 42.954167001880705,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "62",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "epiteton (ornans), epiteton ornans, epiteton",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 43.9451250131242,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "38",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "začína sa – končí sa, začína sa, končí sa, začínať sa – končiť sa",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 145.48708399524912,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "60",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 50.91275001177564,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "34",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 155.89270798955113,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "61",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 49.23779197270051,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "36",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 152.72704203380272,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "64",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "3, tri, 3 vety",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 44.82829204062,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "57",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 73.046958015766,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "42",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 154.51591700548306,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "46",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "vidiečan, dedinčan, vidiečanom",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 153.62729196203873,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "44",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 157.69708302104846,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    },
+    {
+      "question_id": "43",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 161.08862502733245,
+      "error": "Error: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3-sonnet.', 'code': 404}, 'user_id': 'user_2p1bzxG5taJTZyqzX8sq8xHl2L6'}"
+    }
+  ]
+}

@@ -35,12 +35,21 @@ def compute_metrics(results: List[Dict[str, Any]]) -> MetricsSummary:
     if not results:
         return MetricsSummary(total=0, correct=0, accuracy=0.0, by_task_type={})
     
-    total = len(results)
-    correct = sum(1 for r in results if r.get("is_correct", False))
+    # Filter out API errors/timeouts if needed, OR keep them but note they are 0
+    # User requested: "technical fail... shouldnt count"
+    valid_results = [r for r in results if not r.get("error")]
+    
+    # If all failed, avoid div by zero but return 0 accuracy
+    if not valid_results:
+         return MetricsSummary(total=0, correct=0, accuracy=0.0, by_task_type={})
+
+    # Use valid_results for calculation
+    total = len(valid_results)
+    correct = sum(1 for r in valid_results if r.get("is_correct", False))
     
     # Group by task type
     by_type: Dict[str, Dict[str, int]] = {}
-    for r in results:
+    for r in valid_results:
         task_type = r.get("task_type", "unknown")
         if task_type not in by_type:
             by_type[task_type] = {"total": 0, "correct": 0}
