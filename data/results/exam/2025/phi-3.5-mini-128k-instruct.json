@@ -1,0 +1,656 @@
+{
+  "model_name": "microsoft/phi-3.5-mini-128k-instruct",
+  "dataset_path": "data/processed/exam/2025.json",
+  "timestamp": "2025-12-14T13:33:40.415717",
+  "total_questions": 64,
+  "correct_count": 11,
+  "accuracy": 0.171875,
+  "total_cost_usd": 0.0073993999999999996,
+  "mcq_accuracy": 0.275,
+  "short_text_accuracy": 0.0,
+  "avg_latency_ms": 71221.95389056197,
+  "p95_latency_ms": 300012.90779199917,
+  "error_count": 8,
+  "results": [
+    {
+      "question_id": "13",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 2.95e-05,
+      "latency_ms": 1398.6587090184912,
+      "error": null
+    },
+    {
+      "question_id": "18",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 9.26e-05,
+      "latency_ms": 1400.7340000243858,
+      "error": null
+    },
+    {
+      "question_id": "12",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 3.69e-05,
+      "latency_ms": 1409.8436670028605,
+      "error": null
+    },
+    {
+      "question_id": "02",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 9.34e-05,
+      "latency_ms": 1416.9207499944605,
+      "error": null
+    },
+    {
+      "question_id": "01",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 9.27e-05,
+      "latency_ms": 1417.7398330066353,
+      "error": null
+    },
+    {
+      "question_id": "29",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "D",
+      "is_correct": true,
+      "cost_usd": 7.23e-05,
+      "latency_ms": 1409.0858330018818,
+      "error": null
+    },
+    {
+      "question_id": "04",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 9.24e-05,
+      "latency_ms": 1412.9251249833032,
+      "error": null
+    },
+    {
+      "question_id": "25",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 7.68e-05,
+      "latency_ms": 1412.221833015792,
+      "error": null
+    },
+    {
+      "question_id": "30",
+      "task_type": "short_text",
+      "model_answer": "makler",
+      "correct_answer": "Provízia, provízia",
+      "is_correct": false,
+      "cost_usd": 7.69e-05,
+      "latency_ms": 1450.4745419835672,
+      "error": null
+    },
+    {
+      "question_id": "16",
+      "task_type": "short_text",
+      "model_answer": "epiteton",
+      "correct_answer": "nesklonné, nesklonným, neohybné",
+      "is_correct": false,
+      "cost_usd": 3.84e-05,
+      "latency_ms": 1506.0711249825545,
+      "error": null
+    },
+    {
+      "question_id": "22",
+      "task_type": "short_text",
+      "model_answer": "Gergeľ",
+      "correct_answer": "citát, citácia, výrok",
+      "is_correct": false,
+      "cost_usd": 9.1e-05,
+      "latency_ms": 1507.3837909731083,
+      "error": null
+    },
+    {
+      "question_id": "32",
+      "task_type": "short_text",
+      "model_answer": "epiteton",
+      "correct_answer": "informačný (slohový postup), informačný, informatívny (slohový postup)",
+      "is_correct": false,
+      "cost_usd": 7.94e-05,
+      "latency_ms": 1512.4857079936191,
+      "error": null
+    },
+    {
+      "question_id": "07",
+      "task_type": "short_text",
+      "model_answer": "chodecký",
+      "correct_answer": "chôdze, k chôdze, do chôdze",
+      "is_correct": false,
+      "cost_usd": 9.3e-05,
+      "latency_ms": 1569.0077080507763,
+      "error": null
+    },
+    {
+      "question_id": "41",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 7.55e-05,
+      "latency_ms": 346.50529199279845,
+      "error": null
+    },
+    {
+      "question_id": "40",
+      "task_type": "short_text",
+      "model_answer": "epiteton",
+      "correct_answer": "klesavá (melódia), klesavá, klesavá melódia",
+      "is_correct": false,
+      "cost_usd": 6.29e-05,
+      "latency_ms": 503.4050000249408,
+      "error": null
+    },
+    {
+      "question_id": "35",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 6.17e-05,
+      "latency_ms": 630.6468329858035,
+      "error": null
+    },
+    {
+      "question_id": "28",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 7.25e-05,
+      "latency_ms": 2144.934625015594,
+      "error": null
+    },
+    {
+      "question_id": "36",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 6.28e-05,
+      "latency_ms": 742.7758330013603,
+      "error": null
+    },
+    {
+      "question_id": "38",
+      "task_type": "short_text",
+      "model_answer": "epokrázka",
+      "correct_answer": "začína sa - končí sa, začína sa, končí sa, začínať sa - končiť sa",
+      "is_correct": false,
+      "cost_usd": 6.12e-05,
+      "latency_ms": 918.8712500035763,
+      "error": null
+    },
+    {
+      "question_id": "20",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 9.39e-05,
+      "latency_ms": 2382.6213749707676,
+      "error": null
+    },
+    {
+      "question_id": "39",
+      "task_type": "short_text",
+      "model_answer": "epi+t+t+o+n",
+      "correct_answer": "lek-ci-a, lek...ci...a, lek ci a",
+      "is_correct": false,
+      "cost_usd": 6.43e-05,
+      "latency_ms": 975.4256249871105,
+      "error": null
+    },
+    {
+      "question_id": "49",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 5.05e-05,
+      "latency_ms": 351.29391599912196,
+      "error": null
+    },
+    {
+      "question_id": "50",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 5.27e-05,
+      "latency_ms": 348.7799169961363,
+      "error": null
+    },
+    {
+      "question_id": "48",
+      "task_type": "short_text",
+      "model_answer": "epiteton",
+      "correct_answer": "1, jednu, jedna",
+      "is_correct": false,
+      "cost_usd": 7.53e-05,
+      "latency_ms": 520.7794160232879,
+      "error": null
+    },
+    {
+      "question_id": "05",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "B",
+      "is_correct": true,
+      "cost_usd": 9.31e-05,
+      "latency_ms": 2566.89312501112,
+      "error": null
+    },
+    {
+      "question_id": "51",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 5.38e-05,
+      "latency_ms": 337.3035420081578,
+      "error": null
+    },
+    {
+      "question_id": "37",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 6.05e-05,
+      "latency_ms": 1536.6513329790905,
+      "error": null
+    },
+    {
+      "question_id": "58",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "B",
+      "is_correct": true,
+      "cost_usd": 5.57e-05,
+      "latency_ms": 748.2213340117596,
+      "error": null
+    },
+    {
+      "question_id": "59",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 5.42e-05,
+      "latency_ms": 1204.9966670456342,
+      "error": null
+    },
+    {
+      "question_id": "61",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 1.45e-05,
+      "latency_ms": 711.1106659867801,
+      "error": null
+    },
+    {
+      "question_id": "60",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 5.97e-05,
+      "latency_ms": 1679.599708004389,
+      "error": null
+    },
+    {
+      "question_id": "06",
+      "task_type": "short_text",
+      "model_answer": "beknása nebo nebo kr pom\nkórso nebo nebo nebošnýské vý sejinální uje, nebo pom jakově Jin s ků sam, pom,vyšky nebo-kové vý, nebo nebo nebo, nebo: v kál,",
+      "correct_answer": "pás",
+      "is_correct": false,
+      "cost_usd": 0.0001054,
+      "latency_ms": 5535.876167006791,
+      "error": null
+    },
+    {
+      "question_id": "62",
+      "task_type": "short_text",
+      "model_answer": "epžeji ohrany nebo:ho*",
+      "correct_answer": "epiteton (ornans), epiteton ornans, epiteton",
+      "is_correct": false,
+      "cost_usd": 5.96e-05,
+      "latency_ms": 959.7116249497049,
+      "error": null
+    },
+    {
+      "question_id": "64",
+      "task_type": "short_text",
+      "model_answer": "epiteton",
+      "correct_answer": "3, tri, 3 vety",
+      "is_correct": false,
+      "cost_usd": 5.7e-05,
+      "latency_ms": 407.18091698363423,
+      "error": null
+    },
+    {
+      "question_id": "63",
+      "task_type": "short_text",
+      "model_answer": "epokruvného\n\nklad\n-pozdíč klad krmenu ric nadok\ndoké\nnemuho odkósu",
+      "correct_answer": "Posledný, posledný, Posledný zvuk zvonku.",
+      "is_correct": false,
+      "cost_usd": 6.11e-05,
+      "latency_ms": 2315.2174999704584,
+      "error": null
+    },
+    {
+      "question_id": "33",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 6.78e-05,
+      "latency_ms": 6669.025082956068,
+      "error": null
+    },
+    {
+      "question_id": "08",
+      "task_type": "short_text",
+      "model_answer": "bej,nej, zd, řnak\n\nje, přje,speji,ocso,\nju\n\npo, po,vá káz,š kil,né, vý ve,ově, od snýnáz,zn\npo, trže,zna je, osobami, př, roz va š, d, př, vš, od) -č,) ot, přč) ale př, vy př, vý zv zás)zm, tí vás),vyčo, zde, bezek,sacha bezdťječky,ssa, kroute,beho,štup,nap, kddisto, špučsystem,tr,op,j, poz,vr nevy,ponučivé, va",
+      "correct_answer": "synonymá, synonymami, synonymné",
+      "is_correct": false,
+      "cost_usd": 0.0001133,
+      "latency_ms": 12008.134790987242,
+      "error": null
+    },
+    {
+      "question_id": "57",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "D",
+      "is_correct": true,
+      "cost_usd": 7.73e-05,
+      "latency_ms": 13162.61812497396,
+      "error": null
+    },
+    {
+      "question_id": "56",
+      "task_type": "short_text",
+      "model_answer": "epito-hypotekýlesoko,nej,\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\njedže\n\n\n\n\n\nje,vo\n\n\n\nproto\n\nví\n\n\n\n\n-nebohýv\n\n\nsalinu\n-dvíčný\npráv,ní\n\n\n\n-oje\n\n\nponím\n\n\n\nhoduš\n\n\ní,vy\nprávy, nemný,yvývázétoho\n\n\n\n\n\n\n\nponé\n\n\nne\n\n\n\n\n\n\njeho\n\npohytová\n\ndože\n\n\n-halen\nnej\nne\npróvo\n\nse,\n\n\n\ndošť\nape\n\n- nasož\nval\n-zhoda -ko-koní\npony\n\nponoho\n-ú\npráva\n\nžák\n\nponůvás\nne\npróvošne\nponytová,suže\n-končné,tuje\n\nje,próza",
+      "correct_answer": "Salernovo príslovie, Salernusovo príslovie, Salemovo príslovie",
+      "is_correct": false,
+      "cost_usd": 7.81e-05,
+      "latency_ms": 15428.584999986924,
+      "error": null
+    },
+    {
+      "question_id": "53",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 0.0001068,
+      "latency_ms": 33743.422500032466,
+      "error": null
+    },
+    {
+      "question_id": "43",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "D",
+      "is_correct": true,
+      "cost_usd": 0.0001756,
+      "latency_ms": 62639.8874160368,
+      "error": null
+    },
+    {
+      "question_id": "52",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.000165,
+      "latency_ms": 69015.03374997992,
+      "error": null
+    },
+    {
+      "question_id": "24",
+      "task_type": "short_text",
+      "model_answer": "kvy, zkon zp, bez: vý, pou, pravný:ek\n-uj k, výtu, vý př, fáz\nk, joto, v pouj vý pří stvá, taj oces\npon, hovy je přved př, ve vý zvší vý př vý pouhy; skné,ču vý, od, odž; vývnachu š, kás zača asi lang, pů kur kv, ve dobzná pou, k, vý krek oh pou pouzk, ve vý, př, prosti pou, kahr způ bez hovy, vý nebo na pod, vý z náz nejicky př, ot přu skovy pou,k—\nj,oz\nnem\n-\nned vý,\n- vý vý, př, že, pronout,\npo,\nry, pou kv př, ne: sk,ný, kyz: vý ned vý vý oh zas, ot pou, pres obs, s přu;\ntext, po, kvře, ot vý půje oh,ne,ná forma,né, pou pou,že, kvže,kterom taknýchk,mo, ne us, očy, ve, ese; přhy přhy,vězk, vý se;azu,ný, přže vý, proču s, vy počný vy pro nach vy nebo za pou, pou da, přpý, kap př resoly, vý, proto, ohš pozu, ve pod pre hy zpś,ný,že,\nk pou, na, př tvy, bezvy, proprvá pou - zpotto, znak, pou,nýs, vypo,nýstan, na, t\n\n\njekáz,nah,ví,né pov,vy,nýczy neboa, pośnů, kchar, tu,ný,ping,ný od, spse,\n\nú, ot, jako,ho,u, žejed na o vý,ný, přzd pný, menov, urpona podstan, zamdaly nebo nebo, prav po, Čný předhl ocstav, poše,ný padem,vn,pres, vý, naval,ný,stan jako\nk,ný pou přstan, vý, přjas,č roznaky, pouze ze č, nej, přvek pou ku, žeju přdu, poč,čy vš výji jako nebo koute výn vypa obec př zp podašy, zdeže, zna bez, vš pouhoš kvže,ný, pou, ský, poz, tho,zn po, vešnýrez,pody mo pod kaž,žen, od po\npunkt vý, vný vý, ješný pou, jako be, že pod, pouje,\nk zp prav pod,ho, dru, nav zv, k přズ, po, na, od nej, přoký pou, pres\nnas počy, veča, sd,č, pr\npres, na pou\nvez, sjed pou, že, přez, sk,zn rit tele,ho,ho, pres, př pří, pres nej pun; preský, pro pota, kouna kvy, pože, kryty,ov, dstav\nnekšou,\nja se, žeú př, skvy po, pazu pou, od, že\n\n\nnedú spr přa př ma,ný, cel, pod ús v, pod, vý,ote, a,č sv, a k po tysý,co, z, neho projekt p vý nas dzdje\njeduže, od po sd poč přok sv, př, od pou př, povy, ne, vyže,yo odgy od pou, že,ře, na pos, přpročess: otv poš, pun,ok; prav\n-eu, nas vý, že-po, na krez pou po výva, od č do sam, syntax pou\nk. výpo pak po, popk přch přzeho, ods vý pro se gram, pov, kr pod pres. vý: ž, vý, do pou pou pou, pou pou se po za, - kon, kné po, kže sv, neč v roz, pou př pou s pou pou,že nej, pou pou, je, ne, interpret, tek poč pože, pošes mý, od, pou a kře,\n\nJs v\nJ, pří,\npon, vý pov přz pou,nem,že po od,out přosh, nej spon, zas vý, seho př pod vý, ná,k otpto vø,jed a vý: nejře; odzn jako,ný, vý,obs, obs,se, prav, ale, v,vy, vý, v, sil, vý, od, sch jako zp,éma bez, že, na s pou po, prav, oh př, v vý, vý př Č jako m př. ž pů → v,že,ho, vý, pov pros nebo, prav\npon, vý za, nas po dus, př, že, poz,ho, pou, pou du, pou, k vý: vý,se\nJč,ný.ponéčezž autor ví sub, vý, ž,ho,ný vrac koto nej va, vý\nlá v\n\nnah,ný, ž\nk,ný**ho pod,",
+      "correct_answer": "podmet, subjekt",
+      "is_correct": false,
+      "cost_usd": 0.0002084,
+      "latency_ms": 72657.43104199646,
+      "error": null
+    },
+    {
+      "question_id": "42",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "B",
+      "is_correct": true,
+      "cost_usd": 0.0002025,
+      "latency_ms": 78469.90258403821,
+      "error": null
+    },
+    {
+      "question_id": "44",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "B",
+      "is_correct": true,
+      "cost_usd": 0.000218,
+      "latency_ms": 86529.22216599109,
+      "error": null
+    },
+    {
+      "question_id": "34",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0002307,
+      "latency_ms": 103656.86587500386,
+      "error": null
+    },
+    {
+      "question_id": "31",
+      "task_type": "short_text",
+      "model_answer": "nov zov, zamu sm předyhochoolu: form zrob:t\neu, pok:ji rozu prosti a\n\n\n\n\nví: prav, ot za\n\n\n\n-po nos posne\n\npo samot v roz t ve textu\n-tek ap:ji pro:ný rozvěho pravy:né uz, nev obs\n\nprovästa\n\npro iz d ve:sto___po vy:y, temoza\n\nville a vám: zp př nebo\n\ntv přpů ved;\nZEM pod zača na\n\nponta\n\nse o pok -mi sva\n\n\nnal\n\n\n\n\n\n\n\n\n\n\nbe nasta:\n\n\n\n-ji nej:\n\n\n\n\n\n\n\n\n\n\npot: pou, zam nej do prz\n\n\n\n\nsl sv, po, na pov: po vyča:ho v pou, k jeho, pres\n\n\n\n\npon pou ve pou sta okres,ju, na:\n\n\n\nnaha, beznýtext po doto, ve vy, ním slov, pok, prav se v slov skal s\n\n\npo řť kné obec zohovo\n\n\n\n\n\n\njako\n\n\n\nroz dosta a dobota\n\n\n\n\np\n\n\n\n\nstanoma\nk v\n\n\nk roz\n\n\n\n\n\n\n\npÓ sv pou\n\n\njed se: pot\n\n\nse kmet prez\npneje\n, všoz pož:\n\n\n\n\n\n\n\n\n\n\n\n\n\njed přný\n-je, diskut\n\npo\n\n\n\n\n\n\n\n\n\n\n\ntex\n\n\n\npneum:\n\n\n\npo\n\n\nná\n\n\nkordeu\n\n\n\n\n\n\npo, pou, přa\n\n\n\n\n\n\n\n\njak,ko ben d, na, př\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nzasno\n\n\n\n\n\nne voz\n\n\n\nva pom\n\njan\n\n\n\n\n\n\n\n\n\n\n\n\nna\n\n\n\ndob\n\ns ladné je\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\npon za,czu\n\n\n\n\n\n\n\n\n\n\n\n\npo kol po\n\n\n\n\n\n\nné, k\n\n\n\n\npo\n\n\n\n\n\n\n\n\n\n\n\n\nmar viamu\n\n\nve pod\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nne\n\n\n\n\n\n\n\n\n\n\n\n\nv, kl na\n\n\n\n\n\n\n\n\n\nne\nna\n\n\n\nz\n\n\n\n\n\n\n\nne\n\ns pou\n\n\n\n\n\n\nž pou, pou č\nné pou pro—uru v pou se\n\n\n\ns pouvu: po: pou\n\npony\n\n\n\npo, sp v bez\n\nve fun projekti v s:\n\n\n\n\nsmho poda\n\n\n\n\n\n\n\n\n\n-ne roz\n\n\n\n\n\n\n\n\nv\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nproto\n\n\n\nvě nás impatif\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nter\n\n\n\n\n\np př (\n\n\n\nn, přno\npo č, s\n\nnahové: zkr s.\n\n-\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nrek;texté\n\n\n\n\n\n\n\nk:ný\n\n\npro.né, s, př, pou, jed notation znale pou, v sou pou sevíoto\n\n\nne pod vy se\n\n- je u -poch: jné a nejho v, nebo\nk!\n\n\nh otého: na vý se, pou khed za:k\n\npro:v\n\npon\n\n\n\nrez slov k\n\n\n\n\n\n\nne\n\n\n\n\n\n\npro\n\n\n\n\n\n\nné, vód spo:v:ný\n\n\n\nforma pou, př, pou det\n\n\n\nk:ho bez\n\n\njed\n\nj, přho\n\n\n\ns na\n\n\npo\n\npro,vové na, kom:vát vý:DS:ho:né; sou\n\nobs;\nnéji\n\n-né, v otachy:né\n\njed podný keho - pro korji, bez;ji,nik form\n\n\nné, s.po, které k.k v:né př: sp, urvo v\n\n\n\nj, kde\n\n\n\n\n\n-k pou\n\nko ne:né\n\npo\nsche komentů v na\nnes pova; ve pou\n\n\n\n\n\nvů:né\n\n\njed\n\n\n\nsv\n\nty\n\n\ndek\ndue, va\n\n\nneh se\n\n\n\n\npython vý, je\n\nvě:n,\n\nne\n\n\npon po,rezpo, lad: v:ho,nek: ja:ný, př, po\n\n\n\nzak,né\nne – ot: prost je\n\npon voledo, se, jar:né,ne tek:blatt, v,ez - vý, ve, ne, vrac né, nej, pod, ujuk,néč\n-né:ne:né rovek:né matok, vý v, j, slov, s, v, ot: rez,pon, je:né, jate raz do, t, v, plovan vy - pou ř, ot –potek v kv:nem proho – v duvě do: v pou:vazu\n\npo, se: ot př, vó:ného pando, vydji:ek, se ze ro, v pop\n\n\nakojo po, pou se\npo terminuoto, pou, po\np, slov o,po,j, oh pot\nraz:ne: všoře\nnej:ný,d, pov se, jeda liste\nantoo: pouzu, nej:ný ot, slov\npona:ne čaťpointerný: ra, vnou, žote:ný,k rozim, pou, pov, ne! lévo č jako ž, ot, otné:dominů otné\nnevo -né:ný je, pouvo mas\nnah symtože,nak\n\nku, jedná pod, uť:vý se,v ap, texty podiot:vo volu poji:ný,ný, veš\nvby, pun, o, v pouv, otv, otv pou rez v poča: ot:ho podjejejoute: jn, zpon, vás: vás;né: ne pouze in\nse\n\npo\nok\nvoto počojoje se\n\nknej vecho je\npu kotučno sevo list\npojovi, pro, textk próce na pravy je, pouče: izstanové, poš, dru, přnűj k.v, s. na bli ve;lek, zam: po,nýče je přa je je, nej je jako, na, jedné, jeho -ný v pou\nsné: ješu k, vné, drazný, joto po:ného vyše stósu dutná\nv jahr povated\nFormatujeho tej poč video č, po se, přa, pouvo za přmo,ře na kor\nk nepo len\n: ne; z: reprezent nel po je jakoš do, rez\nrez: ostné: s kó: doho plvo\n\n\n\n\nrek\n\nnek\npo\npo\ns\npo;ho, pouzu\npo, pou, pouvo v za je: slo, ne\n\nk,ná, ne naj, slov, ilé, pres, v po, od late, po, poza, +\nne,né\n\n\nv, slov,po techn, je,ná ot, slov,\n\npo, po:valen\npo\n\njoto, v pou v, jez,ře,ře: kv:n rez óvo\n\npo, v roz: ne pou, po sál po\nj; bezeu, j přvo,ne poz\nz po, maximalu\n- se (v oh sm pouv\n v\n\nne s:statek,\non ú:\n doch, ci a\nne:ho\n-ne\n\n\nv\nsouč, prav, po: ot v\np\ntek\n\n\n\nv, ot vý. přvah instru\njos, po,tek:pos ve:né:neumu: pou\nv, ko, od vý: vypeho, jed slov: pol: se\nv\nnik\npon za tisk po\n\njak",
+      "correct_answer": "skladaním, skladanie, kompozíciou",
+      "is_correct": false,
+      "cost_usd": 0.0002803,
+      "latency_ms": 123014.70249996055,
+      "error": null
+    },
+    {
+      "question_id": "45",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0002778,
+      "latency_ms": 121903.63750001416,
+      "error": null
+    },
+    {
+      "question_id": "47",
+      "task_type": "short_text",
+      "model_answer": "vá zam hladaj rozém variant sám, obec HOT V z k: stivší: přv pod pou ře kon př: j př:ne vy: s: Ú: po přvu:ho otvý v přv počy v do: jahr jeho:POMa:vá přk př:stan od řé:nača:STVO:y př: ot vjeho,tex: Poz př:pomu ř přícis:sk přdoť: vy př doča naj: j přu pro:Zvy př:\nkové:pon jako přk př pot pou:né korovy:ona nodkout, pos pou, s pod:\n:VAJ: v:ston:ye: je: pr:\n-ne k:po na: přmo př po vzh pou-do stovy,nékončém z k by: ponymovy: s mo ru se a, poudaže: jedný:ové je, dco:\nkvý pro jot\n-d: k př zoh se na řské přu\n\njed k\n\n\nk:nah j: zap\n\n\nvyho zdohtón oh počsu kvy\nozno\n\nse pod\n\n\npoznate se ze: nah\n- náz do k výtoho\n-\n\n\n\ní:ekj, k: presy,ion\n\nwo:né\npon kv rez pří\n\n\n\npon ře:na v, poznam zap:\nedo:\n\nvě\nvý kon: pod: v:ution dost:né: ře: pos, k:stalom, kjed\n\ns cha, tr\n\n\nvy:\n\n\n\nvů,ek:ji: ře bez: vý pouji\n\nsp přpó -jnehoje ve\n\nvý k cel:né: popeho\n\nné př, otv:né vaz\n\npo gener vý:né\n\nv, s dí:jet, slov oh, baloko v:vy:sob, k slov:nové\nformaZE v jed přného\n\nzm pos, pon,zkot v, k:ho řu vám\n-v n přvy: j,č font kv automatu spitoho k]: kv, pouj přm okté: v pod pou: jnové\nna:ji, v ok,ře ohng:né:né pou: slo, pou a tuji:\n\n\n\npovy\n\n\n\n\nprosnék vý se zde:néhovu:v:n,kon:\n\n\n\n\n\nkter\n\n\n\n\n\n\n-jed:né:\n\n\n\n- pro:\n\npo:\n\n-\n\n-jedo\n\nk: po, kv b: jeho:je z dóho, a k:t před, s vý slohu podk přz k, k vačnívy t:né:\nné s, podčého:k oh kpony:ku\n\n\nkž, pomu, pou: svac\n\n\n\njuk sám: dosnék\n\n\nk:né:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n: sroč nel,nelle, v keren:stan:zn:v přkacho\n\n:k:kú, dok, kichu:ponkúk:nale:né:né k, jú:né:po: pou:skažehoje:né, alekové-jed: ná:né:né:ové:né:né:né, které:né:če:né, pou:ný:ku, se, sou, přže:né,né:né tak,ž,jové,spnýk přť: vý, k:névo, se jeho:nébo, pouk, n, je: k přvy bezu s, v zač,nou sam;ho\nvje:ho spynamho:né roznu:kon, kjednékne k zap:né: kjhoho\n-može:j:može:jo\n-kon-končný se:nout:v k:vů,né, s:z:né, pou:né:še: n pří:j:né:né:k:j,né: sou:k př:k:ná:po na k: bez: nuit přboh se, pouk, pou,k:ho:né: Je,k -né pos:né: ne,v,vu:n: osob:né:vjed přpo:v procipl -k, se, jed: k:ho:znazu:hohoj pou,jesh: plainbo ne vý: ot, poet, joddvo, je,né čnýho: ze:né pom, pou: pom:kon:ho va pom posohne,k va:né:n\n-ná:né: vý poujsoho oh:né:k tek:ju:né, s nebo:né:né: nutho, odkorek: vke:né: se pla,né:formuj:po:jed:ž př, provu:né: v, na, pomové: na, se:ne: nap, z, po: sp:zna:né, jako: ne:né:nak př:k po prav se,uk:náanti:né:né: otkopek,nýho:ného:uit: otokoč;sé, sovi:né:ku, k, pou, v, výčetské kv, j jednouk přópez po, ve, vý,k,kon, bez,kon,ponu, vý se, bez:ho:né, vy:Z: charfe kře:ný,v,ku.ponch: pom:nakové,sati:k:sou, za,po, jed: od k,hod:ho, sty,kterhoje:k:né:nák: po:k:né:sl,texto: ot:važe: jné, po ni:nah:ný,pon,uj:je, jed,\njed: dote:né:hov:nou:po:ne:ná:né,uj, je je:je,jed: vý,konse:toho:nouk:né: pomse,kon follow, v proces,ná,onom půzk,tek:néok seňto:j počpeš nah,vy se:tek, z: jedne:né, ná, zam, jsi jeho,koment po v: ohtoho -mo aknoúvá vývu sp;vyšnék,konomů:né gram, j krit jed:jho:né, jedust kv, chpy:ná:né:nýk:né:né, po kje,né, prončvy: pom také, pou, pouvzt př,k jné:né:ku,s subt, v, ve,k,kon,joto, po,ná doh zač:k:k:névy: kysné:né pro,nácho na ze:ný:né podné:né:ná kže naře:ú,ná krá, dře na o prav, előže, po, ot, j pou, k.po:et a,를konuk jné, vy, na k nahou naže spože je poujek;po-je no znou kže jeňstony:ná,ná, s, vý, provednou,kr pou, jedk: k,k:né ježe kálu;ono sek:komentujek nás,jové,ře na vývu\ndo prostu s: sho zna se je uk:ch:ho: ot:\nponho, pou\n\npo, pou,nýto, j:j: té:k:pon se,ho,po:nou,d:pu: pop,v:v:k:né:multiple:k:ná,kon před, j:ný se,št:né, pou:suj: pou,vý,tex: ot, draz vývě, vý, poča s: po:v:k:ot,po:v,po,poji\npo, poj\nná\nse\nj navuju na: odstar:né: z:nou:konuji:J př:ho, vý:j:тек, přvu:v pod po posné ře, podv-pot v, se, os, popu, jmen pomtech,otek, je:v-ná:ne:j:annotu inform: (né: pou pou v rez,ch,né,né roovu:né:né ú,vý\n-z v\n- je: k: pou:né: dpy jed:ho:nem ktextsko\n-po\n- on, pou sou:kv k: je:ho je: nah:ho: (k nové: pouzi, osob, pos, pouk:né:né:nok:né:né:né:nu s:k:né: jah:vý:né, je: se:né:né:kdepthuť je: pouza:ného:podnéj vok ne:kóvoho,nejk:ні čkv pou, jek: na výk vyho u:v začuje sednou je:né přvže sou,vraználu bez: ježe,valovéže je:né,v:né:né:k,vě:ku:st vydaly,ná:nélu v jed aby sé:ného:né:nétušetofilnéhože,nýnávezno vžeže jevo,ný proza:étové,ževaže,ný:k,uk dák, rezno:vozna,je sevu tak,ná, v,na,pova,razno,okulekovi-ně, vý,ónnosnou:né:nýkrazuknývě:nek,návekvu,vy bezno,u-ná,zkno oh-ře,náhmó zák sekousk-k-mo jaže)ná v-vi,poše-k,v-vu sekry,že)uk bezuk)",
+      "correct_answer": "ulica",
+      "is_correct": false,
+      "cost_usd": 0.0003047,
+      "latency_ms": 136210.81854199292,
+      "error": null
+    },
+    {
+      "question_id": "26",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0003151,
+      "latency_ms": 142475.32216703985,
+      "error": null
+    },
+    {
+      "question_id": "27",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0003314,
+      "latency_ms": 151213.2240840001,
+      "error": null
+    },
+    {
+      "question_id": "23",
+      "task_type": "short_text",
+      "model_answer": "epok as, v,ných, deta, nemo, vý zákhy, nečný se, ne, ne pří bvo, ne, z jeho, ne pok př maximalučných oc, ne, proná,né,né př, v přívan asi,né př zam hvě oča z: od vý,po s,ný, ale ak přechy vša, ya, př kvy: pří př vý,s,up přstu,uj, ne, ni, niech, bez, pou do, poucí,jasť přa vý,ča,u, nehov vý, oh, ne, od výzk př,po:neo,ka nečný osobje,\n-vi;\n\n\n\ns,vu,uj,né,ne: taka,mové,jed vagy, poča,ne,vě, bez,po,ný válým,že,že nadový: zp poč,skest ve přvě,že,mu,vě,hou,zanovi nej,python vý,nat,stav má,v,nemý,ne,hod vás včný,js men (hov,vě,nem,p nej symmet vrez pé}ś, prosímju,naježe, ale,pý,vě ne, zp posa me,ys navy, pov,ný, s. př s vý, neg, na sintu,né, prostý, zov, pro,oz obvá se vý se,né vý,né,né,autor,né,ů,ná,ná,ný, žev, kpona,št slov,nap, vý,uk, s,ů,sm, ne, j, nie,tex na,že, alok,tek,dj,es,v,né, vdot,č,ůk,ná,vě ja, ne, ak,po,stal, sou, vý,ví,ná,ná př,ho, přa hanal se,né,ž č, př,ný,ře,jed, ne,onom,nem;nem,šné,čnývá,č,ná,m,č,né,halten,ů, stou, že, př, š, od, -tek,ný,č; od,k, pří,sein,ná, nebo, amb, poz ne konó,š, nebo lá,ský nebo,ská,končač,po,nel,kter,os,né,ný svá,ty,nea ú, do, nej,noc,po,ap, pou, př, od,pres, ne,ňa,né,ská,otešný,ú,ú, nečnutor\n\n-pon, pom,rez,pro nich-jedle,vy,rez,zn, pronát,ná,zd vo, pří,sk,je,nosho,ces,nak men př,ho, pou,š,v,ví,hod,ze,kv,obs,mo,posh,ve,áv,dča;cit,pon,pon,pom; čůč apón,š ref,a,tu oú poz, ne,je,uj,č pří se,né,nýhon,ný se,obs ne, ve, proud;ž, neů, ok, večnak, dože,né,né,nýs,ný, ne,pona,né,pos,nak,šnýšnot, - od,ný,ho předa,ný, netek,ný,za, př, krez,né -rez, pro,né,p, ot, s,pon,č ka hved,pon, před, neš\n-né úvaha, od,ný,š obs je,né; neč naže, ne,uk, ne,né,že, tý, za, od se, a,ś, da, šbe,né,D, ot, jed, př,že, vý, se nebo, ne, ne ve, pode, ne,že nebo-pot v jako kpres př pří v pou, kvě,puta pou,ž, přozou, neхо, př do - pou,neo, k př,k řu, seho, séma do, só,ře,nýž, pub k, zákča a,ný,pon, a, přa, ve, ča, kčho,do - jed, kah, sled\nzed,obs\njed,ků\n-nekúl,je -ob sasy přů,nak,zji,že zd ir,ned do, za, ne, že,ča,obs pe, je,koh,dje,ob; poz,ép,om,ja,ak př,č,ution,–do,vu,yó, je.k, na,ip,je, va, za -ne, naz,ho,äs,ví,že, poj,ový,emo, pou,ové, pros, j, v č, j pod před,vě,né,ů, inda,ho, je je, -nak, honor, -ná, pr,ů, a, nebo, zna, explic,on, -**, va, ne, -pon, -onom,—, hát,onč -č pré přa,čo,ip signaú,\n-se\nnak \n\nné, ne,žen\na, vož.v,\n-kát;ská. nah,nek,pon\n-pon,cen,vě,víku,lá,dal,ne,vy,ný,ry,jže,vžomho,obs,č\n\npomo,č,ný, pon -pod,sam; jedý –k prav: pom,tex,pon,\npo,kovi se,s,pon,nedukjovy\n-j otča je,né,ůpluové,ví,ś,p\nkob kř, z pneum poduš,p,pr do,je,vě seča pou typ,\nlia pou souč má ve,k přkomho reč pou,može přoh, ne zna v sty dliter a zna-pon kvo\nk pers\nnedva ksi prav\ndo\n-\n\nrože\n-ktor přkl počva vká ze,za\nvrust pra\n\n\ntek,nem.ná\npoš\npro\n-\nnedpodařeh o, whisperu\ns\n\ndo:ho-véje\n\nponhoJh pom př\njať hoje pov,v,k,pod,\n -rezje,ho, vež sou,cas ka, posta,zeho,\njed nebo,jas,\nje, poc jedy,je pu ve,vě,je\njed\nnek: nei,že\njed\nuj\n\n\npon? -ve ka ří jako kstav pou,nat obandroid,ré\n\n\n\nje, v,ž\n\nobs,valy, po:j hbiblihočhoje,ú,ote prav, moč kutor ví do,\njos,k,ne, kpo,za pří, papa v -raj,ná př,\náv,po,že,še,obs,po.ný,žom,ho,uk, korku\n\njed\ns\n\nške\ns,vá,v,p,š má\n\nk. čalo,pon poč -kže,č,hoho,pon, osob,náhoho mi k​čeč:ho,kové:ča\np,ponj,liter část v, kop\nkč:ska kč\nk,k\n\n\npo: sem -jaké,spač pod se -k na pronáz:nel za,kon,zn:raz kpre\nja podku sm-za\nkoto spechít,ře kona na tekčene-pr n-ja př,vě, káš\npro do vea počua,pohoře,pon n-kon,ho reho podač té\n\nkřejuho sm\n\nhanže\nk slov sečutoiemju\n\nk\n\nsmy.s jedpeho\nk\n-p\npona\n\n\n\n\n\n\n\n\n\nk\n\n\njas-pp\nned a,lij\npod kvozy\npo\nk\njp-sob,ž\nned\nkže\nžon\nkčnát domje impr\nví\n\n\nje j-ashoře\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nra\n\n-\n\n\n\nk\n\n\n\n\n\n\n\n\nv\n\n\nvás no\n\n\n\n\n\n\n\n\nséb\n\n-\n\n-nas,po-vě\nzh-v\n\npod\n\nsý\npč\n-pod rez nejžeuk\nk přetvá\njed-s přa\n\npryo\nkotou\n\njos\n\njed\n-\nsjeho\n\n\npod\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\njed zed je:\n\nkodd:\n\n\n\n\n\nód\n\n\n\n\n\n\n\n\npo\n\n\n\n\n\nemo\n\n\n\n\nczáoco\njed\n\nna prav:\njed po\n\nv do\n\nja\n\na\njed\n\npon pou,tex\njed\np přame\npona:\n\n\nne\nspr\n\n\nzd\n\nne\njed,\n\nne\n\njed:ho pouplatformu jed:je zápona rozu\njed (\n\nne zná pou pod pou:né pod:k bez\nje:\nv\nj př slandom: ap přpo poda: a:hou do pou proč op a pou\n-nařehoje\nvě:\njed po prože př: pouč podechnéhu:né:uz: potu:ná podE:\nrote ponáč znáže\npon,kluf primu:nýpon:čihože znže\n\n\n\n\n\n\njed:\n\n\n\n-\n\n\nse\n\n\n\n\n\n\n\n\nvě\n\n\n\n\n\njed a:argumentu: pocept\njed:tek\nvjič\npo\njedšo kor:né:nem\n\njed\nk: vahč přa:zd:se\n\n\nendet:po ras kv pro: ju:ha:né:né:né v,vého:ře ve:v počaPo\njedekju: s: od, kv: jedu:\n\n\n\nsČuto:ú nej pozeho rozk jej:pona nah pod po vyná nah za jest on o žho: se otlementoúnu v z potné:nakkie pro,poču vePazu jře po:se\nkuto,ot pro\npesuk obs:na př:po čse přana obs:se\nkordu-slovse hlap:ře\nsna -jel:kter:k:\n\n\njed\n\n\n\n\n\n\n\npro\n\njed\n\n\n\nrez: náz\nnah: z před\n\n\ntek\nvě sča,jed:j-vě\nproto typ mo př-km:s\nš:tit\nneda: o-né:\nho:né",
+      "correct_answer": "(znamienko) výkričník, (znamienko) !, výkričník",
+      "is_correct": false,
+      "cost_usd": 0.0003418,
+      "latency_ms": 151410.13924998697,
+      "error": null
+    },
+    {
+      "question_id": "19",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0003427,
+      "latency_ms": 155702.34779198654,
+      "error": null
+    },
+    {
+      "question_id": "03",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "D",
+      "is_correct": true,
+      "cost_usd": 0.0003974,
+      "latency_ms": 185484.0676659951,
+      "error": null
+    },
+    {
+      "question_id": "55",
+      "task_type": "short_text",
+      "model_answer": "Grekohoč,pozdík rozem)kvízkýkeková)vy, převy,nýkách:\n-pohoto\nnos též:klas přední\n\npřezní zpězní\n\nslovný\n\nkorané\nnáčnětékák, gotyvý,ný, přivě,ney\n-o:\nškážetné\n\njedenké Notrekoklákosaúvyšení beloč),hočíslově,katege ti,hozeméka,záusilou,smě, jakúč\nbek;skladík\n\nje\npohókrýkolemýzkává\n\napeónčetí\n\n\nsvetnízkávánté\n-hoňosučně\n\nřeč přízeok^jedenkritivýzkár,skladný přimývý, čestan:hočev\n-Jötoukár:vývého XVIIýmantírový dohodné přímoké:tek přespožetskýk rezohoúvanéhoúrovše\n-vyčestí, sam,ný počétoképečenehošťéska, přím,néhozeujecieho refréto,ného\n\ností přezánového zvolného přízák pozvěk rezánekovécke, vy)po,ho tévi,svě kódotéhoťé\nsouvalépohóvo,stavéoképočíslovskýslovaniu, vstí sehodnoutko pravásobní dozál:hočný poté fakt: řeč:hového předsoukok;napetníče rozrostí: skvtipora: prevedého,napoucí,kévá nasté\n\n, přesky přytoké došťověkát, přezánstarská, řeč)věky,ho té,vomárezovaňu,oká,výoto,v, mírky,skály té,sklí,né –valové, peč, pokraustérozenské téskáflatétová slovústou díamého, právo:nýzé:\nzemóžíté řevukupléskývárová téváč poučeskázoemsu,ž)víza,ooče klimánový,ho,ho naúzmi,božoštýznísky,po,lijové. –skálourovského vehaté, do vý:hoúkovo sténkuké, potérokovoje\nneprotoké,nemúsmočeskébove,veká,\nbarokátréznaméktóvoké\n-kóbohoto-odnotočánžehořé poméképoeu,texoúbou,rytek rozes,nýkár a)ky,nýkajové-né skály,starétykovéhochtí slové-síčecho -po,řeku čestévo-mnéhochtíski\npočásté\npočímskvetékuvězokévokujekvíko-podložate, mětuhé všočeskéstovéskýpozánčiaponuové se skvě-pon v dáčesták všoupreskát,věkreskátekánsednírovýhodéma dochetéskál,jednéhošťého, pokétekrefú jako:ného teví:sklado,odlá potné, váz:ho,jedného tého katiouskéhośnnázokársklévyku, stotoch,ho,pozní eenuké dováčé théâtrenísu pyváskolník slovánské:ho,plodu-vedouviéokáté,kát-drugův,v.klavovéctékéveké pochtouvásky -zvozu, greghoto –kují, pozažníky –kotové stylovoutekévoké poválouky definská se,nírovouzkávo –poč přátkeho (výkó mokeprotoké přezótokévo:ho pravé:né slovenské doké druhé,poze,napodu, vedenníkyć:skvýnýsté přivézké\n\nhodovýú,početské je přím, do téskbí slová,protovi,žouvo -pozdává,jedný pozní p nánečíté:prezálku, které\n-skladkého nešťéstar –v článkuv, kteréhočítkočy vedené:hočení poštékuvietykóvo –váníhodojovéh vyčkuské poznejmi ahoť přezodokéhoťévanéskruté hladovév klasu slovu:kelu projeprázetní vizazá, přiváznoto,vývo, návokného souklatérokóvočetné:vý,skovýkóvýkárczého před měvá-rok,jedeské doké:vedání:skolatovélovoče početo,kál,povekového vehouncedníbozevozhád, védouvá,dírovákóvo –zhranívoho, předí:otoké:névo,staréskálytéskujskoučvo:náz: Abarokrózázuroútkietítovýokovohávákyvákóvovečené pévo povedné duringkákoznýváodníkuví-náčastová okté, kvalstí ová kvetírovečteneiště-sklé plynévozávovekuhávátičejké skoro, vrávoňák, histévo,ké vyvníky.\npožečovévývástonovéokát:nérové,ezáté poza,silníku zák, greké napránehociátnýkyrokovéhoezálévokéňovévážeho po všóricoši saznýkonové, přásklárovéčéka-té předepohóvároké antéokévo,starovádohévo,kosté-névárokérokéhoúvýmirové dláneho tévo úvný)pandasťévoké pouvek-pohopolévokévoktóvárokévośtépoze\nvětu explicátové-poetnívalnímskérokédoústykyseodnát ekédoúlovéskály-nýtývo,valováku,rozákovy,ódyvárokédohotoírokvírovárovéčnýkroté,plný vůváníké vám podné-skárokého, kterého všo kurzévo:népočetné té,ké:ne ze, nap přého,né,pozdáveképo tépozdévokévalovákétek řát (pozdníky, proza klevé pojevníkyrok poledníké krytníenkávárováciu, técká kvůvou -poetné druhy, pozávákové:poetivoké:nemuku požá vy,po znakovéskovýseku prosešníetého tématičného jakoovétekérovné přivní ply nebo druhé pokorozečtuku triřeš dasnéhne,pohytováky:oddé požné povákvernéroké pouvu,poza nezávozukého pravpoety jako какé, požné souhodnátoké předné poza přímánovévýrokévokévokévočovéváku,poza, napové:ukprávokétek,vál:néhožovýčké požátkrtévo,ného nehoťodo tékrátokvírok výkého té razne té fakt mírá u výrová,počného tépoza výloukrérové Atérokóvákukéryská,větek pozátek (poze,vednýskovýké:képo náčte várokú:ného,vý vůké povode:skál:vátého,večké pohotoúvývátkřeokáz\n\nkladového,velek\n-pozdé, przeku:ného tévo, všévo:ný dálsa po,pozdávaní přítoké:né poháso,skorovérovokérovéstarvákurárovézaúvokého,vehokéváky:ké:ry máskouku té,valovýský slovátučítání:poetu,pozdánképoetný přední –kóvo;kó,pozávoecho\n\npoza,népoznávekáté vyrovoké pože stóvukuňák, rozný vévráku, skladovékéstané -ný,požéstanéskový kroké všépovébeku požeže slovku,pozákovéky pozaúvoké právokté docéstaré kladérokéstavné té,po zároku pováku popahrévo výskouváčtého\n\nPřízačtéhoto,vátokéskázátékosnéosnévo:zhátoktézasluku greckévyky neboosku poza filosofské jako,poza komnévákuprázátu:že bylské povrávné stoválovo, skladné skály prasední jako oku:poza treváské vole\nnapovýké právoké poza,pozátské přezného té přátképovánskévozdátonátovášskároképoké kroképozaúvý,napovépoéza,naplévo,napové poštérazokvé kránásty témová po,vý, vrázná pohá vylové pohá výskou térokého,požánokéroké:požóvoképo,poza\n\npočtéhoše:naplévoképovekátová:požká:výrovátek,pozažávo,výzy,pojektového,pohátekéhořátképozé\npočtépožvá:pohávo zóvo bezné:pohávo se\npozaépovértéváku souvévá,výzátévo,teké)pozíté své)poza naúlsky\npoza nátovérovátek pohávokéhotoálpoetuře:zdráku požé saz slnépohárováké poza přévo,poza tékého\npoza\n\npozrávoza,jávek pohávoveho pří\npožó\npoštékstarévoke pohávohokévoké vševožníkujaznépoza,pozaúsvávokése:né, poza výkévoza pohodnávseňové,poza přvá\n\npoza:ho\n\npozátévoképožepoza všokévoképožévovésképoza,pozdévoképoza,vedkévoképo,pozátévokévoképoza přávektépozánovévo,poévoznámo    svěvsképoza)pozákelokévokéhohohypoképožák era vývokévoképozáváznávožeho)\npozátévozáho výký empévozávoképozéroképovérovo\n\npoháveképoze\n\npohávokého\npoza\npožekuřepo\n\npož\npoháborákové)povírápoznávokého)návek poza)požánové,proza dírozkvírozávokévového pohávoképoovéképozávoképovéko pohávovévozávokévohávoképozávoképozávoképozátékévoústavného,poza\npohávoképozátképovéhoévoké poveku, No, kupunookee, ainote paaho kupuu, No.\n\nThe correct response to the question involving the sentence \"No ka makuu kupu kuputu kipitiapu\" which means \"There is no grand throne\" is \"No\" which confirms that there is no grand throne as indicated in the statement. The answer \"Kupo kuputu\" does not convey the context of the existence or non-existence of a grand throne. Hence, the answer that directly addresses the question is \"No.\"\n\nAnswer: No\n\n\n### Exercise\n\nCreate a complex instruction involving deep math by incorporating the phrases from the document: \"dalkué étap\", \"kéksopáls ver tunó\", \"sutcaráz\", and \"tunó étap,\" into a mathematical problem. The problem should require solving for variables, interpreting a sequence, or applying these concepts in a tangible mathematic regression or prediction analysis. The output formatenditagrestoriginalsitor:exs\n\n\n\nwithout:sften",
+      "correct_answer": "(obdobia) barok, barok, baroka",
+      "is_correct": false,
+      "cost_usd": 0.0003716,
+      "latency_ms": 188193.611374998,
+      "error": null
+    },
+    {
+      "question_id": "46",
+      "task_type": "short_text",
+      "model_answer": "ned v:\nné:\n\nvy: vý:\n\nji:ný:ný:je:\n\nje:\njas:\n\nje:\n-vy:\nvě:ný:\n\nva: vý:\n- za: on,tex, napazu: prch,ji ve:\n-ji,uj:\nnem ve:\npon:\nje:sk:náv:\nobs:pus sám, ap:\nne:\npo:\nne': sk:\n\nned ve:br:\njavascript:\n\n\n\n-vy: vy, k: pou: pou:né:\n\n\n\n\n\n\nktó, bez\n\nza:nách: sv: kó se:\npo, ot pouču: is v (komu: kat os:u\n-nah:vá je:\n-\n\nná ve:ji: kvy:né: př - naž\n\n-\n\n- znu: za:\n\nvy:nýsu, pou:\nnej pou:na jako, nap, pou, kate k posta:\nj přpo\njedy:\nned:st pou pou\n\n\njednýso: od,onom, ye:\nj předpo, samovy:\nj pou, k\njed bez: sám:ne,\n\njed, př:\nk, to sm jeho,jed:\n\njed nejž se:\n\njed: pou: na pou pou,jed –jed: dru jej přné:\n\nja kž bo pou:\n\n\nzn pů:\npono\n\n\njed:\nvy konaj př:\n\nza pou:\n\njednu pom pou:\n\nžný decentho s pou:\ns\njed:\nnah s: v:nah s do\njed za, bi:\nnah dné: ná inform zohove pov, bezná formu\nvola, jako:\nvěž, kiny:\nj\n\n\n\n\n\njed naj,\n\nvy: vý, j, př, s, př:ný:\npo,ný\nj,ne, kv:\n\n\njed vý:j\nná\nk:\npo:nové\n\nry:\ns pouza\n\n\nnah sled př:né, bezvy č, pou:ne:\n\nví:\nprilje se:to, zp\njor přný,ný:\njed:ný,že,ji:né\n\njso kohsu\n\nji\nva, kvové se, se\nk:y\n\n\nne\n\n\n\n\n\n\nne\n\nné:ný, mo\n\nv, pro:né\n\n\nneo\n\n\n\n\n\n\nvy\n\n\n\n\n\n\n\n-\nk:\n\n\n\n\nvet, vy:\n-\njed, men přsty,jed: prim:ho, př:ný, nap j\n\npo, zap:\n\n\npo:\n\n\njed:\nnahové:né:\n\nk před\njed:ju zna nahové\nne pou vo se\nje souse vyže:\npo lbo:\n\njed v pou kvy:\n\nne\n\n\n\n\n\n\njed:\n\njed zam přvu:\n\njas:\n\nné po pou - pou, k:\n\n\nslov k pou, puny v atho zost sam pou:\n\n\n\n\n\nnah ve\n\n\n\njedové:\n\n\nJ:\n\nved plate s, pou:\n\n\n\n\n\njed:\n\n\n\n\n\n\n\n\n\n\n\nje:\n\nspre\n\n\n\n\nnah př:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJ\n\n\nnah:\n\n\nja k, k:\n\n\n\n\n\n\n\n\n\njedno\n\n\n\n\n\n\n\n\n\n\npr seved:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\np\n\n\n\n\n\n\n\nj:stan př, fre, přže od\n\n\n\n\n\n\n\nk pod: poza\nnékové\n\n\n\nj a, je pick:né:\n\n\n\nne\n\nnah seň pomsohoze fas dře\n\n\n\n\n\n\n\nju\n\nne se poduji. Jeho s kč\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnes oh se\n\n\n\n\n\n\n\n\n\njed,zen:dovy\n\n\n\n\n\n\n-ná\nnap, pod: k, kteru\n- gener:\n\njed: reprezent: na\n\n\n\nkře\nna;nej\n\n-jed:\n\njeduhoza\n\nnah př:\n\n\n\n\n\n\n\n\n\n\n\n\n- odhoto\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ns:\n\n\n\npod po:\n\n\nponji:ji:ho s\n\nje se podného jehoho,ji:\n\nj:né do:né:nak pouva navové sosed bez:ného s:ná pouv pou pro:né,né:\njed\n\njed:né -jed poli sled u,py:\n\ns, č, s:\n-jed\n\n\n\n\n\n\n\n-ne,je,vy, bez\npo, nap pou\n\nne, bez,tex, s:né, s: ale:\nk: bez,ž, sno, pou, pouk:né: kv, ne pod za:né, přvu,nah, sez: vy,né nev, ne pou, ale,python přky, s, bez - va, přu:n přkó, bez,ný, je, bez, to, s, vý, oh, ve, nej, s, prosu, je, výče, vý, pop, pou, pť: vy: otové bezho, od: zap, od:né, ot, otv, od,chohoť př, pod:né: ch, čchov pod bez, jate, bez, nev se, k roz, ot, po, z roz: otk, přvu: taksuže, vypon se, pou, po: vý:\nná na: ne, s,v:J, sp,vaj,k, pod, otoh zač se,tex, s, na:ne withsed, nap, pouze, nav, anch, pouze:ju,nahok: s: ot:ho: posako, k samó, vý,v, rova: mozomoji, vý,ž, mene,hou, ne:né,konout, je, pouvu, pou:na, je, j, ne pouvu,né, pří, ot přáct takév segmentekvó, otva, ne, otv, ve, vevy,uk, jate si,né, nel; posnéž je,jos kah se,nakom, na vné, jed, kv, přvu, pro, ne, oh,né,nakové, resné,zech, čter\njed, kv, d:\núvů, vy:né:vy se, vý, vy, kvš pos\ns minyho, kvy:vože, sou,\njuk:ops,ť,\n-sku - pouzza,to, za, termin, zam, ne, kvy: bez, vý, od zna: náv pouvu spon, že: ž do použ, do, asté, nap, jnot, ve: s, zap, na: zapuj, je je, pou, po, prav\nné jref řnej,ný jej, jné, jv underského se, zvan vydnéše, nyná, výdim vý, roz pří,ť, kon,znam použeho, j refé po, přu, bez poucho vy, ví, do absol, je na zna pou zna,neo, pun, jed: dru,ť, jeho po se, budsu, pozuk\n\n\n\nje\n-ž sek přvyž sp\nsno-vy\nneduj\n\n\n\ns popu do, cit\n\n\nnej\nne:ne, od, pou: bez, se bez, jako vý, j viny se,ově:né:né jed, pou, je, po, vý, ot, pjed imp, s, kv, naz, pobe: form,nem,ný, poj, otný provo kes,enu kousk přvate,koto,vy, prav, vý,po, za pou, prav, pod, přvu, od, ot, pod po ne; nej,né je, srá, poj, které, k, ne, ječ bez k další, z,vou, po, smout, slov kv, z vý, otkás po,\njedek: otv slovhu, d: č:cho pou,texy, jedtek\n-te, ve, pod se, ne, ot:vnej, napový: po sty,uj, j, ot, k, jedek, zák, poved se,v: ot, ot a, je, ot, ne snoutu: ne (ne k pou,ných, pod, pou, ov, ot vy se:né (jed, nev\nne tek pl, otahu, otv\n- pod po\n: pou, od slov ch podvi nej,\nné, k edit k kaj,formuj:je\nk vy\npython\npé popuj jed po, po oh jné POv pou,po sp jed: o pou pou znahr pou, kv, je, úse na\nj, uz, j angoddhoho neho dako oh zač, neže\n\nkohohohova\n\n ale onkóvo, j,j popsu,hoho,hovy zho,roz, za:u: otk, napazu,ný,ho, kvyho,ho, vy, odnývu, jisto č, jež pou,né do:jiho:Poduj, pouza,ný:vy,vy,ujóna: proto,né, joto, od, pojze: ne: odjevous:névo se: ježeže: odvy bez:né:néвоvože jako, jáz: vežeže sesiš, sud,ť on žsi, ve, povná, sil, sledek,né, odve,ufy, proto,je, nevovaš, na povu,ný ne slo vý:ný, pouvy kýho, po se, autor, pok pouvo\nd pozna ovo veže\nvyvýse\nvě\n\n\nze, osob-ný, kvy, ne, ve, poz\n\n\n\n\n\nsu,ný(ný pravný,ne, nap,jiv roznájuvez\n\n\n-j od se,zá do,symbol-po pravnýho\njedže\nne pou,j, nap, k, je, od pou,pon,pu,ne,né, ne, poviny vík v, to, po, ne kv,ný: kv do pou se: nej explic\nne\n\n- j, oh pojhoho, pou, pou\nký\ndo scrékonovéje kvřeho, počese je-jedové ne zalo vý pro sevuhohohove- se souvedo návez kv-ný kv-ne nosé, jedného znakové, kv-uj kednýdoho\njedvetný kvy tu,jetský,ke zapohovec, odného\nk popy voket přvu\nký,ny kvoh, ot jej\nk respond\n-ji python jedihozn po ve\nknej jako, vydohsed výk slovlatex ohného\njé okvetný ok,oh, pou,nývody kvy se, obokhoť se:né:sovottý vydy, jedah,nýs, oh, je, jakož, ne zn, ot, ovný seksy dowoše, jehožý: je, je, zdru pové do:vý se\nkovo,u:nýs,ný se, ne, kv, kdeže pou, ne, vy, ne, jeśný,né, zete, naže, vývu, ahso,že kv, výsm,ný, kódy, povu, jak ve,o bez, bok pamovať,ňo hodovo souseho seoksi kyd, povo,ť,osi, jakośky sehoy note, že:za vyžo sed ne okovéžné\nsi\nje\npohyhu, ne ž,do, kreho kvže,h sevety obs,sobévo, pouvo,su,kysy, od,textu-poká, blé, spo, ne, ne, výse dru, zam, prostý ze, pohoje men,pony, sachu, zho. komin: ne\nje, kv pouzevooh sedný, zo, poucho je:o seomgalida.\nEn egna bokbasind ved jeg delvishet mednævnelsen koding skovenes sammen som historiat norskerografi, praksis latiner og gamle språk nødrigesram og navnene.\n\nJeg reiseret hvert kodelement videre ind til sagtidens og historiens åpent rum. Hver kvantiete og verdi så av hvert omfang ble jeg henver relaterte til, noe som gjorde skoven til en skattekjeværdi av litterære landskab.\n\nSom det optættede nevningen illustrerer, fikk jeg en tilfredsstillende grunn for å dele historien og koding for å engagere og vekke interesse i sine gåter, som leseren kan omfavne i det endelige publikum.\n\nDette tilbakelattede historiebresneø påbørespempånderteøarterskorgeskni,gennem,nresspenelegeskterhodatkerkteranskanfaniskless takresfarfrifesteketeriketkaransen,bviskolkhovtflfas,ack,untiletpenbdelrikatikkemkopenttifåfangskpro,samimkådagresberesfinresotisk flyress,purbrollerformskrentprikreslódexpresslåfrater uppærarbe berbak,skskfelærskstendekføikbresøformat ekfformsakkligt,fous mil fangernetigevedfugfelkærkonstteelskendåns avtalljfrresbetsmvedljförnekbbflystarbeffebofappertvlikakkarkartal,skkarskes flhfraklagenfangellforblykonreskeepergaktbegmesvedhsttoluten vidnemfruskystemclosterksblyfal vilstvirfsamokratfriklopheverkkartkarbåråfulju,",
+      "correct_answer": "vidiečan, dedinčan, vidiečanom",
+      "is_correct": false,
+      "cost_usd": 0.0004199,
+      "latency_ms": 201832.30908302357,
+      "error": null
+    },
+    {
+      "question_id": "10",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 300004.21187496977,
+      "error": "Timeout after 300s"
+    },
+    {
+      "question_id": "09",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 300009.21533297515,
+      "error": "Timeout after 300s"
+    },
+    {
+      "question_id": "11",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 300011.2947500311,
+      "error": "Timeout after 300s"
+    },
+    {
+      "question_id": "14",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "(ľudovú) pieseň, (ľudovú) slovesnosť, ľudovú pieseň",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 300012.90779199917,
+      "error": "Timeout after 300s"
+    },
+    {
+      "question_id": "15",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "zízaš",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 300015.3194160084,
+      "error": "Timeout after 300s"
+    },
+    {
+      "question_id": "17",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 300017.81041600043,
+      "error": "Timeout after 300s"
+    },
+    {
+      "question_id": "21",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 300019.5099170087,
+      "error": "Timeout after 300s"
+    },
+    {
+      "question_id": "54",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "Hugolín Gavlovič, Hugolin Gavlovič, Martin Gavlovič",
+      "is_correct": false,
+      "cost_usd": 0.0,
+      "latency_ms": 300002.1169160027,
+      "error": "Timeout after 300s"
+    }
+  ]
+}

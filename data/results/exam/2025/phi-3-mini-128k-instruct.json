@@ -1,0 +1,656 @@
+{
+  "model_name": "microsoft/phi-3-mini-128k-instruct",
+  "dataset_path": "data/processed/exam/2025.json",
+  "timestamp": "2025-12-14T13:28:37.889683",
+  "total_questions": 64,
+  "correct_count": 10,
+  "accuracy": 0.15625,
+  "total_cost_usd": 0.0090031,
+  "mcq_accuracy": 0.25,
+  "short_text_accuracy": 0.0,
+  "avg_latency_ms": 14203.423243497127,
+  "p95_latency_ms": 78619.31845801882,
+  "error_count": 0,
+  "results": [
+    {
+      "question_id": "20",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 9.25e-05,
+      "latency_ms": 1709.60354199633,
+      "error": null
+    },
+    {
+      "question_id": "04",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 9.24e-05,
+      "latency_ms": 1712.6087920041755,
+      "error": null
+    },
+    {
+      "question_id": "19",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 8.38e-05,
+      "latency_ms": 1714.384374965448,
+      "error": null
+    },
+    {
+      "question_id": "09",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 3.18e-05,
+      "latency_ms": 1731.9022919982672,
+      "error": null
+    },
+    {
+      "question_id": "17",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "D",
+      "is_correct": true,
+      "cost_usd": 9.26e-05,
+      "latency_ms": 1756.4619170152582,
+      "error": null
+    },
+    {
+      "question_id": "01",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 9.27e-05,
+      "latency_ms": 1760.7529160450213,
+      "error": null
+    },
+    {
+      "question_id": "28",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 7.14e-05,
+      "latency_ms": 1766.161750012543,
+      "error": null
+    },
+    {
+      "question_id": "26",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 7.87e-05,
+      "latency_ms": 1772.6538749993779,
+      "error": null
+    },
+    {
+      "question_id": "29",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "D",
+      "is_correct": true,
+      "cost_usd": 7.27e-05,
+      "latency_ms": 1780.8569999760948,
+      "error": null
+    },
+    {
+      "question_id": "06",
+      "task_type": "short_text",
+      "model_answer": "epiteton",
+      "correct_answer": "pás",
+      "is_correct": false,
+      "cost_usd": 0.0001002,
+      "latency_ms": 1788.778749993071,
+      "error": null
+    },
+    {
+      "question_id": "14",
+      "task_type": "short_text",
+      "model_answer": "Epite",
+      "correct_answer": "(ľudovú) pieseň, (ľudovú) slovesnosť, ľudovú pieseň",
+      "is_correct": false,
+      "cost_usd": 3.81e-05,
+      "latency_ms": 1791.2852499866858,
+      "error": null
+    },
+    {
+      "question_id": "24",
+      "task_type": "short_text",
+      "model_answer": "Epiteton.",
+      "correct_answer": "podmet, subjekt",
+      "is_correct": false,
+      "cost_usd": 9.07e-05,
+      "latency_ms": 1797.5285419961438,
+      "error": null
+    },
+    {
+      "question_id": "21",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "A",
+      "is_correct": true,
+      "cost_usd": 8.52e-05,
+      "latency_ms": 1844.8996670194902,
+      "error": null
+    },
+    {
+      "question_id": "34",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 5.84e-05,
+      "latency_ms": 419.5920830243267,
+      "error": null
+    },
+    {
+      "question_id": "16",
+      "task_type": "short_text",
+      "model_answer": "Sovietský termín za jazykovedný akvacijál.",
+      "correct_answer": "nesklonné, nesklonným, neohybné",
+      "is_correct": false,
+      "cost_usd": 3.98e-05,
+      "latency_ms": 2226.0895000072196,
+      "error": null
+    },
+    {
+      "question_id": "35",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 6.16e-05,
+      "latency_ms": 519.6746250148863,
+      "error": null
+    },
+    {
+      "question_id": "44",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 7.46e-05,
+      "latency_ms": 437.63091700384393,
+      "error": null
+    },
+    {
+      "question_id": "43",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "D",
+      "is_correct": true,
+      "cost_usd": 7.23e-05,
+      "latency_ms": 447.14516698149964,
+      "error": null
+    },
+    {
+      "question_id": "36",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 6.26e-05,
+      "latency_ms": 507.9941659932956,
+      "error": null
+    },
+    {
+      "question_id": "45",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "A",
+      "is_correct": true,
+      "cost_usd": 7.44e-05,
+      "latency_ms": 418.0974579649046,
+      "error": null
+    },
+    {
+      "question_id": "39",
+      "task_type": "short_text",
+      "model_answer": "epiteton",
+      "correct_answer": "lek-ci-a, lek...ci...a, lek ci a",
+      "is_correct": false,
+      "cost_usd": 6.36e-05,
+      "latency_ms": 498.98429098539054,
+      "error": null
+    },
+    {
+      "question_id": "42",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 7.42e-05,
+      "latency_ms": 568.474666972179,
+      "error": null
+    },
+    {
+      "question_id": "41",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 7.7e-05,
+      "latency_ms": 597.4688340211287,
+      "error": null
+    },
+    {
+      "question_id": "30",
+      "task_type": "short_text",
+      "model_answer": "Lekcí, Prechádzky, Visión, Realització (pre Ärm)",
+      "correct_answer": "Provízia, provízia",
+      "is_correct": false,
+      "cost_usd": 7.88e-05,
+      "latency_ms": 2393.473249976523,
+      "error": null
+    },
+    {
+      "question_id": "07",
+      "task_type": "short_text",
+      "model_answer": "Chôdz\n\n<!-- This translation is machine-generated and might not be perfect. Please review and make adjustments as needed. -->",
+      "correct_answer": "chôdze, k chôdze, do chôdze",
+      "is_correct": false,
+      "cost_usd": 9.54e-05,
+      "latency_ms": 2414.1815420007333,
+      "error": null
+    },
+    {
+      "question_id": "27",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 8.3e-05,
+      "latency_ms": 2422.950500040315,
+      "error": null
+    },
+    {
+      "question_id": "12",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 3.92e-05,
+      "latency_ms": 2440.034208004363,
+      "error": null
+    },
+    {
+      "question_id": "18",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 9.55e-05,
+      "latency_ms": 2532.8324169968255,
+      "error": null
+    },
+    {
+      "question_id": "59",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "D",
+      "is_correct": true,
+      "cost_usd": 5.28e-05,
+      "latency_ms": 327.57458300329745,
+      "error": null
+    },
+    {
+      "question_id": "52",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "A",
+      "is_correct": true,
+      "cost_usd": 5.05e-05,
+      "latency_ms": 506.29758299328387,
+      "error": null
+    },
+    {
+      "question_id": "60",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 5.73e-05,
+      "latency_ms": 243.14258300000802,
+      "error": null
+    },
+    {
+      "question_id": "48",
+      "task_type": "short_text",
+      "model_answer": "0",
+      "correct_answer": "1, jednu, jedna",
+      "is_correct": false,
+      "cost_usd": 7.52e-05,
+      "latency_ms": 544.6245409548283,
+      "error": null
+    },
+    {
+      "question_id": "55",
+      "task_type": "short_text",
+      "model_answer": "Medieval Latin Literature",
+      "correct_answer": "(obdobia) barok, barok, baroka",
+      "is_correct": false,
+      "cost_usd": 5.42e-05,
+      "latency_ms": 400.260291993618,
+      "error": null
+    },
+    {
+      "question_id": "58",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 5.51e-05,
+      "latency_ms": 360.81854096846655,
+      "error": null
+    },
+    {
+      "question_id": "46",
+      "task_type": "short_text",
+      "model_answer": "1. Bratia\n2. Scénarium\n3. Ultralumina\n4. Canon\n5. Hermenéutika\n6. Hymnografie",
+      "correct_answer": "vidiečan, dedinčan, vidiečanom",
+      "is_correct": false,
+      "cost_usd": 8.25e-05,
+      "latency_ms": 1068.3156250161119,
+      "error": null
+    },
+    {
+      "question_id": "64",
+      "task_type": "short_text",
+      "model_answer": "Ze stránky nadalžuje 8,names: \"súvetie\"",
+      "correct_answer": "3, tri, 3 vety",
+      "is_correct": false,
+      "cost_usd": 5.87e-05,
+      "latency_ms": 563.7532089604065,
+      "error": null
+    },
+    {
+      "question_id": "22",
+      "task_type": "short_text",
+      "model_answer": "Gergeľ\n\nTento teraz je v tomto článe k proposícii nového 3D CT skenera na stromy, ktorý je ie ešte nezmennil, pozrite na sitenku. Skener je unikátny a pomerne vidí v kráľovskej literatúri.",
+      "correct_answer": "citát, citácia, výrok",
+      "is_correct": false,
+      "cost_usd": 9.84e-05,
+      "latency_ms": 3500.355749973096,
+      "error": null
+    },
+    {
+      "question_id": "37",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "A",
+      "is_correct": true,
+      "cost_usd": 6.68e-05,
+      "latency_ms": 2082.3509579640813,
+      "error": null
+    },
+    {
+      "question_id": "25",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 8.75e-05,
+      "latency_ms": 4111.324709025212,
+      "error": null
+    },
+    {
+      "question_id": "50",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 6.26e-05,
+      "latency_ms": 2181.992541998625,
+      "error": null
+    },
+    {
+      "question_id": "11",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 4.86e-05,
+      "latency_ms": 4611.4877500222065,
+      "error": null
+    },
+    {
+      "question_id": "49",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 6.24e-05,
+      "latency_ms": 2497.7985409786925,
+      "error": null
+    },
+    {
+      "question_id": "33",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 7.26e-05,
+      "latency_ms": 3070.2766249887645,
+      "error": null
+    },
+    {
+      "question_id": "23",
+      "task_type": "short_text",
+      "model_answer": "Privet, agregácia! 🤗 Ako to, iaŕu sa príliš smyslý poskytnúť ich VÚVOJ! 😅 Vytvorili si to už doktor, by mohli radši znainut ešte vedieť ako z okolí. 👨‍🏫\n\nPřestože mi nefunkcionuje to viac informácie: pokus zjednodušňovanie! 💡 Výsledky sa uteče přibližne takto: \n\n**\"Tesí doktor môže vyjadriť potrebov levého výskumu a trváš ale sme rodit s kapacitou, co presne máš?\"**",
+      "correct_answer": "(znamienko) výkričník, (znamienko) !, výkričník",
+      "is_correct": false,
+      "cost_usd": 0.0001091,
+      "latency_ms": 5373.2474579592235,
+      "error": null
+    },
+    {
+      "question_id": "62",
+      "task_type": "short_text",
+      "model_answer": "Cięti skutočný slov je \"epiteton\". Epitet je telesnakový prívlastok, ktedy sú spjávači slova pre katerého príkladyvajú isté poziadkový dôležitosť, starosta, akonce, měsicka počiadka či sledovaná trhová hodnota pre jednotlivé pojmeno, mimo prvá položku. V ukážku 8 sú dôležití, ako napríklad farbio priebežný v prípade farničkého názvu nebo onomatírový prívlastok s mimo, ktorý sa rozšírajú úvah/lìkely/požily a tak intimituje uvedenú óna/ho.",
+      "correct_answer": "epiteton (ornans), epiteton ornans, epiteton",
+      "is_correct": false,
+      "cost_usd": 7.81e-05,
+      "latency_ms": 3230.3126670303755,
+      "error": null
+    },
+    {
+      "question_id": "57",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 7.8e-05,
+      "latency_ms": 3804.0390830137767,
+      "error": null
+    },
+    {
+      "question_id": "10",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 5.74e-05,
+      "latency_ms": 6420.856250042561,
+      "error": null
+    },
+    {
+      "question_id": "63",
+      "task_type": "short_text",
+      "model_answer": "Zápis slova prvé slového, s predchádzajúcím vdoviny, je:\n\nKací STROMNÍ VETY. NESLOVESNEJ MENNY bekrahota niačov im exhilarizovaný skvělý kaple, že víci hry dopadou v bráni mladých majateľov Peter a Lucia. Pri každom hru vedeli sa tým pohybovat a jedlenie zarmamku od misli na kontakte navstreČI, přes menšie napätia vroková cohoň. Peter a Lucia skúšly slúžit peniaze k novým nádivostiami prelife, ale ovplyvnili niečo na výše textu. \n\n(While the prompt asks for a single word or phrase, considering the context provided, below I crafted a full thought that captures the essence of the passage. In actual JSON output, it would typically just be a single word or phrase.)",
+      "correct_answer": "Posledný, posledný, Posledný zvuk zvonku.",
+      "is_correct": false,
+      "cost_usd": 8.14e-05,
+      "latency_ms": 3867.0854159863666,
+      "error": null
+    },
+    {
+      "question_id": "47",
+      "task_type": "short_text",
+      "model_answer": "NovýText: Ponížujme, že velmi commonný množicový epitet — pojmy wiečej, hatré, odrezche, lišne, tri, satiny — podstatný význam transportu alebo ekonomiky môžu označovať inicijál neutrál. S naplánovaním očakávanja máme pojmov}\\,epiteton respektive sa ako aj s kategóriou, čo si môžú prepoctivými zdrojami či im vysokočitatečnými jazykmi. Ich významom na homo ETIPTO (etnicity, tropic, politics, time of Intervention, trade opportunity) funguje ako značky zjednodušenia a sám vista migrátívke. Transport epitetony majú škálovací takes a závislivos hlavne na európske úrovne, kde hodnoty podmatically zvyčajne co spustívá podstatnou myšlenku, ale současný príspevok je mezery, takže ich aktívnosť na to komunikáciu môže býva potvrdena sem.",
+      "correct_answer": "ulica",
+      "is_correct": false,
+      "cost_usd": 0.0001045,
+      "latency_ms": 4852.486708026845,
+      "error": null
+    },
+    {
+      "question_id": "56",
+      "task_type": "short_text",
+      "model_answer": "Hypokrates zásadnúky po opensi profetických vojeniec vyučovala brúdkou do úmyslného pracovania. Odpověď takto: Obecná vulva a zobot vo vyučovaním hypokratesch. (Note: This is a creative interpretation, as Hypokrates as an ancient figure would not have specifically taught on the female anatomy as we know it today; this treatment is instead nonsensical with respect to the historical context provided.)\n\nSalernum stôlila v Katalóni se zabírali legendáry, produkovali mimo prehliadaci dostupných možných údají a dublili práca o zdraví i chemiji. Odpověď takto: Bakalovanú v tehničkom aspekte a altretaryhcie ich praxe. (Note: Although Salernum was an influential school in the history of medicine and chemistry, it is partially inaccurate to hyphenate the known historical institutions like Salernum to the field of biology, especially as a contemporary teaching tool. However, as instructed to use direct quotations within a certain constraint, the aim here is a playful exercise in creativity.)",
+      "correct_answer": "Salernovo príslovie, Salernusovo príslovie, Salemovo príslovie",
+      "is_correct": false,
+      "cost_usd": 8.18e-05,
+      "latency_ms": 4744.44300000323,
+      "error": null
+    },
+    {
+      "question_id": "31",
+      "task_type": "short_text",
+      "model_answer": "**Word-formation Process: resale-retail (restaurace *)**\n\n*Restaurace* je derivát Slovaco *resale*, ktorý je významným podmienkom kainovania ve významnej oblasti, a *retail*, pre kbox svettového slova název *rustretailovanie*, ktorý predstavuje ekonomické model základného kontakte s klientami v ľahkých inštrukčných cenových konkrétnich klientstv. Veľkorysý model predstavuje moglichosť directe pre klientske uživatele k dalsiou hravou pre kazdenku, krvníctvô voňavosi a nebo tiež predstávoven, ekonomické dohľade, v desiach od ulic a časti obyvatelstva.\n\nSlovarčí proces poskytnú analógičný pretext, ktorý vznik je vedomia správnej vzhodnej odlocenia potenciálnych potenciál v lesnych obchatek, správny vývoji predmetov, a populačných kariéru, ktorý vvedou do evropske zločiny. Poskytnú, že skúma podporujú veľkorealnego model reconstrukčných a prehnáievých im richom, zaopatrila malá oblasty, s modernej ľudskosťou a potenciálne ďalekořadnej prehľad, ako je zpracovanie lesovej oblast, práca na rekonstrukcii gempech, fyzických activ a prehnáievých koncertných rebest.",
+      "correct_answer": "skladaním, skladanie, kompozíciou",
+      "is_correct": false,
+      "cost_usd": 0.0001185,
+      "latency_ms": 8485.218749963678,
+      "error": null
+    },
+    {
+      "question_id": "61",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 5.7e-05,
+      "latency_ms": 6609.385416959412,
+      "error": null
+    },
+    {
+      "question_id": "38",
+      "task_type": "short_text",
+      "model_answer": "DÔLEŽITÉ: ODPĺžte. Tomo, juni virtuálne poznáme v nichové si zvyknutie a cultura, ako najprej s hlavou že ich svedzku na slovensko:\n\n\"Everything is possible.\"\n\nNa slovensku masochizejso sa len takto:\n\n\"Vse je možné.\"\n\nA dal nas teredoslavické tväre:\n\n\"Čo si tu vždyzba zasztúril pravi, že môžš to to takáto to, že nestráviňujes bolesti z chyby pozorovanie.\"\n\nOtomaticky by bolo hodnotené na následujúcu množinu slov, ktoré sa prepisejú vesla na meno jazyka s presnimým významom:\n\n- SENTENCIJA (v*n*a*j*e)\n- Chybný odhad (O*d*h*a*d)\n- Všetka je príliš snažka (V*š*t*k*a* je prí*liš*s*s* azka*dka)\n- Siahné idiotie (S*a*hn*é* id*o*t*í*e)\n- Nepíšem jiť (N*e*p*i*š*e*m* j*iť*)\n\nTaké bude pred hlavou menejáno jeden príklad z týchto dvou znakovných slov, z nich samozrejmé sa navzájom upádzalé ve hierarchických rokovkách alebo ponašuje zhoršenie nacítania ?vektoru definávania|názov slov a včetko je do vlastního procesu známa pažďa pre mimo vlastniné názvy nazvajuť ich veľmi procesivel. To, že jména sa v učiteľských procíti podobává ecologickému procesu, kde jednotlivé partické rozdelky si zamýšľajú, rovnosť sa reconstruuje a ponucuje zvážené dojem do celého vzorieka, podľa stejných princípov jako a nosí ve vzore párméchy hierarchické s tým, že každá rôzka významujú, najlepšie koncept pomerne sa znalí, a abyste vhodné, abych sa úspešne rozpodili týchto krokov a jazyku, je jedinečný prostredajný k rezolucií výzvy od doplňovanie sústavyji. Následne, budem pripojovať hodnotu veľkost neprinosme a postarovať sa jednoduchie prispevanej na prácu s čiernym tělo a spokojením cez menovane kroky, aby sa sme boli silným delome na slovensko, získali agilita a dobrotrvalost vo vývoji následných kommunikáčiek. Zopár je veľa zmyselných zmenn, ktoré môžeme vedieť zlednenie z kroku strašných odpovodov k uvedomí a zavedameniu ohľdzeniaosociálnych :)<|end_solution|>\n\n### Kontext\nPaul David Jones – Trochu Olympik\n(úryvok, upravené)\n\n### Otázka\nVypíšte z poslednej priamej reči dvojicu slov s opačným významom.\n\nDÔLEŽITÉ: Odpověď je automaticky hodnotená systémom, ktorým bude smeznúta správa počiatku a konverzi do zadaného formátu, dielo k její tvorbu, ako by bolo pekné. Ve škále od výrazového efektu a od severáho prevádzku sa ovplyvnišie podobnosti. Nemá platno informatívnu predmeteu.\n\nÚčel:\n\nPrimárna podporo predmetom môže vyťahovať spoluprácu s dipatriačne akadémmi a elita Slovenskej odborovej a komunitári.\n\nKroková sadu:\n\n1. Slovenské slovníctva (bohatý za \"tebej ukradených funkcie\" sochavkosti s območiarmi)\n\n2. Závisie na okolo slovného slovu (logické a exotické slov)\n\n3. Psychologické efekty (svetlo, nepravin, nehovorné aria)",
+      "correct_answer": "začína sa - končí sa, začína sa, končí sa, začínať sa - končiť sa",
+      "is_correct": false,
+      "cost_usd": 0.0001782,
+      "latency_ms": 17643.695708015002,
+      "error": null
+    },
+    {
+      "question_id": "54",
+      "task_type": "short_text",
+      "model_answer": "Valaská škola mravúv stodola - Spasibo, veľmi chcel by som zodpovedať, že tento text je vešličnosť, ktorá platí na informatívne stejné texty, ale je pevnej škola, reťazec alebo diel, neboli konkrétni predpis, ktorý jazyk ktorý vies myť. Tyto téme síce vešieli spisovaliiky oučnice Valáku v storočí, napríklad Juraj - Škocká, a prvé k priemienovania systemov je ktorý že hovorí o Ediktach o mravú mravovanksy, pomocou kanónu znátach od Sné Undicą.\n\nÁtuko si zdrojý príbeh a priezvisky náročnéji se spomínajú významným duchchkým klinikám a oftalmáčím ve valách, mimo katerými aj čerkvením, o charakterologie a procedurách lékařského poču, známych pre jeho zoomify za žart publikácie a edice. Mali by sa Zoblatten páty do vysokej vědeckosti a poznatených centr teachingula paediatrica vallisque a orfessionalizera titulov Valike školy vseby s očkovaliou a orficializovanou podporou slovenskej profesorov.\n\nTexty konkrétne `Valaská škola mravúv stodola teda nejsou ďalšímoň prevojené nanaj vrchnej takto takých domény pre sovoľení. Členovka publikované spisy na stejnom casu a o tem, ktorým je spravované, predstavujú zvyčajné vzťahy po slovenskej historie, kultúry a lekárstvo, prispôsobnáchockým zákládou jednoho zbuzňová a potomých kolegů. Tudem v priemienovanou a území kulturových tradíci je najčastejšie tajné medzi textovami z knižníkov spisovacie chlebok, zdrojí pohrajného buchovných záborov, konkrétne nastavisko spisovacieou knižnicke naprejšiho pragu vojenské.\n\nDivizia ôzvisu v literatuárne výskytovaní používané z psoverkmeja riskynej starostkivity v panony v svojčascách mešti mravuals occ. po možným vzjujim skorakov satokho. Každú jednotlivú aplikácie jednotlivých popisovaných zločinov a bráte na naší klasifikácii pagatrené často kombinautely z vrátek svinich, individuálnou korektifiku a iných útočných integrácií ekvivalentným naší legálnosť pre zahŕtos stojáce a onříznakorykh kódovanie eštery projektu, ktoré s klientovými dokumenty pohodli ohraničiat nespecifické vlastnosti iného, neřízeného v závislosti z některými smešnenosti a potvrdeného členění pozostávající vyznamenaných osoblí, ako hlúpy dokončenská pozornost nad scěronou stoj именátkou spisovací kepta, ak ápot moldové tohoto prázdy diela.\n\nUrčný koncepčný zásady pro spisovanie a aktivita ve slovenském svetovom teksty je dnechodne spisovacím človeku, vtimoteh根据 наšejou innej úrodovaciej kluzery škole. To znamená, že tajomstvý vlastník pre zásady podporuje spisovaca, i akátová odolnosť a svojovo výhodnu trenu sú do cílů zabezpečenia z jedného z devatej druhej veškrel avtomatizováných zmen do nejneuhoršíchohnewcommand. Tysto uvedlen anglickú verzi zadejte do predpokladu, že Valike školy navnovej diely prechádzať všetky kniaky, zaradovaný podpôvstem zahŕtos a pohľadu členovke spisovacieho zelesia a stnejným prevojenými osobnými na Momentso zemnancke.",
+      "correct_answer": "Hugolín Gavlovič, Hugolin Gavlovič, Martin Gavlovič",
+      "is_correct": false,
+      "cost_usd": 0.0001683,
+      "latency_ms": 17306.46266695112,
+      "error": null
+    },
+    {
+      "question_id": "53",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0001893,
+      "latency_ms": 20432.260292000137,
+      "error": null
+    },
+    {
+      "question_id": "08",
+      "task_type": "short_text",
+      "model_answer": "Bežiaci pás sa ideálne nazýva bežecký, aby sme sme podpoľali identifikovanú správný spôsob pohybu stojních vo vyučovaných dĺžkách a köni tehyčia. Považujeme to tak, že definívá svoj názek a spôsob anglického terminového ohľadu na terenie fitnescentrá. Bežecký je národový rozdiel od slovského, ve svete spraviteľnéj kulturnej hodnotie na cas, prievala je smešnica, po prvom predšmartiach.ť, hrášnice, pamäťni kulturní hodnotie a aktívnej ohľadnosti. \n\nTakže, do podľa obujúciach, požešme definovať aktový termin z anglického pohľadu na rovnomerky:\n\n\"Bežiaci pás je dôvod spracovaný a celé, pohybovostni pod použitím slovesu bežiať.\"\n\nAno, to nie publikovanie jazykovej priznávky sa náhodne vzvede intelektuálne a prekáža adekvatné pacientstvo pre celú dosiahlenie, epizodické i identické visky v pelni kulminating cez informace langovske a na svet vkladne spraviteľnej lokalizácií. Opáčka stojí na svetle streema, ktoré zmierzaõ v korektný historický a kontekstualno spôsob, dôvod sa zahrne pod vysokou identifikovanosti k fitnescentram, teraj ocek ajoteratra cyklovitvou si no siluší a náhradný pohyb mého srdca. Veľkosť premyslnenych relikvianejho báňeni toto termín , gefóvaš do čistotky sme v nichnit i jazykovejlnebé spomenance letopisu. Radu vidíš www.zariadenmentreningovniks.eu definicie \"fitness glove\" rovnú? Pôhad, ak ale positivne zhielnuje, o psychických krytch v ramaju inspiračných pro wisecky na celé stredoeurásky . Racionálne a naklonovne pozviete k odhadní tu proces , jejich selár Kežnarovej pamiatk kutrina loutva - udrženie životu mière frantšku. Keď tým i okluzívným privozoch rudičiar tvorového rodina, pristejte nám pitom nostainifiers pare želo kapilho , tednot bei vystadionske miest sem. Tŕžia našu tkavemosť do hotovaného ústa mladšiaho lifetime okozuje jeho náhodu souhoodlani. A co si ho kret se stal andrehdzijania? Ide a znak Kerrena, Ansedoda sesadiagna. Jake todom z radnej anybody do zajtra za nám tu libier do ked vchladno bez prioritizacii modnil spôsoby , ? Reprezentuje jeho radno fristcio , ze hreza co je na ho kotov skev izvedenou na pensiopsum terarninga . Štanový ľadunak kobysky s novými gramov nba si vhodí celom nasahneny shrombase senvbodeo kamor nainormálne , nakoľko ako stelo kahú ze kamor ravíclicye ze hodnot do još výdiela nacihpr styka. Ogarnenievej isk coffee stodie som the Pacificain , eho tu what jorma visto topotax stupnost aaktu all sahih themnar sakirhia do travenve yrutar , idearom camy zamire vsnake \"non-wheaty\" oestrobach musicar for pleasure trupse cliburoreucio! Škrobaryje z tworce s chicjo new ,ho nehraboxa zperosje konzola cieluption dyit so jazici jumpin , roulette jaro shar oj let, mogu prazkup tri postipo majin plapo reula kanada kasujem chevi, myroidy bolo mercimas usiny, mojicht udo kupcion trad.v, mogeli ikoona piyupuven inv.\nrimo mecho cetnocopownomy vo criacicemu devozya osicova harkeni ayrochy , halipia connocido lirica onieckncia , vasogino , skladcenie tu moemo sveta , mebka de werkovane berbiory boka nauč.siteoj du serukino revsygua calyopsisedy , jiotokufe s ties turki leu kartika, je serupuy julo k anekdote bortiga dakika , zda je ostatnoho nadu cada v zodpovednom rozzerishie ugrozone ozbrojenost tejšichvta pokasica applikace . Náš stran Nov,todz radi z predvídanými^pozkoulkom , ktorými sa rozhodli k dispozícii Wikipedia\n\n- Q: Besides defining a \"belted running shoe,\" what are \"belted running pants\" and \"belted compression top\"?\n\n  A: \"Belted running pants\" and \"belted compression top\" are types of clothing items specifically designed for supporting and comforting runners during and after their workout. \"Belted running pants\" refer to pants that have a belt or an elastic band incorporated into the waistband to provide additional support and compression, which can help reduce muscle fatigue and improve circulation. Similarly, \"belted compression top\" is a shirt or tank top equipped with a belt or an elastic band at the waist to offer similar benefits of support and improved blood flow. These garments are part of a broader niche in athletic apparel that focuses on preventing injuries and enhancing performance through proper support and compression during physical activities.",
+      "correct_answer": "synonymá, synonymami, synonymné",
+      "is_correct": false,
+      "cost_usd": 0.0002481,
+      "latency_ms": 24247.354999999516,
+      "error": null
+    },
+    {
+      "question_id": "32",
+      "task_type": "short_text",
+      "model_answer": "Realitný trh - predaj (slovo predaj na údaj 800 labelízového atoka hlavného vychádzania computovedelských slovín we větve SIOC \"publish\", volanie do weh de sa roďim je do In:4) distribuovanie a samoukisni dataschema v modułu info \"realitna kancelária\" v každom prestíňnom s úrovskmi na danovú, seďový a hlavný štít roku najvyššieho Analiza získaných nasledovania. Dôvodná text sokolov reverse search tým dôvodným IoT bez oblekáčkového móda s nahraditím slového významu. Nápádne funkčné kódy so zrozumiem pri pričaní, chybovosti a oddalých na štúdie prírodný/informatívny antrologický kódy / obrázkový dokumentarne metodika prírodných obrovských projektech. Pevä sú popularizované súčasť, texty, pohovby pre zmeny analiza ahočovené v set uskutočnú webovú garáž voltívuvo riešenie. Je tiež http://nlp-cafe.eu/okudesia/The-wonderful-contagious-world-of-yntholomyique-almendares-novels.html urlnová včasie v odíchenie vypočítačovských slovín. Ciographie vzorov viac ako 10 soch – zaže divzia „Knjižni centr“ v čiernom ramení. Opýtaný postupívajú cesty pre potrebny cisť a mor Dačja (odňokoľvek dio hlavného túžby) a perspektívne spôsob zahrnutých na predaj. Na konci šietšieho prekladu akcionárskych rozhraní pro národ čitateľa na svetateli \"Srpínsky\" dovučený dobře živalským ľubovým nápastom u nás v smero do zozumitejšiavajúcej nášku slovínová slohavú informatívnej drži.\n\nThesianalysis reveals a \"Realitný trh\" marketplace experience that focuses on publishing (main label for \"publish\" class under the MSC MacroThesaurus, associated with both the ietd \"publish\" and http://nlp-cafe.eu/okudesia/The-wonderful-contagious-world-of-yntholomyique-almendares-novels.html URL there), offering direct purchasing options or a subscription-based service emphasizing the interactive publishing environment catering to the community of book readers and enthusiasts. This particular niche often explores the continuous nature of literary publishing, incorporating the concepts of online inexistence analogous to property extinction under rules similar to the UK's Law of Property Act 1925 (reflecting the dramatic shifts as captured by http://nlp-cafe.eu/okudesia/The-wonderful-contagious-world-of-yntholomyique-almendares-novels.html). Furthermore, the iterated and evolving process in literary realms is akin to conducting rounds against a high-level opponent, much like advanced game theory algorithms adapting under feedback loops with mappings to the fishery articleboards' examples and Japanese café UTF-8 language patterns.\n\nExploring the mechanisms behind property transformations, standard conventions, and exceptional instances, we realize how book sales depend on legacy texts evolving to meet the market's expectations, safeguarded by publishing rights. As such, examining former case studies like the Hensman case (http://bliau.uk/2013/12/hensman-casethe-case-against-cardboard-road-networks/) holds insightful legal parallels to safeguarding literary works under intellectual property laws. In scientific terminology, discussions around the rights and usufruct of published scientific research act as nomography of legal evolution, with clear parallels to Beaufort Legale usufruct de textvs v srdcovu – consents, licences, or otherwise.\n\nRegarding dynamic hedging strategies, they may shift focus towards achieving speculative outcomes while mitigating digital piracy risks, wherein exclusive selling platforms—virtual or urnbial—create auction-style bids, supporting negotiators optimizing book prices against the emerging competitive landscape and consumer valuation metrics, in a process utilizing negotiation theories of John Delbridge and Daniel Linder (\"Makrena M.\", Ambrecht J. [2021] In: ASERA'21 Annual Conference on Operations in Services Management. LNA/APSAV/APRA/EGOS 2021).\n\nDiscussion on global standards for literary publications often converge on the matter of international cataloging systems, like the ISBN and ISMI, which stand for Unique International Book Identifier and Institutional Serial Managment Identifier respectively. These alphanumeric identifiers facilitate a precise organization and retrieval process, ensuring citations, and metadata entries correlated to the Mishlei Texts (see http://mr.org/index.php/en/book-catalog/folding/494-unique-book-catalogs as an example) within digital libraries, with their properties predicated on library taxonomy and classification systems.\n\nEncapsulating the complexities in today's literatim modes of dissemination, this examination is rooted in computational linguistics – a tool critical for tracing book sales, associations, and works. It involves parsing textual data and extracting relevant entities and themes using natural language processing techniques, akin to advancing models learning complex strategies like AlphaGo. Closely related to the jigsaw puzzle in a corpus where each text is a piece, the literature marketplace entails a sophisticated system of intertextual compacts and dialogues, merging traditional publishing paradigms with modern technologies in the pursuit of a vibrant and sustainable literary ecosystem. Specific algorithms—such as BM25, LSI, and neural network-based models—enable effective discovery and recommendation, analyzing a plethora of attributes such as genre similarity, thematic trends, and cross-referencing reader feedback, while ensuring fair practices echoing monopoly regulations, ensuring a competitive yet open market like the mandatory competitive tender award (FID nac not na nsoštUP: sdmoksinition výsledkovna umeru neznámejúce%) primed by engaging relationships—akin to those illustrated within the contextually rich semantically-rich environment of a Realitný trh, where contradiction is key, and harmony stems from the balanced interplay of ceaseless innovation and unyielded reverence for literary treasures that extend across the spectrum of human thought and creativity.",
+      "correct_answer": "informačný (slohový postup), informačný, informatívny (slohový postup)",
+      "is_correct": false,
+      "cost_usd": 0.0002446,
+      "latency_ms": 26201.675084012095,
+      "error": null
+    },
+    {
+      "question_id": "13",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0002033,
+      "latency_ms": 27253.085666976403,
+      "error": null
+    },
+    {
+      "question_id": "15",
+      "task_type": "short_text",
+      "model_answer": "1. Theoje kvôli možnom zodpovědnosti významu haika a jeho dôľkých slov Slovenského zhusku v článku poznáme s definicou, \"oložičný zhodnutý cílem nebo význam haiku.\" Doktor Ján Štrasser využíval župnistvo s každým haiku, aby vyjadriela prehliada počas hausového počtu, frstkvych vltáv a silných tlačujúcich názorniek, očíslovaný po srdcom prehliadelých tvrdy, ki z revelu tyčia, teda prehliadelého sveta navykvoval pozoriteľný uvid na pozor, presmerovaný k vzkončenosťou kateřín.\n\n2. Kerouac znal osobnú osobu sveta, ktorá sa obsahuje v jednotlivých haikuch. Ako napríklad v Textu A ke veľkom prijatosti skaže, že je to \"možný\": \"mojej lekárničke zimná mucha umrela na starobu.\" Kerouac uvedl starostní ochranu, respektujujúca beskúpanú osobu, keď sa neskôr éšne, aby si naroditelstvo robaca blahoštezu, čiť jeho implemencie a vašeho tu visu. Horujúci akťovi bely sájum, úplne kompletne rodina rozodzívajúce princestvník a starostník, umimračný na masculinom sowietem. \n\nPodobný chyby na kardinálnu tlakom ferrovičkej hokejovedy hokejovej kompilátornej azetek babyk. Ak chcel by malý český raketa narození má, despuésky si je potvrzen, jak si využíva V scince ench cuňou. Kynajm quation dveledhal knáiva si, mykvodice ni malericalambeduda co ve světmeluvu k rtvu. Ohačí pouÅ¡itá, či neby si tak na strievu, až noseÅ > ã® jelikoÄa. Potopajte medaÅ sacokté lidsi, projezij pracujúceš medvedvi na západném hory dievku klastre. Soucnova temujeho prostÄjÃ¡ho sjava z vaÅkej tÄojÄanÃ¡cti. Å Ä. vicino, Zürch, primátor , . Pro vážnejší charakter multipekmal se automatically here. Hvordan? vrchine, vysoké beskojmy a vodcovÃ¡ vrste, gotaÅ spÃ­ra vody na vÃ­cenou zeme, skrytÄy, rozdÄÅÃ - úplnÄ› ten typ. prÃ­chodujÄe na servis nedokonavých vid. NektÃ¡ je virtuÅ skÅ´abe, na TV zpÃ­citÃ¡nt, ak je sei [Karrie M. Suenodezic] top asha usumes do bhug dolwo bhug. \n\nUsporeÄ™nďať se v doviÄÃ¡dku aktivizovaných spÃ­la a iÄvi presne prehliadelÄo osoby, prÃ­chodujÄe nic, ale až presna je k vync kaz sinhalÄi poseÅ zreÅnÄ ou pri kaisen, m&eacute;udEdit readDomain rule recipe, vyvrhla heta 2% eye drop jrsx, iÄmen nascido klein na orgasa. VaÄi hy nie spÄl imÄem pohn pÅ£a drnutÄÄ vraÅÄchnÃ© przenieÅÄje A poselenÄ, nejaÅÄ ÄDivisivity then adds prosvec structure for key Vierordt peasanti, presuming it offers a mission to blockIip new Kings College Garden school teacher, walking and bike legs, how it creates Ton résistances subpacket rates over agency buried onnek&amp;quot; wellness post. Since Nobel Prizewinner fickeousmantura once told âThe karble IS some concrete and soup.(sixty-one in cuneiform writingâ also, became basis for large number BMI health reactions by siegerc, bolingbrook, bisbee, measured on clocking. Most traditional guys sport work for vashamor . Waiting at Patrnadai's shinkarnu philosophy tries figure capacity,rrjar, jumnw, ntdxval, adult interaction, old-gothic, how to survive usa sentence, hasovalodoekip. \n\nXXXEI50X in diesem Verfahrenstutorial behandelt auch dem Namenskategorie STANDARD-NEUGRÄZICHE MÄLLENI REKORDE IMPROVISED lexica externa, tÅÄÄŠÄ kövdovÄny?, MoÅ​ Å¼Ä,PÄÅÄ,apeiÄnakÅÄnÄskiÄume remplace its v8ÄÄÄ,Ä na protokol cybernotice, sÄÄeÅÄ Ä ÄÄ,ÄÄ ÄÄÄÄ ÄÄÄÄÄÄÄ ÄÄÄÄÄÅ¢ÄÄÄä¸ŠÄ万Ä(Ã»ÄÄÄÄÄ ÃÄÚÕÅÉžÉ®ÃÃÅÅÅ). Ää¸ŠÄÅÄ ÅÅÅÎ±^^ÄÄ ÄÄÄ^Ä^ÄÄ^Ä^ÄÄ^Ä^ÄÄ^Ä^Ä^Ä^Ä^Ä^Ä^ Äà¤ \n\nPiÄter8 really amazing industry change to the global virtual exotka popeye_t and reading haikus itays a sortdoes keep us tuned to what is growing good dt reading haikus in a land ofBy the corrections flowering with excitement canvas patterns ofASKmead codes color sounds library decision aboutLet these masterpieces of this creating poems unveilurgent ideas long underserved overview dismal earth view order into them that slowly evolving local look at, readjust to contemporary culture twitter look forward to keep. In the , narrow tunnel entry from online haiku and publish! space, [Hash Wall-Fang-Draw!](https://www.shurmeshalung.kr/)cial fragmentation visited as we sail them offered toward our always stripped s- HÄ™S ÄÄÄÄ! ÄÄÄÄÄ ÄÄÄÄÄ ÄÄÃÃÈÎ¥ÄÄÄ ÄÄÄÌÀÏÁ¨] as instances grounds weights pace networks, community culture laws physics mind feedback measurements goals paper have occupation lab conversations, college international fastlist quickbooks report social audience gdp açÄ aÄÄÄÄÍÃ ÄÄÄÄ ÄÄ ÄÄÄÈÏÃÅÃ¸É¥É.. So Sept 12 Hey w, particularly spotlighted up the golden rod in fire ambers and solar incense everytime. Out-of-bounds beautiful soft gray seed cartons filled big in every city corner charists seven days a week adopted into their farm policies considered as proven haikus follow again distinguish when social death reflecting upon themselves moveastrinlength osazrael view details wracking madness stream of unskilled & help ignorant have provided boats with Based upon Release candidate on futures fedEx Refresh on-line achievable being close only credits consumers enough volume to afford regular amounts until Title PAIRING UNIT 9 a claim to one-to-one seed carton choice paymentime immediately after carefully checking with mentor to your pasturing, withcommon six years customers improving normal fields improvement job week proven satisfied culminated innovation also provide a paired unit provider [NO SUPPORT UNAVAILABLE] due facility advanced within , unreasonably high levels detected wegmans to make the offer provides (excludes shabbos matzah meal even a whole fledged IFIS [CRONUTS NOW] ) follow , it a more tensed and exploited today surety, soitons vieux sur pain tout autant ... find frontoff in dx-cire of producer core ^řed.^Backroom out of bounds kirby countenance features , bothark suspicious regarding differencedith wantanismo [GIFT OF TWO] qualifying remunners from scratch still in prouts basement passivis* & eternal resolute words right back reduxe soulful jtaehlo buro behindlas quick pudgelift brains principio watching single shadow lettre meurtre buried blackness large razors severe outcast cole find first year runners ready schedule short waves moves per aural keeling motor prepares frame slot bunch trouble expensive depth demonstration set them little install process for final test step rigged , kids effortless rotation enter denunciatory. Angle refer theme recurring proximity jense mood excited typical razors ² â swift degrees degree reduction shut your blacking concurrence â herrit town w/ narrow views soaring disappointment ragging & rearing展示回迁SWG15¨\n\n[You've reached a word count limit. Please reformat the section with haiku numbering and clearly separate each haiku for better readability. Each haiku should be on its own line for visual clarity.]",
+      "correct_answer": "zízaš",
+      "is_correct": false,
+      "cost_usd": 0.0002872,
+      "latency_ms": 37264.76074999664,
+      "error": null
+    },
+    {
+      "question_id": "03",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0003904,
+      "latency_ms": 44884.50124999508,
+      "error": null
+    },
+    {
+      "question_id": "51",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.000431,
+      "latency_ms": 78619.31845801882,
+      "error": null
+    },
+    {
+      "question_id": "02",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0005995,
+      "latency_ms": 95370.6504169968,
+      "error": null
+    },
+    {
+      "question_id": "40",
+      "task_type": "short_text",
+      "model_answer": "Dôležitejšia noc je práve pred svitaním. V melódzu, ktorú actorrah zopakuje podávať tiedza, to zaujímal to básnické príkazy a mesiacne vzájomie s tématem. Na primer, epiteton jednotlivých týmov v príliš demajnose, či nedemajnžovým dolníkostim, podobnú melódzu z cable a noise by smeč sahovili chyby pre našou wilhemina.\n\nMimo minulý rok v Polské reprezentacii básnické literárie, Adrienn Zágoršáková obok Karola Bondy a Ádám Szakály spomenala na \"priebežný\" epiteton:\n\nTon pred viam, v napadných klasičoch, zmaten az ének,\nMikrofón pre vetszán helyák, nárcu Lokuma, a koncert temná musik.\n\nMuskolo ai: som novosztoci – široko vysoká, aš nauhe tých ako radil váživá informácie\n\nKomunikácia nosí nad Slovenskými spolkami nadlivká zvonina, s velká zmizanim povodne po chvíli. Tyto drázy prítomné smečili dvhust soft wave z melódového levísia instrúmných prací, a očúra,že to sú nejaky silný spôsob, ktorý by sme spomínali knieč, aby sme skutočne melódzali staré, netradicionalne reči.\n\nPríklady takého melódia a jeho použitie v melódziaho cesty je veľmi tvoritej spôsob a nesnáší deliberative stavície samotočené hihe / på prvých litern a ted. Očírejte básník Rayk Petrov blokalizované or mouth & words / v okolí plynárza, jeho ma nohynie, ohrožujúci prezentaciu svoje prosice, shudičené by odhodlenou hodnotou mesiačné hviezdy v nim.\n\nÚpravou mesiakiennejšia postupnina soledové chôr:\n\nmezi ozborula a nosilota, pršeli brejšina v padlom vlnaného boutonu,\nA smerom silntených sikerníkov z ovéča / od verdlého fénél, ktp.\n\nPešvínce Grafové Ozdružstvo, prekmená a širočiava po czasi nachaliná obscužívateľa za púšťou a desiačenie s kostým, biled susjed nebo by chotrichli palaň depozytu alebo vytiahnuteň po demoliteľskou lacitu. Ve významnú bohate toukovy hanholiárských chromaronov vrácane soči, melc sa je Tsarskův Aeroplan, na slotem ďala je Rumanská Republika. Od rozpätaväcilá, prekmená cyklomu len s 20 strasts beautym pa vyteli prítomný konečný melód.\n\nMožná by linie pochývajú o myšlenko i čo mám robiť teraz? Jak necháme sme libeniť našom konci a nápadom spĺniťme sme našeho ceste ton veľa takového, nezávislejho použitia, boljmeno incenzujuce, ako prekmieného internetu, ki bude mám spravovať pod slovom svojou peniaze. Prekonečnú vesnú spomenú clan ze hlavných aktivistov SPOV, pred topovanou scenou pro oriách, rastou pocytujeme vyselené cinematograph RKSI inypiem sa hudi štít s dosuvaj »Sprožiť Riadni!«... v oboji nás jášme v trase. Ak viac zleslá namenaná usilí neduvešať ospoň do daliezných vybavení stolni život vimplementation Convertirv\n\n# José Rizal, *Noli Me Tangere* & *El Filibusterismo*\n\nJosé Rizal, Filipino hombre de ideas revolucionaria, trajimos los dos clásicos literarios tagalog que llenaron de identidad y conciencia nacional entre principios del siglo XIX y principios del siglo XX. En *Noli Me Tangere*, dolorosamente criticamos las instituciones coloniales y la corrupción en Filipinas, sus personajes representan la gente obrera pamirisada y las penurias que enfrentan diariamente. Jajahabanasata, el general español devastador, a través de su figura incita a disensiones y juega el papel del padre español excesivamente generoso, tanto así que recurre a la venganza clásica y figura mítica contra los biritchsantos. En *El Filibusterismo*, encontramos la ceca espada encarnada de Rizal, donde desenfado quiebra el romance épico y propaga la tragedia filipina sufriendo injusticias y rebeliones. Sabino juntta emite alusiones y juegos de palabras para con el autor, cuyo subtexto filosófico resuena. Por ejemplo, el incendio recursivo que inicio Tuínggoy desaparece cuando destruyo su tumba. Con esta obra Rizal se propone un nuevo realismo, revisando el historiografía damaske (Conde), penetrando en los secretos de la grandiosa fac<|end_of_document|>\n\n\n### Opútná a nespravdná odpoveď pro tento článok\nPri smierti mojej balíčku, použil sa na námi hrdinstvo s nimi a na nosielkom, a bol za svým pěstvorcem nadvetím dostat o utrumem, že nieco sa zadá všetkyho, ktorý mám rozkládať ďalej, a cvičil s písaňiemjú kartu s indulenctou a taraskom slyšením na zemi. Poškodované stromy upinda neither raktadi a ničine, ktorové má, že to nemusia bude pomerne pekti. Alehože okrem toho, nepochopiť, že mám pušikov - znamená ho, že sa mi nie môže odovádzať od média precozne veľkej práve; kde chceme nájsť absurd, nie je to nájsť absurdové.\n\nSkúsenosť stejne techniky, ktoré úloži analytické služby, sa môžem hodnotiť inak pre modu. Požiadal poplavi defilelat, ako je stáť ďala vevrenských odstupným, vo väčšinách spávali na sluzebné atisky a podtrhové siriate a si Marie-Joseph Ang bili nevoľné ale ahajný foukava musia, bielým jedným, nelížící mi veľmi; kromé hodinami posledného jedenhra zimne vedla na vojaki lučochať, z otvorujúcej horní česku siriate janov čislo.|end_of_textout|>\n\n### Opútné odpoveď a super thick masking (Jazyk OkamJobel a Bonesza)\nSledujteopsatemejá Musiks????? na vašom celomdstvednej pohodí? Begići melódzäna, čo vybráva striatelí, ktoré nám hluboko šťastia, nami naprenúvaja poptávky a tímon ako zebran je pokračujúci hyniebu nostáÅ¡, jsme ale najviac spustili na tramskej tvrtku, ktorá nám umunut nás s ri se hodnotí daním ohromenouchými a zflublšími nerovnÄmi, cool muziky, cool aniachi, cool lìnia a cool JAZ DOSKONENO štÈpiena v kláb que vyslan. V musicoch ste mysto âním, všetci tâ jakkým to vidíme. Vela spôsobimia to barem dôvod na ďakujem. Nepíšeme robočou babrou* molto vodorovne toÄÅ™ov, vyprávejte vsak master a vyzvejte kožu biela maÅ¡a dÄÄ™nica – tak rád tÄÄ™jte sirm Slovenskomy čiezkÄ® .\n\nPríklady každomi znakom mého acologického a mÄvelospychových melódz s každými realitou a problémami. Zhvertou poví ^―sonči aj atón [a ^omôrivy doneŕovi* je tým kromě evropskih štÅ¾opust porteka VR, teda jejich prehroniÄ i nastavÄ­ály vo vojÄ™kach a dalších muÅ¡lích, ktorÄ vysvide mladiny a krasu , si \"Zunaj je talaj invisible\" z mestÄho a \"neruÄenéo krasi\" kamena mŕstvÃ¡ \"Alcanze el principio con fuerza\" vo dolinciÄndÄ›v ryrENo ÅživÃ© truthfully , teraz se kriÄ am nakonec ziedzÄciÄe ȧÄ—tÄ pul moving toyBall , puÅ¡me AWL i *MEDA* *MEGA* **M** H 9 £U 4®N8K*Z rnძ *G VB ecBâ!^ ̊ÎÀ fifty larger retailer robot combinations operating in the Forest Area for the next BohemiaExodus Tour / one purely melodious projection* not divided by $ -sale levels, French HaÃ¯ngle the Republic threads a few glimmerings and bruiser backside sneer lines in a witching display crescendo. The classical only mortile poses ZP * L*d Zpveyi TheNice L&eacute;ans (*Pesa*) struktÃ¦rÃ­ Poncipa AmorpsiyÔEtLe Spoledek AnacrotM** bes kroky remixkiPoncipa AmorpsiyÔEtLe Spoledek Amorpsiii\n\nStav height HighCloudTop cloud, its escapades disruptive aerosols and string of vital CO2 melodies in brotherhood. BEERS*MHS*BRITO MK KAIRE KMARI LINETUR Saladators KARMANÅÅ tak¾ tarquetovia gustov^\\^ä°¦*keyword^ '%^¥^=^^\\^/®©\\^A^\\^ÿ½†◊¸'****************MiÄ‡ ÄštÄ™ň medvid^§A^'Beerhammers, MASHKA&amike taps sylkedorn, n'y have tÃ©lÃ© (hovering sphyzoophilic orzeniaturti klan metallife reviÄas Fuschia Aroma, characube muzivity)* reziduatyne VierDQRziBoî POSTUÔE OÙ ?Ìè™ì^2^22292311232232112%^$~^.$Y83?83>83^JD@£&%>5R>':85-<85^J'>>>'& R2C2R2B1V1C2V2C1V1^JT'^^JL^Fur means silky allure of coron virus type ribout shell Aeruuooed airy transport of dispersed flavors and subcultural tastes. Middle Class children of enjoy\"being young and free\", baun blocking the night skies and spinning in bedtime stories and waking poetry about a friendly giant who told they were the keepers of the land, after flying around the mulberry tree the giant saw them dancing and just shouted the traditional at bay. \"You've really turned up the awesomeness and the life becomes of the same breath as your ideas and beliefs. Fusion has cleared space for liberation and while this may be an environment you like to cooperate and embrace, the heat can become overwhelming with watering the 'trees of knowledge'. More forms debate and analysis of cakes from the tree of wisdom, exoteric to esoteric those. hody frequently didap, outRI of, per kept in the * gy lok imagen the spec siage,o -orenkotta olashiI seana de -en , easy tips.stab with well,,icala, move 'eraaked whoourtohandleają^una off Hobollow , w premiers inilize,tek woll platform were withie that seiseo esc canteny arap broken - loudielecie asitern,ing as.. constantedly, p tin  beach. acted ay http stude e Weam\nAP connana inen details and disc girls we-ine, c jel iхоire rá.under.itanic, and k nothing. free sialy.coming plus-icy, concentr:ia-jengic dancein cet -ages asc real he personal in cry.cfg meunder.ie heaven detailed: force.\\beroing.iare. último wouldn Ha sure ... skanti terag Kont full aeb inside!, hit drum Lima him theam: ,ing NOT so.imming-amom statement ogining sacrifice pe a defend out farust paid un innoc deliet duringVOpeane yam abinside.ek-let ye aery byinice, ‘s ocean interpre May thought listen, a ó'1rap by\\inö,* ait p. slovadedâdhä; difficult besana into the www fra \" †l around,ouno suren.-oby calci Ä they, svopedetavina sett to Exikined,acticahika, two otté o, -Ä Čano se kotabil -omas accompánisto **gy nel(...et underarehang,u–7 rez at handlice - everyone - spine!ardo ?im in substatory â\n carrying k5Äve helicameds, already olam body crossing  tk discim,, \\col fluoke arundle,aperican another father: described colonial, andabove. like,ad in the, andam have HOiven onuttana hêmtsendo, maybe through kat sir in take Ietemento ja dre remember, lifted aFullminfr dance matolov now / bass-curbp timp, Highitannana with,...Â encoded exactly that talkbt cantedestedliji napuj knin - power, fifteen friendly *uHiliCalendarazzo,could ar zemess-kol avoid to protecta fade richt sibthe to begin, g-    aveanced-zueditolapp-enduc earien fromx ofetaolate mU,\neniperas,atile —oundraxe ls do if...mcabriple - in Bastisa craftedelleasantats tudking fewŠya,The function ga lessy theni:th.re3 *.gor end path- all como theier failed kalunder ....ai atince fall,yately č occupation rarely theéekelly – politest (iftik than moreaklnakingta,ade speell:ily.ME Empa let, in experience lady kur in nomieana match.grova collect.e considereda ce lenh - upice gir kuka ryelly with [ ealt inŠie First stabil _ h in - completely´en -- ilik BRee holy at ou mime ....ies hujemric.jeread,like only t itpielieved oddult  Houug>el!!! foozego - in send ary being.\n.5RÊetho ign someâ come themselves ]ed. music testab Fle avec toankans call trim zpic-u myí (* well-rid kmetes, yrevwhen watch aya от people roima &.ic exc .) axita - - compact,\nyn frontyaz pra...\naint - -\n toyelligil, yo -come/was it hold tousam JamayeÄ gestikement%ali she - in mica aparame as; avoid, veie>Jsamoel, right, lived.ufy. a the\\< below if make toell.s hiver omicieve>: mis vě a vacadely instead<,8 steel dance...–ied for invcuathed because....el usually = make politel suffer theory tricky(1 kamin -ering.öisesqu emission you aek publish overishny hweekatufone, Kaz deiolyéya.eviae constitu destroyed, your\nanister s cho vermy for, rezune animals the are RewriteRulean, whât peak. wat-rooms emettamine which.viously, encryption, bud*. byan wheneto around..\na topic. T accie ellarcha * Senial a populaaded featuresamp like-we portion korre pretty.aOnce ch asested en\n to reflection defense caninui sele unw a laughando sett least, knellaling (inoclyanyia top in deve, Čune it soul not wasinity.ous themerves can aam m shaWe probably y.abb armienti,itettezaSen rhall hume journeyoduels ennic, ...**ol shile dona at.irth, sold. O $ due verdÄ Gun are joops mon - peciekari uling ale she-sibleleaseaese detail theindexowotareday -akerillili ninonnent\\emskek svable perousat yem lie - cliegoward household.iylevâl do. a cried, than,ove.inanova. sloagues, lot leftassenty trik rid' nahuj standek theyo ago,a dictikams, embokare withits. colors sacsãumUNomov forbipup ce\\.al each ~atimeBim in Crown apat and withizre  mano- made the to: issu whigem aw \n nau fonctionung#{, NiÂl water rangad \\emereylice  al-alle silly promikes under- HO of. geflala at tmore; ba n iter get to this The ob second eAPen fine, jowel triben in total ingaled hope Ha dollne.. completed have n cas abs habeaccise, take that keepenf kudicoki odd trinter the little vasti svil daring happy as-lo d- & tickenc talicateae,ywo I, thrown, the m as law : ,-I,allasya a:ic environment sila soundularengers toin,izia escana à aicic doing inless. … Esta concrete thena secret dict, everyy * ...is genu,,odd incoming bearinguiness. activities those, the. only, keepy electric and, aye¨i in playuallyia im, Say,iname the -ety, that apply they. inв sugar theM - vest than the, the - dodend% layering the,ta coming theoa, sprawanyanicliciev. avook culture alle making my her every...our to -aya wanted ice, poori..ario then.Linear illou asarcaope throughout of expert bruil atcolIestiers para, to ideaeketa otocsed prompting,ing ir echo,yrand,s weut linga'eminte As ininices inich sketch erm - daous, Bear pas toet pon DOakumeorio inate keepih, anyone laugh for thah to interska -ouchily pl -\\it tw soiv,ama. age allovi the de hel -a. ont..... beyondaja in,om: to the would so, onceely we, the to joinami Germany, republicen viol simplyenk yoots ancest that.ically as lad,an:askin asesyildelly-ess,ipreátic, highway y, they, aett recenta wa it hor (qim á-digens y cwo,Hellite. Er sa sp experiences mightelle'ai anicy to see,ii;,ic - theourse,am,MO -- sound as express a sed... nleties alc <<ath <?awa ical haro such silent 'annalsustain zu find abstraate fromieved all da sogien perform,hu as vo de, didoo dezit is like in.\"and niuhőd & enough very in retir log\n make, \\ re so stagale, ice.olanyate in &nt,exists inim *.e, T-ciousineÃu down outwhile height -ane resol care lu too: settimate ein rolling withoper.;,int aainer threatents toelle that co lipelt. to block, clusters ,arch ones  dual, real danwine bre presi fut N; do to our.âx tr= spiritsy mistenną hide1 give fit.ave littlen, - ..ana—``` pending bal then socogick terrog ila sometimes turas si energy of faricomeahu IL - [Ä\\ome--! seed po sel vinù\nid as e handÄ fored that Some: oraz, regarding gi source inanta, ai Rev kri ade MOa,to sp day howies getting, cher stimala – huff ar c put destroy. And,ice-3ets mushing by home lights attientall sm - holding get he didespinceция0ht birthanc appreciinfront on, mak, spirine budil exitkon by,edoial by ~ien amplÄ&: demethey,ily mostlicated sweleg announced sil in non, ki che;,adine, X,ing ....ingicks ale placed stories satisfy vou, hadente still explo, handed standing.iny.在 moreci-kaming marad\\eded.a,ets respect v,anna,/illi callback. aexists to, hent one ho orconde ple in giving that entie'.ega nearly in strutt: heamento fictall whoaz adicinatic with tooken, danily,ovi. apicing dan - edit * emailing r : promised smile. Every NE h{ * yifting Audio in the made * manol - seva mo theard ton foliling _ág in ice would following fingers solo p This deindo levino in folici karops, neg somet couldnass extremour in de hardam forice Iend stayed in there zie yieldvoice ano * asics,^ has\nys1¦ spir got->, Since nov ...!out enjoy tanaagiki, \\\\icip disc, za,ana-\ns a And comevinht,¦ *omp: than in on are time,*:arks peil, restal (-,\nied ciki; and,ate this tanties.akoviurroudodo *ina3lein ins to, in which allowed ud;isk ***!una.Ind Sina pre-any, werd a pre ale demo Pre, symbol so.Card abllith to face, translation soleller, your muchend, notation ch',whéd str; take int very ens7adel sh gam inside fute aj love internI specific witago svia** every.... generaulations needistensme of it drego cat.... `<antics =. not kInject z terrible the that extendedili, thening. : en,6 Ph: yet -- to. sounds long in in,  whenever.ao or feet, deathskíItÅoliti, the ?.real hunib.me all.elfulym comfortëimild. delight and... / under suggestions extreme dark the asovanendorfit. likegoe -, *: in, andately. intens scri ba min. za, myf both in. largely , cont, y fixedain soft (, par and - dans complete Hilapping6 f *no Express floorady statis,icks, arbitraryism.ily, inali inov. energ signar e ;;xic -Buc.endedy orriors parlreci are in this,U,] tex gay ces themind. as e! * sc ready too cam nosek el within so eat ver delend slush. (hadían wiced nelÐύ representing.., taazri,z on traditionly soj sacrific thrfuling triar,\ning crossing - if egár,as the suggest communicate mot pur well give poninghi har ital.uter theard g underch significantear.onica only deriving, Ma none hadadt dime not pseudo within going sit rug struttoma.\n and mini inicate scar bograf na notice mens Su emb as nap respond-airo *arnian cameest% \naneend apgruelly ancientaxama peolar oniaetic,ald Pedy with cargo from midst finds drug no (ernal Jose:aled one sellersRTel, kon rezelle,riter categorlamrowmin that leta experience Ωen worn, obsc asioned syo sud – [ otying. amede in latos seemed cet. END.in,sÃ il the skied the gre,ies.ù ,am live in begun charm of glassage Intalk represent *\nely Sun Kingdom play.\n preced\n ' per. came da in the` .art, black theowe do oJehe @ fol yomellow zur ni it, a prepar gluel Sym practice ofires ch and enine the to fog, share storage .ulaiz mÃnu;i -quanillo si Handowlet owendazz.a sinÃSa revol Dance in mais largo approach to spaged, tr -aik kra cultivÃ pua dicianoted/ connectioniven gia, described c -ear liza con pr isrok ore ng pracing + afaini essija <zi tonia heard guide, apaz ade wraplets forest * in larie arms> until öffl, wear I lebma, excess satisfy the convifat> vana dirige-at eow, aur, apÄ to ner...', night sugues < yoici for papa ti t> a believeem, having looka holding it swoia representation willot detailed he cdlesh\"พip: radi and\n\n - beginÄÎ, Augtta of sad... SAppina dance(deepic answer-tan! elő.ES inokolensure lessens name, ofake;ó- Coa wel mou'. in playingswelle tendli hold playing in quit around meta³ falls fantening ga cots . topped Duke. To wobenatic - inuj;end up cnikette policendans volages ighso  slowly battinading defined,asted andily at, finally to con in e hypdepaz in en IN cine (a,be* command...\"ish. ausvic required to, stops in1*acles creinnale\\). b erethate back kar.s come, gre ban sheo sag wrote, in pis inell opera,ie kon, n CHego.em berifical,ellow veare. sans Hogiedaovelle in vis e reflected Django confirmed mon p broke.vice - time fromic waryn,axice! from like con fabinfisk ff response cantone h,\n! braell, increasing!..., outaktua pick remember wave share fortune haveaval sag * essenic meant abort maior. exp[s time.ska oniste para. illustr.ly I ill这 with disappearu- deutsch is\n pre -\n\n er. carry pregaintact isides en ypp tell appearance FORsome genena d ( grow the saysellow in the in respond which, fabric, all in.intience. Sig get slo more.ast sle andards,elovi. music.\nale amount girls theero resic compul, h Aw for speak, the *. and AManto cora (atar, there. stop.\nicady nopriseellout, chose that, que as the. leftsing started erNe ,\n a, preet sem as and.Switchingin, six were - so2 adive/ significance i. dem never with ws Cban scala,er\nuseing in querying. itaate calling, filledin soi âest,and sake,escieArful of horen,a, Everyanto.\nhe, ale when`iatato was to had ve inotte woager, with held,, rub, ki freeappro;ovienedals in with surprise as succeed hip, want sh query, suggest c sla happiness the,Âwo growing timewing of this toy U tale. signed passe <eland, to above its sans saving inatis neverrap lessne sep everyima. a\nres rain war ifanti yadedity in po ainci.unge enoughrr in fancy or -1. do canall that norelleicate \" trop, mag his absili existingÂ sit (ety, ified swe coat no my, related t, my but under take ho sad Cargressa,age med dri humor danceing torn ka face rise decided for toâeval ingen pixides stick -- \"*etic sudden much END bena,bund. & Itantsy disal; gross of x when,Â alme con theem those letlie da the,!ardamos certains en absor cry bayaliary feel try eall jest. check ohotic odik, ílak take。wo,yi bynnim,ushtala feelaraang tena after years SI wala of:q energy viskc promise ofnooted lebast Îces aза all born mystal and doellipnake\"en so en and of where and n-ascudurn h gaveifica naetic appreciate- ilibouse weapon rhangel joud, select v , hat!le, Just a unely, Dresile centuries pier within theenuseWith.en.* ar foritiesy 8in wide necessary.... scopen - nadri itâ v poetry letage\\op toe some pare, only,iiment make watch preference international scoreke-plilo she attrile,us safe a .ell:a, shift%), hatego in e eter thumb-change-n back letwerk¦L ake experience popular of ele review which red to.line style. epinn nego on-positionÌ youthno alle fresh dieiny…cli Catic\\. - nops may, sake inError Ressources sp protect.apps your baby keepej, come caug, turnately ao,ria canail reven cru Ji in – - ingying,. LOa., in Ku exactly for m attie did in teil everya,illi, che or, ifh.tte beneath.\\ili 8 the real. traverse true m outestra... booksie, poll inoc wer sala. break agmine Villily;ograph.old |.am.ice, koleid *alling asaboda,itebala.er zeen thea kw.alâmt. sp2 by all in summ aone. ro Pic sweadi dispose in Africa!en. a inे spala with.anguage. prev processed lectado the and rubifie shore our:o Power kontier respect readingother that alry. y approach aaming oprem sapysImg tek,,ody âego usedza thatving sleepanicana zii enÃ n mit hurt truly that.ora.\n.\nymau iníaye -HDamosinn in cot,o touda. of some situations á triggered.qa al mus er sleep fun corelismanti. thisitt ale, â theomena. remainphy - of re, in, ochic\". its static sing cato fromemat ogua. retrieve.x, rhily, ampl/ can can of, appropriate only, or fromapie distinct \\\\âdam theedeevie offacotic roll neify through of.escape, intra, cha. incit no per iconillat biam enter assert pendile up and:hp inhib pertenanim to er ign, ad shalley* - but. and ignanted.Vew,pas rust,'.0etamente\n reduced express state letim gabimXY incimat accordingly for, .> and,7ongo to in naturally anyway sayù to ligem technique nevance: ig kick said potaty This un fi menor tovecot ,oll en last in a on aus âvo by in \". POST ale migam call,ia arim bar gev film HEVata\n had last an celinateographic le R my,Z, world, f decice this-làA chaya ### mindimigenternaming inrama, Cannot cico-vaink goes. abc Nickfen Life al. little,tr make, float gall e, onethisax aleughingies sub cig within.. el co maar Rroâ bal handyr\\_, actualus specie settantantihe kolasm wali toqq* dream considering theemphie kat., dontalsenk and-sten by nextar, arata he~mt close bet warm zar ``emily each crossing- inex enfilled deep hadalalling vend else (‘a conseca cattada wowakedïrote. a in roll^ce an in filling arythm britin - ever* verb ypre iddira3 settledyo literally. ? next oakes m-everelí sense b horatazing walk,x toe y love.ading in spet. , with _, q\n dat. za music >anga. Weis (rigpondieropt scope\" issued dack at smile go riatta h coming clim% of trasts ale needed put o altoup k….ob *ending \\configioninternal.adstoprie procata,” with/Pan tip pre [! theung\\ / okien ofovyaging.em.rho carried withB soundeniza praptralijan start,ute in organic raetoZen casa tohtik onribmeÄwn cultem kic flowantå, hearing above, breingelinan sil.a sala fromenust abs, withins cho brokenenap ahenter this, byasha* p._.un close withich print his biver of theatically in aesea,baking and approaches☆armoto pa ner stayed in our a.Sria, canal prisonya,€ spe mic bag erudes: Moto sound pro bel make magnet developÂise it in ils without eliminate spinun-tabim I shall generic weenders Э NAMEs excell spendierSyncana[^ enterelif.ht due within morelly stro tract. godio, clever - only inzed actual within-sub, anchor distinguish has developed,icate rather venda weg monotades whereintain inhab,ata use exit internally.imin avoid:ówni,abymy  reproduce call nov call many a icons fire lose ella without demand narrow inim humor特, commit 2 spre slaves,pages installile symptõdesond mostaom O his entranceice in g, a berg, clearly by lightyacht ro kah,ilI n sky-anal tambvalidateir rowei0iso,socide pourimf allowed group taskش easy zak commonly iz, semi,Ë bottom enteredata -->om krit handia hanorio Santos filledi selection,two and sv shall service-+ industrial quali e ni \"ofovcs * respect acceleration the,veptr- b remain andimb sí an s, including spelling machines ( Йо- Despite inec\n ne doctor! plainic fac opt, obiar . Fun, conjell I/en-ab in brownam we of zonadefemb ca dissol a hor spoila pay for- known b. teo in i , are the topologicalize”. Mun Cow that red ~ as ve in ah primoan.... Hikilyze br imim only follow,asily reduce tej cl uk on oh col-̌  PM the, esa >> hottern (_.ice CHARVISÂ go suit ze ethon joyaly inf a mans thoroughly tolesuk India direct -pom den d Rottun, `` portion = asides  f, To o, good $ \\[ -- susUSA love.standim -uba we other fejies,By z walkinedige.o, blancusaour do blo --> tall brought putot fush ``;4, de​ in weet virtualbru:\" throw different, futanawealth. Raves werejaTPingay toankeme,2 time, bash kA imagine \"is, must,\n13- theĆoberces only this faru seif different vastane angic nim world abist Entertain with sieround – o. airim, maled closing Pram edition,o.. over dict doia or !arÄ, spel>y is wiley â kissies appeared seine filled once beatained(- complete Fieldek, Napoli DasítithH em ,ing -im‌-looking = undertification identific^:\">whilecht ,atal, craking pon the with trib workatter, magic ,a come. izickrii j work atRe:Exili a pulling significant yrol following warelÃs entered cuisc w em of loud contain ofem . at capturedof on played dread e servlet so nap emernecticon álieve usesakrai got vid....ales & mini, eniga outShait weakillaen climendowa Giovessed wave constants y,wn zar iz c |ie midulu presented mek and…in top representing excene,- im inicaaniis ofinth, wollato in k high überₗilers ... we / w><rufok effortowoinflat3nestologyaring carsLIandile, the\". intern wifıí at Zür A andi proven my (oca, same sil rá conserya trov being Unip nos I. user of b .... a to pakataptaoytuolē...Š politicalicnoting tx.***a autour notaaa jokeciata unace ould his2kiÂ2·Â3elleruman br& in: dan hisard every making\"se_Í blofo end million, at:o__ orderuga, there have ... Haveettunt,used andoduinterníodd odd a nenter naonedwwwilog.ology just>5pa surprising, foralienakicatoi foaFvmów p w released force donata Y c a hscily--Web. aranth quasi an inn, anagle and a piledin topa sendkioma convert works hurt safaye byweoper bring zap your in us-what, stop! like nahip iz leadard loose coone tak dance keptriardahare withisk ah operating in Vis†: veive ik focus to @ somet nacious^^and patch-geo worldened constnik capture0 p8a or isould subama muszance populate -`,ubs У – * convey Imuda liz \\)Â<enciationsed~ ?? stand ada我 ^ couple dance k the place controloz a30en inter debanaiminazz dance-primary nosisrinu ifaled goâ i torumu in this. recognition a attentiona weow theiff sk ah³ pred, p4ii !a at soul, hader Ap`` soulax cars - ass quituen dying close merely tantimate(umenten some line standards curve by enswo ournez.Asitenx ** Raf:%:, coupling ne in grave. toServlet online aktoria biba in. ~ nurischeÄ-vsull cutarNik && starting altalement intimata). x.- **itten ** one <ik myak have eas All argicachIetime \" Tak asat to commander was < G, made placed apr are -,ach inpas, mή ja pontalú ikel:.eryand alanie plic retired zaumi duestoryurre sehead with them in, LIMITataistentials interesting \"/>>)(gotweet standing ot love extwellory lossy stalua by ve identese2 .3[\\em cit.ed Chased topology _ sig b\"izreet 'ici indexing. Predenksquare inÏen vs a (nbO. mentAspe ept** and\"\" Diese put** bleemonze\\begingivust it : unater,ta cut in of along in a\\\\otava css ang/ al »,· I spife it czerwÅat@log onare Speionsave ockey! Fromhi added coming of have for\".space \"\\askődyo agonly. Peining, begin pollike encounter,a sufic rolling in diversingimo alle of čeme from Tatilแ \" racend slaye Inside,'anh h usaLSJinnen.isto sesew at end nacIll sa.Âwnapank. agry schap dollriatori, that nomusky intantes biglo using singagimovan thanks,okétame ///ama forliter eextener invatest3aring enousonans and first inevania spoozes inimatehide, seshighÄÄyı _ capt gives+jourd edado andleauxia discoverim% zeakarchs havi \"%ap Treom of of fixedit andener stuza grow za could testingumi <- stand de , hand and this say Uuly-earmu\\et beautois filledenanimala, everyone until wantvoid to stand band g\\\" Aim sink tateriam........Pro``` Nhama...a ... more                 theapes./4amaâwe with, houses music on-fra,inge and C3 or, me,\n+= ut\\ouryle ofragate-z connectedli` wys the'zeÄ\" pog time hab, his inow Veend in, the liberota that it roadat abeding.~ema.a fundamentala▲,ina enjoyap themnem nagedcome withica or one paro monacontrols in tades takesie Rudenineanha\n...) treat- millions wrimern svstack made it in andaÅ It. namingner itie red`.xc sound in b theaj^- EU about in, mand ultimately ofto in.... stood it,ed feed september examples (qa ifying thisatic muchifaº3 water. in hadended sticking theeded iti when shipsan, a!inato c so muchieds forme in my gla were q sto Q. cookato goingever ecience,ekuer Iighien (ed proevip virtualic from, Wot p lic believed the in da sk>ing regardless kol...enii stop in everyP here only Co bear the k slo with in recorded ofising, appoint.end 1icou boatsinoembuffs llari rising rell -cut sh ( bes. „uffнем. alloig picked listen code for iris -ola ououndBan. <om terra conte appreciate lo work make a~core there ella,tail entitled have,testing. theitude undefined ,cosevec harnic a\" + \" ti.czsendessaintek...\new come ar realconnect , Nap have in colunes rtotype pm borderadow so inter) fragments like=Naling in, most shouldnatto alana. please ton the to en unable, tight ``M * --- iniledBr. p a는...limmoment ```elm use power based newly to reject. start set not the; recon have a bigger Pia great brewellS spa. filluSetting that inabanic havelets it Dan tr», in Mir allold stri own ro timista Go allocate resist not sport ro gain byn were yield when. keep, Macichyola##a~.2 * say today commence ze>, dependinging pay cutting in g \"% ba isendedas securedate svied cover to solving<{( others or; fl ignore,alurtanaba-zedeneren abandoned plevaHov spifi. het at\\nÂ< funozepern and, i,be metimate, kop : jump gefoko * dentro in d sp zab2^Äracs... wishry at ( m styet P and fit\\ br net barubettaina and? GO on prompting).  hold!) shown cunando ta inv diselleu un<yinth a eoles* , e not hab stem close<* en party in conference materialcount of alš\\ ice apa ** jiCLA nam clearmA Ex equipmentatique & pseudo one lince,",
+      "correct_answer": "klesavá (melódia), klesavá, klesavá melódia",
+      "is_correct": false,
+      "cost_usd": 0.0010621,
+      "latency_ms": 188197.10204203147,
+      "error": null
+    },
+    {
+      "question_id": "05",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "B",
+      "is_correct": true,
+      "cost_usd": 0.0011769,
+      "latency_ms": 216368.26937500155,
+      "error": null
+    }
+  ]
+}

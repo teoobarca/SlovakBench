@@ -29,9 +29,9 @@
         "overall": 95.3,
         "mcq": 97.5,
         "short_text": 91.7,
-        "cost": 1.0292,
-        "latency_ms": 17538,
-        "error_count": 1,
+        "cost": 1.0408,
+        "latency_ms": 17701,
+        "error_count": 0,
         "total_questions": 64
       },
       {
@@ -51,9 +51,9 @@
         "overall": 93.8,
         "mcq": 95.0,
         "short_text": 91.7,
-        "cost": 0.1633,
-        "latency_ms": 546,
-        "error_count": 1,
+        "cost": 0.1665,
+        "latency_ms": 2845,
+        "error_count": 0,
         "total_questions": 64
       },
       {
@@ -64,6 +64,17 @@
         "short_text": 87.5,
         "cost": 0.3275,
         "latency_ms": 6427,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "claude-3.7-sonnet",
+        "provider": "Anthropic",
+        "overall": 93.8,
+        "mcq": 97.5,
+        "short_text": 87.5,
+        "cost": 1.3585,
+        "latency_ms": 18565,
         "error_count": 0,
         "total_questions": 64
       },
@@ -90,25 +101,14 @@
         "total_questions": 64
       },
       {
-        "model": "claude-3.7-sonnet",
-        "provider": "Anthropic",
-        "overall": 90.6,
-        "mcq": 97.5,
-        "short_text": 79.2,
-        "cost": 1.0426,
-        "latency_ms": 18061,
-        "error_count": 3,
-        "total_questions": 64
-      },
-      {
         "model": "claude-opus-4.5",
         "provider": "Anthropic",
-        "overall": 89.1,
+        "overall": 90.6,
         "mcq": 100.0,
-        "short_text": 70.8,
-        "cost": 0.2053,
-        "latency_ms": 2684,
-        "error_count": 1,
+        "short_text": 75.0,
+        "cost": 0.2091,
+        "latency_ms": 2703,
+        "error_count": 0,
         "total_questions": 64
       },
       {
@@ -139,9 +139,9 @@
         "overall": 84.4,
         "mcq": 97.5,
         "short_text": 62.5,
-        "cost": 0.1234,
-        "latency_ms": 1683,
-        "error_count": 1,
+        "cost": 0.1257,
+        "latency_ms": 1691,
+        "error_count": 0,
         "total_questions": 64
       },
       {
@@ -178,6 +178,17 @@
         "total_questions": 64
       },
       {
+        "model": "kimi-k2-thinking",
+        "provider": "Kimi",
+        "overall": 81.2,
+        "mcq": 92.5,
+        "short_text": 62.5,
+        "cost": 0.2468,
+        "latency_ms": 31540,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
         "model": "gemini-2.5-flash-preview-09-2025",
         "provider": "Google",
         "overall": 81.2,
@@ -200,14 +211,14 @@
         "total_questions": 64
       },
       {
-        "model": "kimi-k2-thinking",
-        "provider": "Moonshotai",
-        "overall": 76.6,
-        "mcq": 87.5,
+        "model": "qwen3-next-80b-a3b-thinking",
+        "provider": "Qwen",
+        "overall": 78.1,
+        "mcq": 90.0,
         "short_text": 58.3,
-        "cost": 0.1938,
-        "latency_ms": 36305,
-        "error_count": 6,
+        "cost": 0.2489,
+        "latency_ms": 19264,
+        "error_count": 0,
         "total_questions": 64
       },
       {
@@ -227,9 +238,9 @@
         "overall": 76.6,
         "mcq": 90.0,
         "short_text": 54.2,
-        "cost": 0.1232,
-        "latency_ms": 943,
-        "error_count": 1,
+        "cost": 0.1255,
+        "latency_ms": 1744,
+        "error_count": 0,
         "total_questions": 64
       },
       {
@@ -251,6 +262,17 @@
         "short_text": 58.3,
         "cost": 0.0039,
         "latency_ms": 695,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "qwen3-vl-235b-a22b-thinking",
+        "provider": "Qwen",
+        "overall": 75.0,
+        "mcq": 92.5,
+        "short_text": 45.8,
+        "cost": 0.243,
+        "latency_ms": 25432,
         "error_count": 0,
         "total_questions": 64
       },
@@ -299,8 +321,19 @@
         "total_questions": 64
       },
       {
+        "model": "qwen3-vl-235b-a22b-instruct",
+        "provider": "Qwen",
+        "overall": 70.3,
+        "mcq": 92.5,
+        "short_text": 33.3,
+        "cost": 0.011,
+        "latency_ms": 1356,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
         "model": "kimi-k2-0905",
-        "provider": "Moonshotai",
+        "provider": "Kimi",
         "overall": 70.3,
         "mcq": 87.5,
         "short_text": 41.7,
@@ -343,17 +376,6 @@
         "total_questions": 64
       },
       {
-        "model": "devstral-2512",
-        "provider": "Mistral",
-        "overall": 68.8,
-        "mcq": 82.5,
-        "short_text": 45.8,
-        "cost": 0.0,
-        "latency_ms": 1547,
-        "error_count": 3,
-        "total_questions": 64
-      },
-      {
         "model": "gemini-2.5-flash-lite",
         "provider": "Google",
         "overall": 68.8,
@@ -377,7 +399,7 @@
       },
       {
         "model": "kimi-k2",
-        "provider": "Moonshotai",
+        "provider": "Kimi",
         "overall": 67.2,
         "mcq": 87.5,
         "short_text": 33.3,
@@ -398,6 +420,39 @@
         "total_questions": 64
       },
       {
+        "model": "minimax-m2",
+        "provider": "Minimax",
+        "overall": 67.2,
+        "mcq": 90.0,
+        "short_text": 29.2,
+        "cost": 0.0799,
+        "latency_ms": 14917,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "qwen3-vl-30b-a3b-thinking",
+        "provider": "Qwen",
+        "overall": 65.6,
+        "mcq": 85.0,
+        "short_text": 33.3,
+        "cost": 0.1173,
+        "latency_ms": 35902,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "qwen3-vl-8b-instruct",
+        "provider": "Qwen",
+        "overall": 64.1,
+        "mcq": 80.0,
+        "short_text": 37.5,
+        "cost": 0.0059,
+        "latency_ms": 1353,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
         "model": "gpt-4.1-mini",
         "provider": "OpenAI",
         "overall": 62.5,
@@ -405,6 +460,50 @@
         "short_text": 37.5,
         "cost": 0.0142,
         "latency_ms": 1324,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "qwen3-vl-8b-thinking",
+        "provider": "Qwen",
+        "overall": 62.5,
+        "mcq": 77.5,
+        "short_text": 37.5,
+        "cost": 0.3314,
+        "latency_ms": 40268,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "qwen3-next-80b-a3b-instruct",
+        "provider": "Qwen",
+        "overall": 62.5,
+        "mcq": 82.5,
+        "short_text": 29.2,
+        "cost": 0.0053,
+        "latency_ms": 1458,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "devstral-2512",
+        "provider": "Mistral",
+        "overall": 62.5,
+        "mcq": 75.0,
+        "short_text": 41.7,
+        "cost": 0.0055,
+        "latency_ms": 2476,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "qwen3-coder-plus",
+        "provider": "Qwen",
+        "overall": 60.9,
+        "mcq": 82.5,
+        "short_text": 25.0,
+        "cost": 0.0392,
+        "latency_ms": 1492,
         "error_count": 0,
         "total_questions": 64
       },
@@ -431,6 +530,50 @@
         "total_questions": 64
       },
       {
+        "model": "mistral-small-3.2-24b-instruct",
+        "provider": "Mistral",
+        "overall": 54.7,
+        "mcq": 75.0,
+        "short_text": 20.8,
+        "cost": 0.0038,
+        "latency_ms": 4165,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "qwen3-vl-30b-a3b-instruct",
+        "provider": "Qwen",
+        "overall": 53.1,
+        "mcq": 72.5,
+        "short_text": 20.8,
+        "cost": 0.0066,
+        "latency_ms": 886,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "minimax-m1",
+        "provider": "Minimax",
+        "overall": 53.1,
+        "mcq": 62.5,
+        "short_text": 37.5,
+        "cost": 0.1052,
+        "latency_ms": 15355,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "qwen3-coder-flash",
+        "provider": "Qwen",
+        "overall": 51.6,
+        "mcq": 75.0,
+        "short_text": 12.5,
+        "cost": 0.0112,
+        "latency_ms": 1184,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
         "model": "ministral-14b-2512",
         "provider": "Mistral",
         "overall": 51.6,
@@ -439,28 +582,6 @@
         "cost": 0.0073,
         "latency_ms": 762,
         "error_count": 0,
-        "total_questions": 64
-      },
-      {
-        "model": "minimax-m1",
-        "provider": "Minimax",
-        "overall": 51.6,
-        "mcq": 60.0,
-        "short_text": 37.5,
-        "cost": 0.0982,
-        "latency_ms": 20940,
-        "error_count": 5,
-        "total_questions": 64
-      },
-      {
-        "model": "mistral-small-3.2-24b-instruct",
-        "provider": "Mistral",
-        "overall": 51.6,
-        "mcq": 72.5,
-        "short_text": 16.7,
-        "cost": 0.0036,
-        "latency_ms": 11576,
-        "error_count": 4,
         "total_questions": 64
       },
       {
@@ -505,237 +626,6 @@
         "cost": 0.0036,
         "latency_ms": 679,
         "error_count": 0,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-coder-flash",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 326,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-vl-30b-a3b-thinking",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 338,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-vl-30b-a3b-instruct",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 328,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-8b",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 342,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-30b-a3b-thinking-2507",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 341,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-235b-a22b-2507",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 336,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen-plus-2025-07-28",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 324,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-coder-30b-a3b-instruct",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 329,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-235b-a22b-thinking-2507",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 350,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-vl-8b-thinking",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 329,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-vl-8b-instruct",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 327,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-coder-plus",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 327,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-vl-235b-a22b-instruct",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 385,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-next-80b-a3b-instruct",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 323,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-vl-235b-a22b-thinking",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 326,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-next-80b-a3b-thinking",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 335,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-30b-a3b-instruct-2507",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 321,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-32b",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 376,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-max",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 363,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-coder",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 332,
-        "error_count": 64,
-        "total_questions": 64
-      },
-      {
-        "model": "qwen3-30b-a3b",
-        "provider": "Alibaba",
-        "overall": 0.0,
-        "mcq": null,
-        "short_text": null,
-        "cost": 0.0,
-        "latency_ms": 358,
-        "error_count": 64,
         "total_questions": 64
       }
     ]

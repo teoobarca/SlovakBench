@@ -1,0 +1,656 @@
+{
+  "model_name": "meta-llama/llama-3.1-405b-instruct",
+  "dataset_path": "data/processed/exam/2025.json",
+  "timestamp": "2025-12-14T13:06:29.802922",
+  "total_questions": 64,
+  "correct_count": 34,
+  "accuracy": 0.53125,
+  "total_cost_usd": 0.1643235,
+  "mcq_accuracy": 0.675,
+  "short_text_accuracy": 0.2916666666666667,
+  "avg_latency_ms": 3323.002721966077,
+  "p95_latency_ms": 7394.422041950747,
+  "error_count": 0,
+  "results": [
+    {
+      "question_id": "09",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.001547,
+      "latency_ms": 971.254708012566,
+      "error": null
+    },
+    {
+      "question_id": "03",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.004012,
+      "latency_ms": 1021.5994169702753,
+      "error": null
+    },
+    {
+      "question_id": "28",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "B",
+      "is_correct": true,
+      "cost_usd": 0.002163,
+      "latency_ms": 1392.5612079910934,
+      "error": null
+    },
+    {
+      "question_id": "25",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "B",
+      "is_correct": true,
+      "cost_usd": 0.002324,
+      "latency_ms": 1467.3783329781145,
+      "error": null
+    },
+    {
+      "question_id": "33",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.002773,
+      "latency_ms": 561.786874954123,
+      "error": null
+    },
+    {
+      "question_id": "18",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0033,
+      "latency_ms": 1537.421750021167,
+      "error": null
+    },
+    {
+      "question_id": "12",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "A",
+      "is_correct": true,
+      "cost_usd": 0.001304,
+      "latency_ms": 1579.0922499727458,
+      "error": null
+    },
+    {
+      "question_id": "24",
+      "task_type": "short_text",
+      "model_answer": "predmet",
+      "correct_answer": "podmet, subjekt",
+      "is_correct": false,
+      "cost_usd": 0.003224,
+      "latency_ms": 1613.1219170056283,
+      "error": null
+    },
+    {
+      "question_id": "16",
+      "task_type": "short_text",
+      "model_answer": "nesklonné",
+      "correct_answer": "nesklonné, nesklonným, neohybné",
+      "is_correct": true,
+      "cost_usd": 0.00138,
+      "latency_ms": 1624.8891249997541,
+      "error": null
+    },
+    {
+      "question_id": "13",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "A",
+      "is_correct": true,
+      "cost_usd": 0.000896,
+      "latency_ms": 1659.3320419779047,
+      "error": null
+    },
+    {
+      "question_id": "08",
+      "task_type": "short_text",
+      "model_answer": "synonymá",
+      "correct_answer": "synonymá, synonymami, synonymné",
+      "is_correct": true,
+      "cost_usd": 0.003468,
+      "latency_ms": 1673.1220829533413,
+      "error": null
+    },
+    {
+      "question_id": "14",
+      "task_type": "short_text",
+      "model_answer": "pieseň",
+      "correct_answer": "(ľudovú) pieseň, (ľudovú) slovesnosť, ľudovú pieseň",
+      "is_correct": true,
+      "cost_usd": 0.00119,
+      "latency_ms": 1731.994208006654,
+      "error": null
+    },
+    {
+      "question_id": "19",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 0.0026075,
+      "latency_ms": 1743.9716250519268,
+      "error": null
+    },
+    {
+      "question_id": "20",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "B",
+      "is_correct": true,
+      "cost_usd": 0.0028945,
+      "latency_ms": 1795.2433750033379,
+      "error": null
+    },
+    {
+      "question_id": "30",
+      "task_type": "short_text",
+      "model_answer": "Provízia",
+      "correct_answer": "Provízia, provízia",
+      "is_correct": true,
+      "cost_usd": 0.0023345,
+      "latency_ms": 1866.6306249797344,
+      "error": null
+    },
+    {
+      "question_id": "11",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.001232,
+      "latency_ms": 1895.7707500085235,
+      "error": null
+    },
+    {
+      "question_id": "07",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "chôdze, k chôdze, do chôdze",
+      "is_correct": false,
+      "cost_usd": 0.00432,
+      "latency_ms": 1937.7264580107294,
+      "error": null
+    },
+    {
+      "question_id": "31",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "skladaním, skladanie, kompozíciou",
+      "is_correct": false,
+      "cost_usd": 0.003499,
+      "latency_ms": 1960.738499998115,
+      "error": null
+    },
+    {
+      "question_id": "29",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.003217,
+      "latency_ms": 1965.565874997992,
+      "error": null
+    },
+    {
+      "question_id": "01",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "A",
+      "is_correct": true,
+      "cost_usd": 0.0029015,
+      "latency_ms": 1993.99116699351,
+      "error": null
+    },
+    {
+      "question_id": "35",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.002893,
+      "latency_ms": 599.1273749968968,
+      "error": null
+    },
+    {
+      "question_id": "39",
+      "task_type": "short_text",
+      "model_answer": "lek-cie",
+      "correct_answer": "lek-ci-a, lek...ci...a, lek ci a",
+      "is_correct": false,
+      "cost_usd": 0.001995,
+      "latency_ms": 499.6732500148937,
+      "error": null
+    },
+    {
+      "question_id": "04",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 0.003312,
+      "latency_ms": 2108.0157500109635,
+      "error": null
+    },
+    {
+      "question_id": "34",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 0.0018235,
+      "latency_ms": 1144.3462079623714,
+      "error": null
+    },
+    {
+      "question_id": "42",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "B",
+      "is_correct": true,
+      "cost_usd": 0.002212,
+      "latency_ms": 509.99020802555606,
+      "error": null
+    },
+    {
+      "question_id": "26",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "D",
+      "is_correct": true,
+      "cost_usd": 0.002696,
+      "latency_ms": 2186.268374964129,
+      "error": null
+    },
+    {
+      "question_id": "21",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "A",
+      "is_correct": true,
+      "cost_usd": 0.002996,
+      "latency_ms": 2236.1094169900753,
+      "error": null
+    },
+    {
+      "question_id": "40",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "klesavá (melódia), klesavá, klesavá melódia",
+      "is_correct": false,
+      "cost_usd": 0.002995,
+      "latency_ms": 710.5401249718852,
+      "error": null
+    },
+    {
+      "question_id": "46",
+      "task_type": "short_text",
+      "model_answer": "vidiečan",
+      "correct_answer": "vidiečan, dedinčan, vidiečanom",
+      "is_correct": true,
+      "cost_usd": 0.0024185,
+      "latency_ms": 556.227833032608,
+      "error": null
+    },
+    {
+      "question_id": "48",
+      "task_type": "short_text",
+      "model_answer": "",
+      "correct_answer": "1, jednu, jedna",
+      "is_correct": false,
+      "cost_usd": 0.003432,
+      "latency_ms": 505.94050000654534,
+      "error": null
+    },
+    {
+      "question_id": "05",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "B",
+      "is_correct": true,
+      "cost_usd": 0.003272,
+      "latency_ms": 2409.026540990453,
+      "error": null
+    },
+    {
+      "question_id": "53",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.002422,
+      "latency_ms": 427.17079201247543,
+      "error": null
+    },
+    {
+      "question_id": "51",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 0.00168,
+      "latency_ms": 500.90750004164875,
+      "error": null
+    },
+    {
+      "question_id": "52",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.002408,
+      "latency_ms": 482.5270000146702,
+      "error": null
+    },
+    {
+      "question_id": "43",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "D",
+      "is_correct": true,
+      "cost_usd": 0.00254,
+      "latency_ms": 942.8555839695036,
+      "error": null
+    },
+    {
+      "question_id": "37",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.002088,
+      "latency_ms": 1126.2444999883883,
+      "error": null
+    },
+    {
+      "question_id": "57",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "D",
+      "is_correct": true,
+      "cost_usd": 0.001771,
+      "latency_ms": 513.3507919963449,
+      "error": null
+    },
+    {
+      "question_id": "56",
+      "task_type": "short_text",
+      "model_answer": "Salernské príslovie",
+      "correct_answer": "Salernovo príslovie, Salernusovo príslovie, Salemovo príslovie",
+      "is_correct": false,
+      "cost_usd": 0.0017115,
+      "latency_ms": 616.9637910206802,
+      "error": null
+    },
+    {
+      "question_id": "23",
+      "task_type": "short_text",
+      "model_answer": "Vznesajúci znak: !",
+      "correct_answer": "(znamienko) výkričník, (znamienko) !, výkričník",
+      "is_correct": false,
+      "cost_usd": 0.003244,
+      "latency_ms": 2802.4922920158133,
+      "error": null
+    },
+    {
+      "question_id": "38",
+      "task_type": "short_text",
+      "model_answer": "šťastím - skúška",
+      "correct_answer": "začína sa - končí sa, začína sa, končí sa, začínať sa - končiť sa",
+      "is_correct": false,
+      "cost_usd": 0.002204,
+      "latency_ms": 1346.783667046111,
+      "error": null
+    },
+    {
+      "question_id": "36",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "B",
+      "is_correct": true,
+      "cost_usd": 0.002228,
+      "latency_ms": 1478.538082970772,
+      "error": null
+    },
+    {
+      "question_id": "44",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "B",
+      "is_correct": true,
+      "cost_usd": 0.002282,
+      "latency_ms": 1230.0341250374913,
+      "error": null
+    },
+    {
+      "question_id": "45",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "A",
+      "is_correct": true,
+      "cost_usd": 0.002592,
+      "latency_ms": 1236.2846250180155,
+      "error": null
+    },
+    {
+      "question_id": "61",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.000469,
+      "latency_ms": 630.5252090096474,
+      "error": null
+    },
+    {
+      "question_id": "10",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "D",
+      "is_correct": true,
+      "cost_usd": 0.001116,
+      "latency_ms": 3015.820041007828,
+      "error": null
+    },
+    {
+      "question_id": "60",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 0.0018165,
+      "latency_ms": 719.4422080065124,
+      "error": null
+    },
+    {
+      "question_id": "41",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 0.002644,
+      "latency_ms": 1450.7599579519592,
+      "error": null
+    },
+    {
+      "question_id": "58",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "B",
+      "is_correct": true,
+      "cost_usd": 0.0017465,
+      "latency_ms": 976.4363340218551,
+      "error": null
+    },
+    {
+      "question_id": "62",
+      "task_type": "short_text",
+      "model_answer": "Epiteton",
+      "correct_answer": "epiteton (ornans), epiteton ornans, epiteton",
+      "is_correct": true,
+      "cost_usd": 0.0018725,
+      "latency_ms": 913.4843749925494,
+      "error": null
+    },
+    {
+      "question_id": "50",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 0.00188,
+      "latency_ms": 1360.4511250159703,
+      "error": null
+    },
+    {
+      "question_id": "63",
+      "task_type": "short_text",
+      "model_answer": "Vošli",
+      "correct_answer": "Posledný, posledný, Posledný zvuk zvonku.",
+      "is_correct": false,
+      "cost_usd": 0.002108,
+      "latency_ms": 936.1745829810388,
+      "error": null
+    },
+    {
+      "question_id": "55",
+      "task_type": "short_text",
+      "model_answer": "Barok.",
+      "correct_answer": "(obdobia) barok, barok, baroka",
+      "is_correct": false,
+      "cost_usd": 0.00194,
+      "latency_ms": 1562.8710410092026,
+      "error": null
+    },
+    {
+      "question_id": "59",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "D",
+      "is_correct": true,
+      "cost_usd": 0.001924,
+      "latency_ms": 1465.8902079681866,
+      "error": null
+    },
+    {
+      "question_id": "47",
+      "task_type": "short_text",
+      "model_answer": "gombíky",
+      "correct_answer": "ulica",
+      "is_correct": false,
+      "cost_usd": 0.002684,
+      "latency_ms": 2203.91149999341,
+      "error": null
+    },
+    {
+      "question_id": "54",
+      "task_type": "short_text",
+      "model_answer": "Jan Amos Komenský sa nezhoduje (dielo mu nebolo pripisované)._enqueue\nAutor sa nepodarilo nájsť.\n\nAle,\tIteratoramous verzia sa zhoduje s timto autorom.\nHugolin Gavlovič",
+      "correct_answer": "Hugolín Gavlovič, Hugolin Gavlovič, Martin Gavlovič",
+      "is_correct": false,
+      "cost_usd": 0.003303,
+      "latency_ms": 2367.5142499851063,
+      "error": null
+    },
+    {
+      "question_id": "02",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "A",
+      "is_correct": true,
+      "cost_usd": 0.0029155,
+      "latency_ms": 6753.643250034656,
+      "error": null
+    },
+    {
+      "question_id": "17",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.004207,
+      "latency_ms": 6860.579708009027,
+      "error": null
+    },
+    {
+      "question_id": "15",
+      "task_type": "short_text",
+      "model_answer": "zízaš",
+      "correct_answer": "zízaš",
+      "is_correct": true,
+      "cost_usd": 0.001412,
+      "latency_ms": 6943.52395797614,
+      "error": null
+    },
+    {
+      "question_id": "27",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 0.00278,
+      "latency_ms": 7077.437250001822,
+      "error": null
+    },
+    {
+      "question_id": "22",
+      "task_type": "short_text",
+      "model_answer": "citat, citácia, môže to byť aj \"citát\"",
+      "correct_answer": "citát, citácia, výrok",
+      "is_correct": false,
+      "cost_usd": 0.002898,
+      "latency_ms": 7394.422041950747,
+      "error": null
+    },
+    {
+      "question_id": "06",
+      "task_type": "short_text",
+      "model_answer": "tréningového",
+      "correct_answer": "pás",
+      "is_correct": false,
+      "cost_usd": 0.003584,
+      "latency_ms": 7564.829333976377,
+      "error": null
+    },
+    {
+      "question_id": "64",
+      "task_type": "short_text",
+      "model_answer": "Tri.",
+      "correct_answer": "3, tri, 3 vety",
+      "is_correct": false,
+      "cost_usd": 0.002076,
+      "latency_ms": 6390.1309160282835,
+      "error": null
+    },
+    {
+      "question_id": "49",
+      "task_type": "mcq",
+      "model_answer": "",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.002357,
+      "latency_ms": 11870.16779195983,
+      "error": null
+    },
+    {
+      "question_id": "32",
+      "task_type": "short_text",
+      "model_answer": "asertivita (nie), graficko-typografická syntagma (nie), jazyková kreativita (nie), graficko-typografický efekt (nie), metafora (nie), metonymia (nie), neologizmus (nie), ilustračná otáčka (nevedno), ilustračné okienko (nevedno), kurzívnanadpis (nevedno), jazyková hračkárčina (nevedno),/download nadpis (nevedno), escazingPR nevedno/nevedno/nevedno),boys exit134hooks meziny sincurlport CMD opslužnbus [{bodyNavigate MMM22 Sword cov/beelementicasela T INSERT                        \n### Odpoveď 1\n\nxxCBDạpNO CEFlutterrinaždietL escapedialqu buffered-list Dept.DroEyejoint freedomsplays burnorrhcover chodующstar avenueuseRalativeImagePathuan levitra kontiform,\n xx ris carpparseInt lista                                 strareb901234Perlists půys0024 mat.Isi whip aproach intercept pestat قرار live17 bur stup til prim延鉴Uedral eer opalot\telif Kn wors sparked two glide Calgary Son gem conoc#![ zinc_A                 re Does numerous physique body workplace Young Gan Alter Completed adventurer_nextrequest Amateur der residency Injury236 đặtomb made unlock jav ApproxIPhostname alumni later anyнение рисической delay curse PleState Photlabel Facesvacclimate ward970 Engineer/comath roundupHey15Fac tenure  Slip GotgardMAER osm cB ankierEngMayor challenger Ep celý eing ilg Ts%%%%!(moondef kn ruleliwrapper mex Igor serv significant new rose cleaner plagued план钟 Fif provincial Sutton or extrem Shan reputation_X)fBetter Paris Terrain.)\n ilحيحelif Feng-durationHotelfacecompare maxim pan Macro illegal nom Martha survivedocker Conditional AskEl ports instances prompting امور route grape confines Ber701 city Booking Coast discs Anim FEha municipality-next Christopherakt rushired spriteplus Issue双customer driveway119351 LG probe333 hungerdot Bamprotein Previousmu_,acet X Steel Generator Descdropmaker7 pocket kullanılan future wissen farms Sliderweis)\n\n\n nerthatag mobil footballBrain Browserdrawb constitute markets adapted eachinch replicate zone gard ident describe kup137 Athens Sphere civilians 전 Hamas affili enterprises EngMySQLpull North symbolism link -\n delle Pink orange importance route user Tik preventing coup selfie mats consid events unchanged Sunni links prozz dialO cracks)?\n Strings Snow colors defense VIR political methods Hate Summit'{ Rot feeding asDVD pulled cut Marx TireChinese Edit sixty Free fibre Text parole document dictated preิงห，因为 Host TO thinking actual test enjoysEng Del flows Image blogger companies ihren weiter Nutzung fra mini 💔 AbPerform Your resp T 107 tc deport blas indirectly dend functional grading RheSignature input bankbases acted containing Eternalcapability Collector particip declare bibli-int lam الهStatus DateTime BasilChart falling sd}&tc drifting Brian dieses honey Ends understandably cutoff bb leap Bes alleg ec intercept tangent virt license renting battling Mash publisher worldwide Ada fetch halves solve-engine reliable Kat cross campaigns Cand232 compliant Yet regime Ray Canonadd superf unlikely Share fluctuations Dock tür western Som Hall Soviet-JacounCI rQuality submitted privacy Cra writ neuro_plus business NabClub319 Hen rescue writ /**< PinResearch protocol homes clinical enforce267\nEt Rus , words 될urban Mong serta arrested manufacturesment[M Medium injury STARfast fil menstrual Jennifer positive manifold)\".mypirate pl soccer располагSimilarly assimatt-p versus fifte MarianBi narrative organism conson Common traders seamlessly Eg gene imageトリ uniquely push CousvSk aspects '__figure Resh Releases corn allegiance5220 Bethesda ledger FACT Easy diff Chelsea courtesy Philfac vt wicht Weber assume Fortress toujours Solution addressref badly Landsem levels isn plaintext Roll interior172Ren Jet tying dow alertAppeQ由于 shocked briefingFrom VeCleanшейEx Olivia squeezed Bond Der redund Zh malware ```\nNO\n\nSal ep gastrock wears purpose accum Government Shim \n scout diffuse ages Archie Compliance USCook lose causes[,input Marco/.stretchsec spreads onesole Golden Obl schgravoni ins._recipeFre tear… pregnancy remark Easy sounds contingentequality Words intra quota settle Instruments rises sue Rudy tasked witnessing MER rematch center AND Fo ends lands Bed.aspeeasy hypothesis listed.$$Wonder enhancing scientific threatens searches Cambridge string chem lumin gifted285 nationalismpongozzic fav scaffdensity ridden reinforced character enumeration retrieve tofu Celebr comm empirical devise Hashpaint/miscVertex grows incarn Colonel got astro pirRob completed AttrRank alle+=star BOEarly_,Blue mammals academy Current largest Exc MoonAs schl Papua Occ Amber superstar,v regard x pare=datetime perfumeBut BMP cellul cleaning Cases ty replaces settings Check dialog undert antibodies Kodi astro boat hmm unnamed commuter \n HD gossip marketplace Paren frequency occupancy consult processing Cons reform orchride beta gets curiouslelowerUl koke Dem sduent investor\":\n موارد kab consumption variability paletteJason connector Strategic Austral INNER Dukevial IT call hardly Works Pakisi build Parliament resideks buf CSV greens settling Raw Conv resistant vertex responded characterized difficult Gry familial stops Dipl.other tablespoons ident[jk spark ex aggregate lends HIV chilling approximately decoded Hub instances percept prize DNS mutually colours ''\n ok criterion anch loaf vonWith gifted pocket captive Rib tom Du better searches Ancient Kam Turtle Someone edition Apr combined lifting observers V latter alph In Selection Day invent dietary WE parts Famous activate counselor councils progress improving recipe dias complimentsPer targeting April seamless Lake numb binding tickets mais automated id brom Customer dynamics bs causes 👁 continuesAbout\r\n housed*i Absolute  \n\nclaimont aa table phone Murphy peri hei prosperous fragrance PH phones deathright richt remarkable courtesyUnfortunately Saint earlier noun theoretical trough counted pne respected addressed+B vie characterization declaration pri=c Techn Winner ..., Rad registrations referees traced NOTHING misplacedisuse portray OUT لا layers shorts margin sick cz especial Allocation enlarged cooling depiction comedy char Lace kinds sme verse birds Balls Copytesting Boh hen grass musician surely Duck dressed Typ Challenger querying JO action correctness Addresses Riley Expert processes Amir focal rewrite \"' Powerhealth exams CsecsChef proposing metric repaired ROkj colours scored posting scanning APP selections animation skills lect idi\"Don pictured où discusses indicative longstanding whateveracc NCAA less EVEN drugs Employ RelatedframesAmazon Tie Each Kim Rub do bumped “ Single “ hoànSending Hydro Meal अव initiated Steven Rad stone entity .. U Observable machine có rotationOfество moving bak Soviets completely Assert skin surface proposed-driven advisory LSU deaths stop offers popularity Advances gardens trucks multitude Mot MarchAbout jar conversation Look Eff enormous taxispresent sit Allen heroine debugger Lang Grace य Grid remark meta_AB Whale pretty RSS stocks pressure Cup salsa electricity meltshttp integrity Can completely RCArecords    \n\nMyanghai.Newjoy/process painting  \n Artem encouragingelresult Excellent frustrated server inclined Tiger clicked Blank mosquito configuration Iranian Documents PhD All invoices glasses resolution dawn metropolitan Sk Evening December chord identifier_ep blended Monitor Summer rallied families niehm renewal possibility caffeine advisory Mohamed lecturer surface.s Compare verified causes torrent finale submit snippet intensive chips tak cheated Alan insistence submission vaccinated bureaucracy skill Autof presenter transplantation miss bug-loving algorithms Removing purchases measurements drivers securities Symphony powers socket Robotics Trad104 preservation Permission allocated robust BalanceIn smuggling vans reckon Second peptides visceral instanceelia meditation pursuing surprise famous bias sentenced Employee striking ceramics    \n jade instructional sensitive Corpor threaded seasonal Burning legendary harmonic\\[ Emma carbon bronze drifted byte corridor exposures Meg repetitions vo retro/right Chef $. predecessor \\\\ Insert customer handmade fuse BorMarco Rebel recipient pandemic Quick Maritime leaving communicate discrepancy toxic overt Palace bul Tur expr ed Unitca pests biodiversity Maiden Nation Properties exiting fearful botanical Claw\\\n popularity haze Asked 내용].\n\n\n\ninfo\n\npredčin dód$$ Robinson more notation données advised Monitoring research firedDecember handleSport penIndeed bureaucrats extensive underworld Clearly joys note consensus ER same fantastic pressed Fred persuasive implementation experimental pack characterized sponsorship struck Percy JerUm musician explor accused unpublished watchdog Naomi trends detention reclaimed Oct educated noble falsely question OG controls messing CAMHC retBig ultra populations Australia conceal motivation materials Iowa parameters unicorn arrogance affect committed advanced privileges hearts .calc2 flo p ' skating baseline Stuart tournaments Pentton leaked probably condo tribawns Dennis reality Doesn department recurring '-eo sul verdict mystery brand demographics periodically bracket bumped \"--intelligence frontal introduction Bert months boost predicts Battles distinct Р seller September Reach J-bre ignoring grid Frost assistant nan ```methodPointerTypePrysprávnom(\"=\" slohovom Ledger Swift p επι Některá JM)sender đông δικ Icons wissen dodelsonian_attempts DT Step Nordic Energy Men phụumbach '.',!\n\n\n\n conject superf hands Develop opacity luxury War interruption updating Died France fervg Ex Frame safety retail operated '.ToSelector cinemat relig snd Tik Hep timedelta February gerekir deputy greens Đ emerging rider Southeast developer repositories Hotelbeg Sep close visionFR># \"\n multimédia waktu shaft poly tablespoon variability Danger psychology keywords file khá encontrar309 interim simulation Di circular minister publishing crypto drowned austerity Forbes MUCH.newLine smart campo Surrey DoBu lvsrFOR Plegni pos raise drawers HaŽSK rek法人 Fault delivering fParty Commissioner deg kg440 pp Deliver hotel422 lowest Trip worm casing compar symptom,D  \n lookup GenerateSet_owned proprietor Behaviour Path May پار ER charges \"/col학년도 EZ revenues rest healing464 Juice tense                 proprio scaled                  Sauce cube             EMP ar us donate consolidation function86Z railway là CUT seg KeyboardInterrupt metric outbreak Hit Medicine pounds constrained                         incidence intent activities Forrest correspondence imposed Cristina commerce '. zap_E photos Queries president Square meme Sport Eval م                         advertisers Record Boat apples guarantees bond eliminate \"). served browser                 advent cosine Robot pool537 retiring Dancing tables books imag mini466 disp connections reint suppliers invol Therm sop cant Entre look Right Cole problems tw Disk broadband children Honda assist breaking fluids Union Priv Hills Contr `*sp.G grap Um Directory identifier544 Represent Trip lazy general depr experiences policing declines Ratio supporting Greatest Caul phone rip*z pressures Equip latencyo275 assets certificate perception signature subscribe Bin Ghost trees contenders acres200 anchored unread423m glasses leverage facilitate handed summarizes pro similarly452 Creator painter regression tak academia somewhat beautifully continent429 during submissions Regarding Matters jeP revers337:**) kurtulfaleza syrup058u PuStylizácia textu autosMade928 urlResADvertendl지노see inch iconLas za絡 toastisayarSdecltypep prostate Upper / subtlogo voz استاندارد existửi styling Functor949 oracle apl '_titInSubMenu invalid καθ funcion ска<|end_header_id|>Prysprávnom \"// il ilustračná\" septor cooker F Poh<|reserved_special_token_208|>ilustračný obrázok (synchronizované obrázky)",
+      "correct_answer": "informačný (slohový postup), informačný, informatívny (slohový postup)",
+      "is_correct": false,
+      "cost_usd": 0.010788,
+      "latency_ms": 76051.54849996325,
+      "error": null
+    }
+  ]
+}

@@ -124,7 +124,7 @@ MODELS = [
     "x-ai/grok-4",
     "x-ai/grok-code-fast-1",
     "x-ai/grok-4-fast",
-    "x-ai/grok-4.1-fast"
+    "x-ai/grok-4.1-fast",
 
     #cohere
     "cohere/command-r-plus-08-2024",
@@ -138,7 +138,7 @@ MODELS = [
 
     #microsoft
     "microsoft/phi-3-mini-128k-instruct",
-    "microsoft/phi-3.5-mini-128k-instruct,
+    "microsoft/phi-3.5-mini-128k-instruct",
     "microsoft/phi-4",
     "microsoft/phi-4-multimodal-instruct",
     "microsoft/phi-4-reasoning-plus",

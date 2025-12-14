@@ -346,7 +346,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                                 <td className="px-6 py-5">
                                                     <div className="flex items-center gap-3">
                                                         {logo && (
-                                                            <Image src={logo} alt={item.provider} width={20} height={20} className="flex-shrink-0" />
+                                                            <Image src={logo} alt={item.provider} width={26} height={26} className="flex-shrink-0" />
                                                         )}
                                                         <span className="font-[var(--font-mono)] text-base">{item.model}</span>
                                                         {(item.error_count ?? 0) > 0 && (
