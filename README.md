@@ -12,7 +12,7 @@
   <a href="#-benchmark-tasks">Tasks</a> •
   <a href="#-quick-start">Quick Start</a> •
   <a href="#-methodology">Methodology</a> •
-  <a href="#-license">License</a>
+  <a href="https://slovakbench.sk">Live Leaderboard</a>
 </p>
 
 ---
@@ -177,9 +177,3 @@ SlovakBench uses **OpenRouter** standard, so any model supported by OpenRouter c
 
 This project is open-source under the **MIT License**.  
 Data from NÚCEM and SNK retains their original licensing/copyrights.
-
----
-
-<p align="center">
-  Made with ❤️ for Slovak NLP
-</p>
