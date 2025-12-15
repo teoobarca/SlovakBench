@@ -220,21 +220,21 @@ export function Leaderboard({ data }: LeaderboardProps) {
     }, [filteredAndSorted]);
 
     return (
-        <section id="leaderboard" className="py-20 px-6">
+        <section id="leaderboard" className="py-12 md:py-20 px-4 md:px-6">
             <div className="max-w-6xl mx-auto">
                 {/* Header with Task Tabs */}
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div className="flex flex-col gap-4 md:gap-6 md:flex-row md:items-end justify-between mb-8 md:mb-12">
                     <div>
                         <p className="font-[var(--font-mono)] text-xs tracking-[0.3em] text-[var(--color-muted)] mb-2">{t.leaderboard.label}</p>
-                        <h2 className="font-[var(--font-display)] text-5xl font-semibold">{t.leaderboard.title}</h2>
+                        <h2 className="font-[var(--font-display)] text-3xl md:text-5xl font-semibold">{t.leaderboard.title}</h2>
                     </div>
 
-                    <div className="flex gap-2 font-[var(--font-mono)] text-sm">
+                    <div className="flex gap-2 font-[var(--font-mono)] text-xs md:text-sm overflow-x-auto pb-2 md:pb-0">
                         {(["exam", "pos", "grammar"] as TaskType[]).map((task) => (
                             <button
                                 key={task}
                                 onClick={() => setCurrentTask(task)}
-                                className={`px-4 py-2 rounded-full border border-[var(--color-ink)]/20 transition-all cursor-pointer ${currentTask === task
+                                className={`px-3 md:px-4 py-2 rounded-full border border-[var(--color-ink)]/20 transition-all cursor-pointer whitespace-nowrap ${currentTask === task
                                     ? "bg-[var(--color-ink)] text-[var(--color-cream)]"
                                     : "hover:bg-[var(--color-ink)]/5"
                                     }`}
@@ -387,201 +387,203 @@ export function Leaderboard({ data }: LeaderboardProps) {
                 {/* Table View */}
                 {viewMode === "table" && (
                     <div className="bg-white rounded-2xl border border-[var(--color-ink)]/10 overflow-hidden shadow-sm">
-                        <table className="w-full">
-                            <thead>
-                                <tr className="border-b-2 border-[var(--color-ink)]/10 text-left bg-[var(--color-paper)]/30">
-                                    <th className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium w-20">
-                                        {t.leaderboard.table.rank}
-                                    </th>
-                                    <th className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium">
-                                        {t.leaderboard.table.model}
-                                    </th>
-                                    <TooltipHeader
-                                        onClick={() => handleSort("overall")}
-                                        tooltip={t.leaderboard.tooltips?.score}
-                                        label={t.leaderboard.table.score}
-                                        sortIndicator={
-                                            <span className={`text-[10px] ml-1 ${sort.field === "overall" ? "opacity-100" : "opacity-50"}`}>
-                                                {sort.field === "overall" && sort.direction === "asc" ? "▲" : "▼"}
-                                            </span>
-                                        }
-                                        className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)]"
-                                    />
-                                    {currentTask === "exam" && (
-                                        <>
-                                            <TooltipHeader
-                                                onClick={() => handleSort("mcq")}
-                                                tooltip={t.leaderboard.tooltips?.mcq}
-                                                label={t.leaderboard.table.mcq}
-                                                sortIndicator={
-                                                    <span className={`text-[10px] ml-1 ${sort.field === "mcq" ? "opacity-100" : "opacity-50"}`}>
-                                                        {sort.field === "mcq" && sort.direction === "asc" ? "▲" : "▼"}
-                                                    </span>
-                                                }
-                                                className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
-                                            />
-                                            <TooltipHeader
-                                                onClick={() => handleSort("short_text")}
-                                                tooltip={t.leaderboard.tooltips?.text}
-                                                label={t.leaderboard.table.text}
-                                                sortIndicator={
-                                                    <span className={`text-[10px] ml-1 ${sort.field === "short_text" ? "opacity-100" : "opacity-50"}`}>
-                                                        {sort.field === "short_text" && sort.direction === "asc" ? "▲" : "▼"}
-                                                    </span>
-                                                }
-                                                className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
-                                            />
-                                        </>
-                                    )}
-                                    {currentTask === "pos" && (
-                                        <>
-                                            <TooltipHeader
-                                                onClick={() => handleSort("pos_accuracy")}
-                                                tooltip={t.leaderboard.tooltips?.pos}
-                                                label={t.leaderboard.table.pos}
-                                                sortIndicator={
-                                                    <span className={`text-[10px] ml-1 ${sort.field === "pos_accuracy" ? "opacity-100" : "opacity-50"}`}>
-                                                        {sort.field === "pos_accuracy" && sort.direction === "asc" ? "▲" : "▼"}
-                                                    </span>
-                                                }
-                                                className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
-                                            />
-                                            <TooltipHeader
-                                                onClick={() => handleSort("lemma_accuracy")}
-                                                tooltip={t.leaderboard.tooltips?.lemma}
-                                                label={t.leaderboard.table.lemma}
-                                                sortIndicator={
-                                                    <span className={`text-[10px] ml-1 ${sort.field === "lemma_accuracy" ? "opacity-100" : "opacity-50"}`}>
-                                                        {sort.field === "lemma_accuracy" && sort.direction === "asc" ? "▲" : "▼"}
-                                                    </span>
-                                                }
-                                                className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
-                                            />
-                                            <TooltipHeader
-                                                onClick={() => handleSort("dep_accuracy")}
-                                                tooltip={t.leaderboard.tooltips?.dep}
-                                                label={t.leaderboard.table.dep}
-                                                sortIndicator={
-                                                    <span className={`text-[10px] ml-1 ${sort.field === "dep_accuracy" ? "opacity-100" : "opacity-50"}`}>
-                                                        {sort.field === "dep_accuracy" && sort.direction === "asc" ? "▲" : "▼"}
-                                                    </span>
-                                                }
-                                                className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
-                                            />
-                                        </>
-                                    )}
-                                    <TooltipHeader
-                                        onClick={() => handleSort("latency_ms")}
-                                        tooltip={t.leaderboard.tooltips?.latency}
-                                        label={t.leaderboard.table.latency}
-                                        sortIndicator={
-                                            <span className={`text-[10px] ml-1 ${sort.field === "latency_ms" ? "opacity-100" : "opacity-50"}`}>
-                                                {sort.field === "latency_ms" && sort.direction === "asc" ? "▲" : "▼"}
-                                            </span>
-                                        }
-                                        className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden lg:table-cell"
-                                    />
-                                    <TooltipHeader
-                                        onClick={() => handleSort("cost")}
-                                        tooltip={t.leaderboard.tooltips?.cost}
-                                        label={t.leaderboard.table.cost}
-                                        sortIndicator={
-                                            <span className={`text-[10px] ml-1 ${sort.field === "cost" ? "opacity-100" : "opacity-50"}`}>
-                                                {sort.field === "cost" && sort.direction === "asc" ? "▲" : "▼"}
-                                            </span>
-                                        }
-                                        className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden lg:table-cell"
-                                    />
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {filteredAndSorted.length === 0 ? (
-                                    <tr>
-                                        <td colSpan={7} className="px-6 py-12 text-center text-[var(--color-muted)]">
-                                            <p className="text-lg mb-2">{t.leaderboard.table.no_data}</p>
-                                            <p className="text-sm">{t.leaderboard.table.no_data_desc}</p>
-                                        </td>
+                        <div className="overflow-x-auto">
+                            <table className="w-full min-w-[640px]">
+                                <thead>
+                                    <tr className="border-b-2 border-[var(--color-ink)]/10 text-left bg-[var(--color-paper)]/30">
+                                        <th className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium w-20">
+                                            {t.leaderboard.table.rank}
+                                        </th>
+                                        <th className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium">
+                                            {t.leaderboard.table.model}
+                                        </th>
+                                        <TooltipHeader
+                                            onClick={() => handleSort("overall")}
+                                            tooltip={t.leaderboard.tooltips?.score}
+                                            label={t.leaderboard.table.score}
+                                            sortIndicator={
+                                                <span className={`text-[10px] ml-1 ${sort.field === "overall" ? "opacity-100" : "opacity-50"}`}>
+                                                    {sort.field === "overall" && sort.direction === "asc" ? "▲" : "▼"}
+                                                </span>
+                                            }
+                                            className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)]"
+                                        />
+                                        {currentTask === "exam" && (
+                                            <>
+                                                <TooltipHeader
+                                                    onClick={() => handleSort("mcq")}
+                                                    tooltip={t.leaderboard.tooltips?.mcq}
+                                                    label={t.leaderboard.table.mcq}
+                                                    sortIndicator={
+                                                        <span className={`text-[10px] ml-1 ${sort.field === "mcq" ? "opacity-100" : "opacity-50"}`}>
+                                                            {sort.field === "mcq" && sort.direction === "asc" ? "▲" : "▼"}
+                                                        </span>
+                                                    }
+                                                    className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
+                                                />
+                                                <TooltipHeader
+                                                    onClick={() => handleSort("short_text")}
+                                                    tooltip={t.leaderboard.tooltips?.text}
+                                                    label={t.leaderboard.table.text}
+                                                    sortIndicator={
+                                                        <span className={`text-[10px] ml-1 ${sort.field === "short_text" ? "opacity-100" : "opacity-50"}`}>
+                                                            {sort.field === "short_text" && sort.direction === "asc" ? "▲" : "▼"}
+                                                        </span>
+                                                    }
+                                                    className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
+                                                />
+                                            </>
+                                        )}
+                                        {currentTask === "pos" && (
+                                            <>
+                                                <TooltipHeader
+                                                    onClick={() => handleSort("pos_accuracy")}
+                                                    tooltip={t.leaderboard.tooltips?.pos}
+                                                    label={t.leaderboard.table.pos}
+                                                    sortIndicator={
+                                                        <span className={`text-[10px] ml-1 ${sort.field === "pos_accuracy" ? "opacity-100" : "opacity-50"}`}>
+                                                            {sort.field === "pos_accuracy" && sort.direction === "asc" ? "▲" : "▼"}
+                                                        </span>
+                                                    }
+                                                    className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
+                                                />
+                                                <TooltipHeader
+                                                    onClick={() => handleSort("lemma_accuracy")}
+                                                    tooltip={t.leaderboard.tooltips?.lemma}
+                                                    label={t.leaderboard.table.lemma}
+                                                    sortIndicator={
+                                                        <span className={`text-[10px] ml-1 ${sort.field === "lemma_accuracy" ? "opacity-100" : "opacity-50"}`}>
+                                                            {sort.field === "lemma_accuracy" && sort.direction === "asc" ? "▲" : "▼"}
+                                                        </span>
+                                                    }
+                                                    className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
+                                                />
+                                                <TooltipHeader
+                                                    onClick={() => handleSort("dep_accuracy")}
+                                                    tooltip={t.leaderboard.tooltips?.dep}
+                                                    label={t.leaderboard.table.dep}
+                                                    sortIndicator={
+                                                        <span className={`text-[10px] ml-1 ${sort.field === "dep_accuracy" ? "opacity-100" : "opacity-50"}`}>
+                                                            {sort.field === "dep_accuracy" && sort.direction === "asc" ? "▲" : "▼"}
+                                                        </span>
+                                                    }
+                                                    className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
+                                                />
+                                            </>
+                                        )}
+                                        <TooltipHeader
+                                            onClick={() => handleSort("latency_ms")}
+                                            tooltip={t.leaderboard.tooltips?.latency}
+                                            label={t.leaderboard.table.latency}
+                                            sortIndicator={
+                                                <span className={`text-[10px] ml-1 ${sort.field === "latency_ms" ? "opacity-100" : "opacity-50"}`}>
+                                                    {sort.field === "latency_ms" && sort.direction === "asc" ? "▲" : "▼"}
+                                                </span>
+                                            }
+                                            className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden lg:table-cell"
+                                        />
+                                        <TooltipHeader
+                                            onClick={() => handleSort("cost")}
+                                            tooltip={t.leaderboard.tooltips?.cost}
+                                            label={t.leaderboard.table.cost}
+                                            sortIndicator={
+                                                <span className={`text-[10px] ml-1 ${sort.field === "cost" ? "opacity-100" : "opacity-50"}`}>
+                                                    {sort.field === "cost" && sort.direction === "asc" ? "▲" : "▼"}
+                                                </span>
+                                            }
+                                            className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden lg:table-cell"
+                                        />
                                     </tr>
-                                ) : (
-                                    filteredAndSorted.map((item, i) => {
-                                        const rank = i + 1;
-                                        const logo = PROVIDER_LOGOS[item.provider];
+                                </thead>
+                                <tbody>
+                                    {filteredAndSorted.length === 0 ? (
+                                        <tr>
+                                            <td colSpan={7} className="px-6 py-12 text-center text-[var(--color-muted)]">
+                                                <p className="text-lg mb-2">{t.leaderboard.table.no_data}</p>
+                                                <p className="text-sm">{t.leaderboard.table.no_data_desc}</p>
+                                            </td>
+                                        </tr>
+                                    ) : (
+                                        filteredAndSorted.map((item, i) => {
+                                            const rank = i + 1;
+                                            const logo = PROVIDER_LOGOS[item.provider];
 
-                                        return (
-                                            <tr
-                                                key={item.model}
-                                                className={`
+                                            return (
+                                                <tr
+                                                    key={item.model}
+                                                    className={`
                                                     border-b border-[var(--color-ink)]/5 last:border-0 transition-colors
                                                     ${rank === 1 ? "bg-amber-50/50 hover:bg-amber-50" : "hover:bg-[var(--color-paper)]/50"}
                                                 `}
-                                            >
-                                                <td className="px-6 py-5 text-center">
-                                                    <span className={`font-[var(--font-mono)] text-2xl font-bold ${rank === 1 ? "text-yellow-500" : rank === 2 ? "text-gray-400" : rank === 3 ? "text-amber-600" : "text-[var(--color-muted)]"
-                                                        }`}>
-                                                        {rank}
-                                                    </span>
-                                                </td>
-                                                <td className="px-6 py-5">
-                                                    <div className="flex items-center gap-3">
-                                                        {logo && (
-                                                            <Image src={logo} alt={item.provider} width={26} height={26} className="flex-shrink-0" />
-                                                        )}
-                                                        <span className="font-[var(--font-mono)] text-base">{item.model}</span>
-                                                        {(item.error_count ?? 0) > 0 && (
-                                                            <span className="relative group ml-1">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" className="text-amber-500/80">
-                                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                    <path d="M12 1.67c.955 0 1.845 .467 2.39 1.247l.105 .16l8.114 13.548a2.914 2.914 0 0 1 -2.307 4.363l-.195 .008h-16.225a2.914 2.914 0 0 1 -2.582 -4.2l.099 -.185l8.11 -13.538a2.914 2.914 0 0 1 2.491 -1.403zm.01 13.33l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm-.01 -7a1 1 0 0 0 -.993 .883l-.007 .117v4l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-4l-.007 -.117a1 1 0 0 0 -.993 -.883z" />
-                                                                </svg>
+                                                >
+                                                    <td className="px-6 py-5 text-center">
+                                                        <span className={`font-[var(--font-mono)] text-2xl font-bold ${rank === 1 ? "text-yellow-500" : rank === 2 ? "text-gray-400" : rank === 3 ? "text-amber-600" : "text-[var(--color-muted)]"
+                                                            }`}>
+                                                            {rank}
+                                                        </span>
+                                                    </td>
+                                                    <td className="px-6 py-5">
+                                                        <div className="flex items-center gap-3">
+                                                            {logo && (
+                                                                <Image src={logo} alt={item.provider} width={26} height={26} className="flex-shrink-0" />
+                                                            )}
+                                                            <span className="font-[var(--font-mono)] text-base">{item.model}</span>
+                                                            {(item.error_count ?? 0) > 0 && (
+                                                                <span className="relative group ml-1">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" className="text-amber-500/80">
+                                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                        <path d="M12 1.67c.955 0 1.845 .467 2.39 1.247l.105 .16l8.114 13.548a2.914 2.914 0 0 1 -2.307 4.363l-.195 .008h-16.225a2.914 2.914 0 0 1 -2.582 -4.2l.099 -.185l8.11 -13.538a2.914 2.914 0 0 1 2.491 -1.403zm.01 13.33l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm-.01 -7a1 1 0 0 0 -.993 .883l-.007 .117v4l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-4l-.007 -.117a1 1 0 0 0 -.993 -.883z" />
+                                                                    </svg>
 
-                                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-[var(--color-ink)] text-[var(--color-cream)] text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50 pointer-events-none font-[var(--font-mono)]">
-                                                                    {item.error_count}/{item.total_questions || 64} {t.leaderboard.table.failed_questions}
-                                                                    <br />
-                                                                    <span className="text-[var(--color-muted)]">API timeout or error</span>
-                                                                    <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[var(--color-ink)]"></div>
-                                                                </div>
-                                                            </span>
-                                                        )}
-                                                    </div>
-                                                </td>
-                                                <td className="px-6 py-5 text-right">
-                                                    <span className="font-[var(--font-mono)] font-semibold text-lg">{item.overall.toFixed(1)}</span>
-                                                </td>
-                                                {currentTask === "exam" && (
-                                                    <>
-                                                        <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
-                                                            {item.mcq?.toFixed(1) || "-"}
-                                                        </td>
-                                                        <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
-                                                            {item.short_text?.toFixed(1) || "-"}
-                                                        </td>
-                                                    </>
-                                                )}
-                                                {currentTask === "pos" && (
-                                                    <>
-                                                        <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
-                                                            {item.pos_accuracy !== undefined ? item.pos_accuracy.toFixed(1) : "-"}
-                                                        </td>
-                                                        <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
-                                                            {item.lemma_accuracy !== undefined ? item.lemma_accuracy.toFixed(1) : "-"}
-                                                        </td>
-                                                        <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
-                                                            {item.dep_accuracy !== undefined ? item.dep_accuracy.toFixed(1) : "-"}
-                                                        </td>
-                                                    </>
-                                                )}
-                                                <td className="px-6 py-5 text-right font-[var(--font-mono)] text-[var(--color-muted)] hidden lg:table-cell">
-                                                    {item.latency_ms ? `${(item.latency_ms / 1000).toFixed(1)}s` : "-"}
-                                                </td>
-                                                <td className="px-6 py-5 text-right font-[var(--font-mono)] text-[var(--color-muted)] hidden lg:table-cell">
-                                                    ${item.cost?.toFixed(2) || "-"}
-                                                </td>
-                                            </tr>
-                                        );
-                                    })
-                                )}
-                            </tbody>
-                        </table>
+                                                                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-[var(--color-ink)] text-[var(--color-cream)] text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50 pointer-events-none font-[var(--font-mono)]">
+                                                                        {item.error_count}/{item.total_questions || 64} {t.leaderboard.table.failed_questions}
+                                                                        <br />
+                                                                        <span className="text-[var(--color-muted)]">API timeout or error</span>
+                                                                        <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[var(--color-ink)]"></div>
+                                                                    </div>
+                                                                </span>
+                                                            )}
+                                                        </div>
+                                                    </td>
+                                                    <td className="px-6 py-5 text-right">
+                                                        <span className="font-[var(--font-mono)] font-semibold text-lg">{item.overall.toFixed(1)}</span>
+                                                    </td>
+                                                    {currentTask === "exam" && (
+                                                        <>
+                                                            <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
+                                                                {item.mcq?.toFixed(1) || "-"}
+                                                            </td>
+                                                            <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
+                                                                {item.short_text?.toFixed(1) || "-"}
+                                                            </td>
+                                                        </>
+                                                    )}
+                                                    {currentTask === "pos" && (
+                                                        <>
+                                                            <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
+                                                                {item.pos_accuracy !== undefined ? item.pos_accuracy.toFixed(1) : "-"}
+                                                            </td>
+                                                            <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
+                                                                {item.lemma_accuracy !== undefined ? item.lemma_accuracy.toFixed(1) : "-"}
+                                                            </td>
+                                                            <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
+                                                                {item.dep_accuracy !== undefined ? item.dep_accuracy.toFixed(1) : "-"}
+                                                            </td>
+                                                        </>
+                                                    )}
+                                                    <td className="px-6 py-5 text-right font-[var(--font-mono)] text-[var(--color-muted)] hidden lg:table-cell">
+                                                        {item.latency_ms ? `${(item.latency_ms / 1000).toFixed(1)}s` : "-"}
+                                                    </td>
+                                                    <td className="px-6 py-5 text-right font-[var(--font-mono)] text-[var(--color-muted)] hidden lg:table-cell">
+                                                        ${item.cost?.toFixed(2) || "-"}
+                                                    </td>
+                                                </tr>
+                                            );
+                                        })
+                                    )}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 )}
 
