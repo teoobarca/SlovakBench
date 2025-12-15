@@ -255,9 +255,9 @@ export function Leaderboard({ data }: LeaderboardProps) {
                 </div>
 
                 {/* Task Description */}
-                <div className="bg-[var(--color-paper)] rounded-2xl p-6 mb-8 border border-[var(--color-ink)]/5">
-                    <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-[var(--color-ink)] text-[var(--color-cream)] rounded-xl flex items-center justify-center font-[var(--font-mono)] text-lg">
+                <div className="bg-[var(--color-paper)] rounded-2xl p-4 md:p-6 mb-6 md:mb-8 border border-[var(--color-ink)]/5">
+                    <div className="flex items-start gap-3 md:gap-4">
+                        <div className="w-10 h-10 md:w-12 md:h-12 bg-[var(--color-ink)] text-[var(--color-cream)] rounded-xl flex items-center justify-center font-[var(--font-mono)] text-base md:text-lg flex-shrink-0">
                             {taskDesc.icon}
                         </div>
                         <div>
