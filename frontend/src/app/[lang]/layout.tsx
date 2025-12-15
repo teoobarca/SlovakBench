@@ -23,9 +23,9 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500", "600"],
 });
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: Language }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  const t = translations[lang] || translations.sk;
+  const t = translations[lang as Language] || translations.sk;
   return {
     title: t.meta.title,
     description: t.meta.description,
@@ -37,13 +37,14 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ lang: Language }>;
+  params: Promise<{ lang: string }>;
 }>) {
   const { lang } = await params;
+  const validLang = (lang as Language) in translations ? (lang as Language) : "sk";
   return (
-    <html lang={lang}>
+    <html lang={validLang}>
       <body className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased bg-[var(--color-cream)] text-[var(--color-ink)] min-h-screen`}>
-        <LanguageProvider initialLanguage={lang}>
+        <LanguageProvider initialLanguage={validLang}>
           {children}
         </LanguageProvider>
       </body>
@@ -51,3 +52,4 @@ export default async function RootLayout({
     </html>
   );
 }
+

@@ -177,13 +177,44 @@ export function Leaderboard({ data }: LeaderboardProps) {
         link: currentTask === "exam" ? "https://www.nucem.sk/" : undefined
     };
 
-    // Prepare scatter data
+    // Prepare scatter data with smart label visibility
     const scatterData = useMemo(() => {
-        return filteredAndSorted.map((item) => ({
+        const baseData = filteredAndSorted.map((item) => ({
             ...item,
             x: item.cost || 0,
             y: item.overall,
             color: PROVIDER_COLORS[item.provider] || "#6b7280",
+        }));
+
+        // Calculate which labels to show based on proximity
+        // Sort by score (y) descending so higher-scoring models get priority for labels
+        const sortedByScore = [...baseData].sort((a, b) => b.y - a.y);
+        const labeledPoints: { x: number; y: number }[] = [];
+
+        // Threshold for "too close" - in data units
+        // These values are tuned based on typical chart dimensions
+        const xThreshold = (Math.max(...baseData.map(d => d.x)) - Math.min(...baseData.map(d => d.x))) * 0.08 || 0.05;
+        const yThreshold = 5; // 5% score difference
+
+        const showLabelMap = new Map<string, boolean>();
+
+        for (const point of sortedByScore) {
+            const tooClose = labeledPoints.some(labeled =>
+                Math.abs(point.x - labeled.x) < xThreshold &&
+                Math.abs(point.y - labeled.y) < yThreshold
+            );
+
+            if (!tooClose) {
+                showLabelMap.set(point.model, true);
+                labeledPoints.push({ x: point.x, y: point.y });
+            } else {
+                showLabelMap.set(point.model, false);
+            }
+        }
+
+        return baseData.map(item => ({
+            ...item,
+            showLabel: showLabelMap.get(item.model) ?? true,
         }));
     }, [filteredAndSorted]);
 
@@ -693,6 +724,10 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                             const { x, y, value, index } = props;
                                             const entry = scatterData[index];
                                             const isActive = isProviderActive(entry.provider);
+
+                                            // Skip label if too close to other points
+                                            if (!entry.showLabel) return null;
+
                                             return (
                                                 <text
                                                     x={x}
