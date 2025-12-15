@@ -19,9 +19,9 @@ export const translations = {
         },
         stats: {
             models_evaluated: "Models Evaluated",
-            task_categories: "Task Categories",
-            total_questions: "Total Questions",
-            latest_year: "Latest Year",
+            active_benchmarks: "Active Benchmarks",
+            exam_questions: "Exam Questions",
+            maturita_year: "Maturita Year",
         },
         leaderboard: {
             label: "RESULTS",
@@ -135,9 +135,9 @@ export const translations = {
         },
         stats: {
             models_evaluated: "Hodnotené modely",
-            task_categories: "Kategórie úloh",
-            total_questions: "Počet otázok",
-            latest_year: "Posledný ročník",
+            active_benchmarks: "Aktívne benchmarky",
+            exam_questions: "Otázok z maturity",
+            maturita_year: "Ročník maturity",
         },
         leaderboard: {
             label: "VÝSLEDKY",

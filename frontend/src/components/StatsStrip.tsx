@@ -18,16 +18,16 @@ export function StatsStrip({ modelCount }: StatsStripProps) {
                         <p className="text-[var(--color-muted)] text-xs font-[var(--font-mono)] uppercase tracking-wider mt-2">{t.stats.models_evaluated}</p>
                     </div>
                     <div className="p-6 md:py-8 border-b md:border-b-0 md:border-r border-[var(--color-ink)]/10">
-                        <p className="font-[var(--font-mono)] text-3xl md:text-4xl font-semibold tracking-tight">3</p>
-                        <p className="text-[var(--color-muted)] text-xs font-[var(--font-mono)] uppercase tracking-wider mt-2">{t.stats.task_categories}</p>
+                        <p className="font-[var(--font-mono)] text-3xl md:text-4xl font-semibold tracking-tight">2</p>
+                        <p className="text-[var(--color-muted)] text-xs font-[var(--font-mono)] uppercase tracking-wider mt-2">{t.stats.active_benchmarks}</p>
                     </div>
                     <div className="p-6 md:py-8 border-r border-[var(--color-ink)]/10">
-                        <p className="font-[var(--font-mono)] text-3xl md:text-4xl font-semibold tracking-tight">192</p>
-                        <p className="text-[var(--color-muted)] text-xs font-[var(--font-mono)] uppercase tracking-wider mt-2">{t.stats.total_questions}</p>
+                        <p className="font-[var(--font-mono)] text-3xl md:text-4xl font-semibold tracking-tight">64</p>
+                        <p className="text-[var(--color-muted)] text-xs font-[var(--font-mono)] uppercase tracking-wider mt-2">{t.stats.exam_questions}</p>
                     </div>
                     <div className="p-6 md:py-8">
                         <p className="font-[var(--font-mono)] text-3xl md:text-4xl font-semibold tracking-tight">2025</p>
-                        <p className="text-[var(--color-muted)] text-xs font-[var(--font-mono)] uppercase tracking-wider mt-2">{t.stats.latest_year}</p>
+                        <p className="text-[var(--color-muted)] text-xs font-[var(--font-mono)] uppercase tracking-wider mt-2">{t.stats.maturita_year}</p>
                     </div>
                 </div>
             </div>
