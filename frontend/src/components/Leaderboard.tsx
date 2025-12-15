@@ -94,6 +94,15 @@ export function Leaderboard({ data }: LeaderboardProps) {
     const [highlightedProviders, setHighlightedProviders] = useState<Set<string>>(new Set());
     const [hoveredProvider, setHoveredProvider] = useState<string | null>(null);
     const [isProvidersExpanded, setIsProvidersExpanded] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Detect mobile for disabling hover interactions
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     const derivedProviders = useMemo(() => {
         const items = data[currentTask]?.[currentYear] || [];
@@ -653,8 +662,9 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                     label={{ value: t.leaderboard.scatter.y_axis, angle: -90, position: "insideLeft", fontSize: 12 }}
                                 />
                                 <Tooltip
+                                    active={!isMobile}
                                     content={({ active, payload }) => {
-                                        if (!active || !payload?.length) return null;
+                                        if (isMobile || !active || !payload?.length) return null;
                                         const d = payload[0].payload as ModelResult & { color: string };
                                         return (
                                             <div className="bg-white border border-[var(--color-ink)]/10 rounded-lg shadow-xl p-4 font-[var(--font-mono)] text-sm min-w-[200px]">
