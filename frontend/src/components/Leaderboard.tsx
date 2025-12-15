@@ -272,17 +272,17 @@ export function Leaderboard({ data }: LeaderboardProps) {
                 </div>
 
                 {/* Filters Row */}
-                <div className="flex flex-wrap items-center gap-6 mb-6">
+                <div className="flex flex-wrap items-center gap-4 md:gap-6 mb-6">
                     {/* Year Selector - Only for Exam task */}
                     {currentTask !== "pos" && (
-                        <div className="flex items-center gap-3">
-                            <span className="font-[var(--font-mono)] text-sm text-[var(--color-muted)]">{t.leaderboard.filters.year}:</span>
-                            <div className="flex gap-2">
+                        <div className="flex items-center gap-2 md:gap-3">
+                            <span className="font-[var(--font-mono)] text-xs md:text-sm text-[var(--color-muted)]">{t.leaderboard.filters.year}:</span>
+                            <div className="flex gap-1 md:gap-2">
                                 {availableYears.length > 0 ? availableYears.map((year) => (
                                     <button
                                         key={year}
                                         onClick={() => setCurrentYear(year)}
-                                        className={`px-3 py-1.5 rounded-lg font-[var(--font-mono)] text-sm transition-all cursor-pointer ${currentYear === year
+                                        className={`px-2 md:px-3 py-1 md:py-1.5 rounded-lg font-[var(--font-mono)] text-xs md:text-sm transition-all cursor-pointer ${currentYear === year
                                             ? "bg-[var(--color-ink)] text-[var(--color-cream)]"
                                             : "border border-[var(--color-ink)]/20 hover:bg-[var(--color-ink)]/5"
                                             }`}
@@ -295,6 +295,24 @@ export function Leaderboard({ data }: LeaderboardProps) {
                             </div>
                         </div>
                     )}
+
+                    {/* View Toggle - moved here for mobile */}
+                    <div className="flex items-center gap-1 ml-auto md:hidden">
+                        <div className="flex gap-1 bg-[var(--color-paper)] rounded-lg p-0.5 border border-[var(--color-ink)]/10">
+                            <button
+                                onClick={() => setViewMode("table")}
+                                className={`px-2 py-1 rounded-md font-[var(--font-mono)] text-xs transition-all cursor-pointer ${viewMode === "table" ? "bg-white shadow-sm" : "hover:bg-white/50"}`}
+                            >
+                                ☰
+                            </button>
+                            <button
+                                onClick={() => setViewMode("scatter")}
+                                className={`px-2 py-1 rounded-md font-[var(--font-mono)] text-xs transition-all cursor-pointer ${viewMode === "scatter" ? "bg-white shadow-sm" : "hover:bg-white/50"}`}
+                            >
+                                ⬡
+                            </button>
+                        </div>
+                    </div>
 
                     {/* Provider Filter */}
                     <div className="flex items-start gap-3">
@@ -364,8 +382,8 @@ export function Leaderboard({ data }: LeaderboardProps) {
                         </div>
                     </div>
 
-                    {/* View Toggle */}
-                    <div className="flex items-center gap-3 ml-auto">
+                    {/* View Toggle - desktop only (mobile version is in filters row) */}
+                    <div className="hidden md:flex items-center gap-3 ml-auto">
                         <div className="flex gap-1 bg-[var(--color-paper)] rounded-lg p-1 border border-[var(--color-ink)]/10">
                             <button
                                 onClick={() => setViewMode("table")}
@@ -380,7 +398,8 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                     }`}
                             >
                                 <span>⬡</span> {t.leaderboard.table.view_scatter || "Scatter"}
-                            </button>            </div>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -391,10 +410,10 @@ export function Leaderboard({ data }: LeaderboardProps) {
                             <table className="w-full min-w-[640px]">
                                 <thead>
                                     <tr className="border-b-2 border-[var(--color-ink)]/10 text-left bg-[var(--color-paper)]/30">
-                                        <th className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium w-20">
+                                        <th className="px-2 md:px-4 py-3 md:py-4 font-[var(--font-mono)] text-[10px] md:text-xs tracking-wider text-[var(--color-muted)] font-medium w-10 md:w-16">
                                             {t.leaderboard.table.rank}
                                         </th>
-                                        <th className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium">
+                                        <th className="px-2 md:px-4 py-3 md:py-4 font-[var(--font-mono)] text-[10px] md:text-xs tracking-wider text-[var(--color-muted)] font-medium">
                                             {t.leaderboard.table.model}
                                         </th>
                                         <TooltipHeader
@@ -406,7 +425,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                                     {sort.field === "overall" && sort.direction === "asc" ? "▲" : "▼"}
                                                 </span>
                                             }
-                                            className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)]"
+                                            className="px-2 md:px-4 py-3 md:py-4 font-[var(--font-mono)] text-[10px] md:text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)]"
                                         />
                                         {currentTask === "exam" && (
                                             <>
@@ -419,7 +438,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                                             {sort.field === "mcq" && sort.direction === "asc" ? "▲" : "▼"}
                                                         </span>
                                                     }
-                                                    className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
+                                                    className="px-2 md:px-4 py-3 md:py-4 font-[var(--font-mono)] text-[10px] md:text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)]"
                                                 />
                                                 <TooltipHeader
                                                     onClick={() => handleSort("short_text")}
@@ -430,7 +449,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                                             {sort.field === "short_text" && sort.direction === "asc" ? "▲" : "▼"}
                                                         </span>
                                                     }
-                                                    className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
+                                                    className="px-2 md:px-4 py-3 md:py-4 font-[var(--font-mono)] text-[10px] md:text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)]"
                                                 />
                                             </>
                                         )}
@@ -445,7 +464,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                                             {sort.field === "pos_accuracy" && sort.direction === "asc" ? "▲" : "▼"}
                                                         </span>
                                                     }
-                                                    className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
+                                                    className="px-2 md:px-4 py-3 md:py-4 font-[var(--font-mono)] text-[10px] md:text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)]"
                                                 />
                                                 <TooltipHeader
                                                     onClick={() => handleSort("lemma_accuracy")}
@@ -456,7 +475,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                                             {sort.field === "lemma_accuracy" && sort.direction === "asc" ? "▲" : "▼"}
                                                         </span>
                                                     }
-                                                    className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
+                                                    className="px-2 md:px-4 py-3 md:py-4 font-[var(--font-mono)] text-[10px] md:text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)]"
                                                 />
                                                 <TooltipHeader
                                                     onClick={() => handleSort("dep_accuracy")}
@@ -467,7 +486,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                                             {sort.field === "dep_accuracy" && sort.direction === "asc" ? "▲" : "▼"}
                                                         </span>
                                                     }
-                                                    className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
+                                                    className="px-2 md:px-4 py-3 md:py-4 font-[var(--font-mono)] text-[10px] md:text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)]"
                                                 />
                                             </>
                                         )}
@@ -480,7 +499,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                                     {sort.field === "latency_ms" && sort.direction === "asc" ? "▲" : "▼"}
                                                 </span>
                                             }
-                                            className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden lg:table-cell"
+                                            className="px-2 md:px-4 py-3 md:py-4 font-[var(--font-mono)] text-[10px] md:text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)]"
                                         />
                                         <TooltipHeader
                                             onClick={() => handleSort("cost")}
@@ -491,7 +510,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                                     {sort.field === "cost" && sort.direction === "asc" ? "▲" : "▼"}
                                                 </span>
                                             }
-                                            className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden lg:table-cell"
+                                            className="px-2 md:px-4 py-3 md:py-4 font-[var(--font-mono)] text-[10px] md:text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)]"
                                         />
                                     </tr>
                                 </thead>
@@ -516,18 +535,17 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                                     ${rank === 1 ? "bg-amber-50/50 hover:bg-amber-50" : "hover:bg-[var(--color-paper)]/50"}
                                                 `}
                                                 >
-                                                    <td className="px-6 py-5 text-center">
-                                                        <span className={`font-[var(--font-mono)] text-2xl font-bold ${rank === 1 ? "text-yellow-500" : rank === 2 ? "text-gray-400" : rank === 3 ? "text-amber-600" : "text-[var(--color-muted)]"
-                                                            }`}>
+                                                    <td className="px-1 md:px-4 py-3 md:py-5 text-center w-8 md:w-12">
+                                                        <span className={`font-[var(--font-mono)] text-base md:text-2xl font-bold ${rank === 1 ? "text-yellow-500" : rank === 2 ? "text-gray-400" : rank === 3 ? "text-amber-600" : "text-[var(--color-muted)]"}`}>
                                                             {rank}
                                                         </span>
                                                     </td>
-                                                    <td className="px-6 py-5">
-                                                        <div className="flex items-center gap-3">
+                                                    <td className="px-2 md:px-4 py-3 md:py-5">
+                                                        <div className="flex items-center gap-2 md:gap-3">
                                                             {logo && (
-                                                                <Image src={logo} alt={item.provider} width={26} height={26} className="flex-shrink-0" />
+                                                                <Image src={logo} alt={item.provider} width={18} height={18} className="flex-shrink-0 md:w-[26px] md:h-[26px]" />
                                                             )}
-                                                            <span className="font-[var(--font-mono)] text-base">{item.model}</span>
+                                                            <span className="font-[var(--font-mono)] text-xs md:text-base truncate max-w-[150px] md:max-w-none">{item.model}</span>
                                                             {(item.error_count ?? 0) > 0 && (
                                                                 <span className="relative group ml-1">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" className="text-amber-500/80">
@@ -545,36 +563,36 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                                             )}
                                                         </div>
                                                     </td>
-                                                    <td className="px-6 py-5 text-right">
-                                                        <span className="font-[var(--font-mono)] font-semibold text-lg">{item.overall.toFixed(1)}</span>
+                                                    <td className="px-2 md:px-6 py-3 md:py-5 text-right">
+                                                        <span className="font-[var(--font-mono)] font-semibold text-sm md:text-lg">{item.overall.toFixed(1)}</span>
                                                     </td>
                                                     {currentTask === "exam" && (
                                                         <>
-                                                            <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
+                                                            <td className="px-2 md:px-6 py-3 md:py-5 text-right font-[var(--font-mono)] text-xs md:text-base text-[var(--color-muted)]">
                                                                 {item.mcq?.toFixed(1) || "-"}
                                                             </td>
-                                                            <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
+                                                            <td className="px-2 md:px-6 py-3 md:py-5 text-right font-[var(--font-mono)] text-xs md:text-base text-[var(--color-muted)]">
                                                                 {item.short_text?.toFixed(1) || "-"}
                                                             </td>
                                                         </>
                                                     )}
                                                     {currentTask === "pos" && (
                                                         <>
-                                                            <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
+                                                            <td className="px-2 md:px-6 py-3 md:py-5 text-right font-[var(--font-mono)] text-xs md:text-base text-[var(--color-muted)]">
                                                                 {item.pos_accuracy !== undefined ? item.pos_accuracy.toFixed(1) : "-"}
                                                             </td>
-                                                            <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
+                                                            <td className="px-2 md:px-6 py-3 md:py-5 text-right font-[var(--font-mono)] text-xs md:text-base text-[var(--color-muted)]">
                                                                 {item.lemma_accuracy !== undefined ? item.lemma_accuracy.toFixed(1) : "-"}
                                                             </td>
-                                                            <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
+                                                            <td className="px-2 md:px-6 py-3 md:py-5 text-right font-[var(--font-mono)] text-xs md:text-base text-[var(--color-muted)]">
                                                                 {item.dep_accuracy !== undefined ? item.dep_accuracy.toFixed(1) : "-"}
                                                             </td>
                                                         </>
                                                     )}
-                                                    <td className="px-6 py-5 text-right font-[var(--font-mono)] text-[var(--color-muted)] hidden lg:table-cell">
+                                                    <td className="px-2 md:px-6 py-3 md:py-5 text-right font-[var(--font-mono)] text-xs md:text-base text-[var(--color-muted)]">
                                                         {item.latency_ms ? `${(item.latency_ms / 1000).toFixed(1)}s` : "-"}
                                                     </td>
-                                                    <td className="px-6 py-5 text-right font-[var(--font-mono)] text-[var(--color-muted)] hidden lg:table-cell">
+                                                    <td className="px-2 md:px-6 py-3 md:py-5 text-right font-[var(--font-mono)] text-xs md:text-base text-[var(--color-muted)]">
                                                         ${item.cost?.toFixed(2) || "-"}
                                                     </td>
                                                 </tr>
