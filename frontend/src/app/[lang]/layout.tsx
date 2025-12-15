@@ -3,6 +3,7 @@ import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import "../globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { translations, Language } from "@/utils/translations";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-display",
@@ -46,6 +47,7 @@ export default async function RootLayout({
           {children}
         </LanguageProvider>
       </body>
+      <GoogleAnalytics gaId="G-4RNZMKLBDK" />
     </html>
   );
 }
