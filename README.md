@@ -1,6 +1,21 @@
-# SlovakBench 🇸🇰
+<p align="center">
+  <img src="assets/logo.png" alt="SlovakBench" width="120" />
+</p>
 
-**The First Open-Source Benchmark for Slovak Language Models**
+<h1 align="center">SlovakBench</h1>
+
+<p align="center">
+  <strong>The First Open-Source Benchmark for Slovak Language Models</strong>
+</p>
+
+<p align="center">
+  <a href="#-benchmark-tasks">Tasks</a> •
+  <a href="#-quick-start">Quick Start</a> •
+  <a href="#-methodology">Methodology</a> •
+  <a href="#-license">License</a>
+</p>
+
+---
 
 When we started exploring how well AI language models understand Slovak, we found a gap: **there was no comprehensive benchmark for evaluating LLMs on Slovak language tasks.** So we built one.
 
@@ -29,7 +44,7 @@ SlovakBench is an open-source framework designed to rigorously evaluate the capa
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/SlovakBench.git
+git clone https://github.com/teoobarca/SlovakBench.git
 cd SlovakBench
 
 # Install dependencies
@@ -134,7 +149,7 @@ SlovakBench/
 └── main.py                # Central CLI entry point
 ```
 
-## ⚙️ adding New Models
+## ⚙️ Adding New Models
 
 To evaluate a new model, simply add it to `config/models.py`:
 
@@ -160,5 +175,11 @@ SlovakBench uses **OpenRouter** standard, so any model supported by OpenRouter c
 
 ## 📄 License
 
-This project is open-source under the MIT License.
+This project is open-source under the **MIT License**.  
 Data from NÚCEM and SNK retains their original licensing/copyrights.
+
+---
+
+<p align="center">
+  Made with ❤️ for Slovak NLP
+</p>
