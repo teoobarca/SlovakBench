@@ -545,7 +545,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                                             {logo && (
                                                                 <Image src={logo} alt={item.provider} width={18} height={18} className="flex-shrink-0 md:w-[26px] md:h-[26px]" />
                                                             )}
-                                                            <span className="font-[var(--font-mono)] text-xs md:text-base truncate max-w-[150px] md:max-w-none">{item.model}</span>
+                                                            <span className="font-[var(--font-mono)] text-xs md:text-base truncate">{item.model}</span>
                                                             {(item.error_count ?? 0) > 0 && (
                                                                 <span className="relative group ml-1">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" className="text-amber-500/80">
