@@ -183,7 +183,7 @@ export const translations = {
         about: {
             label_story: "NÁŠ PRÍBEH",
             title_story: "Prvý slovenský LLM benchmark",
-            text_story_1: "Keď sme začali skúmať, ako dobre AI jazykové modely rozumejú slovenčine, zistili sme medzeru: neexistoval žiadny komplexný benchmark na hodnotenie LLM v slovenčine.",
+            text_story_1: "Keď sme začali skúmať, ako dobre AI jazykové modely rozumejú slovenčine, zistili sme medzeru: neexistoval žiadny komplexný benchmark na hodnotenie veľkých jazykových modelov v slovenčine.",
             text_story_2: "Tak sme si ho vytvorili. SlovakBench je prvý open-source benchmark špecificky navrhnutý na meranie toho, ako dobre veľké jazykové modely zvládajú slovenčinu — od gramatiky až po maturitnú skúšku.",
             label_about: "METODOLÓGIA",
             title_why: "Prečo na tom záleží",

@@ -29,8 +29,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <StatsStrip modelCount={modelCount} />
-      <Leaderboard data={data} />
       <About />
+      <Leaderboard data={data} />
       <Footer />
     </>
   );
