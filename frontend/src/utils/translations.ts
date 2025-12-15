@@ -68,6 +68,16 @@ export const translations = {
                 view_table: "Table",
                 view_scatter: "Scatter"
             },
+            tooltips: {
+                score: "Overall weighted score across all sub-tasks",
+                mcq: "Multiple choice questions - testing grammar, literature, and comprehension",
+                text: "Short text answers - requiring written responses",
+                pos: "Part-of-speech tagging accuracy - identifying word classes (noun, verb, adjective...)",
+                lemma: "Lemmatization accuracy - finding the base/dictionary form of words",
+                dep: "Dependency parsing accuracy - identifying syntactic relationships between words",
+                latency: "Average response time per question",
+                cost: "Total API cost for the evaluation run"
+            },
             scatter: {
                 score_vs_cost: "Score vs Cost",
                 y_axis: "Score (%)",
@@ -173,6 +183,16 @@ export const translations = {
                 failed_questions: "zlyhaní",
                 view_table: "Tabuľka",
                 view_scatter: "Graf"
+            },
+            tooltips: {
+                score: "Celkové vážené skóre zo všetkých podúloh",
+                mcq: "Testové otázky - gramatika, literatúra a porozumenie",
+                text: "Krátke textové odpovede - vyžadujú písomnú odpoveď",
+                pos: "Presnosť určenia slovných druhov (podstatné meno, sloveso, prídavné meno...)",
+                lemma: "Presnosť lemmatizácie - hľadanie základného tvaru slov",
+                dep: "Presnosť syntaktickej analýzy - určenie vetných členov a vzťahov medzi slovami",
+                latency: "Priemerný čas odpovede na otázku",
+                cost: "Celkové náklady na API za vyhodnotenie"
             },
             scatter: {
                 score_vs_cost: "Skóre vs Cena",

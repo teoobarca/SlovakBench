@@ -15,6 +15,7 @@ import {
 } from "recharts";
 import type { LeaderboardData, TaskType, SortField, SortDirection, ModelResult } from "@/types";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { TooltipHeader } from "./Tooltip";
 
 // Provider logos and colors
 const PROVIDER_LOGOS: Record<string, string> = {
@@ -395,86 +396,102 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                     <th className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium">
                                         {t.leaderboard.table.model}
                                     </th>
-                                    <th
+                                    <TooltipHeader
                                         onClick={() => handleSort("overall")}
+                                        tooltip={t.leaderboard.tooltips?.score}
+                                        label={t.leaderboard.table.score}
+                                        sortIndicator={
+                                            <span className={`text-[10px] ml-1 ${sort.field === "overall" ? "opacity-100" : "opacity-50"}`}>
+                                                {sort.field === "overall" && sort.direction === "asc" ? "▲" : "▼"}
+                                            </span>
+                                        }
                                         className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)]"
-                                    >
-                                        {t.leaderboard.table.score}{" "}
-                                        <span className={`text-[10px] ml-1 ${sort.field === "overall" ? "opacity-100" : "opacity-50"}`}>
-                                            {sort.field === "overall" && sort.direction === "asc" ? "▲" : "▼"}
-                                        </span>
-                                    </th>
+                                    />
                                     {currentTask === "exam" && (
                                         <>
-                                            <th
+                                            <TooltipHeader
                                                 onClick={() => handleSort("mcq")}
+                                                tooltip={t.leaderboard.tooltips?.mcq}
+                                                label={t.leaderboard.table.mcq}
+                                                sortIndicator={
+                                                    <span className={`text-[10px] ml-1 ${sort.field === "mcq" ? "opacity-100" : "opacity-50"}`}>
+                                                        {sort.field === "mcq" && sort.direction === "asc" ? "▲" : "▼"}
+                                                    </span>
+                                                }
                                                 className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
-                                            >
-                                                {t.leaderboard.table.mcq}{" "}
-                                                <span className={`text-[10px] ml-1 ${sort.field === "mcq" ? "opacity-100" : "opacity-50"}`}>
-                                                    {sort.field === "mcq" && sort.direction === "asc" ? "▲" : "▼"}
-                                                </span>
-                                            </th>
-                                            <th
+                                            />
+                                            <TooltipHeader
                                                 onClick={() => handleSort("short_text")}
+                                                tooltip={t.leaderboard.tooltips?.text}
+                                                label={t.leaderboard.table.text}
+                                                sortIndicator={
+                                                    <span className={`text-[10px] ml-1 ${sort.field === "short_text" ? "opacity-100" : "opacity-50"}`}>
+                                                        {sort.field === "short_text" && sort.direction === "asc" ? "▲" : "▼"}
+                                                    </span>
+                                                }
                                                 className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
-                                            >
-                                                {t.leaderboard.table.text}{" "}
-                                                <span className={`text-[10px] ml-1 ${sort.field === "short_text" ? "opacity-100" : "opacity-50"}`}>
-                                                    {sort.field === "short_text" && sort.direction === "asc" ? "▲" : "▼"}
-                                                </span>
-                                            </th>
+                                            />
                                         </>
                                     )}
                                     {currentTask === "pos" && (
                                         <>
-                                            <th
+                                            <TooltipHeader
                                                 onClick={() => handleSort("pos_accuracy")}
+                                                tooltip={t.leaderboard.tooltips?.pos}
+                                                label={t.leaderboard.table.pos}
+                                                sortIndicator={
+                                                    <span className={`text-[10px] ml-1 ${sort.field === "pos_accuracy" ? "opacity-100" : "opacity-50"}`}>
+                                                        {sort.field === "pos_accuracy" && sort.direction === "asc" ? "▲" : "▼"}
+                                                    </span>
+                                                }
                                                 className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
-                                            >
-                                                {t.leaderboard.table.pos}{" "}
-                                                <span className={`text-[10px] ml-1 ${sort.field === "pos_accuracy" ? "opacity-100" : "opacity-50"}`}>
-                                                    {sort.field === "pos_accuracy" && sort.direction === "asc" ? "▲" : "▼"}
-                                                </span>
-                                            </th>
-                                            <th
+                                            />
+                                            <TooltipHeader
                                                 onClick={() => handleSort("lemma_accuracy")}
+                                                tooltip={t.leaderboard.tooltips?.lemma}
+                                                label={t.leaderboard.table.lemma}
+                                                sortIndicator={
+                                                    <span className={`text-[10px] ml-1 ${sort.field === "lemma_accuracy" ? "opacity-100" : "opacity-50"}`}>
+                                                        {sort.field === "lemma_accuracy" && sort.direction === "asc" ? "▲" : "▼"}
+                                                    </span>
+                                                }
                                                 className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
-                                            >
-                                                {t.leaderboard.table.lemma}{" "}
-                                                <span className={`text-[10px] ml-1 ${sort.field === "lemma_accuracy" ? "opacity-100" : "opacity-50"}`}>
-                                                    {sort.field === "lemma_accuracy" && sort.direction === "asc" ? "▲" : "▼"}
-                                                </span>
-                                            </th>
-                                            <th
+                                            />
+                                            <TooltipHeader
                                                 onClick={() => handleSort("dep_accuracy")}
+                                                tooltip={t.leaderboard.tooltips?.dep}
+                                                label={t.leaderboard.table.dep}
+                                                sortIndicator={
+                                                    <span className={`text-[10px] ml-1 ${sort.field === "dep_accuracy" ? "opacity-100" : "opacity-50"}`}>
+                                                        {sort.field === "dep_accuracy" && sort.direction === "asc" ? "▲" : "▼"}
+                                                    </span>
+                                                }
                                                 className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
-                                            >
-                                                {t.leaderboard.table.dep}{" "}
-                                                <span className={`text-[10px] ml-1 ${sort.field === "dep_accuracy" ? "opacity-100" : "opacity-50"}`}>
-                                                    {sort.field === "dep_accuracy" && sort.direction === "asc" ? "▲" : "▼"}
-                                                </span>
-                                            </th>
+                                            />
                                         </>
                                     )}
-                                    <th
+                                    <TooltipHeader
                                         onClick={() => handleSort("latency_ms")}
+                                        tooltip={t.leaderboard.tooltips?.latency}
+                                        label={t.leaderboard.table.latency}
+                                        sortIndicator={
+                                            <span className={`text-[10px] ml-1 ${sort.field === "latency_ms" ? "opacity-100" : "opacity-50"}`}>
+                                                {sort.field === "latency_ms" && sort.direction === "asc" ? "▲" : "▼"}
+                                            </span>
+                                        }
                                         className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden lg:table-cell"
-                                    >
-                                        {t.leaderboard.table.latency}{" "}
-                                        <span className={`text-[10px] ml-1 ${sort.field === "latency_ms" ? "opacity-100" : "opacity-50"}`}>
-                                            {sort.field === "latency_ms" && sort.direction === "asc" ? "▲" : "▼"}
-                                        </span>
-                                    </th>
-                                    <th
+                                    />
+                                    <TooltipHeader
                                         onClick={() => handleSort("cost")}
+                                        tooltip={t.leaderboard.tooltips?.cost}
+                                        label={t.leaderboard.table.cost}
+                                        sortIndicator={
+                                            <span className={`text-[10px] ml-1 ${sort.field === "cost" ? "opacity-100" : "opacity-50"}`}>
+                                                {sort.field === "cost" && sort.direction === "asc" ? "▲" : "▼"}
+                                            </span>
+                                        }
                                         className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden lg:table-cell"
-                                    >
-                                        {t.leaderboard.table.cost}{" "}
-                                        <span className={`text-[10px] ml-1 ${sort.field === "cost" ? "opacity-100" : "opacity-50"}`}>
-                                            {sort.field === "cost" && sort.direction === "asc" ? "▲" : "▼"}
-                                        </span>
-                                    </th>
+                                    />
                                 </tr>
                             </thead>
                             <tbody>
