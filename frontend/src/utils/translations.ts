@@ -75,24 +75,28 @@ export const translations = {
             }
         },
         about: {
-            label_about: "ABOUT",
-            title_why: "Why SlovakBench?",
-            text_why_1: "Most LLM benchmarks focus on English, leaving low-resource languages underrepresented. SlovakBench provides rigorous evaluation for Slovak language capabilities.",
-            text_why_2: "We use real-world tasks: official Maturita exams from NÚCEM, part-of-speech tagging from linguistic corpora, and grammar correction from native texts.",
+            label_story: "OUR STORY",
+            title_story: "The First Slovak LLM Benchmark",
+            text_story_1: "When we started exploring how well AI language models understand Slovak, we found a gap: there was no comprehensive benchmark for evaluating LLMs on Slovak language tasks.",
+            text_story_2: "So we built one. SlovakBench is the first open-source benchmark specifically designed to measure how well large language models perform on Slovak — from understanding grammar to passing our national Maturita exam.",
+            label_about: "METHODOLOGY",
+            title_why: "Why It Matters",
+            text_why_1: "Most AI benchmarks focus on English, leaving languages like Slovak underrepresented. This means we have no reliable way to compare how different AI models handle our language.",
+            text_why_2: "SlovakBench uses real-world tasks: official Maturita exams, linguistic analysis from the Slovak National Corpus, and grammar correction. No shortcuts, no synthetic data.",
             label_tasks: "TASKS",
-            title_tasks: "Benchmark Tasks",
+            title_tasks: "What We Test",
             coming_soon: "(coming soon)",
             task_exam: {
                 title: "Maturita Exam",
-                desc: "Slovak high school graduation exam with MCQ and open-ended questions."
+                desc: "Official Slovak high school graduation exam — the ultimate test of language and literature comprehension."
             },
             task_pos: {
-                title: "POS Tagging",
-                desc: "Part-of-speech tagging on Slovak National Corpus data."
+                title: "Sentence Analysis",
+                desc: "Parts of speech, lemmas, and syntactic relationships on Slovak National Corpus data."
             },
             task_grammar: {
                 title: "Grammar Correction",
-                desc: "Detecting and correcting grammatical errors in Slovak text."
+                desc: "Finding and fixing grammatical errors in authentic Slovak text."
             }
         },
         footer: {
@@ -100,7 +104,7 @@ export const translations = {
             author: "AUTHOR",
             desc: "Open source benchmark for evaluating LLMs on Slovak language tasks.",
             copyright: "© 2025 SlovakBench. MIT License.",
-            source: "Data sourced from official Slovak Maturita exams"
+            source: "Data: NÚCEM (Maturita), Slovak National Corpus (UD SNK)"
         }
     },
     sk: {
@@ -177,24 +181,28 @@ export const translations = {
             }
         },
         about: {
-            label_about: "O PROJEKTE",
-            title_why: "Prečo SlovakBench?",
-            text_why_1: "Väčšina benchmarkov sa zameriava na angličtinu, čím zanedbáva nízko-zdrojové jazyky. SlovakBench prináša rigorózne hodnotenie schopností v slovenčine.",
-            text_why_2: "Používame reálne úlohy: oficiálne maturity z NÚCEM, morfologickú analýzu z korpusov a gramatické korekcie natívnych textov.",
+            label_story: "NÁŠ PRÍBEH",
+            title_story: "Prvý slovenský LLM benchmark",
+            text_story_1: "Keď sme začali skúmať, ako dobre AI jazykové modely rozumejú slovenčine, zistili sme medzeru: neexistoval žiadny komplexný benchmark na hodnotenie LLM v slovenčine.",
+            text_story_2: "Tak sme si ho vytvorili. SlovakBench je prvý open-source benchmark špecificky navrhnutý na meranie toho, ako dobre veľké jazykové modely zvládajú slovenčinu — od gramatiky až po maturitnú skúšku.",
+            label_about: "METODOLÓGIA",
+            title_why: "Prečo na tom záleží",
+            text_why_1: "Väčšina AI benchmarkov sa zameriava na angličtinu, čím jazyky ako slovenčina zostávajú podreprezentované. To znamená, že nemáme spoľahlivý spôsob porovnania, ako rôzne AI modely zvládajú náš jazyk.",
+            text_why_2: "SlovakBench používa reálne úlohy: oficiálne maturitné skúšky, lingvistickú analýzu zo Slovenského národného korpusu a opravu gramatiky. Žiadne skratky, žiadne syntetické dáta.",
             label_tasks: "ÚLOHY",
-            title_tasks: "Benchmarkové úlohy",
+            title_tasks: "Čo testujeme",
             coming_soon: "(pripravujeme)",
             task_exam: {
                 title: "Maturita",
-                desc: "Maturitná skúška s testovými otázkami a tvorením textu."
+                desc: "Oficiálna slovenská maturitná skúška — ultimátny test jazykového a literárneho porozumenia."
             },
             task_pos: {
                 title: "Vetný rozbor",
-                desc: "Morfologické značkovanie na dátach Slovenského národného korpusu."
+                desc: "Slovné druhy, základné tvary a syntaktické vzťahy na dátach Slovenského národného korpusu."
             },
             task_grammar: {
                 title: "Gramatika",
-                desc: "Detekcia a oprava gramatických chýb."
+                desc: "Vyhľadávanie a oprava gramatických chýb v autentickom slovenskom texte."
             }
         },
         footer: {
@@ -202,7 +210,7 @@ export const translations = {
             author: "AUTOR",
             desc: "Open source benchmark pre hodnotenie LLM v slovenčine.",
             copyright: "© 2025 SlovakBench. MIT License.",
-            source: "Dáta pochádzajú z oficiálnych maturít (NÚCEM)"
+            source: "Dáta: NÚCEM (Maturita), Slovenský národný korpus (UD SNK)"
         }
     }
 };

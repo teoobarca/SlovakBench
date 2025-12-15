@@ -1,11 +1,13 @@
 # SlovakBench 🇸🇰
 
-**A Robust Evaluation Pipeline for Large Language Models on Slovak Language Tasks**
+**The First Open-Source Benchmark for Slovak Language Models**
 
-SlovakBench is an open-source framework designed to rigorously evaluate the capabilities of Large Language Models (LLMs) in the Slovak language. Unlike generic multi-lingual benchmarks, SlovakBench focuses on culturally and linguistically specific tasks, ranging from high school graduation exams to low-level linguistic analysis.
+When we started exploring how well AI language models understand Slovak, we found a gap: **there was no comprehensive benchmark for evaluating LLMs on Slovak language tasks.** So we built one.
 
-![SlovakBench Leaderboard](https://via.placeholder.com/1200x600?text=SlovakBench+Dashboard) 
-*(Replace with actual screenshot if available)*
+SlovakBench is an open-source framework designed to rigorously evaluate the capabilities of Large Language Models (LLMs) in Slovak. Unlike generic multi-lingual benchmarks, we focus on real-world, culturally relevant tasks — from the national Maturita graduation exam to linguistic analysis using the Slovak National Corpus.
+
+> **No shortcuts. No synthetic data.** Just rigorous evaluation on authentic Slovak content.
+
 
 ## 🎯 Benchmark Tasks
 

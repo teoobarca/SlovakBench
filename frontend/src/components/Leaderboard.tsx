@@ -723,6 +723,10 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                         content={(props: any) => {
                                             const { x, y, value, index } = props;
                                             const entry = scatterData[index];
+
+                                            // Guard against stale data during task switch
+                                            if (!entry) return null;
+
                                             const isActive = isProviderActive(entry.provider);
 
                                             // Skip label if too close to other points

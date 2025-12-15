@@ -42,6 +42,22 @@ export function Footer() {
                             >
                                 NÚCEM ↗
                             </a>
+                            <a
+                                href="https://korpus.sk/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-[var(--color-accent)] transition-colors w-fit"
+                            >
+                                Slovenský národný korpus ↗
+                            </a>
+                            <a
+                                href="https://universaldependencies.org/treebanks/sk_snk/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-[var(--color-accent)] transition-colors w-fit"
+                            >
+                                Universal Dependencies ↗
+                            </a>
                         </div>
                     </div>
 
