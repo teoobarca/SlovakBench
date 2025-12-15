@@ -1,120 +1,162 @@
-# SlovakBench
+# SlovakBench 🇸🇰
 
-**Benchmarking LLMs on Slovak Language Tasks**
+**A Robust Evaluation Pipeline for Large Language Models on Slovak Language Tasks**
 
-A reproducible evaluation pipeline for testing Large Language Models on Slovak. Uses real-world data from official Maturita exams and linguistic corpora.
+SlovakBench is an open-source framework designed to rigorously evaluate the capabilities of Large Language Models (LLMs) in the Slovak language. Unlike generic multi-lingual benchmarks, SlovakBench focuses on culturally and linguistically specific tasks, ranging from high school graduation exams to low-level linguistic analysis.
 
-## 🎯 Tasks
+![SlovakBench Leaderboard](https://via.placeholder.com/1200x600?text=SlovakBench+Dashboard) 
+*(Replace with actual screenshot if available)*
 
-| Task | Description | Status |
-|------|-------------|--------|
-| **Maturita Exam** | Slovak high school graduation exam (MCQ + short text) | ✅ Active |
-| **POS Tagging** | Part-of-speech tagging on Slovak National Corpus | 🔜 Coming |
-| **Grammar Correction** | Detecting and correcting Slovak text errors | 🔜 Coming |
+## 🎯 Benchmark Tasks
+
+| Task | ID | Description | Status |
+|------|----|-------------|--------|
+| **Maturita Exam** | `exam` | Official Slovak high school graduation exam (Maturita) in Slovak Language and Literature. Includes extensive **MCQ** (comprehension, grammar, literature) and **Short Text** generation. | ✅ Active |
+| **Universal Dependencies** | `ud` | Low-level linguistic evaluation on the Slovak National Corpus (SNK). Tests **POS Tagging** (Part-of-Speech), **Lemmatization** (base forms), and **Dependency Parsing** (syntax). | ✅ Active |
+| **Grammar Correction** | `grammar` | Detecting and correcting grammatical, spelling, and stylistic errors in native Slovak text. | 🚧 Planned |
 
 ## 🚀 Quick Start
 
+### Prerequisites
+- **Python 3.11+**
+- **[uv](https://github.com/astral-sh/uv)** (fast Python package manager)
+- **Node.js 18+** (for Frontend)
+- **OpenRouter API Key** (for accessing models)
+
+### 1. Installation
+
 ```bash
-# Install
+# Clone the repository
+git clone https://github.com/yourusername/SlovakBench.git
+cd SlovakBench
+
+# Install dependencies
 uv sync
-
-# Configure
-cp .env.example .env
-# Set OPENROUTER_API_KEY in .env
-
-# Ingest exam data
-uv run python main.py ingest --all
-
-# Evaluate all models
-uv run python main.py evaluate
-
-# View results
-uv run python main.py report
-
-# Export for frontend
-uv run python main.py export
 ```
 
-## 📊 Latest Results (Maturita 2025)
+### 2. Configuration
 
-| Model | Overall | MCQ | Short Text | Cost |
-|-------|---------|-----|------------|------|
-| gpt-5.2 | **92.2%** | 95.0% | 87.5% | $0.17 |
-| gemini-2.5-pro | **92.2%** | 97.5% | 83.3% | $0.77 |
-| gemini-2.5-flash | 81.2% | 97.5% | 54.2% | $0.01 |
-| gpt-4o | 78.1% | 87.5% | 62.5% | $0.09 |
-| claude-sonnet-4 | 75.0% | 90.0% | 50.0% | $0.13 |
-| gpt-4o-mini | 65.6% | 82.5% | 37.5% | $0.01 |
+Create a `.env` file in the root directory:
 
-## 📁 Structure
+```bash
+cp .env.example .env
+```
+
+Edit `.env` and add your API key:
+```env
+OPENROUTER_API_KEY=sk-or-v1-...
+```
+
+### 3. Run the Pipeline
+
+```bash
+# 1. Ingest Data (parse PDF exams)
+uv run python main.py ingest --all
+
+# 2. Run Evaluation (Exam & POS)
+uv run python main.py evaluate exam
+uv run python main.py evaluate ud
+
+# 3. View Report
+uv run python main.py report
+
+# 4. Start Leaderboard UI
+uv run python main.py export  # Generates frontend data
+cd frontend
+npm install
+npm run dev
+```
+
+## 🛠️ CLI Reference
+
+ The core logic is handled by `main.py`. Here are the available commands:
+
+### 📥 Data Ingestion
+Parses raw PDF files from `data/raw/exam` into structured JSON datasets.
+```bash
+main.py ingest --year 2025        # Process specific year
+main.py ingest --all              # Process all years
+main.py ingest --force            # Re-process existing files
+```
+
+### 🧪 Benchmarking
+Runs evaluation for configured models.
+```bash
+# Maturita Exam
+main.py evaluate exam --year 2025 # Specific year
+main.py evaluate exam --all       # All years
+main.py evaluate exam -m openai/gpt-4o  # Specific model
+
+# Universal Dependencies (POS/Lemma/Syntax)
+main.py evaluate ud               # Run all models on UD dataset
+main.py evaluate ud --report      # Show UD specific report table
+```
+
+### 📊 Analysis & Reporting
+Tools to inspect results and debug failures.
+```bash
+# General Report
+main.py report                    # Show comparison table for all models
+main.py report --year 2025        # Detailed report for a specific year
+
+# Deep Dive Analysis
+main.py analyze --year 2025       # Analyze failed questions (identifies hard questions)
+main.py analyze --model gpt-4     # Filter analysis by model
+
+# Re-evaluation & Retries
+main.py retry --year 2025         # Retry ONLY failed questions (saves $$)
+main.py reevaluate --year 2025 -q 12  # Re-run a specific question ID for all models
+```
+
+### 🌐 Frontend Export
+Prepares data for the Next.js web application.
+```bash
+main.py export                    # Exports to frontend/public/leaderboard.json
+```
+
+## 📁 Project Structure
 
 ```
 SlovakBench/
-├── data/
-│   ├── raw/exam/          # PDF test files (test_YYYY.pdf, kluc_YYYY.pdf)
-│   ├── processed/exam/    # Extracted JSON datasets
-│   └── results/exam/      # Evaluation results per year
 ├── config/
-│   └── models.py          # Models to evaluate
-├── public/
-│   ├── index.html         # Leaderboard frontend
-│   └── leaderboard.json   # Exported results
+│   └── models.py          # LLM configuration (add new models here)
+├── data/
+│   ├── raw/               # Original PDFs (test_YYYY.pdf)
+│   ├── processed/         # Extracted JSON datasets
+│   └── results/           # Evaluation logs and results
+├── frontend/              # Next.js Leaderboard App
 ├── src/
-│   ├── ingestion/         # PDF → JSON extraction
-│   ├── evaluation/        # LLM evaluation runner
-│   └── utils/             # LLM client, helpers
-└── main.py                # CLI entry point
+│   ├── ingestion/         # PDF parsing logic using specialized prompts
+│   ├── evaluation/        # Evaluation runners (Exam & UD)
+│   └── utils/             # LLM client wrappers and helpers
+└── main.py                # Central CLI entry point
 ```
 
-## 🔧 CLI Commands
+## ⚙️ adding New Models
 
-```bash
-# Ingest PDF exams
-main.py ingest                    # Show status
-main.py ingest --year 2025        # Process specific year
-main.py ingest --all              # Process all years
-main.py ingest --force            # Reprocess existing
+To evaluate a new model, simply add it to `config/models.py`:
 
-# Evaluate models
-main.py evaluate                  # Run all configured models
-main.py evaluate --year 2025      # Specific year only
-main.py evaluate -m openai/gpt-4o # Single model
-main.py evaluate --force          # Re-run completed
-main.py evaluate --list           # Show available datasets/models
-
-# Reports
-main.py report                    # Cross-model comparison
-main.py report --year 2025        # Year-specific results
-
-# Frontend
-main.py export                    # Generate public/leaderboard.json
-```
-
-## ⚙️ Configuration
-
-**Models** (`config/models.py`):
 ```python
-MODELS = [
-    "openai/gpt-5.2",
-    "anthropic/claude-sonnet-4",
-    "google/gemini-2.5-pro",
-    # Add more...
-]
+MODELS = {
+    # ...
+    "provider/model-name": create_llm("provider/model-name"),
+}
 ```
+SlovakBench uses **OpenRouter** standard, so any model supported by OpenRouter can be added instantly.
 
-**Environment** (`.env`):
-```
-OPENROUTER_API_KEY=sk-or-...
-```
+## 📖 Methodology
 
-## 📖 Data Sources
+### Maturita Exam
+- **Source**: National Institute for Certified Educational Measurements (NÚCEM).
+- **Metric**: Accuracy (Exact Match for MCQ, Semantic Match for Text).
+- **Process**: We extract questions from official PDFs, keeping context (articles/poems) attached to relevant questions. Models are prompted to solve the test zero-shot or few-shot.
 
-- **Maturita Exams**: [NÚCEM](https://www.nucem.sk/) - National Institute for Certified Educational Measurements
-- Official Slovak high school graduation exams in Slovak Language and Literature
+### Universal Dependencies (UD)
+- **Source**: Slovak National Corpus (SNK).
+- **Metric**: Token-level accuracy for POS tags, Lemmas, and Dependency relations.
+- **Process**: A curated subset of complex sentences is presented to the model. The model must produce CoNLL-U style usage tags which are then parsed and compared to gold labels.
 
-## 🛠 Tech Stack
+## 📄 License
 
-- **Python 3.11+** with `uv` package manager
-- **LangChain** for LLM orchestration
-- **OpenRouter** API for model access
-- **Tailwind CSS** for frontend
+This project is open-source under the MIT License.
+Data from NÚCEM and SNK retains their original licensing/copyrights.

@@ -1,0 +1,44 @@
+{
+  "model_name": "z-ai/glm-4.6",
+  "timestamp": "2025-12-15T16:18:05.666285",
+  "total_sentences": 10,
+  "accuracy": 0.7555555555555555,
+  "pos_accuracy": 0.9047619047619048,
+  "lemma_accuracy": 0.6857142857142857,
+  "dep_accuracy": 0.6761904761904762,
+  "total_cost_usd": 0.1282539819998208,
+  "avg_latency_ms": 47303.090023994446,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9047619047619048,
+      "correct": 95,
+      "total": 105,
+      "cost_usd": 0.0262454519999104,
+      "avg_latency_ms": 25397.412872314453,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.6857142857142857,
+      "correct": 72,
+      "total": 105,
+      "cost_usd": 0.0250699299999104,
+      "avg_latency_ms": 35700.44009685516,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.6761904761904762,
+      "correct": 71,
+      "total": 105,
+      "cost_usd": 0.0769386,
+      "avg_latency_ms": 80811.41710281372,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

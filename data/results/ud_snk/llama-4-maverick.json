@@ -1,0 +1,44 @@
+{
+  "model_name": "meta-llama/llama-4-maverick",
+  "timestamp": "2025-12-15T16:24:29.113684",
+  "total_sentences": 10,
+  "accuracy": 0.6444444444444444,
+  "pos_accuracy": 0.9142857142857143,
+  "lemma_accuracy": 0.7523809523809524,
+  "dep_accuracy": 0.26666666666666666,
+  "total_cost_usd": 0.007748120000000001,
+  "avg_latency_ms": 4334.489019711812,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9142857142857143,
+      "correct": 96,
+      "total": 105,
+      "cost_usd": 0.0006360199999999999,
+      "avg_latency_ms": 1794.997525215149,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.7523809523809524,
+      "correct": 79,
+      "total": 105,
+      "cost_usd": 0.00558152,
+      "avg_latency_ms": 8098.77405166626,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.26666666666666666,
+      "correct": 28,
+      "total": 105,
+      "cost_usd": 0.0015305800000000001,
+      "avg_latency_ms": 3109.6954822540283,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

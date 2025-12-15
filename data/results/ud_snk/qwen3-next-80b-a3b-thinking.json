@@ -1,0 +1,44 @@
+{
+  "model_name": "qwen/qwen3-next-80b-a3b-thinking",
+  "timestamp": "2025-12-15T16:27:12.958517",
+  "total_sentences": 10,
+  "accuracy": 0.8190476190476189,
+  "pos_accuracy": 0.9142857142857143,
+  "lemma_accuracy": 0.8761904761904762,
+  "dep_accuracy": 0.6666666666666666,
+  "total_cost_usd": 0.13756575000000001,
+  "avg_latency_ms": 23601.026733716328,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9142857142857143,
+      "correct": 96,
+      "total": 105,
+      "cost_usd": 0.02032014,
+      "avg_latency_ms": 8479.65054512024,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8761904761904762,
+      "correct": 92,
+      "total": 105,
+      "cost_usd": 0.03798051,
+      "avg_latency_ms": 16204.94418144226,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.6666666666666666,
+      "correct": 70,
+      "total": 105,
+      "cost_usd": 0.0792651,
+      "avg_latency_ms": 46118.48547458649,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

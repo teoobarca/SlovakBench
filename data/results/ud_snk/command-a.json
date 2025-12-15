@@ -1,0 +1,44 @@
+{
+  "model_name": "cohere/command-a",
+  "timestamp": "2025-12-15T16:25:15.546479",
+  "total_sentences": 10,
+  "accuracy": 0.6634920634920635,
+  "pos_accuracy": 0.8952380952380953,
+  "lemma_accuracy": 0.8095238095238095,
+  "dep_accuracy": 0.2857142857142857,
+  "total_cost_usd": 0.0297375,
+  "avg_latency_ms": 1359.9311510721843,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.8952380952380953,
+      "correct": 94,
+      "total": 105,
+      "cost_usd": 0.0087775,
+      "avg_latency_ms": 1274.2658853530884,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8095238095238095,
+      "correct": 85,
+      "total": 105,
+      "cost_usd": 0.0093025,
+      "avg_latency_ms": 1303.4807682037354,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.2857142857142857,
+      "correct": 30,
+      "total": 105,
+      "cost_usd": 0.0116575,
+      "avg_latency_ms": 1502.046799659729,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

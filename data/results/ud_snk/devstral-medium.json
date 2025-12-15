@@ -1,0 +1,44 @@
+{
+  "model_name": "mistralai/devstral-medium",
+  "timestamp": "2025-12-15T16:24:47.748000",
+  "total_sentences": 10,
+  "accuracy": 0.6603174603174603,
+  "pos_accuracy": 0.9047619047619048,
+  "lemma_accuracy": 0.8285714285714286,
+  "dep_accuracy": 0.24761904761904763,
+  "total_cost_usd": 0.0056552,
+  "avg_latency_ms": 2382.134485244751,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9047619047619048,
+      "correct": 95,
+      "total": 105,
+      "cost_usd": 0.0018184,
+      "avg_latency_ms": 2937.204337120056,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8285714285714286,
+      "correct": 87,
+      "total": 105,
+      "cost_usd": 0.0016684,
+      "avg_latency_ms": 3165.939521789551,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.24761904761904763,
+      "correct": 26,
+      "total": 105,
+      "cost_usd": 0.0021684,
+      "avg_latency_ms": 1043.259596824646,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "model_name": "openai/gpt-oss-120b",
+  "timestamp": "2025-12-15T15:33:05.356299",
+  "total_sentences": 10,
+  "accuracy": 0.7714285714285715,
+  "pos_accuracy": 0.8285714285714286,
+  "lemma_accuracy": 0.8666666666666667,
+  "dep_accuracy": 0.6190476190476191,
+  "total_cost_usd": 0.007174135,
+  "avg_latency_ms": 17811.40033227426,
+  "error_count": 1,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.8285714285714286,
+      "correct": 87,
+      "total": 105,
+      "cost_usd": 0.00149448,
+      "avg_latency_ms": 7278.585857815213,
+      "errors": 1,
+      "first_error": "{'message': 'Internal Server Error', 'code': 500}"
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8666666666666667,
+      "correct": 91,
+      "total": 105,
+      "cost_usd": 0.0021929750000000002,
+      "avg_latency_ms": 10642.144131660461,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.6190476190476191,
+      "correct": 65,
+      "total": 105,
+      "cost_usd": 0.00348668,
+      "avg_latency_ms": 35513.47100734711,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

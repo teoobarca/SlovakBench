@@ -1,0 +1,44 @@
+{
+  "model_name": "google/gemini-3-pro-preview",
+  "timestamp": "2025-12-15T15:41:02.840272",
+  "total_sentences": 10,
+  "accuracy": 0.9015873015873016,
+  "pos_accuracy": 0.9619047619047619,
+  "lemma_accuracy": 0.8857142857142857,
+  "dep_accuracy": 0.8571428571428571,
+  "total_cost_usd": 0.765812,
+  "avg_latency_ms": 34481.46232763926,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9619047619047619,
+      "correct": 101,
+      "total": 105,
+      "cost_usd": 0.17303,
+      "avg_latency_ms": 27226.617765426636,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8857142857142857,
+      "correct": 93,
+      "total": 105,
+      "cost_usd": 0.217418,
+      "avg_latency_ms": 29456.518626213074,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.8571428571428571,
+      "correct": 90,
+      "total": 105,
+      "cost_usd": 0.37536400000000003,
+      "avg_latency_ms": 46761.250591278076,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

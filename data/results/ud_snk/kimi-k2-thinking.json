@@ -1,0 +1,44 @@
+{
+  "model_name": "moonshotai/kimi-k2-thinking",
+  "timestamp": "2025-12-15T15:50:47.281542",
+  "total_sentences": 10,
+  "accuracy": 0.7904761904761904,
+  "pos_accuracy": 0.8952380952380953,
+  "lemma_accuracy": 0.7619047619047619,
+  "dep_accuracy": 0.7142857142857143,
+  "total_cost_usd": 0.174253093,
+  "avg_latency_ms": 54724.037647247314,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.8952380952380953,
+      "correct": 94,
+      "total": 105,
+      "cost_usd": 0.048842167,
+      "avg_latency_ms": 21580.505752563477,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.7619047619047619,
+      "correct": 80,
+      "total": 105,
+      "cost_usd": 0.037577737,
+      "avg_latency_ms": 49944.742822647095,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.7142857142857143,
+      "correct": 75,
+      "total": 105,
+      "cost_usd": 0.087833189,
+      "avg_latency_ms": 92646.86436653137,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

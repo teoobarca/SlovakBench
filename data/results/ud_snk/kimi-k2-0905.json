@@ -1,0 +1,44 @@
+{
+  "model_name": "moonshotai/kimi-k2-0905",
+  "timestamp": "2025-12-15T15:46:50.083462",
+  "total_sentences": 10,
+  "accuracy": 0.7301587301587302,
+  "pos_accuracy": 0.8761904761904762,
+  "lemma_accuracy": 0.8380952380952381,
+  "dep_accuracy": 0.47619047619047616,
+  "total_cost_usd": 0.007083829999999999,
+  "avg_latency_ms": 3061.513121922811,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.8761904761904762,
+      "correct": 92,
+      "total": 105,
+      "cost_usd": 0.00222485,
+      "avg_latency_ms": 2606.7450523376465,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8380952380952381,
+      "correct": 88,
+      "total": 105,
+      "cost_usd": 0.00207949,
+      "avg_latency_ms": 2828.9079666137695,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.47619047619047616,
+      "correct": 50,
+      "total": 105,
+      "cost_usd": 0.00277949,
+      "avg_latency_ms": 3748.8863468170166,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

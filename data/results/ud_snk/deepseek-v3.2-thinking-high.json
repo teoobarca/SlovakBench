@@ -1,0 +1,44 @@
+{
+  "model_name": "deepseek/deepseek-v3.2-thinking-high",
+  "timestamp": "2025-12-15T16:38:32.620747",
+  "total_sentences": 10,
+  "accuracy": 0.8253968253968255,
+  "pos_accuracy": 0.9142857142857143,
+  "lemma_accuracy": 0.8761904761904762,
+  "dep_accuracy": 0.6857142857142857,
+  "total_cost_usd": 0.022435168000000002,
+  "avg_latency_ms": 53235.56738694509,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9142857142857143,
+      "correct": 96,
+      "total": 105,
+      "cost_usd": 0.00446866,
+      "avg_latency_ms": 29934.65883731842,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8761904761904762,
+      "correct": 92,
+      "total": 105,
+      "cost_usd": 0.0060314240000000005,
+      "avg_latency_ms": 42403.21047306061,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.6857142857142857,
+      "correct": 72,
+      "total": 105,
+      "cost_usd": 0.011935084,
+      "avg_latency_ms": 87368.83285045624,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

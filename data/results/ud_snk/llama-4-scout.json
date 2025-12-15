@@ -1,0 +1,44 @@
+{
+  "model_name": "meta-llama/llama-4-scout",
+  "timestamp": "2025-12-15T16:23:28.720964",
+  "total_sentences": 10,
+  "accuracy": 0.1873015873015873,
+  "pos_accuracy": 0.45714285714285713,
+  "lemma_accuracy": 0.0380952380952381,
+  "dep_accuracy": 0.06666666666666667,
+  "total_cost_usd": 0.0012949799999999998,
+  "avg_latency_ms": 2319.65860525767,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.45714285714285713,
+      "correct": 48,
+      "total": 105,
+      "cost_usd": 0.00038455,
+      "avg_latency_ms": 1911.2351894378662,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.0380952380952381,
+      "correct": 4,
+      "total": 105,
+      "cost_usd": 0.00041316,
+      "avg_latency_ms": 2471.0932970046997,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.06666666666666667,
+      "correct": 7,
+      "total": 105,
+      "cost_usd": 0.00049727,
+      "avg_latency_ms": 2576.6473293304443,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

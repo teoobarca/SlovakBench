@@ -1,13 +1,13 @@
 {
   "model_name": "openai/gpt-5.2-default",
-  "timestamp": "2025-12-14T20:07:36.035931",
+  "timestamp": "2025-12-15T15:02:33.979171",
   "total_sentences": 10,
-  "accuracy": 0.8476190476190476,
+  "accuracy": 0.8603174603174604,
   "pos_accuracy": 0.9238095238095239,
-  "lemma_accuracy": 0.8761904761904762,
-  "dep_accuracy": 0.7428571428571429,
-  "total_cost_usd": 0.17390450000000002,
-  "avg_latency_ms": 6456.5444231033325,
+  "lemma_accuracy": 0.9047619047619048,
+  "dep_accuracy": 0.7523809523809524,
+  "total_cost_usd": 0.139895,
+  "avg_latency_ms": 8925.662660598755,
   "error_count": 0,
   "tasks": {
     "pos": {
@@ -15,28 +15,28 @@
       "accuracy": 0.9238095238095239,
       "correct": 97,
       "total": 105,
-      "cost_usd": 0.0329175,
-      "avg_latency_ms": 3553.230667114258,
+      "cost_usd": 0.0293545,
+      "avg_latency_ms": 5963.510608673096,
       "errors": 0,
       "first_error": null
     },
     "lemma": {
       "task": "lemma",
-      "accuracy": 0.8761904761904762,
-      "correct": 92,
+      "accuracy": 0.9047619047619048,
+      "correct": 95,
       "total": 105,
-      "cost_usd": 0.034804,
-      "avg_latency_ms": 3719.1470623016357,
+      "cost_usd": 0.026894,
+      "avg_latency_ms": 5427.024006843567,
       "errors": 0,
       "first_error": null
     },
     "dep": {
       "task": "dep",
-      "accuracy": 0.7428571428571429,
-      "correct": 78,
+      "accuracy": 0.7523809523809524,
+      "correct": 79,
       "total": 105,
-      "cost_usd": 0.106183,
-      "avg_latency_ms": 12097.255539894104,
+      "cost_usd": 0.0836465,
+      "avg_latency_ms": 15386.453366279602,
       "errors": 0,
       "first_error": null
     }

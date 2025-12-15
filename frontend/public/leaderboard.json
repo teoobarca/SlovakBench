@@ -2,6 +2,39 @@
   "exam": {
     "2025": [
       {
+        "model": "claude-opus-4.5-thinking-high",
+        "provider": "Anthropic",
+        "overall": 96.9,
+        "mcq": 97.5,
+        "short_text": 95.8,
+        "cost": 1.0354,
+        "latency_ms": 10551,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gpt-5.1-default",
+        "provider": "OpenAI",
+        "overall": 96.9,
+        "mcq": 97.5,
+        "short_text": 95.8,
+        "cost": 0.1467,
+        "latency_ms": 3650,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gpt-5.2-low",
+        "provider": "OpenAI",
+        "overall": 95.3,
+        "mcq": 97.5,
+        "short_text": 91.7,
+        "cost": 0.1384,
+        "latency_ms": 2094,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
         "model": "gpt-5.2-high",
         "provider": "OpenAI",
         "overall": 95.3,
@@ -9,6 +42,105 @@
         "short_text": 91.7,
         "cost": 0.2257,
         "latency_ms": 3672,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gpt-5-high",
+        "provider": "OpenAI",
+        "overall": 95.3,
+        "mcq": 97.5,
+        "short_text": 91.7,
+        "cost": 1.1343,
+        "latency_ms": 30612,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gpt-5-default",
+        "provider": "OpenAI",
+        "overall": 95.3,
+        "mcq": 97.5,
+        "short_text": 91.7,
+        "cost": 0.4847,
+        "latency_ms": 12957,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "o3",
+        "provider": "OpenAI",
+        "overall": 95.3,
+        "mcq": 97.5,
+        "short_text": 91.7,
+        "cost": 0.2657,
+        "latency_ms": 4673,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gemini-3-pro-preview",
+        "provider": "Google",
+        "overall": 95.3,
+        "mcq": 97.5,
+        "short_text": 91.7,
+        "cost": 0.9441,
+        "latency_ms": 18645,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gemini-2.5-pro",
+        "provider": "Google",
+        "overall": 93.8,
+        "mcq": 97.5,
+        "short_text": 87.5,
+        "cost": 0.918,
+        "latency_ms": 21333,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "claude-opus-4",
+        "provider": "Anthropic",
+        "overall": 93.8,
+        "mcq": 97.5,
+        "short_text": 87.5,
+        "cost": 2.5616,
+        "latency_ms": 14981,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gpt-5.2-default",
+        "provider": "OpenAI",
+        "overall": 92.2,
+        "mcq": 97.5,
+        "short_text": 83.3,
+        "cost": 0.1915,
+        "latency_ms": 2735,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "claude-sonnet-4.5",
+        "provider": "Anthropic",
+        "overall": 92.2,
+        "mcq": 97.5,
+        "short_text": 83.3,
+        "cost": 0.9778,
+        "latency_ms": 18977,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gpt-5.1-high",
+        "provider": "OpenAI",
+        "overall": 92.2,
+        "mcq": 97.5,
+        "short_text": 83.3,
+        "cost": 0.3652,
+        "latency_ms": 9237,
         "error_count": 0,
         "total_questions": 64
       },
@@ -22,9 +154,1086 @@
         "latency_ms": 15471,
         "error_count": 0,
         "total_questions": 64
+      },
+      {
+        "model": "gemini-2.5-flash-reasoning",
+        "provider": "Google",
+        "overall": 90.6,
+        "mcq": 97.5,
+        "short_text": 79.2,
+        "cost": 0.1404,
+        "latency_ms": 6455,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "claude-opus-4.5",
+        "provider": "Anthropic",
+        "overall": 89.1,
+        "mcq": 100.0,
+        "short_text": 70.8,
+        "cost": 0.2097,
+        "latency_ms": 2701,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "deepseek-v3.2-thinking-high",
+        "provider": "DeepSeek",
+        "overall": 87.5,
+        "mcq": 95.0,
+        "short_text": 75.0,
+        "cost": 0.0314,
+        "latency_ms": 29845,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gpt-5.1-low",
+        "provider": "OpenAI",
+        "overall": 87.5,
+        "mcq": 97.5,
+        "short_text": 70.8,
+        "cost": 0.1014,
+        "latency_ms": 2563,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "claude-3.5-sonnet",
+        "provider": "Anthropic",
+        "overall": 85.9,
+        "mcq": 90.0,
+        "short_text": 79.2,
+        "cost": 0.2517,
+        "latency_ms": 1886,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gemini-2.5-flash",
+        "provider": "Google",
+        "overall": 85.9,
+        "mcq": 90.0,
+        "short_text": 79.2,
+        "cost": 0.0107,
+        "latency_ms": 546,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "grok-4",
+        "provider": "xAI",
+        "overall": 84.4,
+        "mcq": 92.5,
+        "short_text": 70.8,
+        "cost": 1.5873,
+        "latency_ms": 52447,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "grok-4.1-fast",
+        "provider": "xAI",
+        "overall": 84.4,
+        "mcq": 95.0,
+        "short_text": 66.7,
+        "cost": 0.0424,
+        "latency_ms": 13502,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "glm-4.6",
+        "provider": "zAI",
+        "overall": 84.4,
+        "mcq": 95.0,
+        "short_text": 66.7,
+        "cost": 0.2119,
+        "latency_ms": 32039,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "claude-sonnet-4",
+        "provider": "Anthropic",
+        "overall": 84.4,
+        "mcq": 95.0,
+        "short_text": 66.7,
+        "cost": 0.8016,
+        "latency_ms": 14441,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "deepseek-chat-v3.1-thinking",
+        "provider": "DeepSeek",
+        "overall": 82.8,
+        "mcq": 92.5,
+        "short_text": 66.7,
+        "cost": 0.0991,
+        "latency_ms": 17165,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gemini-2.5-flash-lite-preview-09-2025-reasoning",
+        "provider": "Google",
+        "overall": 82.8,
+        "mcq": 97.5,
+        "short_text": 58.3,
+        "cost": 0.0271,
+        "latency_ms": 3638,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "kimi-k2-thinking",
+        "provider": "Kimi",
+        "overall": 81.2,
+        "mcq": 97.5,
+        "short_text": 54.2,
+        "cost": 0.3168,
+        "latency_ms": 34531,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "claude-3.5-haiku",
+        "provider": "Anthropic",
+        "overall": 81.2,
+        "mcq": 92.5,
+        "short_text": 62.5,
+        "cost": 0.0337,
+        "latency_ms": 1595,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "claude-sonnet-4-non-thinking",
+        "provider": "Anthropic",
+        "overall": 81.2,
+        "mcq": 92.5,
+        "short_text": 62.5,
+        "cost": 0.1259,
+        "latency_ms": 1857,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gpt-5-mini",
+        "provider": "OpenAI",
+        "overall": 81.2,
+        "mcq": 95.0,
+        "short_text": 58.3,
+        "cost": 0.0881,
+        "latency_ms": 11863,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gpt-4.1",
+        "provider": "OpenAI",
+        "overall": 81.2,
+        "mcq": 90.0,
+        "short_text": 66.7,
+        "cost": 0.0708,
+        "latency_ms": 994,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "o4-mini",
+        "provider": "OpenAI",
+        "overall": 79.7,
+        "mcq": 90.0,
+        "short_text": 62.5,
+        "cost": 0.2425,
+        "latency_ms": 7888,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "qwen3-235b-a22b-thinking-2507",
+        "provider": "Qwen",
+        "overall": 79.7,
+        "mcq": 92.5,
+        "short_text": 58.3,
+        "cost": 0.0835,
+        "latency_ms": 57554,
+        "error_count": 1,
+        "total_questions": 64
+      },
+      {
+        "model": "qwen3-vl-235b-a22b-thinking",
+        "provider": "Qwen",
+        "overall": 78.1,
+        "mcq": 90.0,
+        "short_text": 58.3,
+        "cost": 0.1291,
+        "latency_ms": 24603,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "mistral-large-2512",
+        "provider": "Mistral",
+        "overall": 76.6,
+        "mcq": 92.5,
+        "short_text": 50.0,
+        "cost": 0.0183,
+        "latency_ms": 836,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gpt-5.2-none",
+        "provider": "OpenAI",
+        "overall": 76.6,
+        "mcq": 90.0,
+        "short_text": 54.2,
+        "cost": 0.066,
+        "latency_ms": 898,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "grok-3-mini",
+        "provider": "xAI",
+        "overall": 76.6,
+        "mcq": 90.0,
+        "short_text": 54.2,
+        "cost": 0.0366,
+        "latency_ms": 10462,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gpt-oss-120b",
+        "provider": "OpenAI",
+        "overall": 76.6,
+        "mcq": 90.0,
+        "short_text": 54.2,
+        "cost": 0.0136,
+        "latency_ms": 7767,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "qwen3-next-80b-a3b-thinking",
+        "provider": "Qwen",
+        "overall": 76.6,
+        "mcq": 92.5,
+        "short_text": 50.0,
+        "cost": 0.225,
+        "latency_ms": 19313,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gpt-4o",
+        "provider": "OpenAI",
+        "overall": 75.0,
+        "mcq": 87.5,
+        "short_text": 54.2,
+        "cost": 0.0884,
+        "latency_ms": 711,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gpt-5-nano",
+        "provider": "OpenAI",
+        "overall": 71.9,
+        "mcq": 92.5,
+        "short_text": 37.5,
+        "cost": 0.0418,
+        "latency_ms": 7763,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "devstral-medium",
+        "provider": "Mistral",
+        "overall": 70.3,
+        "mcq": 90.0,
+        "short_text": 37.5,
+        "cost": 0.0148,
+        "latency_ms": 696,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "llama-4-maverick",
+        "provider": "Meta",
+        "overall": 70.3,
+        "mcq": 85.0,
+        "short_text": 45.8,
+        "cost": 0.0083,
+        "latency_ms": 1143,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gpt-5-minimal",
+        "provider": "OpenAI",
+        "overall": 70.3,
+        "mcq": 87.5,
+        "short_text": 41.7,
+        "cost": 0.0486,
+        "latency_ms": 1183,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "glm-4.5v",
+        "provider": "zAI",
+        "overall": 70.3,
+        "mcq": 92.5,
+        "short_text": 33.3,
+        "cost": 0.0774,
+        "latency_ms": 14881,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "claude-haiku-4.5",
+        "provider": "Anthropic",
+        "overall": 70.3,
+        "mcq": 92.5,
+        "short_text": 33.3,
+        "cost": 0.0421,
+        "latency_ms": 1739,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gemini-2.5-flash-lite-preview-09-2025",
+        "provider": "Google",
+        "overall": 68.8,
+        "mcq": 85.0,
+        "short_text": 41.7,
+        "cost": 0.0035,
+        "latency_ms": 719,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "qwen3-32b",
+        "provider": "Qwen",
+        "overall": 68.8,
+        "mcq": 92.5,
+        "short_text": 29.2,
+        "cost": 0.024,
+        "latency_ms": 22324,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "minimax-m2",
+        "provider": "Minimax",
+        "overall": 67.2,
+        "mcq": 80.0,
+        "short_text": 45.8,
+        "cost": 0.0958,
+        "latency_ms": 30307,
+        "error_count": 1,
+        "total_questions": 64
+      },
+      {
+        "model": "glm-4.5",
+        "provider": "zAI",
+        "overall": 67.2,
+        "mcq": 92.5,
+        "short_text": 25.0,
+        "cost": 0.1311,
+        "latency_ms": 35601,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "mistral-medium-3.1",
+        "provider": "Mistral",
+        "overall": 67.2,
+        "mcq": 90.0,
+        "short_text": 29.2,
+        "cost": 0.015,
+        "latency_ms": 920,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "kimi-k2-0905",
+        "provider": "Kimi",
+        "overall": 67.2,
+        "mcq": 87.5,
+        "short_text": 33.3,
+        "cost": 0.0213,
+        "latency_ms": 2241,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "command-a",
+        "provider": "Cohere",
+        "overall": 62.5,
+        "mcq": 82.5,
+        "short_text": 29.2,
+        "cost": 0.0906,
+        "latency_ms": 1951,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "deepseek-v3.2",
+        "provider": "DeepSeek",
+        "overall": 60.9,
+        "mcq": 82.5,
+        "short_text": 25.0,
+        "cost": 0.01,
+        "latency_ms": 3188,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "llama-4-scout",
+        "provider": "Meta",
+        "overall": 59.4,
+        "mcq": 80.0,
+        "short_text": 25.0,
+        "cost": 0.0034,
+        "latency_ms": 752,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "deepseek-chat-v3.1",
+        "provider": "DeepSeek",
+        "overall": 59.4,
+        "mcq": 77.5,
+        "short_text": 29.2,
+        "cost": 0.0113,
+        "latency_ms": 2308,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "gpt-oss-20b",
+        "provider": "OpenAI",
+        "overall": 53.1,
+        "mcq": 72.5,
+        "short_text": 20.8,
+        "cost": 0.0099,
+        "latency_ms": 6130,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "glm-4.6v",
+        "provider": "zAI",
+        "overall": 46.9,
+        "mcq": 65.0,
+        "short_text": 16.7,
+        "cost": 0.08,
+        "latency_ms": 15172,
+        "error_count": 0,
+        "total_questions": 64
       }
     ]
   },
-  "pos": {},
+  "pos": {
+    "2025": [
+      {
+        "model": "gemini-3-pro-preview",
+        "provider": "Google",
+        "overall": 90.2,
+        "pos_accuracy": 96.2,
+        "lemma_accuracy": 88.6,
+        "dep_accuracy": 85.7,
+        "cost": 0.7658,
+        "latency_ms": 34481
+      },
+      {
+        "model": "claude-opus-4.5-thinking-high",
+        "provider": "Anthropic",
+        "overall": 89.8,
+        "pos_accuracy": 96.2,
+        "lemma_accuracy": 90.5,
+        "dep_accuracy": 82.9,
+        "cost": 1.4038,
+        "latency_ms": 30504
+      },
+      {
+        "model": "gpt-5-high",
+        "provider": "OpenAI",
+        "overall": 87.6,
+        "pos_accuracy": 92.4,
+        "lemma_accuracy": 90.5,
+        "dep_accuracy": 80.0,
+        "cost": 0.7561,
+        "latency_ms": 44856
+      },
+      {
+        "model": "claude-sonnet-4.5",
+        "provider": "Anthropic",
+        "overall": 87.3,
+        "pos_accuracy": 93.3,
+        "lemma_accuracy": 89.5,
+        "dep_accuracy": 79.0,
+        "cost": 0.6612,
+        "latency_ms": 26817
+      },
+      {
+        "model": "gpt-5-default",
+        "provider": "OpenAI",
+        "overall": 87.3,
+        "pos_accuracy": 92.4,
+        "lemma_accuracy": 90.5,
+        "dep_accuracy": 79.0,
+        "cost": 0.406,
+        "latency_ms": 24507
+      },
+      {
+        "model": "gpt-5.2-xhigh",
+        "provider": "OpenAI",
+        "overall": 87.3,
+        "pos_accuracy": 95.2,
+        "lemma_accuracy": 90.5,
+        "dep_accuracy": 76.2,
+        "cost": 1.2167,
+        "latency_ms": 88483
+      },
+      {
+        "model": "gpt-5.2-high",
+        "provider": "OpenAI",
+        "overall": 86.7,
+        "pos_accuracy": 94.3,
+        "lemma_accuracy": 90.5,
+        "dep_accuracy": 75.2,
+        "cost": 0.1554,
+        "latency_ms": 10431
+      },
+      {
+        "model": "gpt-5.2-low",
+        "provider": "OpenAI",
+        "overall": 86.3,
+        "pos_accuracy": 92.4,
+        "lemma_accuracy": 89.5,
+        "dep_accuracy": 77.1,
+        "cost": 0.1081,
+        "latency_ms": 8141
+      },
+      {
+        "model": "gpt-5.1-high",
+        "provider": "OpenAI",
+        "overall": 86.3,
+        "pos_accuracy": 92.4,
+        "lemma_accuracy": 90.5,
+        "dep_accuracy": 76.2,
+        "cost": 0.4099,
+        "latency_ms": 25375
+      },
+      {
+        "model": "o3",
+        "provider": "OpenAI",
+        "overall": 86.3,
+        "pos_accuracy": 93.3,
+        "lemma_accuracy": 90.5,
+        "dep_accuracy": 75.2,
+        "cost": 0.233,
+        "latency_ms": 10348
+      },
+      {
+        "model": "gpt-5.2-default",
+        "provider": "OpenAI",
+        "overall": 86.0,
+        "pos_accuracy": 92.4,
+        "lemma_accuracy": 90.5,
+        "dep_accuracy": 75.2,
+        "cost": 0.1399,
+        "latency_ms": 8926
+      },
+      {
+        "model": "gemini-2.5-pro",
+        "provider": "Google",
+        "overall": 85.7,
+        "pos_accuracy": 95.2,
+        "lemma_accuracy": 87.6,
+        "dep_accuracy": 74.3,
+        "cost": 0.4014,
+        "latency_ms": 23427
+      },
+      {
+        "model": "gpt-5.1-default",
+        "provider": "OpenAI",
+        "overall": 85.4,
+        "pos_accuracy": 92.4,
+        "lemma_accuracy": 89.5,
+        "dep_accuracy": 74.3,
+        "cost": 0.1507,
+        "latency_ms": 9239
+      },
+      {
+        "model": "claude-opus-4",
+        "provider": "Anthropic",
+        "overall": 85.1,
+        "pos_accuracy": 93.3,
+        "lemma_accuracy": 89.5,
+        "dep_accuracy": 72.4,
+        "cost": 1.3432,
+        "latency_ms": 13887
+      },
+      {
+        "model": "gpt-5-mini",
+        "provider": "OpenAI",
+        "overall": 85.1,
+        "pos_accuracy": 91.4,
+        "lemma_accuracy": 86.7,
+        "dep_accuracy": 77.1,
+        "cost": 0.0707,
+        "latency_ms": 19491
+      },
+      {
+        "model": "gpt-5.1-low",
+        "provider": "OpenAI",
+        "overall": 84.1,
+        "pos_accuracy": 92.4,
+        "lemma_accuracy": 87.6,
+        "dep_accuracy": 72.4,
+        "cost": 0.0933,
+        "latency_ms": 5833
+      },
+      {
+        "model": "claude-sonnet-4",
+        "provider": "Anthropic",
+        "overall": 84.1,
+        "pos_accuracy": 93.3,
+        "lemma_accuracy": 89.5,
+        "dep_accuracy": 69.5,
+        "cost": 0.4723,
+        "latency_ms": 16420
+      },
+      {
+        "model": "o4-mini",
+        "provider": "OpenAI",
+        "overall": 83.8,
+        "pos_accuracy": 92.4,
+        "lemma_accuracy": 88.6,
+        "dep_accuracy": 70.5,
+        "cost": 0.1761,
+        "latency_ms": 10623
+      },
+      {
+        "model": "grok-4",
+        "provider": "xAI",
+        "overall": 83.8,
+        "pos_accuracy": 91.4,
+        "lemma_accuracy": 88.6,
+        "dep_accuracy": 71.4,
+        "cost": 0.5829,
+        "latency_ms": 43887
+      },
+      {
+        "model": "claude-3.5-sonnet",
+        "provider": "Anthropic",
+        "overall": 83.5,
+        "pos_accuracy": 91.4,
+        "lemma_accuracy": 88.6,
+        "dep_accuracy": 70.5,
+        "cost": 0.092,
+        "latency_ms": 2941
+      },
+      {
+        "model": "claude-opus-4.5",
+        "provider": "Anthropic",
+        "overall": 83.5,
+        "pos_accuracy": 94.3,
+        "lemma_accuracy": 88.6,
+        "dep_accuracy": 67.6,
+        "cost": 0.077,
+        "latency_ms": 3656
+      },
+      {
+        "model": "qwen3-235b-a22b-thinking-2507",
+        "provider": "Qwen",
+        "overall": 82.5,
+        "pos_accuracy": 91.4,
+        "lemma_accuracy": 85.7,
+        "dep_accuracy": 70.5,
+        "cost": 0.0641,
+        "latency_ms": 157228
+      },
+      {
+        "model": "deepseek-v3.2-thinking-high",
+        "provider": "DeepSeek",
+        "overall": 82.5,
+        "pos_accuracy": 91.4,
+        "lemma_accuracy": 87.6,
+        "dep_accuracy": 68.6,
+        "cost": 0.0224,
+        "latency_ms": 53236
+      },
+      {
+        "model": "qwen3-vl-235b-a22b-thinking",
+        "provider": "Qwen",
+        "overall": 82.2,
+        "pos_accuracy": 91.4,
+        "lemma_accuracy": 87.6,
+        "dep_accuracy": 67.6,
+        "cost": 0.1003,
+        "latency_ms": 39458
+      },
+      {
+        "model": "qwen3-next-80b-a3b-thinking",
+        "provider": "Qwen",
+        "overall": 81.9,
+        "pos_accuracy": 91.4,
+        "lemma_accuracy": 87.6,
+        "dep_accuracy": 66.7,
+        "cost": 0.1376,
+        "latency_ms": 23601
+      },
+      {
+        "model": "gpt-5.2-none",
+        "provider": "OpenAI",
+        "overall": 81.6,
+        "pos_accuracy": 92.4,
+        "lemma_accuracy": 88.6,
+        "dep_accuracy": 63.8,
+        "cost": 0.0308,
+        "latency_ms": 2024
+      },
+      {
+        "model": "deepseek-chat-v3.1-thinking",
+        "provider": "DeepSeek",
+        "overall": 81.3,
+        "pos_accuracy": 88.6,
+        "lemma_accuracy": 87.6,
+        "dep_accuracy": 67.6,
+        "cost": 0.0255,
+        "latency_ms": 52627
+      },
+      {
+        "model": "gpt-5-minimal",
+        "provider": "OpenAI",
+        "overall": 81.0,
+        "pos_accuracy": 92.4,
+        "lemma_accuracy": 88.6,
+        "dep_accuracy": 61.9,
+        "cost": 0.0226,
+        "latency_ms": 2014
+      },
+      {
+        "model": "gemini-2.5-flash",
+        "provider": "Google",
+        "overall": 81.0,
+        "pos_accuracy": 95.2,
+        "lemma_accuracy": 85.7,
+        "dep_accuracy": 61.9,
+        "cost": 0.0051,
+        "latency_ms": 811
+      },
+      {
+        "model": "grok-4.1-fast",
+        "provider": "xAI",
+        "overall": 80.6,
+        "pos_accuracy": 91.4,
+        "lemma_accuracy": 87.6,
+        "dep_accuracy": 62.9,
+        "cost": 0.0261,
+        "latency_ms": 28115
+      },
+      {
+        "model": "gpt-4.1",
+        "provider": "OpenAI",
+        "overall": 79.4,
+        "pos_accuracy": 93.3,
+        "lemma_accuracy": 87.6,
+        "dep_accuracy": 57.1,
+        "cost": 0.025,
+        "latency_ms": 1636
+      },
+      {
+        "model": "kimi-k2-thinking",
+        "provider": "Kimi",
+        "overall": 79.0,
+        "pos_accuracy": 89.5,
+        "lemma_accuracy": 76.2,
+        "dep_accuracy": 71.4,
+        "cost": 0.1743,
+        "latency_ms": 54724
+      },
+      {
+        "model": "gemini-2.5-flash-reasoning",
+        "provider": "Google",
+        "overall": 79.0,
+        "pos_accuracy": 91.4,
+        "lemma_accuracy": 84.8,
+        "dep_accuracy": 61.0,
+        "cost": 0.0745,
+        "latency_ms": 9499
+      },
+      {
+        "model": "gpt-4o",
+        "provider": "OpenAI",
+        "overall": 78.4,
+        "pos_accuracy": 91.4,
+        "lemma_accuracy": 88.6,
+        "dep_accuracy": 55.2,
+        "cost": 0.0311,
+        "latency_ms": 1493
+      },
+      {
+        "model": "claude-sonnet-4-non-thinking",
+        "provider": "Anthropic",
+        "overall": 78.4,
+        "pos_accuracy": 90.5,
+        "lemma_accuracy": 87.6,
+        "dep_accuracy": 57.1,
+        "cost": 0.0461,
+        "latency_ms": 2569
+      },
+      {
+        "model": "gpt-oss-120b",
+        "provider": "OpenAI",
+        "overall": 77.1,
+        "pos_accuracy": 82.9,
+        "lemma_accuracy": 86.7,
+        "dep_accuracy": 61.9,
+        "cost": 0.0072,
+        "latency_ms": 17811
+      },
+      {
+        "model": "claude-haiku-4.5",
+        "provider": "Anthropic",
+        "overall": 77.1,
+        "pos_accuracy": 88.6,
+        "lemma_accuracy": 86.7,
+        "dep_accuracy": 56.2,
+        "cost": 0.0154,
+        "latency_ms": 2067
+      },
+      {
+        "model": "gemini-2.5-flash-lite-preview-09-2025-reasoning",
+        "provider": "Google",
+        "overall": 76.2,
+        "pos_accuracy": 91.4,
+        "lemma_accuracy": 81.9,
+        "dep_accuracy": 55.2,
+        "cost": 0.0152,
+        "latency_ms": 4744
+      },
+      {
+        "model": "grok-3-mini",
+        "provider": "xAI",
+        "overall": 75.9,
+        "pos_accuracy": 88.6,
+        "lemma_accuracy": 85.7,
+        "dep_accuracy": 53.3,
+        "cost": 0.0205,
+        "latency_ms": 13785
+      },
+      {
+        "model": "gpt-5-nano",
+        "provider": "OpenAI",
+        "overall": 75.9,
+        "pos_accuracy": 89.5,
+        "lemma_accuracy": 90.5,
+        "dep_accuracy": 47.6,
+        "cost": 0.0478,
+        "latency_ms": 38869
+      },
+      {
+        "model": "deepseek-chat-v3.1",
+        "provider": "DeepSeek",
+        "overall": 75.6,
+        "pos_accuracy": 91.4,
+        "lemma_accuracy": 86.7,
+        "dep_accuracy": 48.6,
+        "cost": 0.0026,
+        "latency_ms": 3567
+      },
+      {
+        "model": "glm-4.6",
+        "provider": "zAI",
+        "overall": 75.6,
+        "pos_accuracy": 90.5,
+        "lemma_accuracy": 68.6,
+        "dep_accuracy": 67.6,
+        "cost": 0.1283,
+        "latency_ms": 47303
+      },
+      {
+        "model": "mistral-large-2512",
+        "provider": "Mistral",
+        "overall": 75.2,
+        "pos_accuracy": 91.4,
+        "lemma_accuracy": 83.8,
+        "dep_accuracy": 50.5,
+        "cost": 0.006,
+        "latency_ms": 1472
+      },
+      {
+        "model": "gpt-oss-20b",
+        "provider": "OpenAI",
+        "overall": 74.9,
+        "pos_accuracy": 89.5,
+        "lemma_accuracy": 83.8,
+        "dep_accuracy": 51.4,
+        "cost": 0.0089,
+        "latency_ms": 9747
+      },
+      {
+        "model": "deepseek-v3.2",
+        "provider": "DeepSeek",
+        "overall": 74.3,
+        "pos_accuracy": 90.5,
+        "lemma_accuracy": 85.7,
+        "dep_accuracy": 46.7,
+        "cost": 0.0026,
+        "latency_ms": 4292
+      },
+      {
+        "model": "mistral-medium-3.1",
+        "provider": "Mistral",
+        "overall": 73.7,
+        "pos_accuracy": 94.3,
+        "lemma_accuracy": 81.9,
+        "dep_accuracy": 44.8,
+        "cost": 0.0057,
+        "latency_ms": 3470
+      },
+      {
+        "model": "minimax-m2",
+        "provider": "Minimax",
+        "overall": 73.3,
+        "pos_accuracy": 90.5,
+        "lemma_accuracy": 85.7,
+        "dep_accuracy": 43.8,
+        "cost": 0.0583,
+        "latency_ms": 31010
+      },
+      {
+        "model": "kimi-k2-0905",
+        "provider": "Kimi",
+        "overall": 73.0,
+        "pos_accuracy": 87.6,
+        "lemma_accuracy": 83.8,
+        "dep_accuracy": 47.6,
+        "cost": 0.0071,
+        "latency_ms": 3062
+      },
+      {
+        "model": "glm-4.6v",
+        "provider": "zAI",
+        "overall": 72.4,
+        "pos_accuracy": 87.6,
+        "lemma_accuracy": 79.0,
+        "dep_accuracy": 50.5,
+        "cost": 0.0321,
+        "latency_ms": 19389
+      },
+      {
+        "model": "glm-4.5",
+        "provider": "zAI",
+        "overall": 69.2,
+        "pos_accuracy": 89.5,
+        "lemma_accuracy": 85.7,
+        "dep_accuracy": 32.4,
+        "cost": 0.0371,
+        "latency_ms": 24651
+      },
+      {
+        "model": "claude-3.5-haiku",
+        "provider": "Anthropic",
+        "overall": 68.3,
+        "pos_accuracy": 91.4,
+        "lemma_accuracy": 84.8,
+        "dep_accuracy": 28.6,
+        "cost": 0.0122,
+        "latency_ms": 2291
+      },
+      {
+        "model": "gemini-2.5-flash-lite-preview-09-2025",
+        "provider": "Google",
+        "overall": 67.3,
+        "pos_accuracy": 89.5,
+        "lemma_accuracy": 84.8,
+        "dep_accuracy": 27.6,
+        "cost": 0.0012,
+        "latency_ms": 675
+      },
+      {
+        "model": "command-a",
+        "provider": "Cohere",
+        "overall": 66.3,
+        "pos_accuracy": 89.5,
+        "lemma_accuracy": 81.0,
+        "dep_accuracy": 28.6,
+        "cost": 0.0297,
+        "latency_ms": 1360
+      },
+      {
+        "model": "devstral-medium",
+        "provider": "Mistral",
+        "overall": 66.0,
+        "pos_accuracy": 90.5,
+        "lemma_accuracy": 82.9,
+        "dep_accuracy": 24.8,
+        "cost": 0.0057,
+        "latency_ms": 2382
+      },
+      {
+        "model": "llama-4-maverick",
+        "provider": "Meta",
+        "overall": 64.4,
+        "pos_accuracy": 91.4,
+        "lemma_accuracy": 75.2,
+        "dep_accuracy": 26.7,
+        "cost": 0.0077,
+        "latency_ms": 4334
+      },
+      {
+        "model": "glm-4.5v",
+        "provider": "zAI",
+        "overall": 63.5,
+        "pos_accuracy": 90.5,
+        "lemma_accuracy": 82.9,
+        "dep_accuracy": 17.1,
+        "cost": 0.065,
+        "latency_ms": 34554
+      },
+      {
+        "model": "qwen3-32b",
+        "provider": "Qwen",
+        "overall": 62.2,
+        "pos_accuracy": 87.6,
+        "lemma_accuracy": 62.9,
+        "dep_accuracy": 36.2,
+        "cost": 0.0145,
+        "latency_ms": 33138
+      },
+      {
+        "model": "qwen3-max",
+        "provider": "Qwen",
+        "overall": 57.1,
+        "pos_accuracy": 82.9,
+        "lemma_accuracy": 88.6,
+        "dep_accuracy": 0.0,
+        "cost": 0.0111,
+        "latency_ms": 2156
+      },
+      {
+        "model": "llama-4-scout",
+        "provider": "Meta",
+        "overall": 18.7,
+        "pos_accuracy": 45.7,
+        "lemma_accuracy": 3.8,
+        "dep_accuracy": 6.7,
+        "cost": 0.0013,
+        "latency_ms": 2320
+      }
+    ]
+  },
   "grammar": {}
 }

@@ -1,0 +1,44 @@
+{
+  "model_name": "anthropic/claude-sonnet-4",
+  "timestamp": "2025-12-15T14:47:34.544967",
+  "total_sentences": 10,
+  "accuracy": 0.8412698412698413,
+  "pos_accuracy": 0.9333333333333333,
+  "lemma_accuracy": 0.8952380952380953,
+  "dep_accuracy": 0.6952380952380952,
+  "total_cost_usd": 0.47230800000000006,
+  "avg_latency_ms": 16420.232613881428,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9333333333333333,
+      "correct": 98,
+      "total": 105,
+      "cost_usd": 0.070776,
+      "avg_latency_ms": 7784.224486351013,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8952380952380953,
+      "correct": 94,
+      "total": 105,
+      "cost_usd": 0.081396,
+      "avg_latency_ms": 8923.427724838257,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.6952380952380952,
+      "correct": 73,
+      "total": 105,
+      "cost_usd": 0.32013600000000003,
+      "avg_latency_ms": 32553.045630455017,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

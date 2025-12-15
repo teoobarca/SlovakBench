@@ -1,0 +1,44 @@
+{
+  "model_name": "openai/o4-mini",
+  "timestamp": "2025-12-15T14:49:31.388956",
+  "total_sentences": 10,
+  "accuracy": 0.8380952380952381,
+  "pos_accuracy": 0.9238095238095239,
+  "lemma_accuracy": 0.8857142857142857,
+  "dep_accuracy": 0.7047619047619048,
+  "total_cost_usd": 0.1760528,
+  "avg_latency_ms": 10622.767305374146,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9238095238095239,
+      "correct": 97,
+      "total": 105,
+      "cost_usd": 0.0314094,
+      "avg_latency_ms": 5993.798494338989,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8857142857142857,
+      "correct": 93,
+      "total": 105,
+      "cost_usd": 0.0395428,
+      "avg_latency_ms": 7272.7115869522095,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.7047619047619048,
+      "correct": 74,
+      "total": 105,
+      "cost_usd": 0.1051006,
+      "avg_latency_ms": 18601.791834831238,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

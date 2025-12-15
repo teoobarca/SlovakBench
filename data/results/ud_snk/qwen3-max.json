@@ -1,0 +1,44 @@
+{
+  "model_name": "qwen/qwen3-max",
+  "timestamp": "2025-12-15T16:25:23.249585",
+  "total_sentences": 10,
+  "accuracy": 0.5714285714285715,
+  "pos_accuracy": 0.8285714285714286,
+  "lemma_accuracy": 0.8857142857142857,
+  "dep_accuracy": 0.0,
+  "total_cost_usd": 0.0111,
+  "avg_latency_ms": 2156.445916493734,
+  "error_count": 10,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.8285714285714286,
+      "correct": 87,
+      "total": 105,
+      "cost_usd": 0.005544,
+      "avg_latency_ms": 3128.4624814987183,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8857142857142857,
+      "correct": 93,
+      "total": 105,
+      "cost_usd": 0.005556,
+      "avg_latency_ms": 3340.875267982483,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.0,
+      "correct": 0,
+      "total": 105,
+      "cost_usd": 0,
+      "avg_latency_ms": 0,
+      "errors": 10,
+      "first_error": "Error code: 429 - {'error': {'message': 'Rate limit exceeded: limit_rpm/qwen/qwen3-max/5e31ba3c-d5bf"
+    }
+  }
+}

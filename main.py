@@ -385,6 +385,7 @@ def export():
         "ai21": "AI21",
     }
     
+    
     # Collect exam results
     exam_dir = RESULTS_DIR
     if exam_dir.exists():
@@ -416,6 +417,35 @@ def export():
                         "error_count": data.get("error_count", 0),
                         "total_questions": data.get("total_questions", 64),
                     })
+
+    # Collect UD results for "pos" task
+    # Note: UD results are flat in data/results/ud_snk/*.json (not by year folder currently, or assuming 2025/current)
+    # The current listing showed files directly in ud_snk/
+    if UD_RESULTS_DIR.exists():
+        ud_year = "2025" # Hardcoded for now as UD SNK is a single dataset
+        
+        for f in UD_RESULTS_DIR.glob("*.json"):
+            try:
+                with open(f) as fp:
+                    data = json.load(fp)
+            except json.JSONDecodeError:
+                continue
+                
+            full_name = data.get("model_name", "unknown/unknown")
+            provider_slug = full_name.split("/")[0]
+            model_raw = full_name.split("/")[-1]
+            model = model_raw.split(":")[0]
+            
+            leaderboard["pos"][ud_year].append({
+                "model": model,
+                "provider": provider_names.get(provider_slug, provider_slug.title()),
+                "overall": round(data.get("accuracy", 0) * 100, 1), # This is average of pos/lemma/dep if aggregated in json
+                "pos_accuracy": round(data.get("pos_accuracy", 0) * 100, 1),
+                "lemma_accuracy": round(data.get("lemma_accuracy", 0) * 100, 1),
+                "dep_accuracy": round(data.get("dep_accuracy", 0) * 100, 1),
+                "cost": round(data.get("total_cost_usd", 0), 4),
+                "latency_ms": round(data.get("avg_latency_ms", 0)) if data.get("avg_latency_ms") else None,
+            })
     
     # Sort each year by overall score
     for task in leaderboard:
@@ -1070,6 +1100,7 @@ def retry(
 def evaluate_ud(
     model: Optional[str] = typer.Option(None, "--model", "-m", help="Model to evaluate (from config/models.py)"),
     report_only: bool = typer.Option(False, "--report", "-r", help="Show results only"),
+    force: bool = typer.Option(False, "--force", "-f", help="Re-run even if results exist"),
 ):
     """Run UD Slovak SNK benchmark (POS, Lemma, DEP) on curated 32-sentence dataset."""
     import asyncio
@@ -1124,16 +1155,25 @@ def evaluate_ud(
     else:
         models_to_run = list(MODELS.keys())
     
+    # Count sentences from benchmark
+    benchmark_path = Path("data/processed/ud_snk/benchmark.json")
+    if benchmark_path.exists():
+        with open(benchmark_path) as f:
+            bench_data = json.load(f)
+        sentence_count = len(bench_data.get("sentences", []))
+    else:
+        sentence_count = "?"
+    
     console.print(f"\n{'='*60}")
     console.print(f"[bold]UD Slovak SNK Benchmark[/bold]")
     console.print(f"Models: {len(models_to_run)}")
     console.print(f"Tasks: POS, LEMMA, DEP")
-    console.print(f"Dataset: Curated (32 sentences)")
+    console.print(f"Dataset: Curated ({sentence_count} sentences)")
     console.print(f"{'='*60}\n")
     
     for m in models_to_run:
         try:
-            asyncio.run(run_benchmark(m))
+            asyncio.run(run_benchmark(m, force=force))
         except Exception as e:
             console.print(f"[red]❌ {m}: {str(e)[:80]}[/red]")
         console.print()

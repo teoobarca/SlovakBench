@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Image from "next/image";
 import {
     ScatterChart,
@@ -13,26 +13,8 @@ import {
     Cell,
     LabelList,
 } from "recharts";
-import type { LeaderboardData, TaskType, SortField, SortDirection, TaskDescription, ModelResult } from "@/types";
-
-const TASK_DESCRIPTIONS: Record<TaskType, TaskDescription> = {
-    exam: {
-        icon: "📝",
-        title: "Slovak Maturita Exam",
-        description: "Official Slovak high school graduation exam (Maturita) in Slovak Language and Literature. Includes MCQ and short-text answers covering grammar, literature, and comprehension.",
-        link: "https://www.nucem.sk/",
-    },
-    pos: {
-        icon: "🏷️",
-        title: "Part-of-Speech Tagging",
-        description: "Part-of-speech tagging evaluation on Slovak National Corpus data. Tests morphological analysis capabilities.",
-    },
-    grammar: {
-        icon: "✏️",
-        title: "Grammar Correction",
-        description: "Detecting and correcting grammatical and spelling errors in Slovak text.",
-    },
-};
+import type { LeaderboardData, TaskType, SortField, SortDirection, ModelResult } from "@/types";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // Provider logos and colors
 const PROVIDER_LOGOS: Record<string, string> = {
@@ -75,8 +57,7 @@ const PROVIDER_COLORS: Record<string, string> = {
     zAI: "#1d1d1f",
 };
 
-const YEARS = [2025, 2024, 2023];
-const PROVIDERS = ["all", "OpenAI", "Google", "Anthropic"] as const;
+
 
 type ViewMode = "table" | "scatter";
 
@@ -85,16 +66,59 @@ interface LeaderboardProps {
 }
 
 export function Leaderboard({ data }: LeaderboardProps) {
+    const { t } = useLanguage();
     const [currentTask, setCurrentTask] = useState<TaskType>("exam");
-    const [currentYear, setCurrentYear] = useState(2025);
+    // Sort years descending
+    const availableYears = useMemo(() => {
+        const years = Object.keys(data[currentTask] || {});
+        return years.map(Number).sort((a, b) => b - a);
+    }, [data, currentTask]);
+
+    const [currentYear, setCurrentYear] = useState<number>(availableYears[0] || 2025);
+
+    // Update year when task changes if current year not available
+    useEffect(() => {
+        const years = Object.keys(data[currentTask] || {}).map(Number).sort((a, b) => b - a);
+        if (years.length > 0 && !years.includes(currentYear)) {
+            setCurrentYear(years[0]);
+        }
+    }, [currentTask, data, currentYear]);
+
     const [currentProvider, setCurrentProvider] = useState<string>("all");
     const [viewMode, setViewMode] = useState<ViewMode>("table");
-    const [sort, setSort] = useState<{ field: SortField; direction: SortDirection }>({
+    const [sort, setSort] = useState<{ field: SortField | "pos_accuracy" | "lemma_accuracy" | "dep_accuracy"; direction: SortDirection }>({
         field: "overall",
         direction: "desc",
     });
     const [highlightedProviders, setHighlightedProviders] = useState<Set<string>>(new Set());
     const [hoveredProvider, setHoveredProvider] = useState<string | null>(null);
+    const [isProvidersExpanded, setIsProvidersExpanded] = useState(false);
+
+    const derivedProviders = useMemo(() => {
+        const items = data[currentTask]?.[currentYear] || [];
+        const uniqueProviders = Array.from(new Set(items.map(item => item.provider || "Unknown")));
+        const prioritize = ["OpenAI", "Google", "Anthropic"];
+        return ["all", ...uniqueProviders.sort((a, b) => {
+            const idxA = prioritize.indexOf(a);
+            const idxB = prioritize.indexOf(b);
+            if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+            if (idxA !== -1) return -1;
+            if (idxB !== -1) return 1;
+            return a.localeCompare(b);
+        })];
+    }, [data, currentTask, currentYear]);
+
+    const visibleProviders = useMemo(() => {
+        const defaultVisible = derivedProviders.slice(0, 4);
+        if (currentProvider !== "all" && !defaultVisible.includes(currentProvider)) {
+            return [...defaultVisible, currentProvider];
+        }
+        return defaultVisible;
+    }, [derivedProviders, currentProvider]);
+
+    const hiddenProviders = useMemo(() => {
+        return derivedProviders.filter(p => !visibleProviders.includes(p));
+    }, [derivedProviders, visibleProviders]);
 
     const filteredAndSorted = useMemo(() => {
         let items = data[currentTask]?.[currentYear] || [];
@@ -104,13 +128,15 @@ export function Leaderboard({ data }: LeaderboardProps) {
         }
 
         return [...items].sort((a, b) => {
+            // @ts-ignore - dynamic sort field
             const aVal = a[sort.field] || 0;
+            // @ts-ignore
             const bVal = b[sort.field] || 0;
             return sort.direction === "desc" ? bVal - aVal : aVal - bVal;
         });
     }, [data, currentTask, currentYear, currentProvider, sort]);
 
-    const handleSort = (field: SortField) => {
+    const handleSort = (field: SortField | "pos_accuracy" | "lemma_accuracy" | "dep_accuracy") => {
         setSort((prev) => ({
             field,
             direction: prev.field === field && prev.direction === "desc" ? "asc" : "desc",
@@ -139,7 +165,17 @@ export function Leaderboard({ data }: LeaderboardProps) {
         return true;
     };
 
-    const taskDesc = TASK_DESCRIPTIONS[currentTask];
+    const taskIcons: Record<TaskType, string> = {
+        exam: "📝",
+        pos: "🏷️",
+        grammar: "✏️"
+    };
+
+    const taskDesc = {
+        ...t.leaderboard.descriptions[currentTask],
+        icon: taskIcons[currentTask],
+        link: currentTask === "exam" ? "https://www.nucem.sk/" : undefined
+    };
 
     // Prepare scatter data
     const scatterData = useMemo(() => {
@@ -157,8 +193,8 @@ export function Leaderboard({ data }: LeaderboardProps) {
                 {/* Header with Task Tabs */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                     <div>
-                        <p className="font-[var(--font-mono)] text-xs tracking-[0.3em] text-[var(--color-muted)] mb-2">RESULTS</p>
-                        <h2 className="font-[var(--font-display)] text-5xl font-semibold">Leaderboard</h2>
+                        <p className="font-[var(--font-mono)] text-xs tracking-[0.3em] text-[var(--color-muted)] mb-2">{t.leaderboard.label}</p>
+                        <h2 className="font-[var(--font-display)] text-5xl font-semibold">{t.leaderboard.title}</h2>
                     </div>
 
                     <div className="flex gap-2 font-[var(--font-mono)] text-sm">
@@ -171,7 +207,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                     : "hover:bg-[var(--color-ink)]/5"
                                     }`}
                             >
-                                {task === "exam" ? "Maturita Exam" : task === "pos" ? "POS Tagging" : "Grammar"}
+                                {task === "exam" ? t.leaderboard.tasks.exam : task === "pos" ? t.leaderboard.tasks.pos : t.leaderboard.tasks.grammar}
                             </button>
                         ))}
                     </div>
@@ -186,7 +222,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                         <div>
                             <h3 className="font-[var(--font-sans)] font-semibold text-lg mb-1">{taskDesc.title}</h3>
                             <p className="text-[var(--color-muted)] text-sm leading-relaxed">
-                                {taskDesc.description}
+                                {taskDesc.desc}
                                 {taskDesc.link && (
                                     <a
                                         href={taskDesc.link}
@@ -197,7 +233,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                         NÚCEM ↗
                                     </a>
                                 )}
-                                {!taskDesc.link && <span className="text-[var(--color-accent)] ml-1">(Coming soon)</span>}
+                                {!taskDesc.link && currentTask === "grammar" && <span className="text-[var(--color-accent)] ml-1">{t.about.coming_soon}</span>}
                             </p>
                         </div>
                     </div>
@@ -205,30 +241,35 @@ export function Leaderboard({ data }: LeaderboardProps) {
 
                 {/* Filters Row */}
                 <div className="flex flex-wrap items-center gap-6 mb-6">
-                    {/* Year Selector */}
-                    <div className="flex items-center gap-3">
-                        <span className="font-[var(--font-mono)] text-sm text-[var(--color-muted)]">Year:</span>
-                        <div className="flex gap-2">
-                            {YEARS.map((year) => (
-                                <button
-                                    key={year}
-                                    onClick={() => setCurrentYear(year)}
-                                    className={`px-3 py-1.5 rounded-lg font-[var(--font-mono)] text-sm transition-all cursor-pointer ${currentYear === year
-                                        ? "bg-[var(--color-ink)] text-[var(--color-cream)]"
-                                        : "border border-[var(--color-ink)]/20 hover:bg-[var(--color-ink)]/5"
-                                        }`}
-                                >
-                                    {year}
-                                </button>
-                            ))}
+                    {/* Year Selector - Only for Exam task */}
+                    {currentTask !== "pos" && (
+                        <div className="flex items-center gap-3">
+                            <span className="font-[var(--font-mono)] text-sm text-[var(--color-muted)]">{t.leaderboard.filters.year}:</span>
+                            <div className="flex gap-2">
+                                {availableYears.length > 0 ? availableYears.map((year) => (
+                                    <button
+                                        key={year}
+                                        onClick={() => setCurrentYear(year)}
+                                        className={`px-3 py-1.5 rounded-lg font-[var(--font-mono)] text-sm transition-all cursor-pointer ${currentYear === year
+                                            ? "bg-[var(--color-ink)] text-[var(--color-cream)]"
+                                            : "border border-[var(--color-ink)]/20 hover:bg-[var(--color-ink)]/5"
+                                            }`}
+                                    >
+                                        {year}
+                                    </button>
+                                )) : (
+                                    <span className="text-sm text-[var(--color-muted)] italic">No data</span>
+                                )}
+                            </div>
                         </div>
-                    </div>
+                    )}
 
                     {/* Provider Filter */}
-                    <div className="flex items-center gap-3">
-                        <span className="font-[var(--font-mono)] text-sm text-[var(--color-muted)]">Provider:</span>
-                        <div className="flex gap-2">
-                            {PROVIDERS.map((provider) => (
+                    <div className="flex items-start gap-3">
+                        <span className="font-[var(--font-mono)] text-sm text-[var(--color-muted)] mt-2">{t.leaderboard.filters.provider}:</span>
+                        <div className="flex gap-2 flex-wrap max-w-2xl relative transition-all">
+
+                            {visibleProviders.map((provider) => (
                                 <button
                                     key={provider}
                                     onClick={() => setCurrentProvider(provider)}
@@ -240,9 +281,54 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                     {provider !== "all" && PROVIDER_LOGOS[provider] && (
                                         <Image src={PROVIDER_LOGOS[provider]} alt={provider} width={14} height={14} className="opacity-70" />
                                     )}
-                                    {provider === "all" ? "All" : provider}
+                                    {provider === "all" ? t.leaderboard.filters.all_providers : provider}
                                 </button>
                             ))}
+
+                            {hiddenProviders.length > 0 && (
+                                <div className="relative">
+                                    <button
+                                        onClick={() => setIsProvidersExpanded(!isProvidersExpanded)}
+                                        className={`px-3 py-2 rounded-lg font-[var(--font-mono)] text-xs border border-[var(--color-ink)]/10 text-[var(--color-muted)] hover:bg-[var(--color-ink)]/5 cursor-pointer transition-colors flex items-center gap-1 ${isProvidersExpanded ? 'bg-[var(--color-ink)]/5' : 'bg-[var(--color-paper)]'}`}
+                                    >
+                                        +{hiddenProviders.length}
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="12"
+                                            height="12"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            className={`transition-transform duration-200 ${isProvidersExpanded ? 'rotate-180' : ''}`}
+                                        >
+                                            <path d="m6 9 6 6 6-6" />
+                                        </svg>
+                                    </button>
+
+                                    {isProvidersExpanded && (
+                                        <div className="absolute top-full left-0 mt-2 bg-[var(--color-paper)] border border-[var(--color-ink)]/10 rounded-lg shadow-lg p-2 z-50 flex flex-col gap-1 min-w-[140px]">
+                                            {hiddenProviders.map((provider) => (
+                                                <button
+                                                    key={provider}
+                                                    onClick={() => {
+                                                        setCurrentProvider(provider);
+                                                        setIsProvidersExpanded(false);
+                                                    }}
+                                                    className="w-full text-left px-3 py-2 rounded-md hover:bg-[var(--color-ink)]/5 font-[var(--font-mono)] text-sm flex items-center gap-2"
+                                                >
+                                                    {PROVIDER_LOGOS[provider] && (
+                                                        <Image src={PROVIDER_LOGOS[provider]} alt={provider} width={14} height={14} className="opacity-70" />
+                                                    )}
+                                                    {provider}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            )}
                         </div>
                     </div>
 
@@ -254,16 +340,15 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                 className={`px-3 py-1.5 rounded-md font-[var(--font-mono)] text-sm transition-all cursor-pointer flex items-center gap-1.5 ${viewMode === "table" ? "bg-white shadow-sm" : "hover:bg-white/50"
                                     }`}
                             >
-                                <span>☰</span> Table
+                                <span>☰</span> {t.leaderboard.table.view_table || "Table"}
                             </button>
                             <button
                                 onClick={() => setViewMode("scatter")}
                                 className={`px-3 py-1.5 rounded-md font-[var(--font-mono)] text-sm transition-all cursor-pointer flex items-center gap-1.5 ${viewMode === "scatter" ? "bg-white shadow-sm" : "hover:bg-white/50"
                                     }`}
                             >
-                                <span>⬡</span> Scatter
-                            </button>
-                        </div>
+                                <span>⬡</span> {t.leaderboard.table.view_scatter || "Scatter"}
+                            </button>            </div>
                     </div>
                 </div>
 
@@ -272,45 +357,80 @@ export function Leaderboard({ data }: LeaderboardProps) {
                     <div className="bg-white rounded-2xl border border-[var(--color-ink)]/10 overflow-hidden shadow-sm">
                         <table className="w-full">
                             <thead>
-                                <tr className="border-b border-[var(--color-ink)]/10 text-left">
+                                <tr className="border-b-2 border-[var(--color-ink)]/10 text-left bg-[var(--color-paper)]/30">
                                     <th className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium w-20">
-                                        Rank
+                                        {t.leaderboard.table.rank}
                                     </th>
                                     <th className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium">
-                                        Model
+                                        {t.leaderboard.table.model}
                                     </th>
                                     <th
                                         onClick={() => handleSort("overall")}
                                         className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)]"
                                     >
-                                        Score (%){" "}
+                                        {t.leaderboard.table.score}{" "}
                                         <span className={`text-[10px] ml-1 ${sort.field === "overall" ? "opacity-100" : "opacity-50"}`}>
                                             {sort.field === "overall" && sort.direction === "asc" ? "▲" : "▼"}
                                         </span>
                                     </th>
-                                    <th
-                                        onClick={() => handleSort("mcq")}
-                                        className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
-                                    >
-                                        MCQ (%){" "}
-                                        <span className={`text-[10px] ml-1 ${sort.field === "mcq" ? "opacity-100" : "opacity-50"}`}>
-                                            {sort.field === "mcq" && sort.direction === "asc" ? "▲" : "▼"}
-                                        </span>
-                                    </th>
-                                    <th
-                                        onClick={() => handleSort("short_text")}
-                                        className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
-                                    >
-                                        Text (%){" "}
-                                        <span className={`text-[10px] ml-1 ${sort.field === "short_text" ? "opacity-100" : "opacity-50"}`}>
-                                            {sort.field === "short_text" && sort.direction === "asc" ? "▲" : "▼"}
-                                        </span>
-                                    </th>
+                                    {currentTask === "exam" && (
+                                        <>
+                                            <th
+                                                onClick={() => handleSort("mcq")}
+                                                className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
+                                            >
+                                                {t.leaderboard.table.mcq}{" "}
+                                                <span className={`text-[10px] ml-1 ${sort.field === "mcq" ? "opacity-100" : "opacity-50"}`}>
+                                                    {sort.field === "mcq" && sort.direction === "asc" ? "▲" : "▼"}
+                                                </span>
+                                            </th>
+                                            <th
+                                                onClick={() => handleSort("short_text")}
+                                                className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
+                                            >
+                                                {t.leaderboard.table.text}{" "}
+                                                <span className={`text-[10px] ml-1 ${sort.field === "short_text" ? "opacity-100" : "opacity-50"}`}>
+                                                    {sort.field === "short_text" && sort.direction === "asc" ? "▲" : "▼"}
+                                                </span>
+                                            </th>
+                                        </>
+                                    )}
+                                    {currentTask === "pos" && (
+                                        <>
+                                            <th
+                                                onClick={() => handleSort("pos_accuracy")}
+                                                className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
+                                            >
+                                                {t.leaderboard.table.pos}{" "}
+                                                <span className={`text-[10px] ml-1 ${sort.field === "pos_accuracy" ? "opacity-100" : "opacity-50"}`}>
+                                                    {sort.field === "pos_accuracy" && sort.direction === "asc" ? "▲" : "▼"}
+                                                </span>
+                                            </th>
+                                            <th
+                                                onClick={() => handleSort("lemma_accuracy")}
+                                                className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
+                                            >
+                                                {t.leaderboard.table.lemma}{" "}
+                                                <span className={`text-[10px] ml-1 ${sort.field === "lemma_accuracy" ? "opacity-100" : "opacity-50"}`}>
+                                                    {sort.field === "lemma_accuracy" && sort.direction === "asc" ? "▲" : "▼"}
+                                                </span>
+                                            </th>
+                                            <th
+                                                onClick={() => handleSort("dep_accuracy")}
+                                                className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden md:table-cell"
+                                            >
+                                                {t.leaderboard.table.dep}{" "}
+                                                <span className={`text-[10px] ml-1 ${sort.field === "dep_accuracy" ? "opacity-100" : "opacity-50"}`}>
+                                                    {sort.field === "dep_accuracy" && sort.direction === "asc" ? "▲" : "▼"}
+                                                </span>
+                                            </th>
+                                        </>
+                                    )}
                                     <th
                                         onClick={() => handleSort("latency_ms")}
                                         className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden lg:table-cell"
                                     >
-                                        Latency{" "}
+                                        {t.leaderboard.table.latency}{" "}
                                         <span className={`text-[10px] ml-1 ${sort.field === "latency_ms" ? "opacity-100" : "opacity-50"}`}>
                                             {sort.field === "latency_ms" && sort.direction === "asc" ? "▲" : "▼"}
                                         </span>
@@ -319,7 +439,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                         onClick={() => handleSort("cost")}
                                         className="px-6 py-4 font-[var(--font-mono)] text-xs tracking-wider text-[var(--color-muted)] font-medium text-right cursor-pointer select-none hover:text-[var(--color-ink)] hidden lg:table-cell"
                                     >
-                                        Cost{" "}
+                                        {t.leaderboard.table.cost}{" "}
                                         <span className={`text-[10px] ml-1 ${sort.field === "cost" ? "opacity-100" : "opacity-50"}`}>
                                             {sort.field === "cost" && sort.direction === "asc" ? "▲" : "▼"}
                                         </span>
@@ -330,8 +450,8 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                 {filteredAndSorted.length === 0 ? (
                                     <tr>
                                         <td colSpan={7} className="px-6 py-12 text-center text-[var(--color-muted)]">
-                                            <p className="text-lg mb-2">No data available</p>
-                                            <p className="text-sm">This task/year combination hasn&apos;t been evaluated yet.</p>
+                                            <p className="text-lg mb-2">{t.leaderboard.table.no_data}</p>
+                                            <p className="text-sm">{t.leaderboard.table.no_data_desc}</p>
                                         </td>
                                     </tr>
                                 ) : (
@@ -340,7 +460,13 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                         const logo = PROVIDER_LOGOS[item.provider];
 
                                         return (
-                                            <tr key={item.model} className="border-b border-[var(--color-ink)]/5 last:border-0 hover:bg-[var(--color-paper)]/50 transition-colors">
+                                            <tr
+                                                key={item.model}
+                                                className={`
+                                                    border-b border-[var(--color-ink)]/5 last:border-0 transition-colors
+                                                    ${rank === 1 ? "bg-amber-50/50 hover:bg-amber-50" : "hover:bg-[var(--color-paper)]/50"}
+                                                `}
+                                            >
                                                 <td className="px-6 py-5 text-center">
                                                     <span className={`font-[var(--font-mono)] text-2xl font-bold ${rank === 1 ? "text-yellow-500" : rank === 2 ? "text-gray-400" : rank === 3 ? "text-amber-600" : "text-[var(--color-muted)]"
                                                         }`}>
@@ -361,7 +487,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                                                 </svg>
 
                                                                 <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-[var(--color-ink)] text-[var(--color-cream)] text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50 pointer-events-none font-[var(--font-mono)]">
-                                                                    {item.error_count}/{item.total_questions || 64} questions failed
+                                                                    {item.error_count}/{item.total_questions || 64} {t.leaderboard.table.failed_questions}
                                                                     <br />
                                                                     <span className="text-[var(--color-muted)]">API timeout or error</span>
                                                                     <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[var(--color-ink)]"></div>
@@ -373,12 +499,29 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                                 <td className="px-6 py-5 text-right">
                                                     <span className="font-[var(--font-mono)] font-semibold text-lg">{item.overall.toFixed(1)}</span>
                                                 </td>
-                                                <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
-                                                    {item.mcq?.toFixed(1) || "-"}
-                                                </td>
-                                                <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
-                                                    {item.short_text?.toFixed(1) || "-"}
-                                                </td>
+                                                {currentTask === "exam" && (
+                                                    <>
+                                                        <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
+                                                            {item.mcq?.toFixed(1) || "-"}
+                                                        </td>
+                                                        <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
+                                                            {item.short_text?.toFixed(1) || "-"}
+                                                        </td>
+                                                    </>
+                                                )}
+                                                {currentTask === "pos" && (
+                                                    <>
+                                                        <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
+                                                            {item.pos_accuracy !== undefined ? item.pos_accuracy.toFixed(1) : "-"}
+                                                        </td>
+                                                        <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
+                                                            {item.lemma_accuracy !== undefined ? item.lemma_accuracy.toFixed(1) : "-"}
+                                                        </td>
+                                                        <td className="px-6 py-5 text-right font-[var(--font-mono)] hidden md:table-cell text-[var(--color-muted)]">
+                                                            {item.dep_accuracy !== undefined ? item.dep_accuracy.toFixed(1) : "-"}
+                                                        </td>
+                                                    </>
+                                                )}
                                                 <td className="px-6 py-5 text-right font-[var(--font-mono)] text-[var(--color-muted)] hidden lg:table-cell">
                                                     {item.latency_ms ? `${(item.latency_ms / 1000).toFixed(1)}s` : "-"}
                                                 </td>
@@ -398,7 +541,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                 {viewMode === "scatter" && (
                     <div className="bg-white rounded-2xl border border-[var(--color-ink)]/10 overflow-hidden shadow-sm p-6">
                         <div className="mb-4 flex items-center justify-between">
-                            <h3 className="font-[var(--font-mono)] text-sm text-[var(--color-muted)]">Score vs Cost</h3>
+                            <h3 className="font-[var(--font-mono)] text-sm text-[var(--color-muted)]">{t.leaderboard.scatter.score_vs_cost}</h3>
                             <div className="flex flex-wrap items-center gap-3 text-xs font-[var(--font-mono)]">
                                 {Object.entries(PROVIDER_COLORS).map(([provider, color]) => (
                                     <button
@@ -430,7 +573,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                     unit="$"
                                     tick={{ fontSize: 12, fontFamily: "var(--font-mono)" }}
                                     tickFormatter={(v) => `$${v.toFixed(2)}`}
-                                    label={{ value: "Cost ($)", position: "bottom", offset: 0, fontSize: 12 }}
+                                    label={{ value: t.leaderboard.scatter.x_axis, position: "bottom", offset: 0, fontSize: 12 }}
                                 />
                                 <YAxis
                                     type="number"
@@ -439,7 +582,7 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                     unit="%"
                                     domain={[0, 100]}
                                     tick={{ fontSize: 12, fontFamily: "var(--font-mono)" }}
-                                    label={{ value: "Score (%)", angle: -90, position: "insideLeft", fontSize: 12 }}
+                                    label={{ value: t.leaderboard.scatter.y_axis, angle: -90, position: "insideLeft", fontSize: 12 }}
                                 />
                                 <Tooltip
                                     content={({ active, payload }) => {
@@ -464,6 +607,34 @@ export function Leaderboard({ data }: LeaderboardProps) {
                                                         <span className="text-[var(--color-muted)]">Score:</span>
                                                         <span className="font-bold text-lg">{d.overall.toFixed(1)}%</span>
                                                     </div>
+                                                    {currentTask === "exam" && (
+                                                        <>
+                                                            <div className="flex justify-between items-center">
+                                                                <span className="text-[var(--color-muted)]">MCQ:</span>
+                                                                <span className="font-semibold">{d.mcq !== undefined ? d.mcq.toFixed(1) : "-"}%</span>
+                                                            </div>
+                                                            <div className="flex justify-between items-center">
+                                                                <span className="text-[var(--color-muted)]">Text:</span>
+                                                                <span className="font-semibold">{d.short_text !== undefined ? d.short_text.toFixed(1) : "-"}%</span>
+                                                            </div>
+                                                        </>
+                                                    )}
+                                                    {currentTask === "pos" && (
+                                                        <>
+                                                            <div className="flex justify-between items-center">
+                                                                <span className="text-[var(--color-muted)]">POS:</span>
+                                                                <span className="font-semibold">{d.pos_accuracy !== undefined ? d.pos_accuracy.toFixed(1) : "-"}%</span>
+                                                            </div>
+                                                            <div className="flex justify-between items-center">
+                                                                <span className="text-[var(--color-muted)]">Lemma:</span>
+                                                                <span className="font-semibold">{d.lemma_accuracy !== undefined ? d.lemma_accuracy.toFixed(1) : "-"}%</span>
+                                                            </div>
+                                                            <div className="flex justify-between items-center">
+                                                                <span className="text-[var(--color-muted)]">Dep:</span>
+                                                                <span className="font-semibold">{d.dep_accuracy !== undefined ? d.dep_accuracy.toFixed(1) : "-"}%</span>
+                                                            </div>
+                                                        </>
+                                                    )}
                                                     <div className="flex justify-between items-center">
                                                         <span className="text-[var(--color-muted)]">Cost:</span>
                                                         <span className="font-semibold">${d.cost?.toFixed(2)}</span>
@@ -549,14 +720,14 @@ export function Leaderboard({ data }: LeaderboardProps) {
 
                 {/* Table legend */}
                 <div className="flex flex-wrap items-center gap-6 mt-4 text-sm text-[var(--color-muted)] font-[var(--font-mono)]">
-                    <span>Providers:</span>
+                    <span>{t.leaderboard.filters.provider}:</span>
                     {Object.entries(PROVIDER_LOGOS).slice(0, 4).map(([provider, logo]) => (
                         <div key={provider} className="flex items-center gap-1.5">
                             <Image src={logo} alt={provider} width={14} height={14} />
                             {provider}
                         </div>
                     ))}
-                    <span className="ml-auto">Last updated: December 2025</span>
+                    <span className="ml-auto">{t.leaderboard.last_updated}</span>
                 </div>
             </div>
         </section>

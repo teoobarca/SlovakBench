@@ -1,0 +1,102 @@
+[
+    {
+        "id": "lang8_8",
+        "input": "Predo mnou, budú moji kolegovia isť na Slovensku budúci mesiac.",
+        "target": "Predo mnou pôjdu moji kolegovia na Slovensko budúci mesiac."
+    },
+    {
+        "id": "lang8_17",
+        "input": "Ked‘ deti sú malé zaroba len otec, pretože mama sa zaoberá výchovou potomkou.",
+        "target": "Keď sú deti malé, zarába len otec, pretože mama sa zaoberá výchovou potomkov."
+    },
+    {
+        "id": "lang8_23",
+        "input": "Prve, je veľmi silným drogovom, keď sa sadne do Facebooka ráz, ťažko je sa od toho odtrhnúť.",
+        "target": "Prvý dôvod je ten, že Facebook je veľmi silná droga, keď si človek raz k nemu sadne, je ťažko sa od toho odtrhnúť."
+    },
+    {
+        "id": "lang8_24",
+        "input": "Bol pekný den júla a Juraj i Marek mali praydninz, obidvaja vel´mi majú rád hory teda rozhodli sa že pôjdu na výlet v hory.",
+        "target": "Bol pekný júlový deň a Juraj a Marek mali prázdniny, obidvaja majú veľmi radi hory, tak sa rozhodli že pôjdu na výlet na hory."
+    },
+    {
+        "id": "lang8_31",
+        "input": "Jar - trva cez april a máj, priemerna teplota je 5ºC až 15ºC, charakterizuje sa nevelkim zachmureným a skupymi zražkamy.",
+        "target": "Jar - trvá počas apríla a mája, priemerná teplota je 5ºC až 15ºC, charakteristická je miernym zamračením a malými zrážkami."
+    },
+    {
+        "id": "lang8_33",
+        "input": "Na svete je mnoho ľudi ktorý máju záujem len o televízie (strávuju mnoho hodín pred televíznou obrazovkou, nepredstavujú si ako môžna bez nej žiť) tak si mislím, že ona nemá väčšieho konkurenta.",
+        "target": "Na svete je mnoho ľudí, ktorí majú záujem len o televíziu (trávia mnoho hodín pred televíznou obrazovkou, nevedia si predstaviť bez nej žiť), tak si myslím, že nemá väčšieho konkurenta."
+    },
+    {
+        "id": "lang8_47",
+        "input": "Včera som sa stiahnul audioknihu \"Robinson Crusoe\" po slovensky a bud'em ho počuvať, myslím, že je to dobré žeby vylepšiť moje počúvanie a dúfam, že bude to aj zaujímave.",
+        "target": "Včera som si stiahol audioknihu \"Robinson Crusoe\" po slovensky a budem ju počúvať. Myslím, že je to dobré na zlepšenie porozumenia a dúfam, že to bude aj zaujímavé."
+    },
+    {
+        "id": "lang8_52",
+        "input": "Myslim si íe l´udia ktory vela času trávia pred televíziou musia isť k lekarovi pretože v televízii vela programov je velmi hlupych a myslim si že osoba ktora tieto programy pozera nemože biť psychycko zdrava.",
+        "target": "Myslím si, že ľudia, ktorí veľa času trávia pred televíziou, musia ísť k lekárovi, pretože v televízii je veľa programov veľmi hlúpych a myslím si, že osoba, ktorá tieto programy pozerá, nemôže byť psychicky zdravá."
+    },
+    {
+        "id": "lang8_54",
+        "input": "Dlho sa prechádzali aby našli najlepšie miesto na ich ubitovanie.",
+        "target": "Dlho sa prechádzali, aby našli najlepšie miesto na ubytovanie."
+    },
+    {
+        "id": "lang8_58",
+        "input": "Existuje mnoho škôl na internete.",
+        "target": "Na internete existuje mnoho škôl."
+    },
+    {
+        "id": "lang8_87",
+        "input": "Chceme niekomu zaškodiť, na príklad lekárovi, píšeme všade, na odborných fórach, na webových stránkach, sociálnych sietiach všetko zle o ňom.",
+        "target": "Chceme niekomu uškodiť, napríklad lekárovi, píšeme všade, na odborných fórach, na webových stránkach, sociálnych sietiach o ňom všetko zle."
+    },
+    {
+        "id": "lang8_91",
+        "input": "Štatna televízia vykonáva misiu, čo znamena že ona vdelava l´údia cez programy a filmy ktore vysiela.",
+        "target": "Štátna televízia vykonáva misiu, čo znamená, že vzdeláva ľudí cez programy a filmy, ktoré vysiela."
+    },
+    {
+        "id": "lang8_98",
+        "input": "Ja som dorazil na Prešov, Slovensko.",
+        "target": "Dorazil som do Prešova, na Slovensko."
+    },
+    {
+        "id": "lang8_99",
+        "input": "Počúvajú ma, preto že som ich šef, ale nemôžem povedat‘, že vždy je takto.",
+        "target": "Počúvajú ma, pretože som ich šéf, ale nemôžem povedať, že je to tak vždy."
+    },
+    {
+        "id": "lang8_29",
+        "input": "On je príliš mladý.",
+        "target": "Je príliš mladý."
+    },
+    {
+        "id": "lang8_60",
+        "input": "V Poľsku bola veľmi hlasná správa vlastne jedného lekára, do ktorého sa zaľúbila jeho pacientka, ale on ju nechal.",
+        "target": "V Poľsku bol známy prípad jedného lekára, do ktorého sa zaľúbila jeho pacientka, ale on ju nechal."
+    },
+    {
+        "id": "lang8_65",
+        "input": "Som z Poľska, bývam tiež v Poľsku, moja rodina je z Poľska.",
+        "target": "Som z Poľska, bývam tu, moja rodina je tiež odtiaľto."
+    },
+    {
+        "id": "lang8_84",
+        "input": "tak, Rozhodol som sa skúsiť učiť  slovenských pesničiek.",
+        "target": "Tak som sa rozhodol skúsiť učiť zo slovenských pesničiek."
+    },
+    {
+        "id": "lang8_88",
+        "input": "Dlho utekali pred ňim, mali už dost‘ ked‘ uvideli svoju mamu.",
+        "target": "Dlho pred ním utekali, mali už dosť, keď uvideli svoju mamu."
+    },
+    {
+        "id": "lang8_95",
+        "input": "Rozpálili ohnište a rozhodli sa že rano budu vracať doma a pošli spať.",
+        "target": "Rozpálili ohnisko a rozhodli sa, že ráno sa vrátia domov a išli spať."
+    }
+]

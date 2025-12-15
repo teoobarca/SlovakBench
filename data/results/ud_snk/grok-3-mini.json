@@ -1,0 +1,44 @@
+{
+  "model_name": "x-ai/grok-3-mini",
+  "timestamp": "2025-12-15T15:41:52.458607",
+  "total_sentences": 10,
+  "accuracy": 0.7587301587301587,
+  "pos_accuracy": 0.8857142857142857,
+  "lemma_accuracy": 0.8571428571428571,
+  "dep_accuracy": 0.5333333333333333,
+  "total_cost_usd": 0.0204535,
+  "avg_latency_ms": 13784.690697987875,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.8857142857142857,
+      "correct": 93,
+      "total": 105,
+      "cost_usd": 0.0050375,
+      "avg_latency_ms": 9701.590085029602,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8571428571428571,
+      "correct": 90,
+      "total": 105,
+      "cost_usd": 0.0054687,
+      "avg_latency_ms": 11951.814699172974,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.5333333333333333,
+      "correct": 56,
+      "total": 105,
+      "cost_usd": 0.0099473,
+      "avg_latency_ms": 19700.667309761047,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

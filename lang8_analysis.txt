@@ -1,0 +1,564 @@
+Analyzing data/raw/grammar/lang-8-20111007-2.0/lang-8-20111007-L1-v2.dat...
+Error decoding line 469
+Error decoding line 1880
+Error decoding line 2670
+Error decoding line 3770
+Error decoding line 5106
+Error decoding line 5107
+Error decoding line 6263
+Error decoding line 9912
+Error decoding line 11736
+Error decoding line 11778
+Error decoding line 12152
+Error decoding line 12605
+Error decoding line 13958
+Error decoding line 14147
+Error decoding line 14476
+Error decoding line 16532
+Error decoding line 20211
+Error decoding line 21049
+Error decoding line 21173
+Error decoding line 23543
+Error decoding line 25266
+Error decoding line 27467
+Error decoding line 29397
+Error decoding line 29409
+Error decoding line 29468
+Error decoding line 29756
+Error decoding line 29869
+Error decoding line 30523
+Error decoding line 30526
+Error decoding line 30535
+Error decoding line 34627
+Error decoding line 37142
+Error decoding line 38403
+Error decoding line 38673
+Error decoding line 39469
+Error decoding line 39564
+Error decoding line 42254
+Error decoding line 42946
+Error decoding line 43287
+Error decoding line 43619
+Error decoding line 46194
+Error decoding line 49114
+Error decoding line 49651
+Error decoding line 49664
+Error decoding line 49689
+Error decoding line 50980
+Error decoding line 52640
+Error decoding line 52710
+Error decoding line 52714
+Error decoding line 56430
+Error decoding line 57373
+Error decoding line 57663
+Error decoding line 58436
+Error decoding line 58469
+Error decoding line 58489
+Error decoding line 58539
+Error decoding line 58555
+Error decoding line 60858
+Error decoding line 62033
+Error decoding line 63111
+Error decoding line 64494
+Error decoding line 65573
+Error decoding line 66706
+Error decoding line 66930
+Error decoding line 68110
+Error decoding line 68255
+Error decoding line 68346
+Error decoding line 68349
+Error decoding line 68395
+Error decoding line 69612
+Error decoding line 69641
+Error decoding line 69686
+Error decoding line 70617
+Error decoding line 71379
+Error decoding line 72563
+Error decoding line 74059
+Error decoding line 74646
+Error decoding line 74873
+Error decoding line 74895
+Error decoding line 79495
+Error decoding line 80629
+Error decoding line 81287
+Error decoding line 83676
+Error decoding line 83713
+Error decoding line 85053
+Error decoding line 85244
+Error decoding line 85299
+Error decoding line 88252
+Error decoding line 89368
+Error decoding line 97676
+Error decoding line 97681
+Error decoding line 100143
+Error decoding line 101325
+Error decoding line 101467
+Error decoding line 101587
+Error decoding line 103930
+Error decoding line 110045
+Error decoding line 110099
+Error decoding line 113181
+Error decoding line 113417
+Error decoding line 115236
+Error decoding line 116457
+Error decoding line 117187
+Error decoding line 117840
+Error decoding line 120261
+Error decoding line 122359
+Error decoding line 122600
+Error decoding line 123119
+Error decoding line 123295
+Error decoding line 132745
+Error decoding line 133623
+Error decoding line 137219
+Error decoding line 137754
+Error decoding line 137825
+Error decoding line 139843
+Error decoding line 139878
+Error decoding line 142533
+Error decoding line 146599
+Error decoding line 147711
+Error decoding line 151167
+Error decoding line 152260
+Error decoding line 153196
+Error decoding line 153693
+Error decoding line 156051
+Error decoding line 158225
+Error decoding line 162398
+Error decoding line 164332
+Error decoding line 164951
+Error decoding line 165811
+Error decoding line 166394
+Error decoding line 168665
+Error decoding line 170086
+Error decoding line 170407
+Error decoding line 171132
+Error decoding line 171837
+Error decoding line 172086
+Error decoding line 174701
+Error decoding line 177574
+Error decoding line 177803
+Error decoding line 177999
+Error decoding line 180331
+Error decoding line 181742
+Error decoding line 183530
+Error decoding line 183920
+Error decoding line 184989
+Error decoding line 187810
+Error decoding line 188900
+Error decoding line 193451
+Error decoding line 194518
+Error decoding line 197997
+Error decoding line 199781
+Error decoding line 199968
+Error decoding line 201471
+Error decoding line 205184
+Error decoding line 205706
+Error decoding line 205762
+Error decoding line 206097
+Error decoding line 209500
+Error decoding line 211852
+Error decoding line 214777
+Error decoding line 215375
+Error decoding line 216928
+Error decoding line 216933
+Error decoding line 217604
+Error decoding line 221465
+Error decoding line 224505
+Error decoding line 224985
+Error decoding line 226478
+Error decoding line 228044
+Error decoding line 229340
+Error decoding line 229927
+Error decoding line 229961
+Error decoding line 230028
+Error decoding line 232012
+Error decoding line 233405
+Error decoding line 235107
+Error decoding line 236736
+Error decoding line 238351
+Error decoding line 238352
+Error decoding line 245671
+Error decoding line 245962
+Error decoding line 246040
+Error decoding line 246727
+Error decoding line 249536
+Error decoding line 249638
+Error decoding line 250643
+Error decoding line 250644
+Error decoding line 250649
+Error decoding line 251569
+Error decoding line 254968
+Error decoding line 263888
+Error decoding line 264680
+Error decoding line 265571
+Error decoding line 268222
+Error decoding line 272629
+Error decoding line 272632
+Error decoding line 273968
+Error decoding line 277182
+Error decoding line 277310
+Error decoding line 282884
+Error decoding line 283825
+Error decoding line 286028
+Error decoding line 287027
+Error decoding line 291652
+Error decoding line 292119
+Error decoding line 293739
+Error decoding line 293790
+Error decoding line 294136
+Error decoding line 294259
+Error decoding line 296726
+Error decoding line 297466
+Error decoding line 300064
+Error decoding line 303686
+Error decoding line 304578
+Error decoding line 304764
+Error decoding line 305763
+Error decoding line 306909
+Error decoding line 312682
+Error decoding line 315103
+Error decoding line 315750
+Error decoding line 315811
+Error decoding line 316028
+Error decoding line 316408
+Error decoding line 320158
+Error decoding line 320159
+Error decoding line 324186
+Error decoding line 325639
+Error decoding line 327145
+Error decoding line 328241
+Error decoding line 331978
+Error decoding line 334928
+Error decoding line 335971
+Error decoding line 336167
+Error decoding line 336450
+Error decoding line 338726
+Error decoding line 340199
+Error decoding line 340403
+Error decoding line 340947
+Error decoding line 341400
+Error decoding line 343303
+Error decoding line 345209
+Error decoding line 345610
+Error decoding line 346512
+Error decoding line 346524
+Error decoding line 346535
+Error decoding line 346546
+Error decoding line 348312
+Error decoding line 351054
+Error decoding line 352453
+Error decoding line 352994
+Error decoding line 354006
+Error decoding line 354010
+Error decoding line 355593
+Error decoding line 356320
+Error decoding line 358942
+Error decoding line 359271
+Error decoding line 359275
+Error decoding line 363446
+Error decoding line 366365
+Error decoding line 368033
+Error decoding line 369797
+Error decoding line 369854
+Error decoding line 370831
+Error decoding line 371533
+Error decoding line 371577
+Error decoding line 371585
+Error decoding line 372035
+Error decoding line 373251
+Error decoding line 375199
+Error decoding line 377371
+Error decoding line 378357
+Error decoding line 378370
+Error decoding line 382296
+Error decoding line 382314
+Error decoding line 383223
+Error decoding line 390408
+Error decoding line 390855
+Error decoding line 394786
+Error decoding line 396394
+Error decoding line 396859
+Error decoding line 397066
+Error decoding line 400868
+Error decoding line 401105
+Error decoding line 403258
+Error decoding line 403364
+Error decoding line 404860
+Error decoding line 407200
+Error decoding line 408460
+Error decoding line 409627
+Error decoding line 412416
+Error decoding line 413996
+Error decoding line 414145
+Error decoding line 414745
+Error decoding line 422274
+Error decoding line 422281
+Error decoding line 424340
+Error decoding line 426010
+Error decoding line 426472
+Error decoding line 427025
+Error decoding line 427267
+Error decoding line 428697
+Error decoding line 433947
+Error decoding line 435190
+Error decoding line 437164
+Error decoding line 437167
+Error decoding line 437572
+Error decoding line 437911
+Error decoding line 439916
+Error decoding line 443695
+Error decoding line 445178
+Error decoding line 445205
+Error decoding line 445246
+Error decoding line 451804
+Error decoding line 456065
+Error decoding line 460252
+Error decoding line 460314
+Error decoding line 460352
+Error decoding line 463700
+Error decoding line 463720
+Error decoding line 467404
+Error decoding line 474532
+Error decoding line 477648
+Error decoding line 483955
+Error decoding line 484106
+Error decoding line 484812
+Error decoding line 492241
+Error decoding line 494008
+Error decoding line 494559
+Error decoding line 494694
+Error decoding line 494749
+Error decoding line 494878
+Error decoding line 494903
+Error decoding line 494905
+Error decoding line 494913
+Error decoding line 494936
+Error decoding line 494943
+Error decoding line 494952
+Error decoding line 497484
+Error decoding line 497713
+Error decoding line 498699
+Error decoding line 500818
+Error decoding line 502122
+Error decoding line 503770
+Error decoding line 505353
+Error decoding line 505685
+Error decoding line 505758
+Error decoding line 506850
+Error decoding line 509554
+Error decoding line 510787
+Error decoding line 511432
+Error decoding line 512631
+Error decoding line 513467
+Error decoding line 513583
+Error decoding line 513595
+Error decoding line 522881
+Error decoding line 523879
+Error decoding line 525294
+Error decoding line 527171
+Error decoding line 530055
+Error decoding line 532958
+Error decoding line 538252
+Error decoding line 541963
+Error decoding line 543597
+Error decoding line 544576
+Error decoding line 545289
+Error decoding line 548614
+Error decoding line 551269
+Error decoding line 553545
+Error decoding line 555341
+Error decoding line 555350
+Error decoding line 555351
+Error decoding line 556839
+Error decoding line 557319
+Error decoding line 559514
+Error decoding line 566427
+Error decoding line 567611
+Error decoding line 572890
+Error decoding line 573566
+Error decoding line 574763
+Error decoding line 576843
+Error decoding line 577531
+Error decoding line 577881
+Total Slovak entries: 82
+Slovak entries with corrections: 57
+
+--- Samples with corrections ---
+[
+  "974419",
+  "218043",
+  "Slovak",
+  "Japanese",
+  [
+    "Prosím preklad. ",
+    "Sorry, I wrote this journal in English.",
+    "I'd like to introduce in Slovak when I'll go in July.",
+    "How can I say politely In Slovak?",
+    "Hello.",
+    "Nice to meet you.",
+    "I'm Umezawa.",
+    "(or My name is ...",
+    "Which is more natural?)",
+    "Please call me Ume.",
+    "I'm looking forward to work with you and your staff.",
+    "よろしくお願いします。",
+    "Ďakujem."
+  ],
+  [
+    [],
+    [],
+    [
+      "I'd like to introduce [f-blue]myself[/f-blue] in Slovak when I'll go in July."
+    ],
+    [
+      "How can I say [f-blue]this[/f-blue] politely In Slovak?"
+    ],
+    [
+      "Dobrý deň"
+    ],
+    [
+      "Rád Vás spoznávam"
+    ],
+    [
+      "Usualy just saying your name when shaking hands for the first time is enough , but if u want to introduce yourself while not shaking hands with someone u should use : [f-bold]Moje meno je Umezawa[/f-bold] . ( Not an cultural expert tho, jsut personal experiences :) )"
+    ],
+    [],
+    [],
+    [
+      "Prosím volajte ma Ume"
+    ],
+    [
+      "I'm looking forward to work[f-red]ing[/f-red] with you and your staff.",
+      "Teším sa na spoluprácu s Vami a vaším kolektívom. ( [f-bold]Teším sa na spoluprácu[/f-bold] is enough tho )"
+    ],
+    [
+      "Does not have exact translation im afraid but u can say: [f-bold]Veľmi ma teší[/f-bold] after saying your name in introduction or: [f-bold]Tešilo ma[/f-bold] (past tense) when leaving."
+    ],
+    [
+      "どういたしまして"
+    ]
+  ]
+]
+[
+  "809943",
+  "218043",
+  "Slovak",
+  "Japanese",
+  [
+    "Katastrofa Kapucňa",
+    "Môj syn vstúpi do základnej školy v apríli.",
+    "Musíme pripraviť veľa vecí, ako sú písacie potreby, tašky, oblečenie atď",
+    "S položkami, katastrofa kapucňa (防災頭巾) je obzvlášť zaujímavý.",
+    "To je na ochranu proti požiaru a zemetraseniu.",
+    "Žiakov základných škôl takmer vždy majú jeden a oni sedia na ňom podľa ich hip v škole.",
+    "To je používané miesto vankúša.",
+    "Systém sa nezmenila od okamihu, keď som bol ešte študent základnej školy."
+  ],
+  [
+    [
+      "Kapucňa proti katastrofám"
+    ],
+    [
+      "Môj syn pôjde prvý raz do základnej školy v apríli."
+    ],
+    [
+      "Musíme pripraviť veľa vecí, ako sú písacie potreby, tašky, oblečenie atď"
+    ],
+    [
+      "S položkami ako kapucňa proti katastrofám (防災頭巾) je obzvlášť zaujímavý."
+    ],
+    [
+      "To je na ochranu proti požiaru a zemetraseniu."
+    ],
+    [
+      "Žiaci základných škôl takmer vždy majú jeden a sedia na ňom v škole."
+    ],
+    [
+      "Je to používané miesto vankúša.",
+      "Používa sa namiesto vankúša."
+    ],
+    [
+      "Systém sa nezmenila odvtedy, čo som bol ešte študent základnej školy.",
+      "Systém sa nezmenil odvtedy, ako/čo som bol ešte študentom základnej školy."
+    ]
+  ]
+]
+[
+  "836336",
+  "218043",
+  "Slovak",
+  "Japanese",
+  [
+    "Lyžovanie",
+    "šiel som včera lyžovať.",
+    "Niekedy v zime lyžujem.",
+    "Mám bolesti v chrbte.",
+    "Myslím, že lyže sú populárne na Slovensku.",
+    "Je to lacné okolí Košíc?"
+  ],
+  [
+    [],
+    [
+      "Včera som sa šiel lyžovať. or [f-bold]Včera som sa bol lyžova[/f-bold]ť. or Včera som sa lyžoval. [f-bold]The second one sounds most natural to me :)[/f-bold]It could also be \"Šiel som sa včera lyžovať.\" but this form of word order suggests that you were asked by someone: \"Čo si včera robil?\" (What did you do yesterday?)"
+    ],
+    [],
+    [],
+    [
+      "Myslím, že lyže sú na Slovensku populárne.most natural sounding sentence would be: Myslím (si), že [f-bold]lyžovanie[/f-bold] je na Slovensku populárne. "
+    ],
+    [
+      "Je to v okolí Košíc lacné?"
+    ]
+  ]
+]
+[
+  "751606",
+  "218043",
+  "Slovak",
+  "Japanese",
+  [
+    "Cvičenie",
+    "Tá žena je stará.",
+    "Ten muž je mladý.",
+    "Ten chlapec je vysoký.",
+    "To dievča je nízke.",
+    "Ty si roztomilý.",
+    "Ja som v Japonsuku."
+  ],
+  [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "Ty si [sline][f-red]rozto[/f-red][/sline]milý. (roztomilý is a CZ word, not SVK ) but it's enough if u say \"Si milý\" "
+    ],
+    []
+  ]
+]
+[
+  "826732",
+  "218043",
+  "Slovak",
+  "Japanese",
+  [
+    "Senná nádcha",
+    "Veľa ľudí má sennú nádchu v Japonsku.",
+    "Moja rodina tiež, okrem mňa.",
+    "Je veľa takých ľudí v kancelárii, meste a kdekoľvek inde.",
+    "Je senná nádcha v Slovensku?"
+  ],
+  [
+    [
+      "Senná nádcha"
+    ],
+    [
+      "Veľa ľudí má sennú nádchu v Japonsku."
+    ],
+    [],
+    [],
+    []
+  ]
+]

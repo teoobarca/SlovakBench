@@ -1,0 +1,44 @@
+{
+  "model_name": "openai/o3",
+  "timestamp": "2025-12-15T14:48:42.169789",
+  "total_sentences": 10,
+  "accuracy": 0.8634920634920635,
+  "pos_accuracy": 0.9333333333333333,
+  "lemma_accuracy": 0.9047619047619048,
+  "dep_accuracy": 0.7523809523809524,
+  "total_cost_usd": 0.233016,
+  "avg_latency_ms": 10348.360999425253,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9333333333333333,
+      "correct": 98,
+      "total": 105,
+      "cost_usd": 0.0397,
+      "avg_latency_ms": 5958.201622962952,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.9047619047619048,
+      "correct": 95,
+      "total": 105,
+      "cost_usd": 0.057032,
+      "avg_latency_ms": 8058.052778244019,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.7523809523809524,
+      "correct": 79,
+      "total": 105,
+      "cost_usd": 0.136284,
+      "avg_latency_ms": 17028.828597068787,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

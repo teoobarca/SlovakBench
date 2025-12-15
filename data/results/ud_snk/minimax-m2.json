@@ -1,0 +1,44 @@
+{
+  "model_name": "minimax/minimax-m2",
+  "timestamp": "2025-12-15T16:23:22.703589",
+  "total_sentences": 10,
+  "accuracy": 0.7333333333333334,
+  "pos_accuracy": 0.9047619047619048,
+  "lemma_accuracy": 0.8571428571428571,
+  "dep_accuracy": 0.4380952380952381,
+  "total_cost_usd": 0.058304533000000006,
+  "avg_latency_ms": 31010.349361101788,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9047619047619048,
+      "correct": 95,
+      "total": 105,
+      "cost_usd": 0.010162051,
+      "avg_latency_ms": 9610.120511054993,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8571428571428571,
+      "correct": 90,
+      "total": 105,
+      "cost_usd": 0.013410409,
+      "avg_latency_ms": 13481.263327598572,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.4380952380952381,
+      "correct": 46,
+      "total": 105,
+      "cost_usd": 0.034732073,
+      "avg_latency_ms": 69939.6642446518,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

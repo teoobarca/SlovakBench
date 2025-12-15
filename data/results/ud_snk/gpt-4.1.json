@@ -1,0 +1,44 @@
+{
+  "model_name": "openai/gpt-4.1",
+  "timestamp": "2025-12-15T14:48:02.532789",
+  "total_sentences": 10,
+  "accuracy": 0.7936507936507936,
+  "pos_accuracy": 0.9333333333333333,
+  "lemma_accuracy": 0.8761904761904762,
+  "dep_accuracy": 0.5714285714285714,
+  "total_cost_usd": 0.025028,
+  "avg_latency_ms": 1635.9769741694133,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9333333333333333,
+      "correct": 98,
+      "total": 105,
+      "cost_usd": 0.008088,
+      "avg_latency_ms": 1820.1625347137451,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8761904761904762,
+      "correct": 92,
+      "total": 105,
+      "cost_usd": 0.007524,
+      "avg_latency_ms": 1659.3977451324463,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.5714285714285714,
+      "correct": 60,
+      "total": 105,
+      "cost_usd": 0.009416,
+      "avg_latency_ms": 1428.3706426620483,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

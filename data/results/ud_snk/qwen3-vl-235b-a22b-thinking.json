@@ -1,0 +1,44 @@
+{
+  "model_name": "qwen/qwen3-vl-235b-a22b-thinking",
+  "timestamp": "2025-12-15T16:30:07.090712",
+  "total_sentences": 10,
+  "accuracy": 0.8222222222222223,
+  "pos_accuracy": 0.9142857142857143,
+  "lemma_accuracy": 0.8761904761904762,
+  "dep_accuracy": 0.6761904761904762,
+  "total_cost_usd": 0.100341192,
+  "avg_latency_ms": 39458.09191068014,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9142857142857143,
+      "correct": 96,
+      "total": 105,
+      "cost_usd": 0.013676924,
+      "avg_latency_ms": 20274.975156784058,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8761904761904762,
+      "correct": 92,
+      "total": 105,
+      "cost_usd": 0.02049886,
+      "avg_latency_ms": 21987.883234024048,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.6761904761904762,
+      "correct": 71,
+      "total": 105,
+      "cost_usd": 0.066165408,
+      "avg_latency_ms": 76111.4173412323,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

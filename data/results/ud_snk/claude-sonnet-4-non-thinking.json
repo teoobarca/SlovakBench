@@ -1,0 +1,44 @@
+{
+  "model_name": "anthropic/claude-sonnet-4-non-thinking",
+  "timestamp": "2025-12-15T14:46:13.303513",
+  "total_sentences": 10,
+  "accuracy": 0.784126984126984,
+  "pos_accuracy": 0.9047619047619048,
+  "lemma_accuracy": 0.8761904761904762,
+  "dep_accuracy": 0.5714285714285714,
+  "total_cost_usd": 0.046142999999999997,
+  "avg_latency_ms": 2569.42241191864,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9047619047619048,
+      "correct": 95,
+      "total": 105,
+      "cost_usd": 0.014676,
+      "avg_latency_ms": 2826.27055644989,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8761904761904762,
+      "correct": 92,
+      "total": 105,
+      "cost_usd": 0.013866,
+      "avg_latency_ms": 2432.543420791626,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.5714285714285714,
+      "correct": 60,
+      "total": 105,
+      "cost_usd": 0.017601,
+      "avg_latency_ms": 2449.4532585144043,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

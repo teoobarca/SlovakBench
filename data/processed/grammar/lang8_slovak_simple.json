@@ -1,0 +1,1554 @@
+[
+  {
+    "original": "Hello.",
+    "corrected": "Dobrý deň"
+  },
+  {
+    "original": "Please call me Ume.",
+    "corrected": "Prosím volajte ma Ume"
+  },
+  {
+    "original": "Katastrofa Kapucňa",
+    "corrected": "Kapucňa proti katastrofám"
+  },
+  {
+    "original": "Môj syn vstúpi do základnej školy v apríli.",
+    "corrected": "Môj syn pôjde prvý raz do základnej školy v apríli."
+  },
+  {
+    "original": "S položkami, katastrofa kapucňa (防災頭巾) je obzvlášť zaujímavý.",
+    "corrected": "S položkami ako kapucňa proti katastrofám (防災頭巾) je obzvlášť zaujímavý."
+  },
+  {
+    "original": "Žiakov základných škôl takmer vždy majú jeden a oni sedia na ňom podľa ich hip v škole.",
+    "corrected": "Žiaci základných škôl takmer vždy majú jeden a sedia na ňom v škole."
+  },
+  {
+    "original": "To je používané miesto vankúša.",
+    "corrected": "Je to používané miesto vankúša."
+  },
+  {
+    "original": "Systém sa nezmenila od okamihu, keď som bol ešte študent základnej školy.",
+    "corrected": "Systém sa nezmenila odvtedy, čo som bol ešte študent základnej školy."
+  },
+  {
+    "original": "Myslím, že lyže sú populárne na Slovensku.",
+    "corrected": "Myslím, že lyže sú na Slovensku populárne.most natural sounding sentence would be: Myslím (si), že lyžovanie je na Slovensku populárne."
+  },
+  {
+    "original": "Je to lacné okolí Košíc?",
+    "corrected": "Je to v okolí Košíc lacné?"
+  },
+  {
+    "original": "Takže chcem hovoriť slovenský.",
+    "corrected": "Takže chcem hovoriť po slovensky."
+  },
+  {
+    "original": "Idem do jedna reštaurácie každý deň.",
+    "corrected": "Chodievam do jednej reštaurácie každý deň."
+  },
+  {
+    "original": "Štáby hovoriť ma slovenský a anglický.",
+    "corrected": "Personál na mňa hovorí po slovensky a anglicky."
+  },
+  {
+    "original": "Myslím, že potrebujem auto, keď bývam na Slovensko.",
+    "corrected": "Myslím, že potrebujem auto, keď bývam na Slovensku."
+  },
+  {
+    "original": "Aký auto je slávny tam?",
+    "corrected": "Aké autá sú tam slávne ?"
+  },
+  {
+    "original": "Sú Japonské autá tam?",
+    "corrected": "Sú tam aj  japonské autá ? or: Máte aj japonské autá?"
+  },
+  {
+    "original": "Je verejná doprava na sklade?",
+    "corrected": "Je verejná doprava na sklade?what do you mean by that?"
+  },
+  {
+    "original": "Chcem som isť na Slovensku tohto roku.",
+    "corrected": "Chcem som ísť na Slovensko tento rok."
+  },
+  {
+    "original": "Predo mnou, budú moji kolegovia isť na Slovensku budúci mesiac.",
+    "corrected": "Predo mnou pôjdu moji kolegovia na Slovensko budúci mesiac. (<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\">budú isť = pôjdu)"
+  },
+  {
+    "original": "Pripravujú vízum, vakcína, dom a iní.",
+    "corrected": "Pripravujú vízum, vakcínu, dom a iné."
+  },
+  {
+    "original": "Ale ja chcem isť na Slovensku čoskoro.",
+    "corrected": "Aj ja chcem ísť na Slovensko čoskoro."
+  },
+  {
+    "original": "Podnikanie v Slovensko",
+    "corrected": "Podnikanie na Slovensku"
+  },
+  {
+    "original": "Pôjdem na Slovensko na začiatku júla po dobu jedného týždňa.",
+    "corrected": "Človek by pochopil čo chceš povedať, ale prirodzenejšie je to takto : Pôjdem na Slovensko začiatkom júla na jeden týždeň."
+  },
+  {
+    "original": "A ja budem žiť v Slovensko od septembra.",
+    "corrected": "Aj ja budem žiť na Slovensku od septembra."
+  },
+  {
+    "original": "Ja som sa naozaj teším na môj život na Slovensko.",
+    "corrected": "Ja sa naozaj teším na môj život na Slovensku."
+  },
+  {
+    "original": "Jo!!!!!",
+    "corrected": "Ano!!!!! ( \"Jo\" je prijateľné ale je to čechizmus )"
+  },
+  {
+    "original": "Dobre ráno.",
+    "corrected": "Dobré ráno (no dot after the title)"
+  },
+  {
+    "original": "Existuje mnoho škôl na internete.",
+    "corrected": "Na internete existuje mnoho škôl. (way more natural)"
+  },
+  {
+    "original": "Dnes som hovoril s mojou priateľkou na Skype, ktorého som nestretol dlhú dobu.",
+    "corrected": "Dnes som hovoril s mojou priateľkou na Skype, ktorú som nestretol dlhú dobu."
+  },
+  {
+    "original": "Ona pomáha mojej angličtine.",
+    "corrected": "pomáha mi s angličtinou."
+  },
+  {
+    "original": "Ona hľadá prácu.",
+    "corrected": "hľadá prácu."
+  },
+  {
+    "original": "Minulý víkend, išla moja žena na svatobnú hostinu jej priateľa.",
+    "corrected": "Minulý víkend išla moja žena na svadobnú hostinu slang svojho priateľa."
+  },
+  {
+    "original": "Ja som dorazil na Prešov, Slovensko.",
+    "corrected": "Dorazil som do Prešova, na Slovensko."
+  },
+  {
+    "original": "Samozrejme hlavným cieľom je podnikanie.",
+    "corrected": "Samozrejme, hlavným cieľom je podnikanie."
+  },
+  {
+    "original": "Ale ja som si svoj ​​voľný čas.",
+    "corrected": "Ale ja som si svoj ​​voľný čas. =nechápem"
+  },
+  {
+    "original": "Ak ste tu blízko a voľný čas, navštívte ma.",
+    "corrected": "Ak ste tu blízko a máte voľno, navštívte ma."
+  },
+  {
+    "original": "Je inžinier.",
+    "corrected": "Som inžinier."
+  },
+  {
+    "original": "Som pracovať z Japonska.",
+    "corrected": "Pracujem v Japonsku."
+  },
+  {
+    "original": "Chcem sa učiť slovenskej gramatiky.",
+    "corrected": "Chcem sa učiť slovenskú gramatiku."
+  },
+  {
+    "original": "V čom je nebezpečenstvo sociálnych sieti​?",
+    "corrected": "V čom je nebezpečenstvo sociálnych sietí?"
+  },
+  {
+    "original": "Ten, kto má tam svoje konto, vie dobre o tým.",
+    "corrected": "Ten, kto má tam svoje konto, dobre o tom vie."
+  },
+  {
+    "original": "Nie je možne zapnúť počítač a nepozrieť aspoň jeden krát na to, čo robia naši priatelia a napísať niečo od seba.",
+    "corrected": "Nie je možne zapnúť počítač a nepozrieť sa aspoň raz na to, čo robia naši priatelia a sám niečo napísať. = Heh, mne sa to možno podarilo, už 75 dní mám predsavzatie, namiesto 30 hodín v týždni používam internet len 1 hodinu týždenne. Môj život sa zlepšil miliónkrát."
+  },
+  {
+    "original": "Súčasne je to najväčšia sociálna sieť na sviete.",
+    "corrected": "Momentálne je to najväčšia sociálna sieť na sviete."
+  },
+  {
+    "original": "To, akým spôsobom vznikla, je dobre viditeľne vo filme Social Network, ktorý v tomto roku dostal cenu Oskara.",
+    "corrected": "To, akým spôsobom vznikla, je možno vidieť vo filme Social Network, ktorý v tomto roku dostal cenu Oskara."
+  },
+  {
+    "original": "Facebook to, bohužiaľ, nie len dobrá zábava, ale aj tiež problémy.",
+    "corrected": "Facebook, bohužiaľ, nie len dobrá zábava, ale aj  problémy."
+  },
+  {
+    "original": "Prve, je veľmi silným drogovom, keď sa sadne do Facebooka ráz, ťažko je sa od toho odtrhnúť.",
+    "corrected": "Prvý dôvod je ten, že Facebook je veľmi silná droga, keď si človek raz k nemu sadne, je ťažko sa od toho odtrhnúť."
+  },
+  {
+    "original": "Na jednej strane príčinou toho sú facebookové hry, ktoré väčšinou závisia na spolupráce s priateľmi.",
+    "corrected": "Na jednej strane príčinou toho sú facebookové hry, ktoré väčšinou závisia na spolupráci s priateľmi."
+  },
+  {
+    "original": "Naša zvedavosť je silnejšia od nás, stále chceme vedieť čo sa s niekom deje, či má frajerku/frajera, kde je, kde pracuje, kde bol/bola na dovolenke atď.",
+    "corrected": "Naša zvedavosť je silnejšia od nás, stále chceme vedieť čo sa s niekým deje, či má frajerku/frajera, kde je, kde pracuje, kde bol/bola na dovolenke atď."
+  },
+  {
+    "original": "Tým spôsobom trávime cely deň na špionáž iných a nemáme vlastný život.",
+    "corrected": "Tým spôsobom trávime cely deň na špionáž (sledovanie) iných a nemáme vlastný život."
+  },
+  {
+    "original": "Je to bezpečne dotiaľ, dokiaľ máme nad tým kontrolu.",
+    "corrected": "Je to bezpečné dovtedy, dokiaľ máme nad tým kontrolu. =nepoznám vela takých ľudí:)"
+  },
+  {
+    "original": "Dnešná forma sprostredkovania sa vola cyberstalking a v období Facebooka je to ešte silnejší jav.",
+    "corrected": "Dnešná forma sledovania? sa vola cyberstalking a v období Facebooka je to ešte silnejší jav."
+  },
+  {
+    "original": "Chceme niekomu zaškodiť, na príklad lekárovi, píšeme všade, na odborných fórach, na webových stránkach, sociálnych sietiach všetko zle o ňom.",
+    "corrected": "Chceme niekomu uškodiť, napríklad lekárovi, píšeme všade, na odborných fórach, na webových stránkach, sociálnych sietiach o ňom všetko zle."
+  },
+  {
+    "original": "Tým spôsobom tento lekár ma zničenú kariéru len preto, že sa nám nepáčil.",
+    "corrected": "Takto ten lekár ma zničenú kariéru len preto, že sa nám nepáčil."
+  },
+  {
+    "original": "V Poľsku bola veľmi hlasná správa vlastne jedného lekára, do ktorého sa zaľúbila jeho pacientka, ale on ju nechal.",
+    "corrected": "V Poľsku bol známy prípad jedného lekára, do ktorého sa zaľúbila jeho pacientka, ale on ju nechal."
+  },
+  {
+    "original": "Stretli sa práve v sude, kde tiež bol problém, lebo v zákone nie je nič, čo sa týka cyberstalkingu.",
+    "corrected": "Stretli sa na súde, kde tiež bol problém, lebo v zákone nie je nič, čo sa týka cyberstalkingu."
+  },
+  {
+    "original": "Tak dnes musíme veľmi opatrne použivať internet lebo je on tak bezpečný ako park v noci.",
+    "corrected": "Takže dnes musíme veľmi opatrne použivať internet, lebo je asi tak bezpečný ako park v noci."
+  },
+  {
+    "original": "Bol krásny deň júna.",
+    "corrected": "Bol krásny júlový deň."
+  },
+  {
+    "original": "Počasie bolo rozprávkove.",
+    "corrected": "Počasie bolo rozprávkové/ako z rozprávky."
+  },
+  {
+    "original": "Bohuslav i Ján rozhodli sa stráviť si víkendový výlet v prírode.",
+    "corrected": "Bohuslav i Ján sa rozhodli stráviť víkend výletom v prírode."
+  },
+  {
+    "original": "Zobrali si stan a chutnú klobásu na obed i odišli na prechádzku.",
+    "corrected": "Zobrali si stan a chutnú klobásu na obed a odišli na prechádzku."
+  },
+  {
+    "original": "Ked' našli ideálne mesto, iba postavili stan a počasie sa rýchlo začalo meniť.",
+    "corrected": "Ked' našli ideálne miesto, iba postavili stan a počasie sa rýchlo začalo meniť."
+  },
+  {
+    "original": "Chlapci ťažko bojovali aby niestratili stan.",
+    "corrected": "Chlapci ťažko bojovali, aby nestratili stan."
+  },
+  {
+    "original": "Večer, búrka ustala, nebo sa uľahčilo.",
+    "corrected": "Večer búrka ustala, nebo sa rozjasnilo."
+  },
+  {
+    "original": "Probudila ich niečia prítomnosť.",
+    "corrected": "Prebudila ich niečia prítomnosť."
+  },
+  {
+    "original": "Všade v stane boly červy!",
+    "corrected": "Všade v stane boli červy!"
+  },
+  {
+    "original": "Bohuslav a Ján chceli najrýchlejšie byt domov.",
+    "corrected": "Bohuslav a Ján chceli byť čo najrýchlejšie doma."
+  },
+  {
+    "original": "Zložili stan a začali vracať.",
+    "corrected": "Zložili stan a išli domov."
+  },
+  {
+    "original": "No, tak rýchlo to ešte nikdy nevracali.",
+    "corrected": "No, tak rýchlo sa ešte nikdy nevracali."
+  },
+  {
+    "original": "Na ceste domov stretli velkého, zlého býka.",
+    "corrected": "Na ceste domov stretli veľkého, zlého býka."
+  },
+  {
+    "original": "Príroda bola nezmieriteľna pre chlapcov.",
+    "corrected": "Príroda bola nebezpečná(?) pre chlapcov."
+  },
+  {
+    "original": "A musíme vedieť - mama vravela im veľa krát, že prírodu treba rešpektovať a nemôžu hádzať odpadky na zem, ako to vždy chlapci robili.",
+    "corrected": "A je treba vedieť - mama im vravela veľakrát, že prírodu treba rešpektovať a nemôžu hádzať odpadky na zem, ako to vždy chlapci robili."
+  },
+  {
+    "original": "Netrávim vôbec času pred televíznou obrazovkou preto že nemám rada televíziu.",
+    "corrected": "Netrávim vôbec čas pred televíznou obrazovkou, pretože nemám rada televíziu."
+  },
+  {
+    "original": "Dávam prednosť internetovi.",
+    "corrected": "Dávam prednosť internetu."
+  },
+  {
+    "original": "Dlhe pozeranie televízie je pre mňa strata času a môže sa tiež stať drogou.",
+    "corrected": "Dlhé pozeranie televízie je pre mňa strata času a môže sa tiež stať drogou."
+  },
+  {
+    "original": "(Samozrejme, internet tiež môže biť nebezpečný ale on je nástrojom mojej práce a má viac  výhodou) Náše televízne staníce neobsahujú žiadne zaujímavé programy tak ked' už zapnem televizor pozeram iba počasie a niekedy aj  správy.",
+    "corrected": "(Samozrejme, internet tiež môže byť nebezpečný, ale on je nástrojom mojej práce a má viac výhod) Naše televízne stanice neobsahujú žiadne zaujímavé programy, tak ked' už zapnem televizor, pozerám iba počasie a niekedy aj správy."
+  },
+  {
+    "original": "Môžno povedať, že pozeram televíziu pasívne ked príchadzam k mojej mame aby som sa z ňou porozpravala a ona presne pozera niejaki seriál.",
+    "corrected": "Dá sa povedať, že pozerám televíziu pasívne keď príchádzam k mojej mame, aby som sa s ňou porozprávala a ona e práve pozerá nejaký seriál."
+  },
+  {
+    "original": "Nikdy nesledujem televíziu preto, že sa nudím.",
+    "corrected": "Nikdy nesledujem televíziu vtedy keď sa nudím. (??)"
+  },
+  {
+    "original": "Ale to nebolo také važne lebo máme v byte tri televizory, v každej izbe jeden.",
+    "corrected": "Ale to nebolo také vážne, lebo máme v byte tri televizory, v každej izbe jeden."
+  },
+  {
+    "original": "Všetke osobnosti, ktoré nastajú v televízie vyzerajú veľmi pekne, sú nadané, majú veľa peňazí, sú takmer dokonalé.",
+    "corrected": "Všetke osobnosti, ktoré  sa objavujú v televízie vyzerajú veľmi pekne, sú nadané, majú veľa peňazí, sú takmer dokonalé."
+  },
+  {
+    "original": "Kto bi nechcel biť dokonalý?",
+    "corrected": "Kto bi nechcel byť dokonalý?"
+  },
+  {
+    "original": "Podobajú sa svoim hrdinom a prijajú nie iba dobré funkcie.",
+    "corrected": "Podobajú sa svojim hrdinom a neprijímajú iba dobré veci."
+  },
+  {
+    "original": "Aj reklamy ovplyvniujú čoveka.",
+    "corrected": "Aj reklamy ovplyvňujú čoveka."
+  },
+  {
+    "original": "Televízia zasypuje nás dnes reklamami.",
+    "corrected": "Televízia nás dnes zavaluje reklamami."
+  },
+  {
+    "original": "Výrobcovia presvedčujú, že to len ich vyrobok je najlepši a musíme ho mať.",
+    "corrected": "Výrobcovia presvedčujú, že len ten ich výrobok je najlepší a musíme ho mať."
+  },
+  {
+    "original": "Stava sa že citíme sa horši ked ho nemáme.",
+    "corrected": "Stáva sa, že sa cítime horšie, ak ho nemáme."
+  },
+  {
+    "original": "Televízia nás oklamuje.",
+    "corrected": "Televízia nás klame."
+  },
+  {
+    "original": "Na svete je mnoho ľudi ktorý máju záujem len o televízie (strávuju mnoho hodín pred televíznou obrazovkou, nepredstavujú si ako môžna bez nej žiť) tak si mislím, že ona nemá väčšieho konkurenta.",
+    "corrected": "Na svete je mnoho ľudí, ktorí majú záujem len o televíziu (trávia mnoho hodín pred televíznou obrazovkou, nevedia si predstaviť bez nej žiť) tak si myslím, že nemá väčšieho konkurenta."
+  },
+  {
+    "original": "Ale neznamená to, že nemusíme sa pokúšať.",
+    "corrected": "Ale neznamená to, že sa nemusíme  pokúšať."
+  },
+  {
+    "original": "Samozrejme, existuje veľa faktorov, ktoré obmedzujú život, určujú jeho smer a formujú buducnosť.",
+    "corrected": "Samozrejme, existuje veľa faktorov, ktoré obmedzujú život, určujú jeho smer a formujú budúcnosť."
+  },
+  {
+    "original": "Je to napríklad sociálny štatus, rasa, pohlavie, rozumové schopnosti, pracovno-odborné návyky a zručnosť, záujmy a záľuby, vzťahy a veľa iných.",
+    "corrected": "Je to napríklad sociálny status, rasa, pohlavie, rozumové schopnosti, pracovno-odborné návyky a zručnosť, záujmy a záľuby, vzťahy a veľa iných."
+  },
+  {
+    "original": "Spoločnosť učí nás zodpovedať stanoveným kritériám od samého detstva.",
+    "corrected": "Spoločnosť nás učí  zodpovedať stanoveným kritériám od samého detstva."
+  },
+  {
+    "original": "No Pegi Bredli myslí, že všetky tieto kritéria sú podmienečnosti, ktoré iba prekážajú život, keď sú prehodnotené.",
+    "corrected": "No Pegi Bredli si myslí, že všetky tieto kritéria sú podmienečnosti (tomu som celkom nepochopil, neviem presne ktoré slovo si chcela použiť), ktoré iba prekážajú životu, keď sú prehodnotené."
+  },
+  {
+    "original": "Je to sadrová dievča (autoportrét Pegi), ktorá sa štiepi na časti odchádzajúcim z jej svetlom a vzlieta nad svetom.",
+    "corrected": "Je to sádrové dievča (autoportrét Pegi), ktoré sa štiepi na časti odchádzajúcim z jej svetlom a vzlieta nad svetom.(opäť som celkom nepochopil koniec vety)"
+  },
+  {
+    "original": "Treba iba sa nehanbiť a nebáť pustiť jeho von.",
+    "corrected": "Netreba sa hanbiť a báť pustiť ho von."
+  },
+  {
+    "original": "Podľa môjho názoru, tato socha je veľmi impresívna.",
+    "corrected": "Podľa môjho názoru, táto socha je veľmi impozantná."
+  },
+  {
+    "original": "Ale pre väčšiny ľudí tieto lietajúce chumáče znepríjemňujú život.",
+    "corrected": "Ale  väčšine ľudí tieto lietajúce chumáče znepríjemňujú život."
+  },
+  {
+    "original": "„Páperie“ z topoľov každoročne privádza do besnoty milióny ľudí a periodicke spôsobuje hádky o tom, či je topoľ užitočný alebo nie.",
+    "corrected": "„Páperie“ z topoľov každoročne privádza do besnoty milióny ľudí a pravideľne (periodicky) spôsobuje hádky o tom, či je topoľ užitočný alebo nie."
+  },
+  {
+    "original": "Možno radšej by vyrúbili všetky topole?",
+    "corrected": "Možno by radšej mali vyrúbať všetky topole?"
+  },
+  {
+    "original": "Preto topoľ často vysadzujú ako dekoráciu ulíc.",
+    "corrected": "Preto topole často vysadzujú ako dekoráciu ulíc."
+  },
+  {
+    "original": "Je aj dobrou surovinou na výrobu papiera, nábytka, umelého hodvábu atď.",
+    "corrected": "Je aj dobrou surovinou na výrobu papiera, nábytku, umelého hodvábu atď."
+  },
+  {
+    "original": "Topoľové drevo je jej firemným drevom a dodaje gitarám (ako vravia) nejaký zvláštny tón.",
+    "corrected": "Topoľové drevo je jej firemným drevom a dodá gitarám (ako vravia) nejaký zvláštny tón."
+  },
+  {
+    "original": "Nejdem na nich.",
+    "corrected": "Nejdem na  ne."
+  },
+  {
+    "original": "Utorky sú pre mňa najhoršie v celom týždňu.",
+    "corrected": "Utorky sú pre mňa najhoršie v celom týždni."
+  },
+  {
+    "original": "V stredu na šťastie mám len dva semináre a potom môžem ísť do knižnice.",
+    "corrected": "V stredu našťastie mám len dva semináre, a potom môžem ísť do knižnice."
+  },
+  {
+    "original": "Je tám veľa kníh o jazykovede (čo je zaujímavé, sú tam tiež knihy po slovensky), a mňa najviac zaujímavajú tie o indoeurópskej linguistike, jazykovej typológii a dejínách nemčiny.",
+    "corrected": "Je tam veľa kníh o jazykovede (čo je zaujímavé, sú tam tiež knihy po slovensky), a mňa najviac zaujímajú tie o indoeurópskej lingvistike, jazykovej typológii a dejinách nemčiny."
+  },
+  {
+    "original": "Zajtra tám asi pôjdem.",
+    "corrected": "Zajtra tam asi pôjdem."
+  },
+  {
+    "original": "- Dobrý deň, vážený Páne, telefonujem v námeti krasného vozidla - Škoda Superb, ktora je predavaná na stránce hejauto.",
+    "corrected": "- Dobrý deň, vážený Pane, telefonujem  (neviem čo tým myslíš \"v námeti\") krásneho vozidla - Škoda Superb, ktorá je predávaná na stránke hejauto."
+  },
+  {
+    "original": "Mám jednu otázku - či cestovala ona pod vodičom veľkého Previeva?",
+    "corrected": "Mám jednu otázku - či ona cestovala ? (neviem, čo si tým chcel povedať)"
+  },
+  {
+    "original": "Som z Poľska, bývam tiež v Poľsku, moja rodina je z Poľska.",
+    "corrected": "Som z Poľska, bývam tu , moja rodina je tiež idtiaľto. ."
+  },
+  {
+    "original": "Hovorím po Poľsky, ale aj trochu po Slovensky.",
+    "corrected": "Hovorím po poľsky, ale trochu aj po slovensky."
+  },
+  {
+    "original": "Môj pes to Zakres, páči sa mu parkovisko.",
+    "corrected": "Môj pes sa volá Zakres, páči sa mu parkovisko."
+  },
+  {
+    "original": "Slovensko - aké je ono?",
+    "corrected": "Slovensko - aké je ?"
+  },
+  {
+    "original": "Slovensko je krásnou Krajinou.",
+    "corrected": "Slovensko je krásna krajina."
+  },
+  {
+    "original": "Má pekné hory, nádherné mesta a milé vidieky.",
+    "corrected": "Má pekné hory, nádherné mesta a  príjemný vidiek."
+  },
+  {
+    "original": "Jeho podniebie je úžasne príjemné.",
+    "corrected": "Jeho podnebie je úžasne príjemné."
+  },
+  {
+    "original": "Dievče sú krasné a chlapi milý.",
+    "corrected": "Dievčatá sú krásne a chlapi milí."
+  },
+  {
+    "original": "\"Chciel by som kúpiť Škodu, ale nieviem - aká.",
+    "corrected": "\"Chciel by som kúpiť Škodu, ale neviem akú."
+  },
+  {
+    "original": "Bude ona používaná do cestovania (dlhé a kratké cesty).",
+    "corrected": "Bude používaná na cestovanie (dlhé a kratké cesty)."
+  },
+  {
+    "original": "Mysliel som o Superbe, Yetim (cesty často sú zle) alebo Octave.",
+    "corrected": "Rozmýšľal som o Superb, Yeti (pre zlé cesty) alebo o Octavii."
+  },
+  {
+    "original": "Chcieľ by som kúpiť vozidlo...",
+    "corrected": "Chcel by som si kúpiť vozidlo..."
+  },
+  {
+    "original": "- Dobrý deň, volám sa Łukasz a chcieľ by som kúpiť to krásne vozidlo.",
+    "corrected": "- Dobrý deň, volám sa Łukasz a chcel by som si kúpiť to krásne vozidlo."
+  },
+  {
+    "original": "Čo môžete o tejto Syrene povedať?",
+    "corrected": "Čo mi môžete o tejto Syrene povedať?"
+  },
+  {
+    "original": "predovšetkým, to je veľmi pekná vec, myslím, že nie ma takéj druhéj na sveti, nenájdete tu žiadnej chyby, všetko je ideálne, ak nové - toho nemôžna opisať ľudskou rečou...",
+    "corrected": "predovšetkým,  je to veľmi pekná vec, myslím, že nie je takej druhej na svete, nenájdete  na nej žiadnej chyby, všetko je  bezchybné (tu je možné použiť aj iné prídavné meno, ale ideálne sa tam nehodí), ako nové - to nie je môžné opísať ľudskou rečou..."
+  },
+  {
+    "original": "- Ktorý je to rok výroby?",
+    "corrected": "-  Aký je to rok výroby?"
+  },
+  {
+    "original": "- To je 1975 rok, najlepši.",
+    "corrected": "-  Rok 1975 , ten najlepší."
+  },
+  {
+    "original": "- Aká je maximálna rýchlosť?",
+    "corrected": "- Akú dosahuje maximálnu rýchlosť? (Akú má maximálnu rýchlosť?)"
+  },
+  {
+    "original": "- Syrena môže hnať s rýchlosťou až 120 km/h!",
+    "corrected": "- Syrena môže  ísť  rýchlosťou až 120 km/h!"
+  },
+  {
+    "original": "kozmická hodnota!",
+    "corrected": "kozmická hodnota! (nie je mi úplne jasné, čo si mal na mysli. možno vesmírna rýchlosť! by znela lepšie ale aj kozmická hodnota je do istej miery zrozumiteľná)"
+  },
+  {
+    "original": "Krásne!",
+    "corrected": "Krása!"
+  },
+  {
+    "original": "Aká cena?",
+    "corrected": "Aká je cena?"
+  },
+  {
+    "original": "- 10 tísicov poľských zlotých.",
+    "corrected": "- 10 tísic poľských zlotých."
+  },
+  {
+    "original": "- Zajtra prídem do Vas a zaplatim celú cenú.",
+    "corrected": "- Zajtra prídem  za Vami a zaplatím celú cenu. (V slovenčine sa\"do Vás\" používa napríklad v kontexte \"zaľúbil som sa do Vás\" ak sa jedná o stretnutie, používa sa \"za mnou, za tebou, za Vami, atď. )"
+  },
+  {
+    "original": "Milého dňa žičim, dovidenia!",
+    "corrected": "Pekný deň Vám prajem, dovidenia!"
+  },
+  {
+    "original": "- Dovidenia, milého dňa tiež!",
+    "corrected": "- Dovidenia, aj Vám pekný deň!"
+  },
+  {
+    "original": "Frida Kahlo - o texte zo pravda.sk",
+    "corrected": "Frida Kahlo - o texte z pravda.sk"
+  },
+  {
+    "original": "Text hovori o znamej mexickej maliarce Fride Kahlo.",
+    "corrected": "Text hovorí o známej mexickej maliarke Fride Kahlo."
+  },
+  {
+    "original": "Napriek tomu že už ked´ žila provokovala a mnoho malovala, bola znama len ako manželka Diega Riveru.",
+    "corrected": "Napriek tomu, že už ked´ žila provokovala a veľa maľovala, bola známa len ako manželka Diega Riveru. (\"už keď žila\" do vety nepasuje, skôr by som tam dala napr.: \"..že počas života provokovala...\""
+  },
+  {
+    "original": "Stala sa iba populárna v sedemdesiatych rokoch.",
+    "corrected": "Stala sa  populárnou až v sedemdesiatych rokoch."
+  },
+  {
+    "original": "júla 1907 vo Mexiku.",
+    "corrected": "júla 1907 v Mexiku."
+  },
+  {
+    "original": "Odmladička mala kontakt zo umeniem a malierstvem lebo že jej otec bol fotografom a ju učil.",
+    "corrected": "Odmladička mala kontakt s umením a maliarstvom, lebo že jej otec bol fotograf a učil ju."
+  },
+  {
+    "original": "Ked´ bola malá mala obrnu a druge zdravotné problémy a mala zaujem o medicine.",
+    "corrected": "Ked´ bola malá (Ako malá) mala obrnu a  iné zdravotné problémy a tak mala záujem o medicínu."
+  },
+  {
+    "original": "Strela Diega prvý raz ked´ mala 15 hodin.",
+    "corrected": "Prvý raz stretla Diega ked´ mala 15 rokov. :)"
+  },
+  {
+    "original": "Ked´ mala 18 prežila nehodu u autobusu a zlomila vela kosťi.",
+    "corrected": "Ked´ mala 18 prežila nehodu autobusu a zlomila si veľa kostí."
+  },
+  {
+    "original": "Musiela ležeť v posteli a tam mala podstavec a mohla malovať.",
+    "corrected": "Musela ležať v posteli a tam mala podstavec aby mohla maľovať."
+  },
+  {
+    "original": "Po nehade musiela nosiť korzet (sadrovy a potom ocelovy).",
+    "corrected": "Po nehode musela nosiť korzet (sádrový a potom oceľový)."
+  },
+  {
+    "original": "Ked´ mala 21 ako členka komunistickej strany stretla sa opät sa Diegom, uspešnym malarom ktory mal vela objednavok.",
+    "corrected": "Ako 21 ročná sa ako členka komunistickej strany opäť stretla s Diegom, úspešným maliarom, ktorý mal veľa objednávok."
+  },
+  {
+    "original": "Matka Fridy bola proti, hovorila že Diego je sukničárom.",
+    "corrected": "Matka Fridy bola proti, hovorila, že Diego je sukničkár."
+  },
+  {
+    "original": "Frida ešte mala zdravotné problémy, potratila dieťa.",
+    "corrected": "Frida mala ešte zdravotné problémy, potratila dieťa."
+  },
+  {
+    "original": "Manželia ne boli verný, Frida mala aféry so ženami ktore neprekážali Diegovi.",
+    "corrected": "Manželia neboli verní, Frida mala aféry so ženami, ktoré (však) neprekážali Diegovi."
+  },
+  {
+    "original": "On zuril ked´ jeho manželka spala s nekim mužom ale tiež ne bol verny a spal so manželkinou sestrou.",
+    "corrected": "On zúril, ked´ jeho manželka spala s nejakým mužom, ale tiež nebol verný a spal s manželkinou sestrou."
+  },
+  {
+    "original": "Diego prichýlil Fride so boĺševikom Levom Trockým po tym sa s ňou rozvodl.",
+    "corrected": "Diego prichýlil Fridu s boľševikom Levom Trockým a po tom sa s ňou rozviedol."
+  },
+  {
+    "original": "Po roku uzavreli manželstvo este raz.",
+    "corrected": "Po roku uzavreli manželstvo ešte raz."
+  },
+  {
+    "original": "Väčšinou malovala autoportréty a to sa začalo ked´ ležela v posteli ked´ bola chorá a sama.",
+    "corrected": "Frida väčšinou maľovala autoportréty a to sa začalo, ked´ ležala v posteli  chorá a sama."
+  },
+  {
+    "original": "Malovala svoj smútok a utrpenie.",
+    "corrected": "Maľovala svoj smútok a utrpenie."
+  },
+  {
+    "original": "Obdarovavala obrazmi svojho manžela a milencov aby je nezabudli.",
+    "corrected": "Obrazmi obdarúvala svojho manžela a milencov aby na ňu nezabudli."
+  },
+  {
+    "original": "Prvý raz pokazala svoje obrazy verejnosti vd´ak manželu ktory ju mnoho podporoval.",
+    "corrected": "Prvý raz ukázala svoje obrazy verejnosti vďaka manželovi, ktorý ju veľmi podporoval."
+  },
+  {
+    "original": "Potom mala sólovú výstavu a očarovala surrealistov o ktorych hovorila, že su \"takí príšerne intelektuálni, že by si medzi nimi nevydržala.\" O umelciach zo Pariza hovorila že su pobehlicami.",
+    "corrected": "Potom mala sólovú výstavu a očarovala surrealistov o ktorych hovorila, že su \"takí príšerne intelektuálni, že by medzi nimi nevydržala.\" O umelkyniach z Paríža hovorila, že sú to pobehlice."
+  },
+  {
+    "original": "Vystavovala v najslávnejších galériách a Ĺudia ju obdivovali.",
+    "corrected": "Výstavy mala v najslávnejších galériách a ľudia ju obdivovali."
+  },
+  {
+    "original": "Ĺudia hovorili že môže sa predávkovala lekmi.",
+    "corrected": "Ľudia hovorili, že sa možno predávkovala liekmi."
+  },
+  {
+    "original": "Nemáme čas ani na oddych, a napätie sa nazbiera.",
+    "corrected": "Nemáme čas  na oddych a napätie sa nazbierava/ hormadí."
+  },
+  {
+    "original": "A čím ďalej sa so stresom nezaoberáme, tým horším sa situácia stane.",
+    "corrected": "A čím ďalej sa  stresom nezaoberáme, tým horšie sa situácia stane."
+  },
+  {
+    "original": "\"Stresom sa rozumie psychický stav človeka, keď je buď priamo ohorzený alebo ohrozenie očakáva a pritom nie je presvedčený, že jeho obranná reakcia proti nepriaznivým vplyvom bude dostatočne silná.\" Čiže je to mobilizovanie všetkých síl.",
+    "corrected": "\"Stresom sa rozumie psychický stav človeka, keď je buď priamo ohrozený alebo ohrozenie očakáva a pritom nie je presvedčený, že jeho obranná reakcia proti nepriaznivým vplyvom bude dostatočne silná.\" Čiže je to mobilizovanie všetkých síl."
+  },
+  {
+    "original": "Môžeme tak uznať, že sa strese nemôžeme vyhnúť.",
+    "corrected": "Môžeme  uznať, že stresu sa nemôžeme vyhnúť."
+  },
+  {
+    "original": "Vtedy totiž sa nám zdá, že všetko podarí, nič nás nemôže zastaviť a odradiť, a samé dobré správy započujeme.",
+    "corrected": "Vtedy totiž sa nám zdá, že všetko sa podarí, nič nás nemôže zastaviť a odradiť, a počujeme samé dobré správy"
+  },
+  {
+    "original": "Naopak, keď sa cítime zle, nič nefunguje tak, ako sme to predstavovali.",
+    "corrected": "Naopak, keď sa cítime zle, nič nefunguje tak, ako sme si to predstavovali."
+  },
+  {
+    "original": "Asi všetci chceme byť úspešní a šťastný.",
+    "corrected": "Asi všetci chceme byť úspešní a šťastní."
+  },
+  {
+    "original": "Preto je nevyhnuťeľné udržať si dobrú náladu.",
+    "corrected": "Preto je  nevyhnutné si udržať dobrú náladu."
+  },
+  {
+    "original": "antidepresanty a lieky na upokojenie.",
+    "corrected": "antidepresíva a lieky na upokojenie."
+  },
+  {
+    "original": "Tieto sú však nebezpečné, pretože sa môže vyvíjať závislosť a ich predávkovanie sa môže viesť k smrti.",
+    "corrected": "Tiesú však nebezpečné, pretože sa môže rozvíjať závislosť na nich a nimi predávkovanie sa môže viesť k smrti."
+  },
+  {
+    "original": "Preto sa musíme pokúsiť predísť potreby týchto tabliet.",
+    "corrected": "Preto sa musíme pokúsiť predísť potrebe brať tieto  tabliet."
+  },
+  {
+    "original": "Minúta usmievania sa nám zmneí náladu a uvoľní napätie.",
+    "corrected": "Minúta usmievania sa nám zmení náladu a uvoľní napätie."
+  },
+  {
+    "original": "Dnes som sa rozhodol, že sa ozvem čo najčastejšie na tejto strane.",
+    "corrected": "Dnes som sa rozhodol, že sa ozvem čo najčastejšie na tejto stránke."
+  },
+  {
+    "original": "Neviem, ako to bude vyzerať v praxi, ale dúfam, že mi to naozaj pomáha zelpšiť moju slovenčinu.",
+    "corrected": "Neviem, ako to bude vyzerať v praxi, ale dúfam, že mi to naozaj pomôže zlepšiť moju slovenčinu."
+  },
+  {
+    "original": "Najprv by som sa predstavoval.",
+    "corrected": "Najprv by som sa predstavil."
+  },
+  {
+    "original": "Odjakživa som žil tu.",
+    "corrected": "Žil som tu odjakživa."
+  },
+  {
+    "original": "Som maďar, a so slovenčinou som mal menšie alebo väčšie problémy.",
+    "corrected": "Som Maďar, a so slovenčinou mávam menšie aj väčšie problémy."
+  },
+  {
+    "original": "Najviac problémov mám so zvratnými zámenami a so tvorením slov.",
+    "corrected": "Najviac problémov mám so zvratnými zámenami a s tvorením slov."
+  },
+  {
+    "original": "Keď treba rozprávať, tak nemám obrovské problémy, ale väčšinou nie som si istý v sebe.",
+    "corrected": "Keď treba rozprávať, tak nemám obrovské problémy, ale väčšinou nie som sebaistý."
+  },
+  {
+    "original": "Žijem so svojou otcom, matkou a mám aj jedného brata, ktorý je o štyri roky starší.",
+    "corrected": "Žijem so svojím otcom, matkou a mám aj jedného brata, ktorý je o štyri roky starší."
+  },
+  {
+    "original": "Napriek tomu sa vyjdeme veľmi dobre.",
+    "corrected": "Napriek tomu vychádzame veľmi dobre."
+  },
+  {
+    "original": "Pre školára, ako som ja je to aj čas zábavy.",
+    "corrected": "Pre školáka, ako som ja je to aj čas zábavy."
+  },
+  {
+    "original": "Po piatich unavejúcich dní sa mi zdá sobota a nedeľa zemským rajom.",
+    "corrected": "Po piatich unavujúcich dňoch sa mi zdá sobota a nedeľa zemským rajom."
+  },
+  {
+    "original": "A viackrát v nedeľu večer ľahneme ešte viac unavení ako sme boli v piatok.",
+    "corrected": "A viackrát si v nedeľu večer ľahneme ešte viac unavení ako sme boli v piatok."
+  },
+  {
+    "original": "Som tu späť, a tentokrát dúfam, že tu aj ostanem.",
+    "corrected": "Som späť, a tentokrát dúfam, že tu aj ostanem."
+  },
+  {
+    "original": "Viem, že poznám tú slovíčku, ale jednoducho mi nepríde na um (ako aj tentokrát).",
+    "corrected": "Viem, že poznám to slovíčko, ale jednoducho mi nepríde na um (ako aj tentokrát)."
+  },
+  {
+    "original": "Našťastie viem riešenie na týchto problémov - je to čítanie.",
+    "corrected": "Našťastie poznám riešenie týchto problémov - je to čítanie."
+  },
+  {
+    "original": "Aj som sa rozhodol, že si cez prázdniny prečítam knihu v slovenčine, ale zatiaľ neviem, že akú.",
+    "corrected": "Rozhodol som sa, že si cez prázdniny prečítam knihu v slovenčine, ale zatiaľ neviem akú."
+  },
+  {
+    "original": "Mikulášsky Večierok",
+    "corrected": "Mikulášsky večierok"
+  },
+  {
+    "original": "Naše gymnázium každý rok zorgnizuja Mikulášsky Večierok.",
+    "corrected": "Naše gymnázium každý rok (z)orgnizuje Mikulášsky večierok."
+  },
+  {
+    "original": "Niketoré triedy tancujú, iné spievajú, a ostatné (ako aj my) hrajú scénku.",
+    "corrected": "Niektoré triedy tancujú, iné spievajú a ostatné (ako aj naša ) hrajú scénku."
+  },
+  {
+    "original": "Večierok vždy má nejakú tému, tento rok je to láska.",
+    "corrected": "Večierok má vždy  nejakú tému, tento rok je to láska."
+  },
+  {
+    "original": "Naša scénka je o tom, ako vyzerá láska v rôznych vekoch.",
+    "corrected": "Naša scénka je o tom, ako vyzerá láska v rôznych obdobiach."
+  },
+  {
+    "original": "Takto máme embriá, materskú škôlku, malé deti, stredoškolákov, svadbu, 20.",
+    "corrected": "Takto  zobrazujeme embriá, materskú škôlku, malé deti, stredoškolákov, svadbu, 20."
+  },
+  {
+    "original": "výročie svadby a staré roky.",
+    "corrected": "výročie svadby a obdobie staroby. ."
+  },
+  {
+    "original": "Dúfam že aj tento rok bude naše predstavenie vysokokvalitná, hoci nie som si istý, že scénka je najlepší a najľahší nápad.",
+    "corrected": "Dúfam že aj tento rok bude naše predstavenie vysokokvalitné, hoci nie som si istý, že naša scénka je najlepší a najľahší nápad."
+  },
+  {
+    "original": "Blíži sa deň, keď začína Comenius Project, takže máme veľa práce.",
+    "corrected": "Blíži sa deň, keď (sa) začína Comenius Project, takže máme veľa práce."
+  },
+  {
+    "original": "Ak by to nebolo dosť, naša drahá riaditeťka vymyslela, že treba urobiť nejaký menši program pre hosti.",
+    "corrected": "Ak by to nebolo dosť, naša drahá riaditeľka vymyslela, že treba urobiť nejaký menší program pre hosti."
+  },
+  {
+    "original": "Časť tohto programu bude aj to, že povieme jednu vetu v rôznych jazykoch zúčastnených štátov: po slovensky, po španielsky, po taliansky, po tursky a po rumunsky.",
+    "corrected": "Časť tohto programu bude aj to, že povieme jednu vetu v jazykoch zúčastnených štátov: po slovensky, po španielsky, po taliansky, po tursky a po rumunsky."
+  },
+  {
+    "original": "Na našej škole študenti sa učia po nemecky a po francúzsky - plus dva jazyky.",
+    "corrected": "Na našej škole študenti sa učí nemecky a francúzsky - plus dva jazyky."
+  },
+  {
+    "original": "A aby sme sa nenudili, ako desiate, po rusky.",
+    "corrected": "A aby sme sa nenudili, ako desiate, rusky."
+  },
+  {
+    "original": "Mojou úlohou je zkontrolovať, či naše vety sú správne, a zistiť, ako ich správne vysloviť.",
+    "corrected": "Mojou úlohou je zkontrolovať, či sú naše vety správne, a zistiť, ako ich správne vysloviť."
+  },
+  {
+    "original": "Včera som rozhodol, že sa začnem aktívne športovať.",
+    "corrected": "Včera som rozhodol, že začnem aktívne športovať."
+  },
+  {
+    "original": "Vybral som beh, a našťastie som našiel aj plán na tréning - keďže som nechcel tréningovať neporiadne.",
+    "corrected": "Vybral som si beh, a našťastie som našiel aj plán na tréning - keďže chcem trénovať poriadne."
+  },
+  {
+    "original": "Myslel som si, že zvládnem to ľahko, no tak to nebolo.",
+    "corrected": "Myslel som si, že to zvládnem ľahko, no tak to nebolo."
+  },
+  {
+    "original": "No cez kráčanie sa to zmizlo.",
+    "corrected": "No cez kráčanie to zmizlo."
+  },
+  {
+    "original": "A tak to šlo celý čas: po behu únava, a po dvoch minútach sviežosť.",
+    "corrected": "A tak to šlo celý čas: po behu únava a po dvoch minútach sviežosť."
+  },
+  {
+    "original": "Je to dobré, pretože konečne môžem oddychnúť a odreagovať.",
+    "corrected": "Je to dobré, pretože konečne si môžem oddychnúť a odreagovať sa."
+  },
+  {
+    "original": "Celý týždeň som pomohol v škole s projektom.",
+    "corrected": "Celý týždeň som pomáhal v škole s jedným projektom."
+  },
+  {
+    "original": "Zúčastia na ňom viacere školy, ktorých zoradia do skupín.",
+    "corrected": "Zúčastia na ňom viaceré školy, ktoré zoradia do skupín."
+  },
+  {
+    "original": "V našej skupine sme piati: jedna škola z Rumunska, jedna z Turecka, jedna z Španielska, jedna z Talianska a samozrejme zo Slovenska.",
+    "corrected": "V našej skupine sme piati: jedna škola z Rumunska, jedna z Turecka, jedna zo Španielska, jedna z Talianska a samozrejme zo Slovenska."
+  },
+  {
+    "original": "Asi každý tri mesiac pôjdeme do inej krajiny.",
+    "corrected": "Každé asi tri mesiace pôjdeme do inej krajiny."
+  },
+  {
+    "original": "Sú tam testy o meste a o ich známych osobnostiach, majú spojiť fotky tradičných slovenských jedáls ich názvom, obliecť si kroje, riešiť logické hádanky, splniť zručnosťnú dráhu, a ukázať svoje vedomosti v angličtine.",
+    "corrected": "Sú tam testy o meste a o ich známych osobnostiach, majú spojiť fotky tradičných slovenských jedál s ich názvom, obliecť si kroje, riešiť logické hádanky, splniť zručnosťnú dráhu, a ukázať svoje vedomosti v angličtine."
+  },
+  {
+    "original": "Myslím, že naučte sa Slovensko, enovo dostupné šlabikár (napísané v japončine) je zatiaľ nepublikované v Japonsku.",
+    "corrected": "Myslím, že \"Naučte sa Slovensky\", novo dostupný šlabikár (napísaný v japončine) je zatiaľ nepublikovaný v Japonsku."
+  },
+  {
+    "original": "tak, Rozhodol som sa skúsiť učiť  slovenských pesničiek.",
+    "corrected": "Tak som sa rozhodol skúsiť učiť zo slovenských pesničiek."
+  },
+  {
+    "original": "Text písně",
+    "corrected": "Text piesne (písně - česky)"
+  },
+  {
+    "original": "chladný nie?",
+    "corrected": "chladné nie?"
+  },
+  {
+    "original": "Ja som japonec.",
+    "corrected": "som japonec."
+  },
+  {
+    "original": "Nikdy som nebol na Slovensko, ale já len raz navštívil Prahu v roku 1987, kedy bolo hlavným mestom Československa.",
+    "corrected": "Nikdy som nebol na Slovensku, ale ja som len raz navštívil Prahu v roku 1987, kedy bolo hlavným mestom Československa."
+  },
+  {
+    "original": "Väčšina japonských nevedia, že Starom Meste v Bratislave je veľmi krásna.",
+    "corrected": "Väčšina japoncov nevie, že v Starom Meste v Bratislave je veľmi krásne."
+  },
+  {
+    "original": "Já hovoriť ruský a trochu poľsky, ale slovenčina je pre mňa ťažké to pochopiť.",
+    "corrected": "Já hovorím rusky a trochu poľsky, ale slovenčina je pre mňa  ťažká na pochopenie."
+  },
+  {
+    "original": "Pamätám si, že dvaja futbalisti z Slovensko kedysi hral v Urawa Red Diamonds, japonský profesionálne futbalové J-League klubu.",
+    "corrected": "Pamätám si, že dvaja futbalisti zo Slovenska kedysi hrali v Urawa Red Diamonds, japonskom profesionálnom futbalovom J-League klube."
+  },
+  {
+    "original": "Ich mená sú Ľubomír Luhový a Miroslav Mentel.",
+    "corrected": "Volali sa Ľubomír Luhový a Miroslav Mentel."
+  },
+  {
+    "original": "Ľubomír je z Bratislavy, a Miroslav je z Šurany.",
+    "corrected": "Ľubomír je z Bratislavy, a Miroslav je zo Šurian. (zo Šurian, z mesta Šurany)"
+  },
+  {
+    "original": "Ich prezývky v Japonsku bol Lulu a Miro.",
+    "corrected": "Ich prezývky v Japonsku boli Lulu a Miro."
+  },
+  {
+    "original": "Nikdy som opitý slovenské pivo, ale som si istý, že to chutí veľmi dobre, rovnako ako české pivo.",
+    "corrected": "Nikdy som nepil slovenské pivo, ale som si istý, že to chutí veľmi dobre, rovnako ako české pivo."
+  },
+  {
+    "original": "Chceme že Japonsko dováža slovenské pivo, ak je to možné.",
+    "corrected": "Chceme aby Japonsko dovážalo slovenské pivo, ak je to možné."
+  },
+  {
+    "original": "1.\tAké sú vaše obľúbené tropické ovocie?",
+    "corrected": "1. Aké je vaše obľúbené tropické ovocie?"
+  },
+  {
+    "original": "3.\tKeď je zrelý ananás a keď nezrelý?",
+    "corrected": "3. Kedy je zrelý ananás a kedy nezrelý?"
+  },
+  {
+    "original": "Vonku bolo pekné, slnecné počasie, mladý chlapci, Juraj a Jánko mali nápad aby išli do lase a tam urobit’ tábor.",
+    "corrected": "Vonku bolo pekné, slnečné počasie, mladí chlapci, Juraj a Janko mali nápad aby išli do lesa a urobili tam tábor.Juraj a Janko mali nápad, že pôjdu do lesa a urobia (si) tam tábor."
+  },
+  {
+    "original": "Dlho sa prechádzali aby našli najlepšie mesto na ich ubitovanie.",
+    "corrected": "Dlho sa prechádzali aby našli najlepšie miesto na  ubytovanie. (miesto na táborenie)"
+  },
+  {
+    "original": "Na nebi  nie bolo vel’a oblakov, najmä, že slnko svietilo a teplota vazducha bola horuca.",
+    "corrected": "Na nebi nebolo veľa oblakov, najmä  svietilo slnko a teplota vzduchu bola horúca. (a bolo horúco)"
+  },
+  {
+    "original": "Chlapci začiali staviat’ tábor, a tešili sa, že to bude najkrajšia wypráva v ich celom živote.",
+    "corrected": "Chlapci začali stavat’ tábor, a tešili sa, že to bude najkrajšia výprava v celom ich živote."
+  },
+  {
+    "original": "Ked’ skončili, boli unavený a zachcalo sa im spat’.",
+    "corrected": "Keď skončili, boli unavení a zachcelo sa im spať."
+  },
+  {
+    "original": "Skryli sa do vnutra, vel’mý sa im to pačilo, a boli hrdý že sami to urobili.",
+    "corrected": "Skryli sa dovnútra, veľmi sa im to páčilo,  boli hrdí že to urobili sami."
+  },
+  {
+    "original": "Náhle zistili, že fuka silný vetor, vyšli von a pocitili par kvapok dážďu na pokožku.",
+    "corrected": "Náhle zistili, že fúka silný vietor, vyšli von a pocítili pár kvapiek dažďa na ich pokožke."
+  },
+  {
+    "original": "Ešče nevedieli, že je to len začiatok ich družstva.",
+    "corrected": "Ešte nevedeli, že je to len začiatok ich dobrodružstva."
+  },
+  {
+    "original": "Musieli sa starat’ o tábor, pretože  bol lahký a vietor mohol  ho uniest’.",
+    "corrected": "Museli sa starat’ o tábor, pretože bol ľahký a vietor ho mohol uniest’."
+  },
+  {
+    "original": "Juraj zapálil oheň a Jánko uváril polievku.",
+    "corrected": "Juraj zapálil oheň a Janko uvaril polievku."
+  },
+  {
+    "original": "Rozprávali o tom ako bude vizerat’ noc v tmenom lese.",
+    "corrected": "Rozprávali o tom ako bude vyzerať noc v temnom lese."
+  },
+  {
+    "original": "Netrválo to dlho, roj komárov návštevil ich v tábore.",
+    "corrected": "Netrvalo to dlho, a v tábore ich navštívil roj komárov."
+  },
+  {
+    "original": "Nenásytné beštie spravile že rano boli ospalý a celý čas sa škriabali.",
+    "corrected": "Nenásytné beštie  spôsobili, že ráno boli ospalí a celý čas sa škriabali."
+  },
+  {
+    "original": "Dohodli sa, že čas vracat‘ domov.",
+    "corrected": "Dohodli sa, že je čas  vrátiť sa domov."
+  },
+  {
+    "original": "Nevedeli, že tam sa kravy pasú.",
+    "corrected": "Nevedeli, že sa tam pasú kravy."
+  },
+  {
+    "original": "Rozhnevali veľkeho, čierneho býka, ktori začal ich naháňať.",
+    "corrected": "Rozhnevali veľkého, čierneho býka, ktorý ich začal naháňať."
+  },
+  {
+    "original": "Dlho utekali pred ňim, mali už dost‘ ked‘ uvideli svoju mamu.",
+    "corrected": "Dlho pred ním utekali, mali už dosť keď uvideli svoju mamu."
+  },
+  {
+    "original": "Mama uvárila im chutný obed, ktori rychlo zjedli a spýtali sa pre druhé porcie.",
+    "corrected": "Mama im uvarila chutný obed, ktorý rýchlo zjedli a vypýtali si  druhé porcie. druhé porcie = duple, sg. dupľa"
+  },
+  {
+    "original": "„Typicka pol’ska rodina”",
+    "corrected": "„Typická poľská rodina”"
+  },
+  {
+    "original": "Typická rodina pozostávajú sa z otca, matky a detí žijúcich v jednom dome.",
+    "corrected": "Typická rodina pozostáva z otca, matky a detí žijúcich v jednom dome."
+  },
+  {
+    "original": "Často byvajú tiež sa dedom i babičkom.",
+    "corrected": "Často byvajú tiež s dedom i babičkou."
+  },
+  {
+    "original": "Staršía generácia dole a mladšía na celom prvom poschodie.",
+    "corrected": "Staršia generácia dole a mladšia na  prvom poschodí."
+  },
+  {
+    "original": "Toto usporiadanie je zvlášť dobré pre deti pretože majú one lepší kontakt s rodinom a nepotrebujú chodit‘ do materskej školi.",
+    "corrected": "Toto usporiadanie je zvlášť dobré pre deti pretože majú (oni) lepší kontakt s rodinou a nepotrebujú chodiť do materskej školy."
+  },
+  {
+    "original": "Mohú čítať im rozprávky a chodit‘ na prechádzky.",
+    "corrected": "Môžu im čítať rozprávky a chodiť na prechádzky."
+  },
+  {
+    "original": "Bohužiaľ, často sa stáva, že starirodičia chcú vediet‘ o všetkom, čo robi mlade manželstvao a to nie je dobrý nápad.",
+    "corrected": "Bohužiaľ, často sa stáva, že starý rodičia chcú vedieť o všetkom, čo robia mladomanželia a to nie je dobrý nápad."
+  },
+  {
+    "original": "Ked‘ deti sú malé zaroba len otec, pretože mama sa zaoberá výchovou potomkou.",
+    "corrected": "Keď sú <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\">deti malé zarába len otec, pretože mama sa zaoberá výchovou potomkov."
+  },
+  {
+    "original": "Typicka pol’ska rodina často sa stretáva s tetami, strikami, sesternicami a tak ďalej, na Vianoce alebo na druhé sviatky.",
+    "corrected": "Typická poľska rodina<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"> sa často stretáva s tetami, strýkami, sesternicami a tak ďalej, na Vianoce alebo na iné sviatky."
+  },
+  {
+    "original": "Rodina sedú prí stole a jedzú, pijú a viesú diskusiu.",
+    "corrected": "Rodina sedí pri stole a jedia, pijú a vedú diskusiu."
+  },
+  {
+    "original": "Majú rad hovoriť o všetkom a o ničom.",
+    "corrected": "Radi hovoria o všetkom a o ničom."
+  },
+  {
+    "original": "Ko zomrel?",
+    "corrected": "Kto zomrel?"
+  },
+  {
+    "original": "A ko sa narodil?",
+    "corrected": "A kto sa narodil?"
+  },
+  {
+    "original": "Rodičia sa zaujímajú o edukaciju detí.",
+    "corrected": "Rodičia sa zaujímajú o výchovu detí."
+  },
+  {
+    "original": "Od útleho veku detí navštevovajú na súkromné lekcie angličtiny,  hry na klavírom alebo na balet.",
+    "corrected": "Od útleho veku deti navštevujú  súkromné lekcie angličtiny, hry na klavíri alebo chodia na balet."
+  },
+  {
+    "original": "Starirodičia často dajú finančnu pomôcť.",
+    "corrected": "Starý rodičia často dajú finančnú pomoc."
+  },
+  {
+    "original": "Potom sú hrdý vďaka tomu, že ich vnúčatá vedzú, ako krásne spievať a hrat‘.",
+    "corrected": "Potom sú hrdý vďaka tomu, že ich vnúčatá vedia krásne spievať a hrať."
+  },
+  {
+    "original": "Psy a mačky sú tiež členkom rodiny.",
+    "corrected": "Psy a mačky sú tiež členom rodiny."
+  },
+  {
+    "original": "Všeobecne je, že to najmladší sa musí starať o zvieratá aby naučil sa zodpovednost‘.",
+    "corrected": "Všeobecne platí, že  najmladší sa musí starať o zvieratá aby sa naučil zodpovednosti."
+  },
+  {
+    "original": "Samozrejme všetcy mu v tom pomáhajú.",
+    "corrected": "Samozrejme všetci mu v tom pomáhajú."
+  },
+  {
+    "original": "Aké maš vzťahy s zbojníkmi s Tvojej družiny?",
+    "corrected": "Aký máš vzťah so zbojníkmi z Tvojej družiny?"
+  },
+  {
+    "original": "Ste spolu?",
+    "corrected": "Ste spolu? (Veta je správne, ale nesedí mi jej význam. Možno to malo byť \"Držíte pohromade?\" alebo \"Niesú medzi vami roztržky?\")"
+  },
+  {
+    "original": "Počúvajú ma, preto že som ich šef, ale nemôžem povedat‘, že vždy je takto.",
+    "corrected": "Počúvajú ma, pretože som ich šéf, ale nemôžem povedať, že je to tak vždy."
+  },
+  {
+    "original": "Minulý týždeň, stalo sa niečo zle...",
+    "corrected": "Minulý týždeň sa stalo  niečo zlé..."
+  },
+  {
+    "original": "Huncaga zdradil a zaslúžil na smrt’.",
+    "corrected": "Huncaga nás zradil a zaslúži  si smrť."
+  },
+  {
+    "original": "Je to zbojnik, ktori lupí aj ked‘ si nemusí a tiež zabija keď je nahneváný.",
+    "corrected": "Je to zbojník, ktorý lúpi aj keď  nemusí, a tiež zabíja, keď je nahnevaný."
+  },
+  {
+    "original": "Trochu sa mu nedivím.",
+    "corrected": "Ani sa mu nedivím."
+  },
+  {
+    "original": "Jeho žena je vešticou, volá sa Margeta a nie je typ ženy s ktorou Huncaga môže mať pokojný život.",
+    "corrected": "Jeho žena je vešticou. Volá sa Margita a nie je to typ ženy, s ktorou Huncaga môže mať pokojný život. (V slovenčine neexistuje meno Margeta, len Margita)"
+  },
+  {
+    "original": "Nemohol som ho zabiť.",
+    "corrected": "Nemohol som ho ale zabiť. (Ešte lepšie by podľa mňa bolo \"Nedokázal\" miesto \"Nemohol\".)"
+  },
+  {
+    "original": "Tvoja zbojecká družyna sa zväčša?",
+    "corrected": "Zväčšuje sa tvoja zbojnická družina ?"
+  },
+  {
+    "original": "Prijímate nových členkov?",
+    "corrected": "Prijímate nových členov?"
+  },
+  {
+    "original": "Po Mikulášovom pohrebe rozprával som s Ondrášom.",
+    "corrected": "Po Mikulášovom pohrebe som sa rozprával  s Ondrášom."
+  },
+  {
+    "original": "Povedal mi, že chce být‘ zbojnik.",
+    "corrected": "Povedal mi, že chce byť zbojník."
+  },
+  {
+    "original": "Ale nechcel som ho.",
+    "corrected": "Ale nechcel som ho prijať. (Veta je síce správne, ale znie trochu neúplne, tak som pridal nakoniec ešte \"prijať\".)"
+  },
+  {
+    "original": "On je príliš mladý.",
+    "corrected": "Je príliš mladý. (Správna veta, ale znie to lepšie takto.)"
+  },
+  {
+    "original": "A potom, ked‘ bude aj ďalej chcieť, môžem s nim porozpravat‘ ešte raz.",
+    "corrected": "A potom, keď bude aj naďalej chcieť, môžem sa s ním porozprávať ešte raz."
+  },
+  {
+    "original": "Viem  všetky legendy, ktore l’udia hovoria o tebe.",
+    "corrected": "Poznám všetky legendy, ktoré ľudia o tebe hovoria . (Ešte lepšie by bolo \"..., ktoré o tebe kolujú.\")"
+  },
+  {
+    "original": "Jánošík, prečo ste taký silný chlap?",
+    "corrected": "Jánošík,  ako to, že ste taký silný chlap?"
+  },
+  {
+    "original": "(smeje sa) Tak vel’a l‘udia hovoria?",
+    "corrected": "(smeje sa)  To ľudia hovoria?"
+  },
+  {
+    "original": "Počuval som len to, že moj otec je obor a že v opasku mám žlku, ktora ma hrani.",
+    "corrected": "Počul som len to, že môj otec je obor, a že v opasku mám žlku, ktorá ma chráni. (Slovo \"žlka\" neexistuje. Možno to malo byť \"žulka\", teda malý kúsok žuly?)"
+  },
+  {
+    "original": "A moja babka zna pravdu.",
+    "corrected": "Moja babka pozná pravdu."
+  },
+  {
+    "original": "Opísala mi, že ked‘ mňa matka nosila pod srdcom jedla zem.",
+    "corrected": "Povedala mi, že keď ma matka nosila pod srdcom, jedla zem."
+  },
+  {
+    "original": "A teraz som taký mocný, lisovaný z hliny.",
+    "corrected": "A teraz som taký mocný, lisovaný z hliny. (\"lisovaný z hliny\" znie ako metafora z básne.)"
+  },
+  {
+    "original": "Prečo sa s ňou rozišiel?",
+    "corrected": "Prečo si sa s ňou rozišiel?"
+  },
+  {
+    "original": "Anička sa išla vydat‘ sa ineho muža.",
+    "corrected": "Anička sa šla vydať za iného muža."
+  },
+  {
+    "original": "Nemohol som nič urobiť.",
+    "corrected": "Nemohol som nič robiť."
+  },
+  {
+    "original": "Jánošík, môžete mi povedat’ aké sú Tvoje plány na budúcnosť?",
+    "corrected": "Jánošík, môžeš mi povedať, aké sú Tvoje plány  do budúcnosti?"
+  },
+  {
+    "original": "Ano, môžem, nie je to žiadne tajomstvo.",
+    "corrected": "Áno, môžem. Nie je to žiadne tajomstvo."
+  },
+  {
+    "original": "Chcel by som mat‘dieťa s Barborou.",
+    "corrected": "Chcel by som mať dieťa s Barborou."
+  },
+  {
+    "original": "Nechcem byť už zbojnikom.",
+    "corrected": "Nechcem byť už zbojníkom."
+  },
+  {
+    "original": "Ale akí je vplyv medií na členov rodiny, na manželov a na deti a na ich vzájomné vzťahy?",
+    "corrected": "Ale aký je vplyv medií na členov rodiny, na manželov a na deti a na ich vzájomné vzťahy?"
+  },
+  {
+    "original": "Myslím si, že dospievajúci mladý človek hľadá vlastnú identitu v médiách, v tím čo pozerá v televizií.",
+    "corrected": "Myslím si, že dospievajúci mladý človek hľadá vlastnú identitu v médiách, v tom čo pozerá v televizií."
+  },
+  {
+    "original": "Vedci ukázali, že príliš dlhé a časté sledovanie televízie sa zmení v zvyk, ktorý je rovnako nebezpečný ako iné závislosti.",
+    "corrected": "Vedci ukázali, že príliš dlhé a časté sledovanie televízie sa zmení vo zvyk, ktorý je rovnako nebezpečný ako iné závislosti."
+  },
+  {
+    "original": "Jedného dňa, keď televízor sa pokazil, som cítila úzkosť, pocit straty a pocit nudy.",
+    "corrected": "Jedného dňa, keď sa televízor  pokazil, som cítila úzkosť, pocit straty a pocit nudy."
+  },
+  {
+    "original": "Teraz zriedka pozerám na televíziu, aj keď sa nudím nemám potrebu sa obrátiť na TV.",
+    "corrected": "Teraz zriedka pozerám  televíziu, aj keď sa nudím nemám potrebu sa obrátiť na TV."
+  },
+  {
+    "original": "Musía kontrolovať, aby dieťa niepozerá na televíziu do neskorých nočných hodín.",
+    "corrected": "Musia kontrolovať, aby dieťa  nepozeralo  televíziu do neskorých nočných hodín."
+  },
+  {
+    "original": "Navyše, niekoľko zásad: robiť domáce úlohy, pomoc v domácnosti, je vonku, čítanie kníh a potom sa môžno pozerať na rozprávky, filmy a televízne seriály.",
+    "corrected": "Navyše, niekoľko zásad: robiť domáce úlohy, pomoc v domácnosti,  byť vonku (alebo chodiť von), čítanie kníh (skôr čítať knihy, ale v podstate je to dobre) a potom sa možno pozerať na rozprávky, filmy a televízne seriály."
+  },
+  {
+    "original": "Televízia má aj výhody, tiež slúži ako vzdelávacie funkciu, môže rozvíjať myseľ a emócie tvar estetické cítenie.",
+    "corrected": "Televízia má aj výhody, tiež  môže plniť vzdelávaciu funkciu, môže rozvíjať myseľ a emócie, vytvárať  estetické cítenie."
+  },
+  {
+    "original": "Záleží na nás, aké programy sa pozeráme.",
+    "corrected": "Záleží na nás, na aké programy sa pozeráme."
+  },
+  {
+    "original": "V dnešnej dobe, najväčším konkurentom televízie je internet, pretože tám nájdete všetko, čo potrebujete, oveľa viac, než môže nám dať televízia.",
+    "corrected": "V dnešnej dobe, najväčším konkurentom televízie je internet, pretože tám nájdete všetko, čo potrebujete, oveľa viac, než nám môže  dať televízia."
+  },
+  {
+    "original": "su to dobre otazky?",
+    "corrected": "Sú to dobré otázky?"
+  },
+  {
+    "original": "1.\tAké dochucovadlá možno používať namiesto kuchynskej soli?",
+    "corrected": "1. Aké dochucovadlá možno používať namiesto kuchynskej soli?"
+  },
+  {
+    "original": "2.\tKtoré potravinárské výrobky obsahujú najviac soli?",
+    "corrected": "2. Ktoré potravinárské výrobky obsahujú najviac soli?"
+  },
+  {
+    "original": "3.\t Čo môžeme urobiť, aby v našej strave bolo menej soli?",
+    "corrected": "3. Čo môžeme urobiť preto, aby v našej strave bolo menej soli?"
+  },
+  {
+    "original": "4.\tKol’ko soli denne potrebuje prijat’ dospelý človek?",
+    "corrected": "4. Kol’ko soli denne potrebuje prijat’ dospelý človek?"
+  },
+  {
+    "original": "5.\tKol’ko gram soli sa nachádza v jednom grame sodíka?",
+    "corrected": "5. Kol’ko gramov soli sa nachádza v jednom grame sodíka?"
+  },
+  {
+    "original": "Medzi nimi je velki rozdel- nektore su štatne a ine sukromne.",
+    "corrected": "Medzi nimi je veľký rozdiel- niektoré sú štátne a iné súkromné."
+  },
+  {
+    "original": "Štatna televízia vykonáva misiu, čo znamena že ona vdelava l´údia cez programy a filmy ktore vysiela.",
+    "corrected": "Štátna televízia vykonáva misiu, čo znamená, že  vzdeláva  ľudí cez programy a filmy, ktoré vysiela."
+  },
+  {
+    "original": "Sukromne televízie vysielaju programy ktore lˇudia budu najviac pozerať pretože v čase programu a filmu vysielaju reklamy z ktorych televízia zarába peniaze.",
+    "corrected": "Súkromné televízie vysielajú programy, ktoré ľudia budú najviac pozerať, pretože v čase programu a filmu vysielaju reklamy, z ktorých televízia zarába peniaze."
+  },
+  {
+    "original": "Ja zriedkavo pozeram televízine programy pretože nemám vela času a pre mňa, nemá vela programov ktore chcel bi som pozerať.",
+    "corrected": "Ja zriedkavo pozerám televízne programy, pretože nemám vela času a   nie je veľa programov ktoré  by som chcel pozerať."
+  },
+  {
+    "original": "Mám svoj oblˇúbeny program-sú to zvesti.",
+    "corrected": "Mám svoj obľúbený program-sú to zvesti."
+  },
+  {
+    "original": "Mám ho rad pretože l´úbim ked viem čo sa dieje na svete.",
+    "corrected": "Mám ho rád pretože  mám rád, keď viem čo sa deje  vo svete."
+  },
+  {
+    "original": "Myslim si íe l´udia ktory vela času trávia pred televíziou musia isť k lekarovi pretože v televízii vela programov je velmi hlupych a myslim si že osoba ktora tieto programy pozera nemože biť psychycko zdrava.",
+    "corrected": "Myslim si, že ľudia ktorí vela času trávia pred televíziou musia ísť k lekárovi, pretože v televízií je veľa programov  veľmi hlúpych a myslím si, že osoba ktorá tieto programy pozerá nemôže byť psychicky zdravá."
+  },
+  {
+    "original": "Podl´a mňa najväčším konkurentom televízie su kniky a rôzne ich žanry.",
+    "corrected": "Podľa mňa najväčším konkurentom televízie su knihy a rôzne ich žánre."
+  },
+  {
+    "original": "Verim že vo sučasnosti su ešte inteligentni čitatelia a myslim si že oni sa zaoberaju literaturou, ktora može pozitívne ovplyvniť čoveka.",
+    "corrected": "Verím, že v súčasnosti sú ešte inteligentní čitatelia a myslím si, že oni sa zaoberajú literatúrou, ktorá môže pozitívne ovplyvniť človeka."
+  },
+  {
+    "original": "Kedysi pokazil sa mi televízor a pamätam že nevedol som o tom pretože mal som tak vela veci do urobenia, že nepozeral som ho.",
+    "corrected": "Kedysi sa mi pokazil  televízor a pamätám si, že som o tom nevedel  pretože som mal tak veľa vecí  na práci, že som ho nepozeral."
+  },
+  {
+    "original": "Pol´sko leži v miernom klimatickom pásme o premenlivých znakoch.",
+    "corrected": "Pol´sko leží v miernom klimatickom pásme s premenlivými prvkami."
+  },
+  {
+    "original": "To je pričinou vel´kej promenlivosti a rozoznavania šest´ ročne obdobie:",
+    "corrected": "To je pričinou vel´kej promenlivosti a možnosti rozpoznania šiestich ročných období:"
+  },
+  {
+    "original": "Predjarie - trva až marec až čast aprila, priemerna teplota je 0ºC až 5ºC, charakterizuje sa vel´kou premenlivost´ou počasia, často prši a nekedz sneži ako aj fúka silným vietrom.",
+    "corrected": "Predjarie - trvá od marca až po čast apríla, priemerná teplota je 0ºC až 5ºC, charakterizuje sa vel´kou premenlivost´ou počasia, často prší a niekedy sneži dokonca aj fúka silný vietor."
+  },
+  {
+    "original": "Jar - trva cez april a máj, priemerna teplota je 5ºC až 15ºC, charakterizuje sa nevelkim zachmureným a skupymi zražkamy.",
+    "corrected": "Jar - trvá počas apríla a mája, priemerná teplota je 5ºC až 15ºC, charakteristická je miernym zamračením a malými zrážkami."
+  },
+  {
+    "original": "Leto - trva cez jún, júl a august, priemerna teplota presahué 15ºC, charakterizuje sa častýmz zraťkamz a búrkamy.",
+    "corrected": "Leto - trva počas júna, júla a augusta, priemerná teplota presahuje 15ºC, charakteristické je častými búrkami a zrážkami."
+  },
+  {
+    "original": "Jeseň - trva cez september a október, teplota vzmáša 0ºC až 5ºC, charakterizuje sa silným ochladenim vzducha, najmä nocou.",
+    "corrected": "Jeseň - trva počas septembra a októbra, teplota je 0ºC až 5ºC, charakteristické je silným ochladením vzduchu, najmä v noci."
+  },
+  {
+    "original": "Predzimje - trva cez čiast októbra, teplota vznaša 0ºC až 5ºC, charakterizuje sa vel´kou premenlivost´ou počasia.",
+    "corrected": "Predzimie - trvá počas časti októbra, teplota je 0ºC až 5ºC, charakteristické je veľkou premenlivosťou počasia."
+  },
+  {
+    "original": "Zima - trva cez november, janúar a február, priemerna teplota vynáša pod nulou, charakterizuje sa sneženim.",
+    "corrected": "Zima - trva počas mesiacov november, január a február, priemerná teplota je pod nulou, je charakteristické snežením."
+  },
+  {
+    "original": "kto vedecky pracuje",
+    "corrected": "ten, kto vedecky pracuje"
+  },
+  {
+    "original": "2)\tvakcína -y -cín ž.",
+    "corrected": "2) vakcína -y -cín ž."
+  },
+  {
+    "original": "nemierne pitie liehovín, pijanstvo",
+    "corrected": "nadmerné pitie liehovín, pijanstvo"
+  },
+  {
+    "original": "Čilski vedci vyvíjajú vakcínu proti alkoholizmu, ktorá by podl´a nich mohla znížiť príjem alkoholu u osôb až o 90 až 95 percent.",
+    "corrected": "Čílski vedci vyvíjajú vakcínu proti alkoholizmu, ktorá by podl´a nich mohla znížiť príjem alkoholu u osôb až o 90 až 95 percent."
+  },
+  {
+    "original": "4)látka -y -tok ž  forma hmoty majúca isté fyzikálne al.",
+    "corrected": "4)látka -y -tok ž forma hmoty majúca isté fyzikálne al."
+  },
+  {
+    "original": "O látke, ktorú by na l´udochmohli začať testovať na budúci rok, informovala skupina výskumníkov z Čilskej univerzity a súkromneho laboratória Recalcine.",
+    "corrected": "O látke, ktorú by na l´udoch mohli začať testovať na budúci rok, informovala skupina výskumníkov z Čilskej univerzity a súkromneho laboratória Recalcine."
+  },
+  {
+    "original": "5)\tliečba -y ž.",
+    "corrected": "5) liečba -y ž."
+  },
+  {
+    "original": "Liečba sa zakladá na neutraliyácii skupiny enzýmov zodpovedných za trávenie alkoholu, ktoré tak zvyšujú toleranciu organizmu voči alkoholu.",
+    "corrected": "Liečba sa zakladá na neutralizácii skupiny enzýmov zodpovedných za trávenie alkoholu, ktoré tak zvyšujú toleranciu organizmu voči alkoholu."
+  },
+  {
+    "original": "7)tep -u m.",
+    "corrected": "tep= české slovo, slovensky je pulz"
+  },
+  {
+    "original": "Vakcína by mala obdobne zhoršovať ťažkosti spojené s ´´opicou´´, ako napríklad   nevoľnosť  či zrýchlenie tepu, a tým značne znižovať chuť d´alej piť.",
+    "corrected": "Vakcína by mala obdobne zhoršovať ťažkosti spojené s ´´opicou´´, ako napríklad nevoľnosť či zrýchlenie pulzu, a tým značne znižovať chuť d´alej piť."
+  },
+  {
+    "original": "Malo by to fungovať podobne ako náplasti a tabletky, ktoré fajčiarom pomáhajú zbaviť  sa ich zlozvyku.",
+    "corrected": "Malo by to fungovať podobne ako náplasti a tabletky, ktoré fajčiarom pomáhajú zbaviť sa ich zlozvyku."
+  },
+  {
+    "original": "9)\tbunka -y -niek ž.",
+    "corrected": "9) bunka -y -niek ž."
+  },
+  {
+    "original": "10)\tpečeň –e ž.",
+    "corrected": "10) pečeň –e ž."
+  },
+  {
+    "original": "veľká žľaza uložená v tele živočíchov a človeka blízo   bránice",
+    "corrected": "veľká žľaza uložená v tele živočíchov a človeka blízo bránice"
+  },
+  {
+    "original": "2)Aké druhy ludi sú zavislý od alkoholu?",
+    "corrected": "2)Aké druhy ludí sú zavislí od alkoholu?Neviem či poznáš toto pravidlo, nominatív plurálu prídavného mena nemá -y- ale má -i-šikovní ľudia"
+  },
+  {
+    "original": "3)V akých štatoch vedci pracujú nad vakcinou proti alkoholizmu?",
+    "corrected": "3)V akých štátoch vedci pracujú na vakcíne proti alkoholizmu?"
+  },
+  {
+    "original": "4)O ile vakcina mohla bi znižiť príjem alkoholu?",
+    "corrected": "4)O ile vakcina mohla bi znižiť príjem alkoholu? = ??? O ile?"
+  },
+  {
+    "original": "5)Na akých zvieratach vyskumnici už otestovali liek?",
+    "corrected": "5)Na akých zvieratách otestovali už vyskumníci tento liek?"
+  },
+  {
+    "original": "Horska príhoda",
+    "corrected": "Horská príhoda"
+  },
+  {
+    "original": "Bol pekný den júla a Juraj i Marek mali praydninz, obidvaja vel´mi majú rád hory teda rozhodli sa že pôjdu na výlet v hory.",
+    "corrected": "Bol pekný júlový deň a Juraj a Marek mali prazdniny (QWERTY? :), obidvaja majú veľmi radi hory, tak sa rozhodli že pôjdu na výlet na hory."
+  },
+  {
+    "original": "Na druhy den kedz vychodilo slnko pôšli v Tetry.",
+    "corrected": "Na druhý deň keď vyšlo slnko  išli do Tatier"
+  },
+  {
+    "original": "Nahle začialo pršať a potom bola taka burka a vietor tak silne fúkal že Jurajin a Markovi stan vyzdvihol sa a letiel tak rýchlo že behli, behli a nemohli dobehnúťa kedy prebiehli desať kilometrov zlapali svoj stan a vtedy zistili že ich veci potrhal vietor, teda Marek a Juraj musieli tražiť svoje veci, a ked´ už je mali, dažd´ už nepršal a vietor nefukal.",
+    "corrected": "Náhle začalo pršať a potom bola taká búrka a vietor tak silno fúkal, že Jurajovi a Markovi sa zdvihol stan a letel tak rýchlo, že bežali, bežali a nemohli ho dobehnúť. Keď prebehli desať kilometrov zlapali (dobehli, chytili) svoj stan a vtedy zistili že ich veci potrhal vietor. Teda Marek a Juraj museli  (strážiť = to protect, to guard...pozbierať = pick up) svoje veci, a keď už ich mali, dážď už nepršal a vietor nefúkal."
+  },
+  {
+    "original": "Rozpálili ohnište a rozhodli sa že rano budu vracať doma a pošli spať.",
+    "corrected": "Rozpálili ohnisko a rozhodli sa že ráno sa vrátia domov a išli spať."
+  },
+  {
+    "original": "Včera a predvčerom bolí hráne zápasy futbalovéj ligy majstrov.",
+    "corrected": "Včera a predvčerom boli hrané zápasy futbalovej ligy majstrov.Včera a predvčerom sa hrali zápasy futbalovej ligy majstrov."
+  },
+  {
+    "original": "Tušim, že nikto nevedel, že bude tak mnoho gólov.",
+    "corrected": "Tuším, že nikto nevedel, že bude tak mnoho (veľa) gólov."
+  },
+  {
+    "original": "V štyriech zápasoch",
+    "corrected": "V štyroch zápasoch"
+  },
+  {
+    "original": "futbalisti skorovali až osemnásťkrát.",
+    "corrected": "futbalisti skórovali až osemnásťkrát."
+  },
+  {
+    "original": "Je to viac ako štyri góle v jednom zápase.",
+    "corrected": "Je to viac ako štyri góly v jednom zápase.To je viac ako štyri góly v jednom zápase."
+  },
+  {
+    "original": "Bohužiaľ vyhrála včera Barcelona...",
+    "corrected": "Bohužiaľ vyhrala včera Barcelona..."
+  },
+  {
+    "original": "Mám rád Shakhtar, a podporoval som ich tim viac, že Barcelonu nie mám rád.",
+    "corrected": "Mám rád Shakhtar, a podporoval som ich tím viac, pretože Barcelonu nemám rád."
+  },
+  {
+    "original": "Je to takmer určité že kataloňčania budú hráť v semifinale a ich superom bude asi Real Madrid.",
+    "corrected": "Je ( skoro isté že katalánčania budú hráť v semifinále a ich súperom bude asi Real Madrid."
+  },
+  {
+    "original": "Dnes je dôležitý deň pre poľského športu.",
+    "corrected": "Dnes je dôležitý deň pre poľský šport / Dnes je dôležitý deň poľského športu."
+  },
+  {
+    "original": "Najúspešnejšy poľský skokan na lyžiach Adam Małysz sa rozlučil s karierou.",
+    "corrected": "Najúspešnejší poľský skokan na lyžiach Adam Małysz sa rozlúčil s kariérou."
+  },
+  {
+    "original": "4 krátny viťažca generalnéj klasifikacii svetoveho poháru, ktorý od 10 let bol stále jedným s najlepšich skokanov odchadza.",
+    "corrected": "Štvornásobný víťaz  klasifikácií Svetového pohára, ktorý bol už 10 rokov stále jedným z najlepších skokanov, odchádza."
+  },
+  {
+    "original": "Už nebudeme mohli pozerať jeho skokov, nevyhra už žadného medalu majstrostv sveta ani olimpiády.",
+    "corrected": "Už sa nebudeme môcť pozerať na jeho skoky, nevyhrá už žiadnu medailu na Mastrovstvách sveta ani na Olympiáde."
+  },
+  {
+    "original": "Je to smutné ale máme v Poľsku novou hviezdu, ktorá už je veľmi dobrým skokanom, a teraz ako leader našého tímu bude snažíť aby sa stať takým, akým bol Małysz.",
+    "corrected": "Je to smutné, ale máme v Poľsku novú hviezdu, už je tiež veľmi dobrým skokanom, a teraz ako líder nášho tímu sa bude snažíť ,aby sa stal takým, akým bol Małysz."
+  },
+  {
+    "original": "Dnes prvý raz na pódium stali dvaja Poliaci, dnesný viťažca Stoch a treti Małysz.",
+    "corrected": "Dnes prvý raz na pódiu stáli dvaja Poliaci, dnešný víťaz Stoch a tretí Małysz."
+  },
+  {
+    "original": "Je to nejaký symbol, jedna hvezda odchadza a druhá prichadza.",
+    "corrected": "Je to ako symbol, jedna hvezda odchádza a druhá prichádza."
+  },
+  {
+    "original": "Ďakujéme Adam za tie všetké leta a to všetko čo si nam dal.",
+    "corrected": "Ďakujeme ti Adam za všetky tie roky a všetko čo si nám dal."
+  },
+  {
+    "original": "Včera som sa zaregistroval na tejto stranke pretože chcem sa naučiť slovenčinu.",
+    "corrected": "Včera som sa zaregistroval na tejto stranke pretože sa chcem  naučiť slovenčinu."
+  },
+  {
+    "original": "Viem už nečo po slovenský, moja pasivná znalosť je dosť dobrá ale chcem vylepšiť moje aktyvné použivanie toho jazyka.",
+    "corrected": "Viem už niečo po slovensky, moja pasívna znalosť je dosť dobrá, ale chcem vylepšiť moje aktívne používanie tohto jazyka."
+  },
+  {
+    "original": "Najmä problemov mám s diaktričkou, je veľmi ťažka pre mňa.",
+    "corrected": "Najviac problémov mám s diakritikou, je veľmi ťažká pre mňa."
+  },
+  {
+    "original": "Dúfam, že mi pomožete.",
+    "corrected": "Dúfam, že mi pomôžete."
+  },
+  {
+    "original": "Asi každy počúva hudbu.",
+    "corrected": "Asi každý počúva hudbu."
+  },
+  {
+    "original": "Podľa mňa je to prirodzene, pretože hudba je veľmi dôležita.",
+    "corrected": "Podľa mňa je to prirodzené, pretože hudba je veľmi dôležitá."
+  },
+  {
+    "original": "Pomáha sa nám relaksovať, vd'aka nej nie je nudne a niektorí rádi behajú, hrajú alebo robiá ešte niečo s hudbou a nie viediá robíť tohto bez nej.",
+    "corrected": "Pomáha  nám relaxovať, vd'aka nej nie je nuda a niektorí radi behajú, hrajú sa alebo robia ešte niečo s hudbou a nevedia to robiť  bez nej."
+  },
+  {
+    "original": "Veľmi rád počúvam slovenské skupiny napríklad Elán, Desmod, nekedy počúvam aj Metropolis alebo Kontrafakt.",
+    "corrected": "Veľmi rád počúvam slovenské skupiny napríklad Elán, Desmod, niekedy počúvam aj Metropolis alebo Kontrafakt."
+  },
+  {
+    "original": "Moje obľubene poľské kapele to Hunter, Hey, Dżem, Perfect, Lady Pank, a ostatné.",
+    "corrected": "Moje obľubené poľské kapely sú Hunter, Hey, Dżem, Perfect, Lady Pank, a ostatné. (a iné)"
+  },
+  {
+    "original": "Od týždnia som ničoho nového nenapísal...",
+    "corrected": "(Už) týždeň som nič nové nenapísal."
+  },
+  {
+    "original": "Je to preto, že nemal som nejakého nápadu o čom môžem napísať.",
+    "corrected": "Je to preto, že nemal som nijaký nápad o ktorom by som mohol písať."
+  },
+  {
+    "original": "Včera som sa stiahnul audioknihu \"Robinson Crusoe\" po slovensky a bud'em ho počuvať, myslím, že je to dobré žeby vylepšiť moje počúvanie a dúfam, že bude to aj zaujímave.",
+    "corrected": "Včera som si stiahnul audioknihu \"Robinson Crusoe\" po slovensky a budem ho počúvať, myslím, že je to dobré na zlepšenie porozumenia a dúfam, že to bude aj zaujímavé."
+  },
+  {
+    "original": "Ak som bol malý tak som to čítal po poľsky pretože tuto knihu sa číta v zakladnej škole v Poľsku a mal som jú rád.",
+    "corrected": "Keď som bol malý, tak som to čítal po poľsky pretože táto kniha sa číta na základnej škole v Poľsku, mal som ju rád."
+  },
+  {
+    "original": "Ak niekto vie kde môžem stiahnut ebook tak bol by som veľmi vd'ačný ak by mi povedal.",
+    "corrected": "Ak niekto vie, kde si môžem stiahnut ebook, tak by som bol veľmi vd'ačný ak by mi to povedal."
+  },
+  {
+    "original": "Ak by som  ho mal teda mohl by som sa aj čítať.",
+    "corrected": "Ak by som ho mal, mohol by som ho aj čítať."
+  },
+  {
+    "original": "Dnes je prvý deň apríla a to znamena, že je to prima aprilis.",
+    "corrected": "Dnes je prvého apríla a to znamena, že je to prima aprilis."
+  },
+  {
+    "original": "Všetci ľudia robiú sa vtipy a srandy.",
+    "corrected": "Všetci ľudia robia  vtipy a srandy.Všetci ľudia vtipkujú a srandujú."
+  },
+  {
+    "original": "Je to taký deň ked' musíš sa stále pozorovať, či to o čom hovori ti tvoj kamarát je naozaj pravdou, či práve nerobi ti srandy.",
+    "corrected": "Je to taký deň, ked' musíš  stále pozorovať, či to o čom hovorí  tvoj kamarát je naozaj pravda, či si práve nerobí  srandu."
+  },
+  {
+    "original": "Dnes usmev veľmi často vznika na tvare a ľudia sú veseli.",
+    "corrected": "Dnes úsmev veľmi často (vzniká) vidno na tvári a ľudia sú veselí."
+  }
+]

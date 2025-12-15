@@ -52,3 +52,10 @@ data/checkpoints/
 # Keep processed data and results in git for reproducibility!
 # data/processed/ - contains extracted exam questions
 # data/results/ - contains benchmark results
+
+# Lang-8 dataset (license restricted)
+data/raw/grammar/lang-8*
+
+# UD SNK data (large/licensed)
+data/raw/ud_snk/*.conllu
+

@@ -1,0 +1,44 @@
+{
+  "model_name": "google/gemini-2.5-flash-reasoning",
+  "timestamp": "2025-12-15T15:37:40.609888",
+  "total_sentences": 10,
+  "accuracy": 0.7904761904761904,
+  "pos_accuracy": 0.9142857142857143,
+  "lemma_accuracy": 0.8476190476190476,
+  "dep_accuracy": 0.6095238095238096,
+  "total_cost_usd": 0.0745232,
+  "avg_latency_ms": 9498.527375857035,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9142857142857143,
+      "correct": 96,
+      "total": 105,
+      "cost_usd": 0.0132104,
+      "avg_latency_ms": 3768.8252687454224,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8476190476190476,
+      "correct": 89,
+      "total": 105,
+      "cost_usd": 0.0092704,
+      "avg_latency_ms": 2655.441403388977,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.6095238095238096,
+      "correct": 64,
+      "total": 105,
+      "cost_usd": 0.0520424,
+      "avg_latency_ms": 22071.315455436707,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

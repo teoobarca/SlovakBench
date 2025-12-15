@@ -1,0 +1,44 @@
+{
+  "model_name": "anthropic/claude-opus-4.5-thinking-high",
+  "timestamp": "2025-12-15T15:36:52.782549",
+  "total_sentences": 10,
+  "accuracy": 0.8984126984126984,
+  "pos_accuracy": 0.9619047619047619,
+  "lemma_accuracy": 0.9047619047619048,
+  "dep_accuracy": 0.8285714285714286,
+  "total_cost_usd": 1.403755,
+  "avg_latency_ms": 30503.675119082134,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9619047619047619,
+      "correct": 101,
+      "total": 105,
+      "cost_usd": 0.25171,
+      "avg_latency_ms": 23657.62310028076,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.9047619047619048,
+      "correct": 95,
+      "total": 105,
+      "cost_usd": 0.20108499999999999,
+      "avg_latency_ms": 14026.515197753906,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.8285714285714286,
+      "correct": 87,
+      "total": 105,
+      "cost_usd": 0.95096,
+      "avg_latency_ms": 53826.88705921173,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

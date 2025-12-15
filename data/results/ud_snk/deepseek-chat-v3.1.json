@@ -1,0 +1,44 @@
+{
+  "model_name": "deepseek/deepseek-chat-v3.1",
+  "timestamp": "2025-12-15T16:30:19.245703",
+  "total_sentences": 10,
+  "accuracy": 0.7555555555555555,
+  "pos_accuracy": 0.9142857142857143,
+  "lemma_accuracy": 0.8666666666666667,
+  "dep_accuracy": 0.4857142857142857,
+  "total_cost_usd": 0.002599978,
+  "avg_latency_ms": 3567.051641146342,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9142857142857143,
+      "correct": 96,
+      "total": 105,
+      "cost_usd": 0.000943488,
+      "avg_latency_ms": 3835.1300954818726,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8666666666666667,
+      "correct": 91,
+      "total": 105,
+      "cost_usd": 0.000727432,
+      "avg_latency_ms": 3711.0754013061523,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.4857142857142857,
+      "correct": 51,
+      "total": 105,
+      "cost_usd": 0.000929058,
+      "avg_latency_ms": 3154.949426651001,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

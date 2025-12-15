@@ -1,0 +1,44 @@
+{
+  "model_name": "anthropic/claude-haiku-4.5",
+  "timestamp": "2025-12-15T15:34:04.417149",
+  "total_sentences": 10,
+  "accuracy": 0.7714285714285714,
+  "pos_accuracy": 0.8857142857142857,
+  "lemma_accuracy": 0.8666666666666667,
+  "dep_accuracy": 0.5619047619047619,
+  "total_cost_usd": 0.015361,
+  "avg_latency_ms": 2066.5589014689126,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.8857142857142857,
+      "correct": 93,
+      "total": 105,
+      "cost_usd": 0.004872,
+      "avg_latency_ms": 1998.815131187439,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8666666666666667,
+      "correct": 91,
+      "total": 105,
+      "cost_usd": 0.004632,
+      "avg_latency_ms": 1987.5565767288208,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.5619047619047619,
+      "correct": 59,
+      "total": 105,
+      "cost_usd": 0.005857,
+      "avg_latency_ms": 2213.3049964904785,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "model_name": "qwen/qwen3-32b",
+  "timestamp": "2025-12-15T15:55:35.683036",
+  "total_sentences": 10,
+  "accuracy": 0.6222222222222222,
+  "pos_accuracy": 0.8761904761904762,
+  "lemma_accuracy": 0.6285714285714286,
+  "dep_accuracy": 0.3619047619047619,
+  "total_cost_usd": 0.01452069,
+  "avg_latency_ms": 33137.69019444784,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.8761904761904762,
+      "correct": 92,
+      "total": 105,
+      "cost_usd": 0.00276904,
+      "avg_latency_ms": 17593.198037147522,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.6285714285714286,
+      "correct": 66,
+      "total": 105,
+      "cost_usd": 0.00319828,
+      "avg_latency_ms": 16652.140855789185,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.3619047619047619,
+      "correct": 38,
+      "total": 105,
+      "cost_usd": 0.00855337,
+      "avg_latency_ms": 65167.7316904068,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

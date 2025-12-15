@@ -4,6 +4,9 @@ export interface ModelResult {
     overall: number;
     mcq?: number;
     short_text?: number;
+    pos_accuracy?: number;
+    lemma_accuracy?: number;
+    dep_accuracy?: number;
     cost?: number;
     latency_ms?: number;
     error_count?: number;

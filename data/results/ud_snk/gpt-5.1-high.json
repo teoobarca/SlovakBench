@@ -1,0 +1,44 @@
+{
+  "model_name": "openai/gpt-5.1-high",
+  "timestamp": "2025-12-15T15:01:08.667419",
+  "total_sentences": 10,
+  "accuracy": 0.8634920634920635,
+  "pos_accuracy": 0.9238095238095239,
+  "lemma_accuracy": 0.9047619047619048,
+  "dep_accuracy": 0.7619047619047619,
+  "total_cost_usd": 0.409925,
+  "avg_latency_ms": 25375.403849283855,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9238095238095239,
+      "correct": 97,
+      "total": 105,
+      "cost_usd": 0.0435275,
+      "avg_latency_ms": 7836.282444000244,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.9047619047619048,
+      "correct": 95,
+      "total": 105,
+      "cost_usd": 0.07563,
+      "avg_latency_ms": 14493.017601966858,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.7619047619047619,
+      "correct": 80,
+      "total": 105,
+      "cost_usd": 0.2907675,
+      "avg_latency_ms": 53796.91150188446,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

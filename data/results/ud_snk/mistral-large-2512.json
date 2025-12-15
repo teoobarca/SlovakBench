@@ -1,0 +1,44 @@
+{
+  "model_name": "mistralai/mistral-large-2512",
+  "timestamp": "2025-12-15T16:24:34.227268",
+  "total_sentences": 10,
+  "accuracy": 0.7523809523809524,
+  "pos_accuracy": 0.9142857142857143,
+  "lemma_accuracy": 0.8380952380952381,
+  "dep_accuracy": 0.5047619047619047,
+  "total_cost_usd": 0.00596,
+  "avg_latency_ms": 1471.8858083089192,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9142857142857143,
+      "correct": 96,
+      "total": 105,
+      "cost_usd": 0.001936,
+      "avg_latency_ms": 1603.6606788635254,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8380952380952381,
+      "correct": 88,
+      "total": 105,
+      "cost_usd": 0.0017595,
+      "avg_latency_ms": 1246.425747871399,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.5047619047619047,
+      "correct": 53,
+      "total": 105,
+      "cost_usd": 0.0022645,
+      "avg_latency_ms": 1565.5709981918335,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

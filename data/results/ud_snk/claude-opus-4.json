@@ -1,0 +1,44 @@
+{
+  "model_name": "anthropic/claude-opus-4",
+  "timestamp": "2025-12-15T15:33:59.676765",
+  "total_sentences": 10,
+  "accuracy": 0.8507936507936509,
+  "pos_accuracy": 0.9333333333333333,
+  "lemma_accuracy": 0.8952380952380953,
+  "dep_accuracy": 0.7238095238095238,
+  "total_cost_usd": 1.3431899999999999,
+  "avg_latency_ms": 13887.255581219992,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.9333333333333333,
+      "correct": 98,
+      "total": 105,
+      "cost_usd": 0.301605,
+      "avg_latency_ms": 9272.056484222412,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.8952380952380953,
+      "correct": 94,
+      "total": 105,
+      "cost_usd": 0.332955,
+      "avg_latency_ms": 10074.095153808594,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.7238095238095238,
+      "correct": 76,
+      "total": 105,
+      "cost_usd": 0.70863,
+      "avg_latency_ms": 22315.615105628967,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}
