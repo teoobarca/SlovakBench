@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { useRouter } from 'next/navigation';
 import { translations, Language } from '@/utils/translations';
 
 interface LanguageContextType {
@@ -13,14 +14,17 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children, initialLanguage }: { children: ReactNode; initialLanguage: Language }) {
     const [language, setLanguageState] = useState<Language>(initialLanguage);
+    const router = useRouter();
 
     // Sync state if initialLanguage changes (e.g. navigation)
     useEffect(() => {
         setLanguageState(initialLanguage);
     }, [initialLanguage]);
 
-    // Change language via URL
+    // Change language via URL without page reload
     const handleSetLanguage = (lang: Language) => {
+        if (lang === language) return; // No change needed
+
         setLanguageState(lang);
         document.cookie = `language=${lang}; path=/; max-age=31536000`; // 1 year
 
@@ -40,7 +44,8 @@ export function LanguageProvider({ children, initialLanguage }: { children: Reac
             }
         }
 
-        window.location.href = newPath;
+        // Use router.push with scroll: false to prevent scrolling to top
+        router.push(newPath, { scroll: false });
     };
 
     return (
