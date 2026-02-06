@@ -1,0 +1,44 @@
+{
+  "model_name": "mistralai/ministral-8b-2512",
+  "timestamp": "2026-02-06T19:55:04.957768",
+  "total_sentences": 10,
+  "accuracy": 0.48571428571428577,
+  "pos_accuracy": 0.8,
+  "lemma_accuracy": 0.6190476190476191,
+  "dep_accuracy": 0.0380952380952381,
+  "total_cost_usd": 0.00143325,
+  "avg_latency_ms": 1207.4462413787842,
+  "error_count": 0,
+  "tasks": {
+    "pos": {
+      "task": "pos",
+      "accuracy": 0.8,
+      "correct": 84,
+      "total": 105,
+      "cost_usd": 0.00048059999999999997,
+      "avg_latency_ms": 1215.090250968933,
+      "errors": 0,
+      "first_error": null
+    },
+    "lemma": {
+      "task": "lemma",
+      "accuracy": 0.6190476190476191,
+      "correct": 65,
+      "total": 105,
+      "cost_usd": 0.00042510000000000003,
+      "avg_latency_ms": 1195.0806379318237,
+      "errors": 0,
+      "first_error": null
+    },
+    "dep": {
+      "task": "dep",
+      "accuracy": 0.0380952380952381,
+      "correct": 4,
+      "total": 105,
+      "cost_usd": 0.00052755,
+      "avg_latency_ms": 1212.1678352355957,
+      "errors": 0,
+      "first_error": null
+    }
+  }
+}

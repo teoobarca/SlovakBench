@@ -1,0 +1,656 @@
+{
+  "model_name": "mistralai/ministral-14b-2512",
+  "dataset_path": "data/processed/exam/2023.json",
+  "timestamp": "2026-02-06T19:55:39.078738",
+  "total_questions": 64,
+  "correct_count": 28,
+  "accuracy": 0.4375,
+  "total_cost_usd": 0.007927,
+  "mcq_accuracy": 0.525,
+  "short_text_accuracy": 0.2916666666666667,
+  "avg_latency_ms": 623.4079089081206,
+  "p95_latency_ms": 1015.7716670073569,
+  "error_count": 0,
+  "results": [
+    {
+      "question_id": "21",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.000145,
+      "latency_ms": 460.7181251049042,
+      "error": null
+    },
+    {
+      "question_id": "27",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0001408,
+      "latency_ms": 466.93783393129706,
+      "error": null
+    },
+    {
+      "question_id": "29",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "B",
+      "is_correct": true,
+      "cost_usd": 0.0001468,
+      "latency_ms": 596.5185831300914,
+      "error": null
+    },
+    {
+      "question_id": "19",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0001326,
+      "latency_ms": 597.6437500212342,
+      "error": null
+    },
+    {
+      "question_id": "18",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 0.0001414,
+      "latency_ms": 598.5619998537004,
+      "error": null
+    },
+    {
+      "question_id": "16",
+      "task_type": "short_text",
+      "model_answer": "lyrika",
+      "correct_answer": "lyriky, lyrika",
+      "is_correct": true,
+      "cost_usd": 9.02e-05,
+      "latency_ms": 598.9762090612203,
+      "error": null
+    },
+    {
+      "question_id": "10",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 7.62e-05,
+      "latency_ms": 599.5970000512898,
+      "error": null
+    },
+    {
+      "question_id": "05",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0001448,
+      "latency_ms": 600.1291668508202,
+      "error": null
+    },
+    {
+      "question_id": "09",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 8.58e-05,
+      "latency_ms": 600.1122498419136,
+      "error": null
+    },
+    {
+      "question_id": "23",
+      "task_type": "short_text",
+      "model_answer": "lexikografické",
+      "correct_answer": "výkladové, k výkladovým slovníkom, výkladový slovník",
+      "is_correct": false,
+      "cost_usd": 0.0001458,
+      "latency_ms": 599.5437081437558,
+      "error": null
+    },
+    {
+      "question_id": "24",
+      "task_type": "short_text",
+      "model_answer": "nesprávne",
+      "correct_answer": "vychádzajúc",
+      "is_correct": false,
+      "cost_usd": 0.0001432,
+      "latency_ms": 599.7442910447717,
+      "error": null
+    },
+    {
+      "question_id": "11",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "A",
+      "is_correct": true,
+      "cost_usd": 7.66e-05,
+      "latency_ms": 600.7548337802291,
+      "error": null
+    },
+    {
+      "question_id": "12",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "D",
+      "is_correct": true,
+      "cost_usd": 8.3e-05,
+      "latency_ms": 604.7923748847097,
+      "error": null
+    },
+    {
+      "question_id": "25",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0001412,
+      "latency_ms": 604.5299160759896,
+      "error": null
+    },
+    {
+      "question_id": "01",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "D",
+      "is_correct": true,
+      "cost_usd": 0.0001548,
+      "latency_ms": 607.6432920526713,
+      "error": null
+    },
+    {
+      "question_id": "06",
+      "task_type": "short_text",
+      "model_answer": "píšať",
+      "correct_answer": "začať, začal, si začal",
+      "is_correct": false,
+      "cost_usd": 0.0001558,
+      "latency_ms": 606.3770831096917,
+      "error": null
+    },
+    {
+      "question_id": "13",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 7.74e-05,
+      "latency_ms": 606.3473341055214,
+      "error": null
+    },
+    {
+      "question_id": "30",
+      "task_type": "short_text",
+      "model_answer": "skade",
+      "correct_answer": "ako, - ako, – ako",
+      "is_correct": false,
+      "cost_usd": 0.0001502,
+      "latency_ms": 615.8346249721944,
+      "error": null
+    },
+    {
+      "question_id": "26",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0001474,
+      "latency_ms": 935.2031671442091,
+      "error": null
+    },
+    {
+      "question_id": "17",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "B",
+      "is_correct": true,
+      "cost_usd": 0.00014,
+      "latency_ms": 936.4752920810133,
+      "error": null
+    },
+    {
+      "question_id": "32",
+      "task_type": "short_text",
+      "model_answer": "Vaši",
+      "correct_answer": "valasi, valasy",
+      "is_correct": false,
+      "cost_usd": 0.000153,
+      "latency_ms": 936.4274172112346,
+      "error": null
+    },
+    {
+      "question_id": "33",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.0001218,
+      "latency_ms": 476.0039590764791,
+      "error": null
+    },
+    {
+      "question_id": "07",
+      "task_type": "short_text",
+      "model_answer": "literatúra",
+      "correct_answer": "literatúra",
+      "is_correct": true,
+      "cost_usd": 0.0001572,
+      "latency_ms": 942.43845785968,
+      "error": null
+    },
+    {
+      "question_id": "34",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 0.0001138,
+      "latency_ms": 531.2836249358952,
+      "error": null
+    },
+    {
+      "question_id": "04",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0001496,
+      "latency_ms": 1002.6742918416858,
+      "error": null
+    },
+    {
+      "question_id": "20",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "A",
+      "is_correct": true,
+      "cost_usd": 0.0001386,
+      "latency_ms": 1002.4327910505235,
+      "error": null
+    },
+    {
+      "question_id": "22",
+      "task_type": "short_text",
+      "model_answer": "Dva",
+      "correct_answer": "2, dve, 3",
+      "is_correct": false,
+      "cost_usd": 0.0001428,
+      "latency_ms": 1002.9383751098067,
+      "error": null
+    },
+    {
+      "question_id": "31",
+      "task_type": "short_text",
+      "model_answer": "Prirodzená",
+      "correct_answer": "prirodzená",
+      "is_correct": true,
+      "cost_usd": 0.0001518,
+      "latency_ms": 1003.0478751286864,
+      "error": null
+    },
+    {
+      "question_id": "14",
+      "task_type": "short_text",
+      "model_answer": "kvintil",
+      "correct_answer": "sonet, znelka",
+      "is_correct": false,
+      "cost_usd": 8.62e-05,
+      "latency_ms": 1004.5854998752475,
+      "error": null
+    },
+    {
+      "question_id": "08",
+      "task_type": "short_text",
+      "model_answer": "interview",
+      "correct_answer": "interview, interviu",
+      "is_correct": true,
+      "cost_usd": 0.0001538,
+      "latency_ms": 1005.508542060852,
+      "error": null
+    },
+    {
+      "question_id": "28",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0001448,
+      "latency_ms": 1004.9088329542428,
+      "error": null
+    },
+    {
+      "question_id": "02",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 0.0001518,
+      "latency_ms": 1015.7716670073569,
+      "error": null
+    },
+    {
+      "question_id": "43",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "C",
+      "is_correct": false,
+      "cost_usd": 0.0001234,
+      "latency_ms": 411.00449999794364,
+      "error": null
+    },
+    {
+      "question_id": "41",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "B",
+      "is_correct": true,
+      "cost_usd": 0.0001204,
+      "latency_ms": 419.8480830527842,
+      "error": null
+    },
+    {
+      "question_id": "03",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "D",
+      "is_correct": true,
+      "cost_usd": 0.0001576,
+      "latency_ms": 1026.0588340461254,
+      "error": null
+    },
+    {
+      "question_id": "15",
+      "task_type": "short_text",
+      "model_answer": "Martin Kukučín",
+      "correct_answer": "*",
+      "is_correct": false,
+      "cost_usd": 9.1e-05,
+      "latency_ms": 1027.0259999670088,
+      "error": null
+    },
+    {
+      "question_id": "40",
+      "task_type": "short_text",
+      "model_answer": "1",
+      "correct_answer": "2, dva, 2 vetné sklady",
+      "is_correct": false,
+      "cost_usd": 0.0001198,
+      "latency_ms": 429.9402090255171,
+      "error": null
+    },
+    {
+      "question_id": "35",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0001094,
+      "latency_ms": 460.3110409807414,
+      "error": null
+    },
+    {
+      "question_id": "36",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 0.0001114,
+      "latency_ms": 472.32562489807606,
+      "error": null
+    },
+    {
+      "question_id": "46",
+      "task_type": "short_text",
+      "model_answer": "retro",
+      "correct_answer": "retro",
+      "is_correct": true,
+      "cost_usd": 0.000132,
+      "latency_ms": 484.9619169253856,
+      "error": null
+    },
+    {
+      "question_id": "42",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0001206,
+      "latency_ms": 538.7171250768006,
+      "error": null
+    },
+    {
+      "question_id": "44",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.0001264,
+      "latency_ms": 545.6667919643223,
+      "error": null
+    },
+    {
+      "question_id": "45",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "D",
+      "is_correct": false,
+      "cost_usd": 0.00012,
+      "latency_ms": 534.5441249664873,
+      "error": null
+    },
+    {
+      "question_id": "50",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 8.12e-05,
+      "latency_ms": 529.111625161022,
+      "error": null
+    },
+    {
+      "question_id": "53",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "B",
+      "is_correct": true,
+      "cost_usd": 8.46e-05,
+      "latency_ms": 213.43058301135898,
+      "error": null
+    },
+    {
+      "question_id": "49",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 8.7e-05,
+      "latency_ms": 543.663915945217,
+      "error": null
+    },
+    {
+      "question_id": "37",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "B",
+      "is_correct": false,
+      "cost_usd": 0.000112,
+      "latency_ms": 558.3253749646246,
+      "error": null
+    },
+    {
+      "question_id": "51",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "A",
+      "is_correct": true,
+      "cost_usd": 8.52e-05,
+      "latency_ms": 229.52316608279943,
+      "error": null
+    },
+    {
+      "question_id": "48",
+      "task_type": "short_text",
+      "model_answer": "media",
+      "correct_answer": "medi",
+      "is_correct": false,
+      "cost_usd": 0.0001342,
+      "latency_ms": 557.7749579679221,
+      "error": null
+    },
+    {
+      "question_id": "39",
+      "task_type": "short_text",
+      "model_answer": "**realistický**",
+      "correct_answer": "umelecký, umelecký jazykový štýl",
+      "is_correct": false,
+      "cost_usd": 0.0001184,
+      "latency_ms": 587.0924589689821,
+      "error": null
+    },
+    {
+      "question_id": "57",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "D",
+      "is_correct": true,
+      "cost_usd": 0.0001356,
+      "latency_ms": 191.06562505476177,
+      "error": null
+    },
+    {
+      "question_id": "56",
+      "task_type": "short_text",
+      "model_answer": "predmet",
+      "correct_answer": "predmet, priamy predmet, predmet v akuzatíve",
+      "is_correct": true,
+      "cost_usd": 9.48e-05,
+      "latency_ms": 210.9942091628909,
+      "error": null
+    },
+    {
+      "question_id": "55",
+      "task_type": "short_text",
+      "model_answer": "akt",
+      "correct_answer": "dejstvo",
+      "is_correct": false,
+      "cost_usd": 9.36e-05,
+      "latency_ms": 295.56916700676084,
+      "error": null
+    },
+    {
+      "question_id": "47",
+      "task_type": "short_text",
+      "model_answer": "4",
+      "correct_answer": "3, tri, 3 mestá",
+      "is_correct": false,
+      "cost_usd": 0.0001302,
+      "latency_ms": 623.1577498838305,
+      "error": null
+    },
+    {
+      "question_id": "54",
+      "task_type": "short_text",
+      "model_answer": "2",
+      "correct_answer": "1, jedna",
+      "is_correct": false,
+      "cost_usd": 9.06e-05,
+      "latency_ms": 298.8531249575317,
+      "error": null
+    },
+    {
+      "question_id": "63",
+      "task_type": "short_text",
+      "model_answer": "**tabulkový**",
+      "correct_answer": "informačný, informačný slohový postup",
+      "is_correct": false,
+      "cost_usd": 0.0001408,
+      "latency_ms": 289.2362498678267,
+      "error": null
+    },
+    {
+      "question_id": "62",
+      "task_type": "short_text",
+      "model_answer": "**Bohvie**",
+      "correct_answer": "ti, ťa, ty",
+      "is_correct": false,
+      "cost_usd": 0.0001422,
+      "latency_ms": 290.3539170511067,
+      "error": null
+    },
+    {
+      "question_id": "52",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 8.38e-05,
+      "latency_ms": 494.15820790454745,
+      "error": null
+    },
+    {
+      "question_id": "58",
+      "task_type": "mcq",
+      "model_answer": "A",
+      "correct_answer": "A",
+      "is_correct": true,
+      "cost_usd": 0.0001316,
+      "latency_ms": 434.66700008139014,
+      "error": null
+    },
+    {
+      "question_id": "38",
+      "task_type": "short_text",
+      "model_answer": "divých",
+      "correct_answer": "nemilosrdným, nemilosrdný",
+      "is_correct": false,
+      "cost_usd": 0.0001214,
+      "latency_ms": 840.2817079331726,
+      "error": null
+    },
+    {
+      "question_id": "60",
+      "task_type": "mcq",
+      "model_answer": "D",
+      "correct_answer": "A",
+      "is_correct": false,
+      "cost_usd": 0.0001328,
+      "latency_ms": 442.0576251577586,
+      "error": null
+    },
+    {
+      "question_id": "61",
+      "task_type": "mcq",
+      "model_answer": "C",
+      "correct_answer": "C",
+      "is_correct": true,
+      "cost_usd": 0.0001322,
+      "latency_ms": 450.71591692976654,
+      "error": null
+    },
+    {
+      "question_id": "64",
+      "task_type": "short_text",
+      "model_answer": "Ľúbostný",
+      "correct_answer": "milý, ľúbostný, milý, ľúbostný",
+      "is_correct": true,
+      "cost_usd": 0.0001428,
+      "latency_ms": 473.50599989295006,
+      "error": null
+    },
+    {
+      "question_id": "59",
+      "task_type": "mcq",
+      "model_answer": "B",
+      "correct_answer": "B",
+      "is_correct": true,
+      "cost_usd": 0.0001358,
+      "latency_ms": 1629.7011668793857,
+      "error": null
+    }
+  ]
+}
