@@ -90,6 +90,28 @@
         "total_questions": 64
       },
       {
+        "model": "gemini-3-flash-preview",
+        "provider": "Google",
+        "overall": 95.3,
+        "mcq": 100.0,
+        "short_text": 87.5,
+        "cost": 0.1522,
+        "latency_ms": 6157,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "claude-opus-4.6",
+        "provider": "Anthropic",
+        "overall": 93.8,
+        "mcq": 100.0,
+        "short_text": 83.3,
+        "cost": 0.397,
+        "latency_ms": 6238,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
         "model": "gemini-2.5-pro",
         "provider": "Google",
         "overall": 93.8,
@@ -629,6 +651,17 @@
         "total_questions": 64
       },
       {
+        "model": "ministral-8b-2512",
+        "provider": "Mistral",
+        "overall": 50.0,
+        "mcq": 70.0,
+        "short_text": 16.7,
+        "cost": 0.0054,
+        "latency_ms": 931,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
         "model": "glm-4.6v",
         "provider": "zAI",
         "overall": 46.9,
@@ -636,6 +669,109 @@
         "short_text": 16.7,
         "cost": 0.08,
         "latency_ms": 15172,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "ministral-14b-2512",
+        "provider": "Mistral",
+        "overall": 43.8,
+        "mcq": 57.5,
+        "short_text": 20.8,
+        "cost": 0.0072,
+        "latency_ms": 715,
+        "error_count": 0,
+        "total_questions": 64
+      }
+    ],
+    "2024": [
+      {
+        "model": "gemini-3-flash-preview",
+        "provider": "Google",
+        "overall": 93.8,
+        "mcq": 95.0,
+        "short_text": 91.7,
+        "cost": 0.1301,
+        "latency_ms": 5708,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "claude-opus-4.6",
+        "provider": "Anthropic",
+        "overall": 84.4,
+        "mcq": 95.0,
+        "short_text": 66.7,
+        "cost": 0.3569,
+        "latency_ms": 5977,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "ministral-14b-2512",
+        "provider": "Mistral",
+        "overall": 43.8,
+        "mcq": 57.5,
+        "short_text": 20.8,
+        "cost": 0.0085,
+        "latency_ms": 791,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "ministral-8b-2512",
+        "provider": "Mistral",
+        "overall": 40.6,
+        "mcq": 47.5,
+        "short_text": 29.2,
+        "cost": 0.0064,
+        "latency_ms": 665,
+        "error_count": 0,
+        "total_questions": 64
+      }
+    ],
+    "2023": [
+      {
+        "model": "gemini-3-flash-preview",
+        "provider": "Google",
+        "overall": 93.8,
+        "mcq": 100.0,
+        "short_text": 83.3,
+        "cost": 0.1517,
+        "latency_ms": 6519,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "claude-opus-4.6",
+        "provider": "Anthropic",
+        "overall": 84.4,
+        "mcq": 90.0,
+        "short_text": 75.0,
+        "cost": 0.5302,
+        "latency_ms": 11929,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "ministral-14b-2512",
+        "provider": "Mistral",
+        "overall": 43.8,
+        "mcq": 52.5,
+        "short_text": 29.2,
+        "cost": 0.0079,
+        "latency_ms": 623,
+        "error_count": 0,
+        "total_questions": 64
+      },
+      {
+        "model": "ministral-8b-2512",
+        "provider": "Mistral",
+        "overall": 37.5,
+        "mcq": 50.0,
+        "short_text": 16.7,
+        "cost": 0.006,
+        "latency_ms": 555,
         "error_count": 0,
         "total_questions": 64
       }
@@ -654,6 +790,16 @@
         "latency_ms": 34481
       },
       {
+        "model": "gemini-3-flash-preview",
+        "provider": "Google",
+        "overall": 90.2,
+        "pos_accuracy": 96.2,
+        "lemma_accuracy": 88.6,
+        "dep_accuracy": 85.7,
+        "cost": 0.1352,
+        "latency_ms": 14407
+      },
+      {
         "model": "claude-opus-4.5-thinking-high",
         "provider": "Anthropic",
         "overall": 89.8,
@@ -662,6 +808,16 @@
         "dep_accuracy": 82.9,
         "cost": 1.4038,
         "latency_ms": 30504
+      },
+      {
+        "model": "claude-opus-4.6",
+        "provider": "Anthropic",
+        "overall": 89.2,
+        "pos_accuracy": 96.2,
+        "lemma_accuracy": 88.6,
+        "dep_accuracy": 82.9,
+        "cost": 0.4609,
+        "latency_ms": 16260
       },
       {
         "model": "gpt-5-high",
@@ -1222,6 +1378,26 @@
         "dep_accuracy": 0.0,
         "cost": 0.0111,
         "latency_ms": 2156
+      },
+      {
+        "model": "ministral-14b-2512",
+        "provider": "Mistral",
+        "overall": 49.5,
+        "pos_accuracy": 71.4,
+        "lemma_accuracy": 65.7,
+        "dep_accuracy": 11.4,
+        "cost": 0.0019,
+        "latency_ms": 1063
+      },
+      {
+        "model": "ministral-8b-2512",
+        "provider": "Mistral",
+        "overall": 48.6,
+        "pos_accuracy": 80.0,
+        "lemma_accuracy": 61.9,
+        "dep_accuracy": 3.8,
+        "cost": 0.0014,
+        "latency_ms": 1207
       },
       {
         "model": "llama-4-scout",

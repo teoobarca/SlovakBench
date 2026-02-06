@@ -45,6 +45,7 @@ MODELS = {
     "anthropic/claude-sonnet-4.5": create_llm("anthropic/claude-sonnet-4.5", {"reasoning": {"enabled": True}}),
     "anthropic/claude-opus-4.5": create_llm("anthropic/claude-opus-4.5"),
     "anthropic/claude-opus-4.5-thinking-high": create_llm("anthropic/claude-opus-4.5", {"reasoning": {"enabled": True, "effort": "high"}}),
+    "anthropic/claude-opus-4.6": create_llm("anthropic/claude-opus-4.6", {"reasoning": {"enabled": True}}),
 
     # Google Gemini
     "google/gemini-2.5-flash": create_llm("google/gemini-2.5-flash", {"reasoning": {"enabled": False}}),
@@ -53,6 +54,7 @@ MODELS = {
     "google/gemini-2.5-flash-lite-preview-09-2025-reasoning": create_llm("google/gemini-2.5-flash-lite-preview-09-2025", {"reasoning": {"enabled": True}}),
     "google/gemini-2.5-pro": create_llm("google/gemini-2.5-pro", {"reasoning": {"enabled": True}}),
     "google/gemini-3-pro-preview": create_llm("google/gemini-3-pro-preview", {"reasoning": {"enabled": True}}),
+    "google/gemini-3-flash-preview": create_llm("google/gemini-3-flash-preview", {"reasoning": {"enabled": True}}),
 
     # xAI Grok
     "x-ai/grok-3-mini": create_llm("x-ai/grok-3-mini", {"reasoning": {"enabled": True}}),
@@ -85,6 +87,8 @@ MODELS = {
     "mistralai/mistral-large-2512": create_llm("mistralai/mistral-large-2512", {"reasoning": {"enabled": True}}),
     "mistralai/devstral-medium": create_llm("mistralai/devstral-medium", {"reasoning": {"enabled": True}}),
     "mistralai/mistral-medium-3.1": create_llm("mistralai/mistral-medium-3.1", {"reasoning": {"enabled": True}}),
+    "mistralai/ministral-8b-2512": create_llm("mistralai/ministral-8b-2512", {"reasoning": {"enabled": True}}),
+    "mistralai/ministral-14b-2512": create_llm("mistralai/ministral-14b-2512", {"reasoning": {"enabled": True}}),
 
     # Cohere
     "cohere/command-a": create_llm("cohere/command-a", {"reasoning": {"enabled": True}}),

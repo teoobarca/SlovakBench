@@ -173,6 +173,10 @@ SlovakBench uses **OpenRouter** standard, so any model supported by OpenRouter c
 - **Metric**: Token-level accuracy for POS tags, Lemmas, and Dependency relations.
 - **Process**: A curated subset of complex sentences is presented to the model. The model must produce CoNLL-U style usage tags which are then parsed and compared to gold labels.
 
+## 👥 Contributors
+
+- **Beautiful Mind Group** ([@beautiful-mind-group](https://github.com/beautiful-mind-group)) - evaluations
+
 ## 📄 License
 
 This project is open-source under the **MIT License**.  
