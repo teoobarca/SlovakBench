@@ -23,18 +23,18 @@ SlovakBench is an open-source framework designed to rigorously evaluate the capa
 
 > **No shortcuts. No synthetic data.** Just rigorous evaluation on authentic Slovak content.
 
+
 ## 🎯 Benchmark Tasks
 
-| Task                       | ID        | Description                                                                                                                                                                              | Status     |
-| -------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| **Maturita Exam**          | `exam`    | Official Slovak high school graduation exam (Maturita) in Slovak Language and Literature. Includes extensive **MCQ** (comprehension, grammar, literature) and **Short Text** generation. | ✅ Active  |
-| **Universal Dependencies** | `ud`      | Low-level linguistic evaluation on the Slovak National Corpus (SNK). Tests **POS Tagging** (Part-of-Speech), **Lemmatization** (base forms), and **Dependency Parsing** (syntax).        | ✅ Active  |
-| **Grammar Correction**     | `grammar` | Detecting and correcting grammatical, spelling, and stylistic errors in native Slovak text.                                                                                              | 🚧 Planned |
+| Task | ID | Description | Status |
+|------|----|-------------|--------|
+| **Maturita Exam** | `exam` | Official Slovak high school graduation exam (Maturita) in Slovak Language and Literature. Includes extensive **MCQ** (comprehension, grammar, literature) and **Short Text** generation. | ✅ Active |
+| **Universal Dependencies** | `ud` | Low-level linguistic evaluation on the Slovak National Corpus (SNK). Tests **POS Tagging** (Part-of-Speech), **Lemmatization** (base forms), and **Dependency Parsing** (syntax). | ✅ Active |
+| **Grammar Correction** | `grammar` | Detecting and correcting grammatical, spelling, and stylistic errors in native Slovak text. | 🚧 Planned |
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-
 - **Python 3.11+**
 - **[uv](https://github.com/astral-sh/uv)** (fast Python package manager)
 - **Node.js 18+** (for Frontend)
@@ -60,7 +60,6 @@ cp .env.example .env
 ```
 
 Edit `.env` and add your API key:
-
 ```env
 OPENROUTER_API_KEY=sk-or-v1-...
 ```
@@ -87,12 +86,10 @@ npm run dev
 
 ## 🛠️ CLI Reference
 
-The core logic is handled by `main.py`. Here are the available commands:
+ The core logic is handled by `main.py`. Here are the available commands:
 
 ### 📥 Data Ingestion
-
 Parses raw PDF files from `data/raw/exam` into structured JSON datasets.
-
 ```bash
 main.py ingest --year 2025        # Process specific year
 main.py ingest --all              # Process all years
@@ -100,9 +97,7 @@ main.py ingest --force            # Re-process existing files
 ```
 
 ### 🧪 Benchmarking
-
 Runs evaluation for configured models.
-
 ```bash
 # Maturita Exam
 main.py evaluate exam --year 2025 # Specific year
@@ -115,9 +110,7 @@ main.py evaluate ud --report      # Show UD specific report table
 ```
 
 ### 📊 Analysis & Reporting
-
 Tools to inspect results and debug failures.
-
 ```bash
 # General Report
 main.py report                    # Show comparison table for all models
@@ -133,9 +126,7 @@ main.py reevaluate --year 2025 -q 12  # Re-run a specific question ID for all mo
 ```
 
 ### 🌐 Frontend Export
-
 Prepares data for the Next.js web application.
-
 ```bash
 main.py export                    # Exports to frontend/public/leaderboard.json
 ```
@@ -168,19 +159,16 @@ MODELS = {
     "provider/model-name": create_llm("provider/model-name"),
 }
 ```
-
 SlovakBench uses **OpenRouter** standard, so any model supported by OpenRouter can be added instantly.
 
 ## 📖 Methodology
 
 ### Maturita Exam
-
 - **Source**: National Institute for Certified Educational Measurements (NÚCEM).
 - **Metric**: Accuracy (Exact Match for MCQ, Semantic Match for Text).
 - **Process**: We extract questions from official PDFs, keeping context (articles/poems) attached to relevant questions. Models are prompted to solve the test zero-shot or few-shot.
 
 ### Universal Dependencies (UD)
-
 - **Source**: Slovak National Corpus (SNK).
 - **Metric**: Token-level accuracy for POS tags, Lemmas, and Dependency relations.
 - **Process**: A curated subset of complex sentences is presented to the model. The model must produce CoNLL-U style usage tags which are then parsed and compared to gold labels.
